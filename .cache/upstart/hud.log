@@ -1,0 +1,14 @@
+[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "Keine derartige Schnittstelle »com.canonical.dbusmenu« des Objekts im Pfad /org/ayatana/bamf/window/20971524"
+[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "Keine derartige Schnittstelle »com.canonical.dbusmenu« des Objekts im Pfad /org/ayatana/bamf/window/58720257"
+QCoreApplication::postEvent: Unexpected null receiver
+[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "Keine derartige Schnittstelle »com.canonical.dbusmenu« des Objekts im Pfad /org/ayatana/bamf/window/60817508"
+[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "Keine derartige Schnittstelle »com.canonical.dbusmenu« des Objekts im Pfad /org/ayatana/bamf/window/60817439"
+[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "Keine derartige Schnittstelle »com.canonical.dbusmenu« des Objekts im Pfad /org/ayatana/bamf/window/60817530"
+[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "Keine derartige Schnittstelle »com.canonical.dbusmenu« des Objekts im Pfad /org/ayatana/bamf/window/52428803"
+[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "Keine derartige Schnittstelle »com.canonical.dbusmenu« des Objekts im Pfad /org/ayatana/bamf/window/52429706"
+[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "Keine derartige Schnittstelle »com.canonical.dbusmenu« des Objekts im Pfad /org/ayatana/bamf/window/52432153"
+[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "Keine derartige Schnittstelle »com.canonical.dbusmenu« des Objekts im Pfad /org/ayatana/bamf/window/52433439"
+[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "Keine derartige Schnittstelle »com.canonical.dbusmenu« des Objekts im Pfad /org/ayatana/bamf/window/52435726"
+[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "Keine derartige Schnittstelle »com.canonical.dbusmenu« des Objekts im Pfad /org/ayatana/bamf/window/52436259"
+QCoreApplication::postEvent: Unexpected null receiver
+[31mvoid DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher*)[0m: "Keine derartige Schnittstelle »com.canonical.dbusmenu« des Objekts im Pfad /org/ayatana/bamf/window/41943318"

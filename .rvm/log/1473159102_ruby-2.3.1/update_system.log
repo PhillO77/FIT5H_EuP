@@ -1,0 +1,48 @@
+[2016-09-06 12:51:42] requirements_debian_update_system
+requirements_debian_update_system () 
+{ 
+    __rvm_try_sudo apt-get --quiet --yes update || { 
+        \typeset __ret=$?;
+        case ${__ret} in 
+            100)
+                rvm_error "There has been error while updating 'apt-get', please give it some time and try again later.
+404 errors should be fixed for rvm to proceed. Check your sources configured in:
+    /etc/apt/sources.list
+    /etc/apt/sources.list.d/*.list
+"
+            ;;
+        esac;
+        return ${__ret}
+    }
+}
+current path: /home/philippe
+PATH=/home/philippe/bin:/home/philippe/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/philippe/.rvm/bin
+command(2): requirements_debian_update_system ruby-2.3.1
+++ __rvm_try_sudo apt-get --quiet --yes update
+++ typeset -a command_to_run
+++ typeset sudo_path sbin_path missing_paths
+++ command_to_run=("$@")
+++ ((  UID == 0  ))
+++ case "$rvm_autolibs_flag_number" in
+++ is_a_function __rvm_sudo
+++ typeset -f __rvm_sudo
+++ missing_paths=
+++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ [[ -d /sbin ]]
+++ [[ :/home/philippe/bin:/home/philippe/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/philippe/.rvm/bin: != *\:\/\s\b\i\n\:* ]]
+++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ [[ -d /usr/sbin ]]
+++ [[ :/home/philippe/bin:/home/philippe/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/philippe/.rvm/bin: != *\:\/\u\s\r\/\s\b\i\n\:* ]]
+++ for sbin_path in /sbin /usr/sbin /usr/local/sbin
+++ [[ -d /usr/local/sbin ]]
+++ [[ :/home/philippe/bin:/home/philippe/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/philippe/.rvm/bin: != *\:\/\u\s\r\/\l\o\c\a\l\/\s\b\i\n\:* ]]
+++ [[ -n '' ]]
+++ command_to_run=(__rvm_sudo -p "%p password required for '$*': " "${command_to_run[@]}")
+++ __rvm_sudo -p '%p password required for '\''apt-get --quiet --yes update'\'': ' apt-get --quiet --yes update
+++ command sudo -p '%p password required for '\''apt-get --quiet --yes update'\'': ' apt-get --quiet --yes update
+++ sudo -p '%p password required for '\''apt-get --quiet --yes update'\'': ' apt-get --quiet --yes update
+OK:1 http://de.archive.ubuntu.com/ubuntu xenial InRelease
+OK:2 http://de.archive.ubuntu.com/ubuntu xenial-updates InRelease
+OK:3 http://de.archive.ubuntu.com/ubuntu xenial-backports InRelease
+OK:4 http://security.ubuntu.com/ubuntu xenial-security InRelease
+Paketlisten werden gelesen...

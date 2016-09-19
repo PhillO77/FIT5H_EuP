@@ -1,0 +1,137 @@
+[2016-09-06 12:56:27] __rvm_make
+__rvm_make () 
+{ 
+    \make "$@" || return $?
+}
+current path: /home/philippe/.rvm/src/ruby-2.3.1
+PATH=/home/philippe/bin:/home/philippe/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/philippe/.rvm/bin
+command(2): __rvm_make install
+++ make install
+generating i686-linux-fake.rb
+i686-linux-fake.rb updated
+	CC = gcc
+	LD = ld
+	LDSHARED = gcc -shared
+	CFLAGS = -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat -Wno-maybe-uninitialized -std=iso9899:1999  -fPIC 
+	XCFLAGS = -D_FORTIFY_SOURCE=2 -fstack-protector -fno-strict-overflow -fvisibility=hidden -DRUBY_EXPORT
+	CPPFLAGS =   -I. -I.ext/include/i686-linux -I./include -I.
+	DLDFLAGS = -Wl,-soname,libruby.so.2.3  -fstack-protector  
+	SOLIBS = -lpthread -lgmp -ldl -lcrypt -lm  
+Using built-in specs.
+COLLECT_GCC=gcc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/i686-linux-gnu/5/lto-wrapper
+Target: i686-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 5.4.0-6ubuntu1~16.04.1' --with-bugurl=file:///usr/share/doc/gcc-5/README.Bugs --enable-languages=c,ada,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-5 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-5-i386/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-5-i386 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-5-i386 --with-arch-directory=i386 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-targets=all --enable-multiarch --disable-werror --with-arch-32=i686 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-checking=release --build=i686-linux-gnu --host=i686-linux-gnu --target=i686-linux-gnu
+Thread model: posix
+gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.1) 
+generating enc.mk
+making srcs under enc
+make[1]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1“ wird betreten
+make[1]: Für das Ziel „srcs“ ist nichts zu tun.
+make[1]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1“ wird verlassen
+generating transdb.h
+transdb.h unchanged
+generating makefile exts.mk
+configuring socket
+Failed to configure tk. It will not be installed.
+Failed to configure tk/tkutil. It will not be installed.
+make[1]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1“ wird betreten
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/bigdecimal“ wird betreten
+installing default bigdecimal libraries
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/bigdecimal“ wird verlassen
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/date“ wird betreten
+installing default date_core libraries
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/date“ wird verlassen
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/digest“ wird betreten
+installing digest libraries
+installing default digest libraries
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/digest“ wird verlassen
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/digest/sha2“ wird betreten
+installing default sha2 libraries
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/digest/sha2“ wird verlassen
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/fiddle“ wird betreten
+installing default fiddle libraries
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/fiddle“ wird verlassen
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/io/console“ wird betreten
+installing default console libraries
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/io/console“ wird verlassen
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/json“ wird betreten
+installing default libraries
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/json“ wird verlassen
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/nkf“ wird betreten
+installing default nkf libraries
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/nkf“ wird verlassen
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/openssl“ wird betreten
+installing default openssl libraries
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/openssl“ wird verlassen
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/pathname“ wird betreten
+installing default pathname libraries
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/pathname“ wird verlassen
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/psych“ wird betreten
+installing default psych libraries
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/psych“ wird verlassen
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/pty“ wird betreten
+installing default pty libraries
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/pty“ wird verlassen
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/ripper“ wird betreten
+installing default ripper libraries
+checking ../.././parse.y and ../.././ext/ripper/eventids2.c
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/ripper“ wird verlassen
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/socket“ wird betreten
+linking shared-object socket.so
+installing default socket libraries
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/socket“ wird verlassen
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/syslog“ wird betreten
+installing default syslog libraries
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/syslog“ wird verlassen
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/tk“ wird betreten
+make[2]: Für das Ziel „all“ ist nichts zu tun.
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/tk“ wird verlassen
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/tk/tkutil“ wird betreten
+make[2]: Für das Ziel „all“ ist nichts zu tun.
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1/ext/tk/tkutil“ wird verlassen
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1“ wird betreten
+make[2]: „ruby“ ist bereits aktuell.
+make[2]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1“ wird verlassen
+make[1]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1“ wird verlassen
+making enc
+make[1]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1“ wird betreten
+make[1]: Für das Ziel „enc“ ist nichts zu tun.
+make[1]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1“ wird verlassen
+making trans
+make[1]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1“ wird betreten
+make[1]: Für das Ziel „./enc/trans“ ist nichts zu tun.
+make[1]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1“ wird verlassen
+making encs
+make[1]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1“ wird betreten
+make[1]: Verzeichnis „/home/philippe/.rvm/src/ruby-2.3.1“ wird verlassen
+./miniruby -I./lib -I. -I.ext/common  ./tool/runruby.rb --extout=.ext  -- --disable-gems -r./i686-linux-fake ./tool/rbinstall.rb --make="make" --dest-dir="" --extout=".ext" --mflags="" --make-flags="" --data-mode=0644 --prog-mode=0755 --installed-list .installed.list --mantype="doc"
+installing binary commands:   /home/philippe/.rvm/rubies/ruby-2.3.1/bin
+installing base libraries:    /home/philippe/.rvm/rubies/ruby-2.3.1/lib
+installing arch files:        /home/philippe/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/i686-linux
+installing pkgconfig data:    /home/philippe/.rvm/rubies/ruby-2.3.1/lib/pkgconfig
+installing command scripts:   /home/philippe/.rvm/rubies/ruby-2.3.1/bin
+installing library scripts:   /home/philippe/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0
+installing common headers:    /home/philippe/.rvm/rubies/ruby-2.3.1/include/ruby-2.3.0
+installing manpages:          /home/philippe/.rvm/rubies/ruby-2.3.1/share/man/man1
+installing extension objects: /home/philippe/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/i686-linux
+installing extension objects: /home/philippe/.rvm/rubies/ruby-2.3.1/lib/ruby/site_ruby/2.3.0/i686-linux
+installing extension objects: /home/philippe/.rvm/rubies/ruby-2.3.1/lib/ruby/vendor_ruby/2.3.0/i686-linux
+installing extension headers: /home/philippe/.rvm/rubies/ruby-2.3.1/include/ruby-2.3.0/i686-linux
+installing extension scripts: /home/philippe/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0
+installing extension scripts: /home/philippe/.rvm/rubies/ruby-2.3.1/lib/ruby/site_ruby/2.3.0
+installing extension scripts: /home/philippe/.rvm/rubies/ruby-2.3.1/lib/ruby/vendor_ruby/2.3.0
+installing extension headers: /home/philippe/.rvm/rubies/ruby-2.3.1/include/ruby-2.3.0/ruby
+installing default gems:      /home/philippe/.rvm/rubies/ruby-2.3.1/lib/ruby/gems/2.3.0 (build_info, cache, doc, extensions, gems, specifications)
+                              bigdecimal 1.2.8
+                              io-console 0.4.5
+                              json 1.8.3
+                              psych 2.0.17
+                              rdoc 4.2.1
+installing bundle gems:       /home/philippe/.rvm/rubies/ruby-2.3.1/lib/ruby/gems/2.3.0 (build_info, cache, doc, extensions, gems, specifications)
+                              minitest 5.8.3
+                              test-unit 3.1.5
+                              power_assert 0.2.6
+                              rake 10.4.2
+                              net-telnet 0.1.1
+                              did_you_mean 1.0.0

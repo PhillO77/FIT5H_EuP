@@ -1,0 +1,14 @@
+current directory: /home/philippe/.rvm/rubies/ruby-2.3.1/lib/ruby/gems/2.3.0/gems/gem-wrappers-1.2.7/ext/wrapper_generator
+/home/philippe/.rvm/rubies/ruby-2.3.1/bin/ruby -r ./siteconf20160906-20749-1fbg46t.rb extconf.rb
+
+current directory: /home/philippe/.rvm/rubies/ruby-2.3.1/lib/ruby/gems/2.3.0/gems/gem-wrappers-1.2.7/ext/wrapper_generator
+make "DESTDIR=" clean
+make: *** Keine Regel, um „clean“ zu erstellen.  Schluss.
+
+current directory: /home/philippe/.rvm/rubies/ruby-2.3.1/lib/ruby/gems/2.3.0/gems/gem-wrappers-1.2.7/ext/wrapper_generator
+make "DESTDIR="
+make: Für das Ziel „all“ ist nichts zu tun.
+
+current directory: /home/philippe/.rvm/rubies/ruby-2.3.1/lib/ruby/gems/2.3.0/gems/gem-wrappers-1.2.7/ext/wrapper_generator
+make "DESTDIR=" install
+make: Für das Ziel „install“ ist nichts zu tun.

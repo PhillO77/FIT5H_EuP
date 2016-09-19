@@ -1,0 +1,378 @@
+[data-vic="abs"]::before,[data-child-vic="abs"] > *:not([data-vic])::before{content: "\e048";}
+[data-vic="abs-2"]::before,[data-child-vic="abs-2"] > *:not([data-vic])::before{content: "\e04b";}
+[data-vic="abs-3"]::before,[data-child-vic="abs-3"] > *:not([data-vic])::before{content: "\e04f";}
+[data-vic="abs-4"]::before,[data-child-vic="abs-4"] > *:not([data-vic])::before{content: "\f406";}
+[data-vic="abs-5"]::before,[data-child-vic="abs-5"] > *:not([data-vic])::before{content: "\f340";}
+[data-vic="abs-6"]::before,[data-child-vic="abs-6"] > *:not([data-vic])::before{content: "\f344";}
+[data-vic="abs-7"]::before,[data-child-vic="abs-7"] > *:not([data-vic])::before{content: "\f34c";}
+[data-vic="abs-8"]::before,[data-child-vic="abs-8"] > *:not([data-vic])::before{content: "\e64d";}
+[data-vic="airplane"]::before,[data-child-vic="airplane"] > *:not([data-vic])::before{content: "\e909";}
+[data-vic="android"]::before,[data-child-vic="android"] > *:not([data-vic])::before{content: "\e613";}
+[data-vic="apple"]::before,[data-child-vic="apple"] > *:not([data-vic])::before{content: "\e611";}
+[data-vic="arrow-child"]::before,[data-child-vic="arrow-child"] > *:not([data-vic])::before{content: "\e620";}
+[data-vic="arrow-down"]::before,[data-child-vic="arrow-down"] > *:not([data-vic])::before{content: "\f0d7";}
+[data-vic="arrow-down-2"]::before,[data-child-vic="arrow-down-2"] > *:not([data-vic])::before{content: "\e020";}
+[data-vic="arrow-down-3"]::before,[data-child-vic="arrow-down-3"] > *:not([data-vic])::before{content: "\e025";}
+[data-vic="arrow-down-4"]::before,[data-child-vic="arrow-down-4"] > *:not([data-vic])::before{content: "\e617";}
+[data-vic="arrow-down-5"]::before,[data-child-vic="arrow-down-5"] > *:not([data-vic])::before{content: "\e61f";}
+[data-vic="arrow-left"]::before,[data-child-vic="arrow-left"] > *:not([data-vic])::before{content: "\f0d9";}
+[data-vic="arrow-left-2"]::before,[data-child-vic="arrow-left-2"] > *:not([data-vic])::before{content: "\e021";}
+[data-vic="arrow-left-3"]::before,[data-child-vic="arrow-left-3"] > *:not([data-vic])::before{content: "\e022";}
+[data-vic="arrow-left-4"]::before,[data-child-vic="arrow-left-4"] > *:not([data-vic])::before{content: "\e614";}
+[data-vic="arrow-left-5"]::before,[data-child-vic="arrow-left-5"] > *:not([data-vic])::before{content: "\e61c";}
+[data-vic="arrow-right"]::before,[data-child-vic="arrow-right"] > *:not([data-vic])::before{content: "\f0da";}
+[data-vic="arrow-right-2"]::before,[data-child-vic="arrow-right-2"] > *:not([data-vic])::before{content: "\e01f";}
+[data-vic="arrow-right-3"]::before,[data-child-vic="arrow-right-3"] > *:not([data-vic])::before{content: "\e023";}
+[data-vic="arrow-right-4"]::before,[data-child-vic="arrow-right-4"] > *:not([data-vic])::before{content: "\e615";}
+[data-vic="arrow-right-5"]::before,[data-child-vic="arrow-right-5"] > *:not([data-vic])::before{content: "\e61d";}
+[data-vic="arrow-up"]::before,[data-child-vic="arrow-up"] > *:not([data-vic])::before{content: "\f0d8";}
+[data-vic="arrow-up-2"]::before,[data-child-vic="arrow-up-2"] > *:not([data-vic])::before{content: "\e01e";}
+[data-vic="arrow-up-3"]::before,[data-child-vic="arrow-up-3"] > *:not([data-vic])::before{content: "\e024";}
+[data-vic="arrow-up-4"]::before,[data-child-vic="arrow-up-4"] > *:not([data-vic])::before{content: "\e616";}
+[data-vic="arrow-up-5"]::before,[data-child-vic="arrow-up-5"] > *:not([data-vic])::before{content: "\e61e";}
+[data-vic="at"]::before,[data-child-vic="at"] > *:not([data-vic])::before{content: "\e648";}
+[data-vic="attachment"]::before,[data-child-vic="attachment"] > *:not([data-vic])::before{content: "\f0c6";}
+[data-vic="bicycle"]::before,[data-child-vic="bicycle"] > *:not([data-vic])::before{content: "\e90d";}
+[data-vic="book"]::before,[data-child-vic="book"] > *:not([data-vic])::before{content: "\e042";}
+[data-vic="book-2"]::before,[data-child-vic="book-2"] > *:not([data-vic])::before{content: "\e043";}
+[data-vic="bug"]::before,[data-child-vic="bug"] > *:not([data-vic])::before{content: "\e04d";}
+[data-vic="cable"]::before,[data-child-vic="cable"] > *:not([data-vic])::before{content: "\e662";}
+[data-vic="calendar"]::before,[data-child-vic="calendar"] > *:not([data-vic])::before{content: "\e058";}
+[data-vic="calendar-2"]::before,[data-child-vic="calendar-2"] > *:not([data-vic])::before{content: "\e05a";}
+[data-vic="calendar-3"]::before,[data-child-vic="calendar-3"] > *:not([data-vic])::before{content: "\e637";}
+[data-vic="camera"]::before,[data-child-vic="camera"] > *:not([data-vic])::before{content: "\e60f";}
+[data-vic="camera-2"]::before,[data-child-vic="camera-2"] > *:not([data-vic])::before{content: "\e60d";}
+[data-vic="camera-3"]::before,[data-child-vic="camera-3"] > *:not([data-vic])::before{content: "\e647";}
+[data-vic="car"]::before,[data-child-vic="car"] > *:not([data-vic])::before{content: "\f239";}
+[data-vic="car-2"]::before,[data-child-vic="car-2"] > *:not([data-vic])::before{content: "\e600";}
+[data-vic="car-3"]::before,[data-child-vic="car-3"] > *:not([data-vic])::before{content: "\e636";}
+[data-vic="car-4"]::before,[data-child-vic="car-4"] > *:not([data-vic])::before{content: "\e643";}
+[data-vic="car-5"]::before,[data-child-vic="car-5"] > *:not([data-vic])::before{content: "\e646";}
+[data-vic="car-6"]::before,[data-child-vic="car-6"] > *:not([data-vic])::before{content: "\e649";}
+[data-vic="car-7"]::before,[data-child-vic="car-7"] > *:not([data-vic])::before{content: "\e652";}
+[data-vic="car-8"]::before,[data-child-vic="car-8"] > *:not([data-vic])::before{content: "\e90f";}
+[data-vic="cart"]::before,[data-child-vic="cart"] > *:not([data-vic])::before{content: "\e65f";}
+[data-vic="cell"]::before,[data-child-vic="cell"] > *:not([data-vic])::before{content: "\e60a";}
+[data-vic="cell-2"]::before,[data-child-vic="cell-2"] > *:not([data-vic])::before{content: "\e60b";}
+[data-vic="cell-3"]::before,[data-child-vic="cell-3"] > *:not([data-vic])::before{content: "\e60c";}
+[data-vic="check"]::before,[data-child-vic="check"] > *:not([data-vic])::before{content: "\e01d";}
+[data-vic="check-2"]::before,[data-child-vic="check-2"] > *:not([data-vic])::before{content: "\e059";}
+[data-vic="check-3"]::before,[data-child-vic="check-3"] > *:not([data-vic])::before{content: "\e02d";}
+[data-vic="check-4"]::before,[data-child-vic="check-4"] > *:not([data-vic])::before{content: "\f058";}
+[data-vic="check-5"]::before,[data-child-vic="check-5"] > *:not([data-vic])::before{content: "\f046";}
+[data-vic="check-6"]::before,[data-child-vic="check-6"] > *:not([data-vic])::before{content: "\e672";}
+[data-vic="check-7"]::before,[data-child-vic="check-7"] > *:not([data-vic])::before{content: "\e64e";}
+[data-vic="chrome"]::before,[data-child-vic="chrome"] > *:not([data-vic])::before{content: "\e054";}
+[data-vic="clock"]::before,[data-child-vic="clock"] > *:not([data-vic])::before{content: "\e055";}
+[data-vic="clock-2"]::before,[data-child-vic="clock-2"] > *:not([data-vic])::before{content: "\e056";}
+[data-vic="clock-3"]::before,[data-child-vic="clock-3"] > *:not([data-vic])::before{content: "\e057";}
+[data-vic="clock-4"]::before,[data-child-vic="clock-4"] > *:not([data-vic])::before{content: "\f22b";}
+[data-vic="clock-5"]::before,[data-child-vic="clock-5"] > *:not([data-vic])::before{content: "\e635";}
+[data-vic="close"]::before,[data-child-vic="close"] > *:not([data-vic])::before{content: "\e015";}
+[data-vic="close-2"]::before,[data-child-vic="close-2"] > *:not([data-vic])::before{content: "\e01c";}
+[data-vic="close-3"]::before,[data-child-vic="close-3"] > *:not([data-vic])::before{content: "\e621";}
+[data-vic="cloud"]::before,[data-child-vic="cloud"] > *:not([data-vic])::before{content: "\e64f";}
+[data-vic="comment"]::before,[data-child-vic="comment"] > *:not([data-vic])::before{content: "\f075";}
+[data-vic="comment-2"]::before,[data-child-vic="comment-2"] > *:not([data-vic])::before{content: "\f086";}
+[data-vic="contract"]::before,[data-child-vic="contract"] > *:not([data-vic])::before{content: "\e011";}
+[data-vic="contract-2"]::before,[data-child-vic="contract-2"] > *:not([data-vic])::before{content: "\e010";}
+[data-vic="creditcard"]::before,[data-child-vic="creditcard"] > *:not([data-vic])::before{content: "\e63e";}
+[data-vic="creditcard-2"]::before,[data-child-vic="creditcard-2"] > *:not([data-vic])::before{content: "\e653";}
+[data-vic="delete"]::before,[data-child-vic="delete"] > *:not([data-vic])::before{content: "\f014";}
+[data-vic="delete-2"]::before,[data-child-vic="delete-2"] > *:not([data-vic])::before{content: "\e035";}
+[data-vic="desktop"]::before,[data-child-vic="desktop"] > *:not([data-vic])::before{content: "\f108";}
+[data-vic="dog"]::before,[data-child-vic="dog"] > *:not([data-vic])::before{content: "\e627";}
+[data-vic="dog-2"]::before,[data-child-vic="dog-2"] > *:not([data-vic])::before{content: "\e63c";}
+[data-vic="download"]::before,[data-child-vic="download"] > *:not([data-vic])::before{content: "\e039";}
+[data-vic="edit"]::before,[data-child-vic="edit"] > *:not([data-vic])::before{content: "\f044";}
+[data-vic="edit-2"]::before,[data-child-vic="edit-2"] > *:not([data-vic])::before{content: "\f040";}
+[data-vic="electricity"]::before,[data-child-vic="electricity"] > *:not([data-vic])::before{content: "\e05b";}
+[data-vic="electricity-2"]::before,[data-child-vic="electricity-2"] > *:not([data-vic])::before{content: "\e05c";}
+[data-vic="electricity-3"]::before,[data-child-vic="electricity-3"] > *:not([data-vic])::before{content: "\f0ed";}
+[data-vic="electricity-4"]::before,[data-child-vic="electricity-4"] > *:not([data-vic])::before{content: "\e609";}
+[data-vic="electricity-5"]::before,[data-child-vic="electricity-5"] > *:not([data-vic])::before{content: "\e64a";}
+[data-vic="electricity-6"]::before,[data-child-vic="electricity-6"] > *:not([data-vic])::before{content: "\e906";}
+[data-vic="euro"]::before,[data-child-vic="euro"] > *:not([data-vic])::before{content: "\20ac";}
+[data-vic="euro-2"]::before,[data-child-vic="euro-2"] > *:not([data-vic])::before{content: "\e602";}
+[data-vic="euro-3"]::before,[data-child-vic="euro-3"] > *:not([data-vic])::before{content: "\e634";}
+[data-vic="euro-4"]::before,[data-child-vic="euro-4"] > *:not([data-vic])::before{content: "\e633";}
+[data-vic="euro-5"]::before,[data-child-vic="euro-5"] > *:not([data-vic])::before{content: "\e654";}
+[data-vic="expand"]::before,[data-child-vic="expand"] > *:not([data-vic])::before{content: "\e013";}
+[data-vic="expand-2"]::before,[data-child-vic="expand-2"] > *:not([data-vic])::before{content: "\e012";}
+[data-vic="export"]::before,[data-child-vic="export"] > *:not([data-vic])::before{content: "\e036";}
+[data-vic="export-2"]::before,[data-child-vic="export-2"] > *:not([data-vic])::before{content: "\f08b";}
+[data-vic="facebook"]::before,[data-child-vic="facebook"] > *:not([data-vic])::before{content: "\e000";}
+[data-vic="facebook-2"]::before,[data-child-vic="facebook-2"] > *:not([data-vic])::before{content: "\e644";}
+[data-vic="factory"]::before,[data-child-vic="factory"] > *:not([data-vic])::before{content: "\e632";}
+[data-vic="feed"]::before,[data-child-vic="feed"] > *:not([data-vic])::before{content: "\e009";}
+[data-vic="feed-2"]::before,[data-child-vic="feed-2"] > *:not([data-vic])::before{content: "\e00a";}
+[data-vic="film"]::before,[data-child-vic="film"] > *:not([data-vic])::before{content: "\e60e";}
+[data-vic="filter"]::before,[data-child-vic="filter"] > *:not([data-vic])::before{content: "\f0b0";}
+[data-vic="filter-2"]::before,[data-child-vic="filter-2"] > *:not([data-vic])::before{content: "\e03c";}
+[data-vic="filter-3"]::before,[data-child-vic="filter-3"] > *:not([data-vic])::before{content: "\f070";}
+[data-vic="firefox"]::before,[data-child-vic="firefox"] > *:not([data-vic])::before{content: "\e053";}
+[data-vic="first-aid"]::before,[data-child-vic="first-aid"] > *:not([data-vic])::before{content: "\e631";}
+[data-vic="flickr"]::before,[data-child-vic="flickr"] > *:not([data-vic])::before{content: "\e002";}
+[data-vic="folder"]::before,[data-child-vic="folder"] > *:not([data-vic])::before{content: "\e018";}
+[data-vic="folder-2"]::before,[data-child-vic="folder-2"] > *:not([data-vic])::before{content: "\f07b";}
+[data-vic="fuel"]::before,[data-child-vic="fuel"] > *:not([data-vic])::before{content: "\e655";}
+[data-vic="fuel-2"]::before,[data-child-vic="fuel-2"] > *:not([data-vic])::before{content: "\e905";}
+[data-vic="gas"]::before,[data-child-vic="gas"] > *:not([data-vic])::before{content: "\e05d";}
+[data-vic="gas-2"]::before,[data-child-vic="gas-2"] > *:not([data-vic])::before{content: "\f27f";}
+[data-vic="gas-3"]::before,[data-child-vic="gas-3"] > *:not([data-vic])::before{content: "\e608";}
+[data-vic="gas-4"]::before,[data-child-vic="gas-4"] > *:not([data-vic])::before{content: "\e64b";}
+[data-vic="glas"]::before,[data-child-vic="glas"] > *:not([data-vic])::before{content: "\e626";}
+[data-vic="globe"]::before,[data-child-vic="globe"] > *:not([data-vic])::before{content: "\e016";}
+[data-vic="globe-2"]::before,[data-child-vic="globe-2"] > *:not([data-vic])::before{content: "\f0ac";}
+[data-vic="globe-3"]::before,[data-child-vic="globe-3"] > *:not([data-vic])::before{content: "\e05e";}
+[data-vic="globe-4"]::before,[data-child-vic="globe-4"] > *:not([data-vic])::before{content: "\e663";}
+[data-vic="google-plus"]::before,[data-child-vic="google-plus"] > *:not([data-vic])::before{content: "\e003";}
+[data-vic="google-plus-2"]::before,[data-child-vic="google-plus-2"] > *:not([data-vic])::before{content: "\e642";}
+[data-vic="grid"]::before,[data-child-vic="grid"] > *:not([data-vic])::before{content: "\f009";}
+[data-vic="group"]::before,[data-child-vic="group"] > *:not([data-vic])::before{content: "\e03e";}
+[data-vic="group-2"]::before,[data-child-vic="group-2"] > *:not([data-vic])::before{content: "\f0c0";}
+[data-vic="hammer"]::before,[data-child-vic="hammer"] > *:not([data-vic])::before{content: "\e625";}
+[data-vic="hands"]::before,[data-child-vic="hands"] > *:not([data-vic])::before{content: "\e656";}
+[data-vic="hat"]::before,[data-child-vic="hat"] > *:not([data-vic])::before{content: "\e900";}
+[data-vic="hdd"]::before,[data-child-vic="hdd"] > *:not([data-vic])::before{content: "\e65d";}
+[data-vic="heart"]::before,[data-child-vic="heart"] > *:not([data-vic])::before{content: "\e624";}
+[data-vic="home"]::before,[data-child-vic="home"] > *:not([data-vic])::before{content: "\f015";}
+[data-vic="home-2"]::before,[data-child-vic="home-2"] > *:not([data-vic])::before{content: "\e034";}
+[data-vic="home-3"]::before,[data-child-vic="home-3"] > *:not([data-vic])::before{content: "\e603";}
+[data-vic="home-4"]::before,[data-child-vic="home-4"] > *:not([data-vic])::before{content: "\e623";}
+[data-vic="home-5"]::before,[data-child-vic="home-5"] > *:not([data-vic])::before{content: "\e622";}
+[data-vic="home-6"]::before,[data-child-vic="home-6"] > *:not([data-vic])::before{content: "\e630";}
+[data-vic="home-7"]::before,[data-child-vic="home-7"] > *:not([data-vic])::before{content: "\e62f";}
+[data-vic="home-8"]::before,[data-child-vic="home-8"] > *:not([data-vic])::before{content: "\e640";}
+[data-vic="home-9"]::before,[data-child-vic="home-9"] > *:not([data-vic])::before{content: "\e657";}
+[data-vic="horse"]::before,[data-child-vic="horse"] > *:not([data-vic])::before{content: "\e63b";}
+[data-vic="horse-dog"]::before,[data-child-vic="horse-dog"] > *:not([data-vic])::before{content: "\e63a";}
+[data-vic="human"]::before,[data-child-vic="human"] > *:not([data-vic])::before{content: "\e607";}
+[data-vic="human-2"]::before,[data-child-vic="human-2"] > *:not([data-vic])::before{content: "\e605";}
+[data-vic="human-3"]::before,[data-child-vic="human-3"] > *:not([data-vic])::before{content: "\e606";}
+[data-vic="human-4"]::before,[data-child-vic="human-4"] > *:not([data-vic])::before{content: "\e604";}
+[data-vic="human-5"]::before,[data-child-vic="human-5"] > *:not([data-vic])::before{content: "\e62e";}
+[data-vic="human-6"]::before,[data-child-vic="human-6"] > *:not([data-vic])::before{content: "\e658";}
+[data-vic="i12"]::before,[data-child-vic="i12"] > *:not([data-vic])::before{content: "\e005";}
+[data-vic="ie"]::before,[data-child-vic="ie"] > *:not([data-vic])::before{content: "\e052";}
+[data-vic="image"]::before,[data-child-vic="image"] > *:not([data-vic])::before{content: "\e63f";}
+[data-vic="import"]::before,[data-child-vic="import"] > *:not([data-vic])::before{content: "\f090";}
+[data-vic="info"]::before,[data-child-vic="info"] > *:not([data-vic])::before{content: "\e02a";}
+[data-vic="info-2"]::before,[data-child-vic="info-2"] > *:not([data-vic])::before{content: "\e02b";}
+[data-vic="info-3"]::before,[data-child-vic="info-3"] > *:not([data-vic])::before{content: "\e02c";}
+[data-vic="info-4"]::before,[data-child-vic="info-4"] > *:not([data-vic])::before{content: "\e00f";}
+[data-vic="info-5"]::before,[data-child-vic="info-5"] > *:not([data-vic])::before{content: "\f059";}
+[data-vic="info-6"]::before,[data-child-vic="info-6"] > *:not([data-vic])::before{content: "\e61a";}
+[data-vic="key"]::before,[data-child-vic="key"] > *:not([data-vic])::before{content: "\e03d";}
+[data-vic="keyboard"]::before,[data-child-vic="keyboard"] > *:not([data-vic])::before{content: "\e04a";}
+[data-vic="lab"]::before,[data-child-vic="lab"] > *:not([data-vic])::before{content: "\e04e";}
+[data-vic="laptop"]::before,[data-child-vic="laptop"] > *:not([data-vic])::before{content: "\f109";}
+[data-vic="laptop-2"]::before,[data-child-vic="laptop-2"] > *:not([data-vic])::before{content: "\e601";}
+[data-vic="leaf"]::before,[data-child-vic="leaf"] > *:not([data-vic])::before{content: "\f06c";}
+[data-vic="lightbulb"]::before,[data-child-vic="lightbulb"] > *:not([data-vic])::before{content: "\e639";}
+[data-vic="linkedin"]::before,[data-child-vic="linkedin"] > *:not([data-vic])::before{content: "\e007";}
+[data-vic="linkedin-2"]::before,[data-child-vic="linkedin-2"] > *:not([data-vic])::before{content: "\e907";}
+[data-vic="list"]::before,[data-child-vic="list"] > *:not([data-vic])::before{content: "\e00c";}
+[data-vic="list-2"]::before,[data-child-vic="list-2"] > *:not([data-vic])::before{content: "\f0c9";}
+[data-vic="list-3"]::before,[data-child-vic="list-3"] > *:not([data-vic])::before{content: "\e049";}
+[data-vic="list-4"]::before,[data-child-vic="list-4"] > *:not([data-vic])::before{content: "\e660";}
+[data-vic="location"]::before,[data-child-vic="location"] > *:not([data-vic])::before{content: "\e019";}
+[data-vic="location-2"]::before,[data-child-vic="location-2"] > *:not([data-vic])::before{content: "\e01a";}
+[data-vic="location-3"]::before,[data-child-vic="location-3"] > *:not([data-vic])::before{content: "\f041";}
+[data-vic="location-4"]::before,[data-child-vic="location-4"] > *:not([data-vic])::before{content: "\e040";}
+[data-vic="location-5"]::before,[data-child-vic="location-5"] > *:not([data-vic])::before{content: "\e026";}
+[data-vic="location-6"]::before,[data-child-vic="location-6"] > *:not([data-vic])::before{content: "\e03f";}
+[data-vic="location-7"]::before,[data-child-vic="location-7"] > *:not([data-vic])::before{content: "\f05b";}
+[data-vic="lte"]::before,[data-child-vic="lte"] > *:not([data-vic])::before{content: "\e659";}
+[data-vic="lte-2"]::before,[data-child-vic="lte-2"] > *:not([data-vic])::before{content: "\e664";}
+[data-vic="mail"]::before,[data-child-vic="mail"] > *:not([data-vic])::before{content: "\e00b";}
+[data-vic="message"]::before,[data-child-vic="message"] > *:not([data-vic])::before{content: "\e902";}
+[data-vic="minus"]::before,[data-child-vic="minus"] > *:not([data-vic])::before{content: "\e618";}
+[data-vic="mobile-internet"]::before,[data-child-vic="mobile-internet"] > *:not([data-vic])::before{content: "\e62d";}
+[data-vic="mobile-internet-2"]::before,[data-child-vic="mobile-internet-2"] > *:not([data-vic])::before{content: "\e65a";}
+[data-vic="mom"]::before,[data-child-vic="mom"] > *:not([data-vic])::before{content: "\e02f";}
+[data-vic="money"]::before,[data-child-vic="money"] > *:not([data-vic])::before{content: "\e05f";}
+[data-vic="money-2"]::before,[data-child-vic="money-2"] > *:not([data-vic])::before{content: "\e62c";}
+[data-vic="money-3"]::before,[data-child-vic="money-3"] > *:not([data-vic])::before{content: "\e638";}
+[data-vic="money-4"]::before,[data-child-vic="money-4"] > *:not([data-vic])::before{content: "\e65b";}
+[data-vic="motorbike"]::before,[data-child-vic="motorbike"] > *:not([data-vic])::before{content: "\e90e";}
+[data-vic="music"]::before,[data-child-vic="music"] > *:not([data-vic])::before{content: "\e63d";}
+[data-vic="off"]::before,[data-child-vic="off"] > *:not([data-vic])::before{content: "\f011";}
+[data-vic="opera"]::before,[data-child-vic="opera"] > *:not([data-vic])::before{content: "\e051";}
+[data-vic="palm"]::before,[data-child-vic="palm"] > *:not([data-vic])::before{content: "\e90b";}
+[data-vic="paper"]::before,[data-child-vic="paper"] > *:not([data-vic])::before{content: "\f016";}
+[data-vic="paragraph"]::before,[data-child-vic="paragraph"] > *:not([data-vic])::before{content: "\e030";}
+[data-vic="paragraph-2"]::before,[data-child-vic="paragraph-2"] > *:not([data-vic])::before{content: "\e031";}
+[data-vic="pencil"]::before,[data-child-vic="pencil"] > *:not([data-vic])::before{content: "\e044";}
+[data-vic="pencil-2"]::before,[data-child-vic="pencil-2"] > *:not([data-vic])::before{content: "\e045";}
+[data-vic="pencil-3"]::before,[data-child-vic="pencil-3"] > *:not([data-vic])::before{content: "\e046";}
+[data-vic="phone"]::before,[data-child-vic="phone"] > *:not([data-vic])::before{content: "\e028";}
+[data-vic="phone-2"]::before,[data-child-vic="phone-2"] > *:not([data-vic])::before{content: "\e029";}
+[data-vic="phone-3"]::before,[data-child-vic="phone-3"] > *:not([data-vic])::before{content: "\e645";}
+[data-vic="phone-flat"]::before,[data-child-vic="phone-flat"] > *:not([data-vic])::before{content: "\e665";}
+[data-vic="pinterest"]::before,[data-child-vic="pinterest"] > *:not([data-vic])::before{content: "\e006";}
+[data-vic="play"]::before,[data-child-vic="play"] > *:not([data-vic])::before{content: "\e610";}
+[data-vic="plus"]::before,[data-child-vic="plus"] > *:not([data-vic])::before{content: "\e619";}
+[data-vic="price-change"]::before,[data-child-vic="price-change"] > *:not([data-vic])::before{content: "\e061";}
+[data-vic="print"]::before,[data-child-vic="print"] > *:not([data-vic])::before{content: "\f02f";}
+[data-vic="print-2"]::before,[data-child-vic="print-2"] > *:not([data-vic])::before{content: "\e017";}
+[data-vic="qr"]::before,[data-child-vic="qr"] > *:not([data-vic])::before{content: "\e047";}
+[data-vic="reload"]::before,[data-child-vic="reload"] > *:not([data-vic])::before{content: "\f0e2";}
+[data-vic="rocket"]::before,[data-child-vic="rocket"] > *:not([data-vic])::before{content: "\e910";}
+[data-vic="router"]::before,[data-child-vic="router"] > *:not([data-vic])::before{content: "\e667";}
+[data-vic="router-2"]::before,[data-child-vic="router-2"] > *:not([data-vic])::before{content: "\e901";}
+[data-vic="safari"]::before,[data-child-vic="safari"] > *:not([data-vic])::before{content: "\e050";}
+[data-vic="satellit"]::before,[data-child-vic="satellit"] > *:not([data-vic])::before{content: "\e668";}
+[data-vic="save"]::before,[data-child-vic="save"] > *:not([data-vic])::before{content: "\e03a";}
+[data-vic="search"]::before,[data-child-vic="search"] > *:not([data-vic])::before{content: "\f002";}
+[data-vic="server"]::before,[data-child-vic="server"] > *:not([data-vic])::before{content: "\e650";}
+[data-vic="setting"]::before,[data-child-vic="setting"] > *:not([data-vic])::before{content: "\f013";}
+[data-vic="setting-2"]::before,[data-child-vic="setting-2"] > *:not([data-vic])::before{content: "\e014";}
+[data-vic="setting-3"]::before,[data-child-vic="setting-3"] > *:not([data-vic])::before{content: "\e041";}
+[data-vic="setting-4"]::before,[data-child-vic="setting-4"] > *:not([data-vic])::before{content: "\f0ad";}
+[data-vic="setting-5"]::before,[data-child-vic="setting-5"] > *:not([data-vic])::before{content: "\e04c";}
+[data-vic="share"]::before,[data-child-vic="share"] > *:not([data-vic])::before{content: "\f045";}
+[data-vic="shield"]::before,[data-child-vic="shield"] > *:not([data-vic])::before{content: "\e62b";}
+[data-vic="sim"]::before,[data-child-vic="sim"] > *:not([data-vic])::before{content: "\e62a";}
+[data-vic="sim-2"]::before,[data-child-vic="sim-2"] > *:not([data-vic])::before{content: "\e669";}
+[data-vic="smartphone"]::before,[data-child-vic="smartphone"] > *:not([data-vic])::before{content: "\f10b";}
+[data-vic="smartphone-2"]::before,[data-child-vic="smartphone-2"] > *:not([data-vic])::before{content: "\e64c";}
+[data-vic="smartphone-flat"]::before,[data-child-vic="smartphone-flat"] > *:not([data-vic])::before{content: "\e666";}
+[data-vic="smartphone-internet"]::before,[data-child-vic="smartphone-internet"] > *:not([data-vic])::before{content: "\e908";}
+[data-vic="smartphone-message"]::before,[data-child-vic="smartphone-message"] > *:not([data-vic])::before{content: "\e904";}
+[data-vic="smartphone-sim"]::before,[data-child-vic="smartphone-sim"] > *:not([data-vic])::before{content: "\e629";}
+[data-vic="smartphone-sms"]::before,[data-child-vic="smartphone-sms"] > *:not([data-vic])::before{content: "\e903";}
+[data-vic="star"]::before,[data-child-vic="star"] > *:not([data-vic])::before{content: "\e01b";}
+[data-vic="star-2"]::before,[data-child-vic="star-2"] > *:not([data-vic])::before{content: "\f005";}
+[data-vic="star-3"]::before,[data-child-vic="star-3"] > *:not([data-vic])::before{content: "\f0a3";}
+[data-vic="star-4"]::before,[data-child-vic="star-4"] > *:not([data-vic])::before{content: "\e61b";}
+[data-vic="stethoscope"]::before,[data-child-vic="stethoscope"] > *:not([data-vic])::before{content: "\e65c";}
+[data-vic="stock"]::before,[data-child-vic="stock"] > *:not([data-vic])::before{content: "\e628";}
+[data-vic="suitcase"]::before,[data-child-vic="suitcase"] > *:not([data-vic])::before{content: "\e90a";}
+[data-vic="table"]::before,[data-child-vic="table"] > *:not([data-vic])::before{content: "\f0ce";}
+[data-vic="tablet"]::before,[data-child-vic="tablet"] > *:not([data-vic])::before{content: "\f10a";}
+[data-vic="tree"]::before,[data-child-vic="tree"] > *:not([data-vic])::before{content: "\e060";}
+[data-vic="tv"]::before,[data-child-vic="tv"] > *:not([data-vic])::before{content: "\e03b";}
+[data-vic="tv-2"]::before,[data-child-vic="tv-2"] > *:not([data-vic])::before{content: "\e66a";}
+[data-vic="twitter"]::before,[data-child-vic="twitter"] > *:not([data-vic])::before{content: "\e001";}
+[data-vic="twitter-2"]::before,[data-child-vic="twitter-2"] > *:not([data-vic])::before{content: "\e641";}
+[data-vic="upload"]::before,[data-child-vic="upload"] > *:not([data-vic])::before{content: "\e037";}
+[data-vic="upload-2"]::before,[data-child-vic="upload-2"] > *:not([data-vic])::before{content: "\e038";}
+[data-vic="user"]::before,[data-child-vic="user"] > *:not([data-vic])::before{content: "\e00d";}
+[data-vic="user-2"]::before,[data-child-vic="user-2"] > *:not([data-vic])::before{content: "\e00e";}
+[data-vic="vimeo"]::before,[data-child-vic="vimeo"] > *:not([data-vic])::before{content: "\e004";}
+[data-vic="vx-icon"]::before,[data-child-vic="vx-icon"] > *:not([data-vic])::before{content: "\e027";}
+[data-vic="vx-logo"]::before,[data-child-vic="vx-logo"] > *:not([data-vic])::before{content: "\e033";}
+[data-vic="warning"]::before,[data-child-vic="warning"] > *:not([data-vic])::before{content: "\e02e";}
+[data-vic="warning-2"]::before,[data-child-vic="warning-2"] > *:not([data-vic])::before{content: "\f071";}
+[data-vic="watch"]::before,[data-child-vic="watch"] > *:not([data-vic])::before{content: "\e661";}
+[data-vic="waterdrop"]::before,[data-child-vic="waterdrop"] > *:not([data-vic])::before{content: "\e699";}
+[data-vic="web"]::before,[data-child-vic="web"] > *:not([data-vic])::before{content: "\e651";}
+[data-vic="whatsapp"]::before,[data-child-vic="whatsapp"] > *:not([data-vic])::before{content: "\e65e";}
+[data-vic="windows"]::before,[data-child-vic="windows"] > *:not([data-vic])::before{content: "\e612";}
+[data-vic="wizard"]::before,[data-child-vic="wizard"] > *:not([data-vic])::before{content: "\f0d0";}
+[data-vic="xing"]::before,[data-child-vic="xing"] > *:not([data-vic])::before{content: "\e008";}
+[data-vic="xing-2"]::before,[data-child-vic="xing-2"] > *:not([data-vic])::before{content: "\e90c";}
+[data-vic="youtube"]::before,[data-child-vic="youtube"] > *:not([data-vic])::before{content: "\e032";}
+[data-vic="zoom-in"]::before,[data-child-vic="zoom-in"] > *:not([data-vic])::before{content: "\f320";}
+[data-vic="zoom-out"]::before,[data-child-vic="zoom-out"] > *:not([data-vic])::before{content: "\f321";}
+
+
+@font-face {
+    font-family: 'i12font';
+    src:url('//common.i12.de/cms/file/plugin/vic/i12font.eot');
+    src:url('//common.i12.de/cms/file/plugin/vic/i12font.eot?#iefix') format('embedded-opentype'),
+        url('//common.i12.de/cms/file/plugin/vic/i12font.woff') format('woff'),
+        url('//common.i12.de/cms/file/plugin/vic/i12font.ttf') format('truetype'),
+        url('//common.i12.de/cms/file/plugin/vic/i12font.svg#i12font') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+
+[data-vic]::before,
+[data-child-vic] > *:not([data-vic])::before {
+    font-family: 'i12font';
+    font-style: normal;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    padding-right: 4px;
+    }
+
+    ul[data-child-vic] {
+        list-style-type: none;
+    }
+    
+    
+      /* farbe icons*/
+    .cms_vic-color[data-vic="google-plus"]::before,
+    .cms_vic-color [data-vic="google-plus"]::before {color: #db4b39; }
+    .cms_vic-color[data-vic="facebook"]::before,
+    .cms_vic-color [data-vic="facebook"]::before {color: #3b5998; }
+    .cms_vic-color[data-vic="twitter"]::before,
+    .cms_vic-color [data-vic="twitter"]::before {color: #00c0f7; }
+    .cms_vic-color[data-vic="vimeo"]::before,
+    .cms_vic-color [data-vic="vimeo"]::before {color: #00c0f7; }
+    .cms_vic-color[data-vic="youtube"]::before,
+    .cms_vic-color [data-vic="youtube"]::before {color: #cd1f28; }
+    .cms_vic-color[data-vic="vx-icon"]::before,
+    .cms_vic-color [data-vic="vx-icon"]::before {color: #fe8a03; }
+    .cms_vic-color[data-vic="xing"]::before,
+    .cms_vic-color [data-vic="xing"]::before {color: #006464; }
+    .cms_vic-color[data-vic="pinterest"]::before,
+    .cms_vic-color [data-vic="pinterest"]::before {color: #cd1f28; }
+    .cms_vic-color[data-vic="feed"]::before,
+    .cms_vic-color [data-vic="feed"]::before,
+    .cms_vic-color[data-vic="feed-2"]::before,
+    .cms_vic-color [data-vic="feed-2"]::before {color: #ff9d2b; }
+    .cms_vic-color[data-vic="comment"]::before,
+    .cms_vic-color [data-vic="comment"]::before {color: #9ecc27; }
+
+      /* gro√üe icons*/
+
+    .cms_vic-big li {
+        background: none transparent;
+        padding: 0;
+        margin: 2px 0px 6px;
+        }
+
+        .cms_vic-big[data-vic]::before,
+        .cms_vic-big [data-vic]::before {font-size: 150%;}
+
+
+
+    .cms_vic-only li {
+        background: none transparent;
+        padding: 0;
+        margin: 0;
+        width: 30px;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        }
+            .cms_vic-only li  [data-vic]::before {
+                margin-right: 500px;
+                }
+
+
+.cms_vic-style1 [data-vic]::before {
+    padding-right: 6px;
+    display: inline-block;
+    text-shadow: 1px 1px 3px rgba(0,0,0, .4), 0px 0px 1px #fff;
+    }
+.cms_vic-style1 [data-vic]:hover::before {
+    -webkit-transition: all .30s;
+    -moz-transition: all .30s;
+    transition: all .30s;
+    color: #fff;
+    }»ıΩÊ
+           W÷Ü’<‚x˙W÷à    E    :http://common.i12.de/cms/file/plugin/vic/vic.css.php?commonRoot=true request-method GET response-head HTTP/1.1 200 OK
+Via: 1.1 ISA01TMG
+Date: Mon, 12 Sep 2016 10:43:32 GMT
+Content-Type: text/css; charset=utf-8
+Server: Apache
+X-Powered-By: PHP/5.5.30-1~dotdeb+7.1
+X-UA-Compatible: IE=edge
+Cache-Control: max-age=300
+X-Hostname: app06
+ uncompressed-len 0   {î

@@ -1,0 +1,562 @@
+<!doctype html>
+<!--[if !IE]>      <html class="no-js non-ie" lang="en-US"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en-US"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en-US"> <![endif]-->
+<!--[if IE 9 ]>    <html class="no-js ie9" lang="en-US"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en-US"> <!--<![endif]-->
+<head>
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+<title>How To Install Sublime Text 3 (Build 3103) On Ubuntu 16.04, Ubuntu 15.10, Ubuntu 14.04 And Derivatives &#124; LinuxG.net</title>
+
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="http://linuxg.net/xmlrpc.php" />
+
+
+<link rel="alternate" type="application/rss+xml" title="LinuxG.net &raquo; Feed" href="http://linuxg.net/feed/" />
+<link rel="alternate" type="application/rss+xml" title="LinuxG.net &raquo; Comments Feed" href="http://linuxg.net/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="LinuxG.net &raquo; How To Install Sublime Text 3 (Build 3103) On Ubuntu 16.04, Ubuntu 15.10, Ubuntu 14.04 And Derivatives Comments Feed" href="http://linuxg.net/how-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/linuxg.net\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.5.3"}};
+			!function(a,b,c){function d(a){var c,d,e,f=b.createElement("canvas"),g=f.getContext&&f.getContext("2d"),h=String.fromCharCode;if(!g||!g.fillText)return!1;switch(g.textBaseline="top",g.font="600 32px Arial",a){case"flag":return g.fillText(h(55356,56806,55356,56826),0,0),f.toDataURL().length>3e3;case"diversity":return g.fillText(h(55356,57221),0,0),c=g.getImageData(16,16,1,1).data,d=c[0]+","+c[1]+","+c[2]+","+c[3],g.fillText(h(55356,57221,55356,57343),0,0),c=g.getImageData(16,16,1,1).data,e=c[0]+","+c[1]+","+c[2]+","+c[3],d!==e;case"simple":return g.fillText(h(55357,56835),0,0),0!==g.getImageData(16,16,1,1).data[0];case"unicode8":return g.fillText(h(55356,57135),0,0),0!==g.getImageData(16,16,1,1).data[0]}return!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g,h,i;for(i=Array("simple","flag","unicode8","diversity"),c.supports={everything:!0,everythingExceptFlag:!0},h=0;h<i.length;h++)c.supports[i[h]]=d(i[h]),c.supports.everything=c.supports.everything&&c.supports[i[h]],"flag"!==i[h]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[i[h]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<link rel="stylesheet" href="http://linuxg.net/wp-content/cache/scripts/95443f7bed039bd0fcda24e8c0d4ed30.css" type="text/css" media="all" /> <!-- Cache! -->
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='base-style-css'  href='http://linuxg.net/wp-content/plugins/ads-inside-post-aipwp/admin/style.css?ver=1' type='text/css' media='screen' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+/* cookie-consent */
+var ctcc_vars = {"expiry":"30","method":"1","version":"1"};
+
+/* ]]> */
+</script>
+<script type="text/javascript" src="http://linuxg.net/wp-content/cache/scripts/4c14f5d5e601dd60670f2c76a5cc9433.js">/*Cache!*/</script>
+<link rel='https://api.w.org/' href='http://linuxg.net/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://linuxg.net/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://linuxg.net/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.5.3" />
+<link rel="canonical" href="http://linuxg.net/how-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives/" />
+<link rel='shortlink' href='http://linuxg.net/?p=40252' />
+<link rel="alternate" type="application/json+oembed" href="http://linuxg.net/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flinuxg.net%2Fhow-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://linuxg.net/wp-json/oembed/1.0/embed?url=http%3A%2F%2Flinuxg.net%2Fhow-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives%2F&#038;format=xml" />
+<style id="ctcc-css" type="text/css" media="screen">
+			#catapult-cookie-bar {
+				box-sizing: border-box;
+				max-height: 0;
+				opacity: 0;
+				z-index: 99999;
+				overflow: hidden;
+				color: #ddd;
+				position: fixed;
+				left: 0;
+				top: 0;
+				width: 100%;
+				background-color: #464646;
+			}
+			#catapult-cookie-bar a {
+				color: #fff;
+			}
+			button#catapultCookie {
+				background:;
+				color: ;
+				border: 0; padding: 6px 9px; border-radius: 3px;
+			}
+			#catapult-cookie-bar h3 {
+				color: #ddd;
+			}
+			.has-cookie-bar #catapult-cookie-bar {
+				opacity: 1;
+				max-height: 999px;
+				min-height: 30px;
+			}</style><script type="text/javascript">
+	window._wp_rp_static_base_url = 'https://wprp.zemanta.com/static/';
+	window._wp_rp_wp_ajax_url = "http://linuxg.net/wp-admin/admin-ajax.php";
+	window._wp_rp_plugin_version = '3.6';
+	window._wp_rp_post_id = '40252';
+	window._wp_rp_num_rel_posts = '5';
+	window._wp_rp_thumbnails = false;
+	window._wp_rp_post_title = 'How+To+Install+Sublime+Text+3+%28Build+3103%29+On+Ubuntu+16.04%2C+Ubuntu+15.10%2C+Ubuntu+14.04+And+Derivatives';
+	window._wp_rp_post_tags = ['linux+mint+17', 'ubuntu+15.10', 'linux+mint', 'ubuntu+14.04', 'how+to+install+sublime+text+3+', 'linux+mint+17.x', 'elementary+os+0.3', 'linux+mint+17.3', 'elementary+os', 'linux+mint+17.2', 'ubuntu+16.04', 'linux+mint+17.1', 'the+linux+and+unix+articles%21', 'html', '3', 'window', 'beta', 'css', 'free', 'event', 'mac', 'engin', 'file', 'ubuntu', 'hack', 'text', 'panel', 'javascript'];
+	window._wp_rp_promoted_content = false;
+</script>
+<script type="text/javascript" src="https://wprp.zemanta.com/static/js/loader.js?version=3.6" async></script>
+
+<!-- Using Simple Yearly Archive Plugin v1.7.4 | http://www.schloebe.de/wordpress/simple-yearly-archive-plugin/ // -->
+<!-- We need this for debugging -->
+<!-- Linux G  -->
+				<!-- WordPress Popular Posts v3.3.3 -->
+				<script type="text/javascript">//<![CDATA[
+
+					var sampling_active = 0;
+					var sampling_rate   = 100;
+					var do_request = false;
+
+					if ( !sampling_active ) {
+						do_request = true;
+					} else {
+						var num = Math.floor(Math.random() * sampling_rate) + 1;
+						do_request = ( 1 === num );
+					}
+
+					if ( do_request ) {
+
+						// Create XMLHttpRequest object and set variables
+						var xhr = ( window.XMLHttpRequest )
+						  ? new XMLHttpRequest()
+						  : new ActiveXObject( "Microsoft.XMLHTTP" ),
+						url = 'http://linuxg.net/wp-admin/admin-ajax.php',
+						params = 'action=update_views_ajax&token=0cd3526c5e&wpp_id=40252';
+						// Set request method and target URL
+						xhr.open( "POST", url, true );
+						// Set request header
+						xhr.setRequestHeader( "Content-type", "application/x-www-form-urlencoded" );
+						// Hook into onreadystatechange
+						xhr.onreadystatechange = function() {
+							if ( 4 === xhr.readyState && 200 === xhr.status ) {
+								if ( window.console && window.console.log ) {
+									window.console.log( xhr.responseText );
+								}
+							}
+						};
+						// Send request
+						xhr.send( params );
+
+					}
+
+				//]]></script>
+				<!-- End WordPress Popular Posts v3.3.3 -->
+				
+<!--WP Socializer v2.4.9.8 - Scripts Loader-->
+<script type="text/javascript">
+var wu=["https://connect.facebook.net/en_US/all.js#xfbml=1"],wc=1;
+function wpsrload(){ for(var i=0;i<wc;i++){wpsrasync(wu[i]);} }
+function wpsrasync(u){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.src=u;var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(a,s);} wpsrload();
+</script>
+<!--End WP Socializer - Scripts Loader-->
+</head>
+
+<body class="single single-post postid-40252 single-format-standard">
+                 
+<div id="container" class="hfeed">
+
+
+
+       
+<div id="header">
+
+           
+       
+	
+    
+           
+
+
+        <div id="logo">
+            <span class="site-name"><a href="http://linuxg.net/" title="LinuxG.net" rel="home">LinuxG.net</a></span>
+            <span class="site-description">The Linux and Unix Geekster!</span>
+        </div><!-- end of #logo -->  
+
+           
+        			    
+				<ul id="menu-linux-geekster" class="menu"><li id="menu-item-2415" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2415"><a href="http://linuxg.net/">Linux Geekster</a></li>
+<li id="menu-item-2414" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2414"><a href="http://linuxg.net/about/">About</a></li>
+<li id="menu-item-9382" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9382"><a href="http://linuxg.net/postlist">Post List</a></li>
+<li id="menu-item-9450" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9450"><a href="http://geekbits.org">Geekbits</a></li>
+<li id="menu-item-2413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2413"><a href="http://linuxg.net/contact/">Contact</a></li>
+<li id="menu-item-9451" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9451"><a></a></li>
+</ul>                
+            
+
+    </div><!-- end of #header -->
+        
+	    <div id="wrapper" class="clearfix">
+
+
+
+
+<div style="margin:20px 0 0 0;" <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Sub_Meniu -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-9922031711745112"
+     data-ad-slot="4489821152"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+    
+        <div id="content" class="grid col-620">
+        
+
+		        
+        
+          
+            <div id="post-40252" class="post-40252 post type-post status-publish format-standard hentry category-linux-unix tag-elementary-os tag-elementary-os-0-3 tag-how-to-install-sublime-text-3-on-elementary-os tag-how-to-install-sublime-text-3-on-linux-mint tag-how-to-install-sublime-text-3-on-ubuntu tag-linux-mint tag-linux-mint-17 tag-linux-mint-17-1 tag-linux-mint-17-2 tag-linux-mint-17-3 tag-linux-mint-17-x tag-ubuntu-14-04 tag-ubuntu-15-10 tag-ubuntu-16-04">
+	    <h1 class="title single-title entry-title">How To Install Sublime Text 3 (Build 3103) On Ubuntu 16.04, Ubuntu 15.10, Ubuntu 14.04 And Derivatives</h1>
+
+
+
+                <div class="post-meta">
+                <span class="meta-prep meta-prep-author posted">Posted on </span><a href="http://linuxg.net/how-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives/" title="12:17 pm" rel="bookmark"><span class="timestamp">February 26, 2016</span></a><span class="byline"> by </span><span class="author vcard"><a class="url fn n" href="http://linuxg.net/author/root/" title="View all posts by Geekster">Geekster</a></span>                
+				                            <span class="comments-link">
+                        <span class="mdash">&mdash;</span>
+                    <a href="http://linuxg.net/how-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives/#respond">No Comments &darr;</a>                        </span>
+                     
+                </div><!-- end of .post-meta -->
+                                
+                <div class="post-entry">
+
+
+<div style="clear:both;"></div>
+
+
+
+                 
+
+
+
+<div style="clear:both;"></div>
+
+
+
+         <p>As you may know, <strong>Sublime Text 3 </strong>is a lightweight, multi-platform, text editor. It is installable on Ubuntu, Windows and Mac OS X. Sublime Text has a proprietary licence, but the application can also be used for free, without needing to do reverse engineer hacking. Those who want to support the developerâ€™s work can buy Sublime Text for $70.</p>
+<!-- Quick Adsense WordPress Plugin: http://quicksense.net/ -->
+<div style="float:none;margin:10px 0 10px 0;text-align:center;">
+<div class="cfmonitor"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- anunt_articol -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-9922031711745112"
+     data-ad-slot="3277962754"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+</div>
+
+<p>Sublime Text 3 is still a beta, the latest version available being <strong>Sublime Text 3 Build 3103</strong>, which comes with <a href="http://www.sublimetext.com/3" target="_blank">the below changes</a>:</p>
+<ul>
+<li>Added new Syntax Definition file format, .sublime-syntax</li>
+<li>Added a custom regex engine that matches multiple regexps in parallel, for faster file loading and indexing</li>
+<li>Improved Unicode support, including combining character rendering, character classification in regex searches, and case insensitivity in Goto</li>
+<li>Anything matching</li>
+<li>Packages are now on GitHub</li>
+<li>Incorporates many community provided improvements to the above packages, with significant improvements to HTML, CSS, JavaScript, Go, D and SQL</li>
+<li>Added Panel Switcher to status bar</li>
+<li>Better handling of troublesome files during indexing</li>
+<li>Improved file change detection</li>
+<li>Added &#8220;Profile Events&#8221; to the Command Palette, to help identify slow plugins</li>
+<li>Build Systems may now define a list of file name wildcard patterns to trigger on, via the file_patterns key prompt_open_file and related commands now accept an initial_directory argument</li>
+<li>Improved indenting behavior when indent_to_bracket is enabled</li>
+<li>Spell Checker now reads from manually edited user preferences on the fly</li>
+<li>Stability improvements for Find in Files when using regular expressions that result in significant backtracking</li>
+<li>Fixed file truncation when using hexadecimal encoding</li>
+<li>Fixed brackets in strings influencing auto indent</li>
+<li>Fixed inconsistencies in Goto Anything when selecting symbols</li>
+<li>Fixed tab completion regression in 3081, where h1..h6 HTML completions were not triggering</li>
+<li>Fixed Goto Definition command not working when placed in a submenu</li>
+<li>Fixed Emoji &amp; Symbols popup failing to insert text in some cases</li>
+<li>Added support for inserting characters from outside of the BMP<br />
+ctrl+alt+p is no longer bound by default, due to compatibility issues with some keyboard layouts</li>
+<li>Linux: Fixed a file permission issue when running without &#8211;wait</li>
+<li>Linux: crash_reporter is statically linked, improving system compatibility</li>
+<li>API: Added View.is_auto_complete_visible()</li>
+<li>API: Added find_output_panel(), destroy_output_panel(), active_panel() and panels()</li>
+<li>API: Added create_output_panel() now accepts an optional parameter, &#8220;unlisted&#8221;</li>
+</ul>
+<p><img class="decoded aligncenter" src="http://i.imgur.com/gLryKZi.png" alt="how to install Sublime Text 3 (Build 3083) on Ubuntu 15.04 Vivid Vervet, Ubuntu 14.10 Utopic Unicorn, Ubuntu 14.04 Trusty Tahr, Ubuntu 12.04 Precise Pangolin, Linux Mint 17.1 Rebecca, Linux Mint 17 Qiana, Linux Mint 13 Maya, Pinguy OS 14.04, Elementary OS 0.3 Freya, Elementary OS 0.2 Luna, Peppermint Five, Deepin 2014, LXLE 14.04, Linux Lite 2" width="643" height="437" /></p>
+<h3>Installation instructions:</h3>
+<p>In order to successfully install Sublime Text 3 on Ubuntu 16.04 Xenial Xerus, Ubuntu 15.10 Wily Werewolf, Ubuntu 14.04 Trusty Tahr, Linux Mint 17.x, Elementary OS 0.3 Freya and other Ubuntu derivative systems, you have to add the PPA to your system, update the local repository index and install the sublime-text-installer:</p>
+<p><code>$ sudo add-apt-repository ppa:webupd8team/sublime-text-3<br />
+$ sudo apt-get update<br />
+$ sudo apt-get install sublime-text-installer</code></p>
+<p>Optional, to remove sublime text, do:</p>
+<p><code>$ sudo apt-get remove sublime-text-installer</code></p>
+<script id="mNCC" language="javascript">  medianet_width='600';  medianet_height= '250';  medianet_crid='665124074';  </script>  <script id="mNSC" src="http://contextual.media.net/nmedianet.js?cid=8CUEU1J6Y" language="javascript"></script> 
+<div style="font-size:0px;height:0px;line-height:0px;margin:0;padding:0;clear:both"></div>
+<div class="wp_rp_wrap  wp_rp_plain" id="wp_rp_first"><div class="wp_rp_content"><h3 class="related_post_title">Related Posts</h3><ul class="related_post wp_rp"><li data-position="0" data-poid="in-40263" data-post-type="none" ><a href="http://linuxg.net/how-to-install-sublime-text-3-build-3083-on-the-most-popular-linux-systems/" class="wp_rp_title">How To Install Sublime Text 3 (Build 3103) On The Most Popular Linux Systems</a></li><li data-position="1" data-poid="in-32961" data-post-type="none" ><a href="http://linuxg.net/how-to-install-sublime-text-3-build-3065-on-the-most-popular-linux-systems/" class="wp_rp_title">How To Install Sublime Text 3 (Build 3065) On The Most Popular Linux Systems</a></li><li data-position="2" data-poid="in-46908" data-post-type="none" ><a href="http://linuxg.net/install-sublime-text-on-ubuntu/" class="wp_rp_title">Sublime Text 3 Build 3083 Is Now Available Via PPA For All The Supported Ubuntu Systems</a></li><li data-position="3" data-poid="in-37728" data-post-type="none" ><a href="http://linuxg.net/how-to-install-sublime-text-3-build-3065-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives/" class="wp_rp_title">How To Install Sublime Text 3 (Build 3065) On Ubuntu 15.04, Ubuntu 14.10, Ubuntu 14.04, Ubuntu 12.04 And Derivatives</a></li><li data-position="4" data-poid="in-33744" data-post-type="none" ><a href="http://linuxg.net/five-text-editors-for-programmers-available-for-ubuntu-14-04-and-derivatives/" class="wp_rp_title">Five Text Editors For Programmers, Available For Ubuntu 14.04 And Derivatives</a></li></ul></div></div>
+<h3>Share and Enjoy</h3>
+
+<!-- Start WP Socializer - Social Buttons - Output -->
+<div class="wp-socializer 32px">
+<ul class="wp-socializer-opacity columns-no">
+ <li><a href="http://twitter.com/home?status=How+To+Install+Sublime+Text+3+%28Build+3103%29+On+Ubuntu+16.04%2C+Ubuntu+15.10%2C+Ubuntu+14.04+And+Derivatives%20-%20http%3A%2F%2Flinuxg.net%2Fhow-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives%2F%20" title="Tweet this !" target="_blank" rel="nofollow"><img src="http://linuxg.net/wp-content/plugins/wp-socializer/public/social-icons/wp-socializer-sprite-mask-32px.gif" alt="Twitter" style="width:32px; height:32px; background: transparent url(http://linuxg.net/wp-content/plugins/wp-socializer/public/social-icons/wp-socializer-sprite-32px.png?v1) no-repeat; background-position:0px -1386px; border:0;"/></a></li> 
+
+ <li><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Flinuxg.net%2Fhow-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives%2F&amp;t=How+To+Install+Sublime+Text+3+%28Build+3103%29+On+Ubuntu+16.04%2C+Ubuntu+15.10%2C+Ubuntu+14.04+And+Derivatives" title="Share this on Facebook" target="_blank" rel="nofollow"><img src="http://linuxg.net/wp-content/plugins/wp-socializer/public/social-icons/wp-socializer-sprite-mask-32px.gif" alt="Facebook" style="width:32px; height:32px; background: transparent url(http://linuxg.net/wp-content/plugins/wp-socializer/public/social-icons/wp-socializer-sprite-32px.png?v1) no-repeat; background-position:0px -330px; border:0;"/></a></li> 
+
+ <li><a href="https://plus.google.com/share?url=http%3A%2F%2Flinuxg.net%2Fhow-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives%2F" title="Share this on Google Plus" target="_blank" rel="nofollow"><img src="http://linuxg.net/wp-content/plugins/wp-socializer/public/social-icons/wp-socializer-sprite-mask-32px.gif" alt="Google Plus" style="width:32px; height:32px; background: transparent url(http://linuxg.net/wp-content/plugins/wp-socializer/public/social-icons/wp-socializer-sprite-32px.png?v1) no-repeat; background-position:0px -495px; border:0;"/></a></li> 
+
+ <li><a href="mailto:?to=&subject=How+To+Install+Sublime+Text+3+%28Build+3103%29+On+Ubuntu+16.04%2C+Ubuntu+15.10%2C+Ubuntu+14.04+And+Derivatives&body=As+you+may+know%2C+Sublime+Text+3+is+a+lightweight%2C+multi-platform%2C+text+editor.+It+is+installable+on+Ubuntu%2C+Windows+and+Mac+OS+X.+Sublime+Text+has+a+proprietary+licence%2C+but+the+application+can+also+be+used+for+free%2C+without+needing+to+do+reverse+eng%20-%20http://linuxg.net/how-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives/" title="Email this" target="_blank" rel="nofollow"><img src="http://linuxg.net/wp-content/plugins/wp-socializer/public/social-icons/wp-socializer-sprite-mask-32px.gif" alt="Email" style="width:32px; height:32px; background: transparent url(http://linuxg.net/wp-content/plugins/wp-socializer/public/social-icons/wp-socializer-sprite-32px.png?v1) no-repeat; background-position:0px -297px; border:0;"/></a></li> 
+
+ <li><a href="http://linuxg.net/feed/rss/" title="Subscribe to RSS" target="_blank" rel="nofollow"><img src="http://linuxg.net/wp-content/plugins/wp-socializer/public/social-icons/wp-socializer-sprite-mask-32px.gif" alt="RSS" style="width:32px; height:32px; background: transparent url(http://linuxg.net/wp-content/plugins/wp-socializer/public/social-icons/wp-socializer-sprite-32px.png?v1) no-repeat; background-position:0px -1221px; border:0;"/></a></li> 
+</ul> 
+<div class="wp-socializer-clearer"></div></div>
+<!-- End WP Socializer - Social Buttons - Output -->
+
+
+                                        
+
+
+                                    </div><!-- end of .post-entry -->
+
+
+
+
+                <div class="navigation">
+			        <div class="previous">&#8249; <a href="http://linuxg.net/how-to-install-sublime-text-3-build-3083-on-the-most-popular-linux-systems/" rel="prev">How To Install Sublime Text 3 (Build 3103) On The Most Popular Linux Systems</a></div>
+                    <div class="next"><a href="http://linuxg.net/install-flightgear-on-ubuntu/" rel="next">FlightGear 2016.1.1 Is Now Available For Ubuntu 16.04, Ubuntu 15.10, Ubuntu 14.04 Via PPA</a> &#8250;</div>
+		        </div><!-- end of .navigation -->
+ 
+
+               
+                <div class="post-data">
+				    Tagged with: <a href="http://linuxg.net/tag/elementary-os/" rel="tag">elementary os</a>, <a href="http://linuxg.net/tag/elementary-os-0-3/" rel="tag">elementary os 0.3</a>, <a href="http://linuxg.net/tag/how-to-install-sublime-text-3-on-elementary-os/" rel="tag">how to install sublime text 3 on elementary os</a>, <a href="http://linuxg.net/tag/how-to-install-sublime-text-3-on-linux-mint/" rel="tag">how to install sublime text 3 on linux mint</a>, <a href="http://linuxg.net/tag/how-to-install-sublime-text-3-on-ubuntu/" rel="tag">how to install sublime text 3 on ubuntu</a>, <a href="http://linuxg.net/tag/linux-mint/" rel="tag">linux mint</a>, <a href="http://linuxg.net/tag/linux-mint-17/" rel="tag">linux mint 17</a>, <a href="http://linuxg.net/tag/linux-mint-17-1/" rel="tag">linux mint 17.1</a>, <a href="http://linuxg.net/tag/linux-mint-17-2/" rel="tag">linux mint 17.2</a>, <a href="http://linuxg.net/tag/linux-mint-17-3/" rel="tag">linux mint 17.3</a>, <a href="http://linuxg.net/tag/linux-mint-17-x/" rel="tag">linux mint 17.x</a>, <a href="http://linuxg.net/tag/ubuntu-14-04/" rel="tag">ubuntu 14.04</a>, <a href="http://linuxg.net/tag/ubuntu-15-10/" rel="tag">ubuntu 15.10</a>, <a href="http://linuxg.net/tag/ubuntu-16-04/" rel="tag">ubuntu 16.04</a><br /> 
+					Posted in <a href="http://linuxg.net/category/linux-unix/">The Linux and Unix Articles!</a> 
+                </div><!-- end of .post-data -->             
+
+
+
+            <div class="post-edit"></div>             
+            </div><!-- end of #post-40252 -->
+            
+			
+
+
+
+
+    				<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/how-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives/#respond" style="display:none;">Cancel reply</a></small></h3>				<form action="http://linuxg.net/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+					<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" aria-required="true" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name</label> <span class="required">*</span><input id="author" name="author" type="text" value="" size="30" /></p>
+<p class="comment-form-email"><label for="email">E-mail</label> <span class="required">*</span><input id="email" name="email" type="text" value="" size="30" /></p>
+<p class="comment-form-url"><label for="url">Website</label><input id="url" name="url" type="text" value="" size="30" /></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='40252' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="854d0a72c2" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="168"/></p>				</form>
+					</div><!-- #respond -->
+		
+
+                
+         
+
+
+
+        
+	      
+      
+        </div><!-- end of #content -->
+
+        <div id="widgets" class="grid col-300 fit">
+                    
+            <div id="text-5" class="widget-wrapper widget_text">			<div class="textwidget"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Sidebar_linuxg -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-9922031711745112"
+     data-ad-slot="8141291553"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+		</div><div id="search-2" class="widget-wrapper widget_search">	<form method="get" id="searchform" action="http://linuxg.net/">
+		<input type="text" class="field" name="s" id="s" placeholder="search here &hellip;" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Go"  />
+	</form></div><div id="text-2" class="widget-wrapper widget_text"><div class="widget-title">Subscribe</div>			<div class="textwidget"><form action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=Linuxg', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><p><input type="text" style="width:140px" name="email"/><input type="hidden" value="Linuxg" name="uri"/>&nbsp;&nbsp;<input type="hidden" name="loc" value="en_US"/><input type="submit" value="Subscribe" /></p></form>
+Subscribe to get the latest Linux news and how to guides directly on your e-mail!</div>
+		</div><div id="text-12" class="widget-wrapper widget_text">			<div class="textwidget"><div class="cfmonitor"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- linksidebar -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:200px;height:90px"
+     data-ad-client="ca-pub-9922031711745112"
+     data-ad-slot="1794522752"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+		</div>		<div id="recent-posts-3" class="widget-wrapper widget_recent_entries">		<div class="widget-title">Recent posts</div>		<ul>
+					<li>
+				<a href="http://linuxg.net/install-snapcraft-on-ubuntu/">How To Install Snapcraft 2.17 On Ubuntu, Linux Mint And Elementary OS Systems</a>
+						</li>
+					<li>
+				<a href="http://linuxg.net/install-gimp-on-ubuntu/">GIMP 2.8.18 Has Been Released</a>
+						</li>
+					<li>
+				<a href="http://linuxg.net/install-wireshark-on-ubuntu/">Wireshark 2.2.0 Has Been Released, Bringing A Big List Of Changes</a>
+						</li>
+					<li>
+				<a href="http://linuxg.net/install-sayonara-player-on-ubuntu/">How To Install Sayonara 0.9.1 On Ubuntu, Linux Mint, Elementary OS And Other Ubuntu Derivative Systems</a>
+						</li>
+					<li>
+				<a href="http://linuxg.net/install-stellarium-on-ubuntu-2/">How To Install Stellarium 0.15.0 On Ubuntu And Derivative Systems</a>
+						</li>
+					<li>
+				<a href="http://linuxg.net/install-wine-1-9-on-ubuntu/">How To Install Wine 1.9.19 on Ubuntu</a>
+						</li>
+					<li>
+				<a href="http://linuxg.net/install-qbittorrent-on-ubuntu/">How To Install qBittorrent 3.3.7 On Ubuntu 16.04, Ubuntu 15.10 And Ubuntu 14.04 Systems</a>
+						</li>
+				</ul>
+		</div>		<div id="text-11" class="widget-wrapper widget_text">			<div class="textwidget"><script id="mNCC" language="javascript">  medianet_width='336';  medianet_height= '280';  medianet_crid='787703320';  </script>  <script id="mNSC" src="http://contextual.media.net/nmedianet.js?cid=8CUEU1J6Y" language="javascript"></script> </div>
+		</div>
+<!-- WordPress Popular Posts Plugin v3.3.3 [W] [weekly] [views] [regular] -->
+<div id="wpp-2" class="widget-wrapper popular-posts">
+<div class="widget-title">Last 7 Days Most Popular Posts</div>
+<ul class="wpp-list">
+<li class="current"><a  title="How To Install Sublime Text 3 (Build 3103) On Ubuntu 16.04, Ubuntu 15.10, Ubuntu 14.04 And Derivatives" class="wpp-post-title" target="_self">How To Install Sublime Text 3 (Build 3103) On Ubuntu 16.04, Ubuntu 15.10, Ubuntu 14.04 And Derivatives</a> </li>
+<li><a href="http://linuxg.net/install-wine-1-9-on-ubuntu/" title="How To Install Wine 1.9.19 on Ubuntu" class="wpp-post-title" target="_self">How To Install Wine 1.9.19 on Ubuntu</a> </li>
+<li><a href="http://linuxg.net/how-to-find-out-info-about-users-in-linux/" title="How to find out information about users in Linux" class="wpp-post-title" target="_self">How to find out information about users in Linux</a> </li>
+<li><a href="http://linuxg.net/how-to-set-the-setuid-and-setgid-bit-for-files-in-linux-and-unix/" title="How to set the SetUID and SetGID bit for files in Linux and Unix" class="wpp-post-title" target="_self">How to set the SetUID and SetGID bit for files in Linux and Unix</a> </li>
+<li><a href="http://linuxg.net/how-to-install-gradle-2-1-on-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives/" title="How To Install Gradle 2.1 On Ubuntu 14.10, Ubuntu 14.04, Ubuntu 12.04 And Derivatives" class="wpp-post-title" target="_self">How To Install Gradle 2.1 On Ubuntu 14.10, Ubuntu 14.04, Ubuntu 12.04 And Derivatives</a> </li>
+
+</ul>
+</div>
+<!-- End WordPress Popular Posts Plugin v3.3.3 -->
+<div id="text-10" class="widget-wrapper widget_text">			<div class="textwidget"><script id="mNCC" language="javascript">  medianet_width='336';  medianet_height= '280';  medianet_crid='787703320';  </script>  <script id="mNSC" src="http://contextual.media.net/nmedianet.js?cid=8CUEU1J6Y" language="javascript"></script> </div>
+		</div><div id="tag_cloud-3" class="widget-wrapper widget_tag_cloud"><div class="widget-title">Tags</div><div class="tagcloud"><a href='http://linuxg.net/tag/canonical/' class='tag-link-2921 tag-link-position-1' title='484 topics' style='font-size: 10.1724137931pt;'>canonical</a>
+<a href='http://linuxg.net/tag/centos/' class='tag-link-24 tag-link-position-2' title='467 topics' style='font-size: 9.93103448276pt;'>centos</a>
+<a href='http://linuxg.net/tag/debian/' class='tag-link-55 tag-link-position-3' title='1,044 topics' style='font-size: 14.1551724138pt;'>debian</a>
+<a href='http://linuxg.net/tag/debian-wheezy/' class='tag-link-735 tag-link-position-4' title='392 topics' style='font-size: 8.96551724138pt;'>debian wheezy</a>
+<a href='http://linuxg.net/tag/deepin/' class='tag-link-3313 tag-link-position-5' title='1,527 topics' style='font-size: 16.0862068966pt;'>deepin</a>
+<a href='http://linuxg.net/tag/deepin-2014/' class='tag-link-9432 tag-link-position-6' title='1,236 topics' style='font-size: 15pt;'>deepin 2014</a>
+<a href='http://linuxg.net/tag/elementary-os/' class='tag-link-4635 tag-link-position-7' title='2,850 topics' style='font-size: 19.3448275862pt;'>elementary os</a>
+<a href='http://linuxg.net/tag/elementary-os-0-2/' class='tag-link-6293 tag-link-position-8' title='699 topics' style='font-size: 12.1034482759pt;'>elementary os 0.2</a>
+<a href='http://linuxg.net/tag/elementary-os-0-2-luna/' class='tag-link-5072 tag-link-position-9' title='645 topics' style='font-size: 11.6206896552pt;'>elementary os 0.2 luna</a>
+<a href='http://linuxg.net/tag/elementary-os-0-3/' class='tag-link-8126 tag-link-position-10' title='1,509 topics' style='font-size: 16.0862068966pt;'>elementary os 0.3</a>
+<a href='http://linuxg.net/tag/fedora/' class='tag-link-66 tag-link-position-11' title='831 topics' style='font-size: 12.9482758621pt;'>fedora</a>
+<a href='http://linuxg.net/tag/kernel/' class='tag-link-1848 tag-link-position-12' title='336 topics' style='font-size: 8.24137931034pt;'>kernel</a>
+<a href='http://linuxg.net/tag/linux/' class='tag-link-90 tag-link-position-13' title='3,793 topics' style='font-size: 20.9137931034pt;'>linux</a>
+<a href='http://linuxg.net/tag/linux-lite/' class='tag-link-9199 tag-link-position-14' title='1,493 topics' style='font-size: 15.9655172414pt;'>linux lite</a>
+<a href='http://linuxg.net/tag/linux-lite-2-0/' class='tag-link-9200 tag-link-position-15' title='1,247 topics' style='font-size: 15.1206896552pt;'>linux lite 2.0</a>
+<a href='http://linuxg.net/tag/linux-mint/' class='tag-link-397 tag-link-position-16' title='3,686 topics' style='font-size: 20.7931034483pt;'>linux mint</a>
+<a href='http://linuxg.net/tag/linux-mint-13/' class='tag-link-792 tag-link-position-17' title='1,862 topics' style='font-size: 17.1724137931pt;'>linux mint 13</a>
+<a href='http://linuxg.net/tag/linux-mint-14/' class='tag-link-982 tag-link-position-18' title='1,132 topics' style='font-size: 14.5172413793pt;'>linux mint 14</a>
+<a href='http://linuxg.net/tag/linux-mint-15/' class='tag-link-1696 tag-link-position-19' title='1,008 topics' style='font-size: 13.9137931034pt;'>linux mint 15</a>
+<a href='http://linuxg.net/tag/linux-mint-16/' class='tag-link-2656 tag-link-position-20' title='1,157 topics' style='font-size: 14.6379310345pt;'>linux mint 16</a>
+<a href='http://linuxg.net/tag/linux-mint-17/' class='tag-link-8045 tag-link-position-21' title='1,666 topics' style='font-size: 16.5689655172pt;'>linux mint 17</a>
+<a href='http://linuxg.net/tag/linux-mint-17-1/' class='tag-link-11110 tag-link-position-22' title='739 topics' style='font-size: 12.3448275862pt;'>linux mint 17.1</a>
+<a href='http://linuxg.net/tag/linux-news/' class='tag-link-2092 tag-link-position-23' title='1,179 topics' style='font-size: 14.7586206897pt;'>linux news</a>
+<a href='http://linuxg.net/tag/lxle/' class='tag-link-8699 tag-link-position-24' title='1,672 topics' style='font-size: 16.5689655172pt;'>lxle</a>
+<a href='http://linuxg.net/tag/lxle-14-04/' class='tag-link-8701 tag-link-position-25' title='1,363 topics' style='font-size: 15.4827586207pt;'>lxle 14.04</a>
+<a href='http://linuxg.net/tag/mageia/' class='tag-link-796 tag-link-position-26' title='421 topics' style='font-size: 9.44827586207pt;'>mageia</a>
+<a href='http://linuxg.net/tag/news/' class='tag-link-1298 tag-link-position-27' title='1,262 topics' style='font-size: 15.1206896552pt;'>news</a>
+<a href='http://linuxg.net/tag/openmandriva/' class='tag-link-3280 tag-link-position-28' title='325 topics' style='font-size: 8pt;'>openmandriva</a>
+<a href='http://linuxg.net/tag/opensuse/' class='tag-link-338 tag-link-position-29' title='653 topics' style='font-size: 11.7413793103pt;'>opensuse</a>
+<a href='http://linuxg.net/tag/pear-os/' class='tag-link-5743 tag-link-position-30' title='554 topics' style='font-size: 10.775862069pt;'>pear os</a>
+<a href='http://linuxg.net/tag/pear-os-8/' class='tag-link-5744 tag-link-position-31' title='403 topics' style='font-size: 9.20689655172pt;'>pear os 8</a>
+<a href='http://linuxg.net/tag/peppermint/' class='tag-link-3107 tag-link-position-32' title='1,523 topics' style='font-size: 16.0862068966pt;'>peppermint</a>
+<a href='http://linuxg.net/tag/peppermint-five/' class='tag-link-9037 tag-link-position-33' title='1,236 topics' style='font-size: 15pt;'>peppermint five</a>
+<a href='http://linuxg.net/tag/pinguy-os/' class='tag-link-750 tag-link-position-34' title='1,786 topics' style='font-size: 16.9310344828pt;'>pinguy os</a>
+<a href='http://linuxg.net/tag/pinguy-os-14-04/' class='tag-link-8313 tag-link-position-35' title='1,411 topics' style='font-size: 15.724137931pt;'>pinguy os 14.04</a>
+<a href='http://linuxg.net/tag/ubuntu/' class='tag-link-147 tag-link-position-36' title='4,691 topics' style='font-size: 22pt;'>ubuntu</a>
+<a href='http://linuxg.net/tag/ubuntu-12-04/' class='tag-link-710 tag-link-position-37' title='2,088 topics' style='font-size: 17.775862069pt;'>ubuntu 12.04</a>
+<a href='http://linuxg.net/tag/ubuntu-12-10/' class='tag-link-920 tag-link-position-38' title='1,319 topics' style='font-size: 15.3620689655pt;'>ubuntu 12.10</a>
+<a href='http://linuxg.net/tag/ubuntu-13-04/' class='tag-link-941 tag-link-position-39' title='1,253 topics' style='font-size: 15.1206896552pt;'>ubuntu 13.04</a>
+<a href='http://linuxg.net/tag/ubuntu-13-10/' class='tag-link-1750 tag-link-position-40' title='1,438 topics' style='font-size: 15.8448275862pt;'>ubuntu 13.10</a>
+<a href='http://linuxg.net/tag/ubuntu-14-04/' class='tag-link-3786 tag-link-position-41' title='2,262 topics' style='font-size: 18.1379310345pt;'>ubuntu 14.04</a>
+<a href='http://linuxg.net/tag/ubuntu-14-10/' class='tag-link-3787 tag-link-position-42' title='1,013 topics' style='font-size: 14.0344827586pt;'>ubuntu 14.10</a>
+<a href='http://linuxg.net/tag/ubuntu-15-04/' class='tag-link-7321 tag-link-position-43' title='548 topics' style='font-size: 10.775862069pt;'>ubuntu 15.04</a>
+<a href='http://linuxg.net/tag/ubuntu-touch/' class='tag-link-3033 tag-link-position-44' title='363 topics' style='font-size: 8.60344827586pt;'>ubuntu touch</a>
+<a href='http://linuxg.net/tag/unix/' class='tag-link-148 tag-link-position-45' title='3,735 topics' style='font-size: 20.7931034483pt;'>unix</a></div>
+</div>
+                </div><!-- end of #widgets --><script type='text/javascript'>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-23961180-2']);
+_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+    </div><!-- end of #wrapper -->
+    </div><!-- end of #container -->
+
+<div id="footer" class="clearfix">
+
+    <div id="footer-wrapper">
+    
+        <div class="grid col-940">
+        
+        <div class="grid col-540">
+		         </div><!-- end of col-540 -->
+         
+         <div class="grid col-380 fit">
+         <ul class="social-icons"></ul><!-- end of .social-icons -->         </div><!-- end of col-380 fit -->
+         
+         </div><!-- end of col-940 -->
+                             
+        
+       
+        
+        <div class="scroll-top">  &copy; 2016<a href="http://linuxg.net/" title="LinuxG.net">
+                LinuxG.net</div>
+        
+       
+        
+    </div><!-- end #footer-wrapper -->
+    
+</div><!-- end #footer -->
+
+<script type="text/javascript" src="http://linuxg.net/wp-content/cache/scripts/4038f352f2656dbb76bc567794be1167.js">/*Cache!*/</script>
+<script type='text/javascript' src='http://linuxg.net/wp-content/plugins/akismet/_inc/form.js?ver=3.1.10'></script>
+
+			
+			<script type="text/javascript">
+				jQuery(document).ready(function($){
+					
+					if(!catapultReadCookie("catAccCookies")){ // If the cookie has not been set then show the bar
+						$("html").addClass("has-cookie-bar");
+						$("html").addClass("cookie-bar-top-bar");
+						$("html").addClass("cookie-bar-bar");
+						
+							// Wait for the animation on the html to end before recalculating the required top margin
+							$("html").on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(e) {
+								// code to execute after transition ends
+								var barHeight = $('#catapult-cookie-bar').outerHeight();
+								$("html").css("margin-top",barHeight);
+								$("body.admin-bar").css("margin-top",barHeight-32); // Push the body down if the admin bar is active
+							});
+						
+					}
+					
+					
+					
+				});
+			</script>
+			
+		<div id="catapult-cookie-bar" class=""><div class="ctcc-inner "><span class="ctcc-left-side">This site uses cookies:  <a tabindex=1 target="_blank" href="http://linuxg.net/how-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives/">Find out more.</a></span><span class="ctcc-right-side"><button id="catapultCookie" tabindex=1 onclick="catapultAcceptCookies();">Okay, thanks</button></span></div><!-- custom wrapper class --></div><!-- #catapult-cookie-bar --><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23961180-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>ˆ
+˜ö0      Wß¸`Wß¸z<èØT       ƒ    :http://linuxg.net/how-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives/ necko:classified 1 request-method GET response-head HTTP/1.1 200 OK
+Via: 1.1 ISA01TMG
+Date: Mon, 19 Sep 2016 10:05:20 GMT
+Content-Type: text/html; charset=UTF-8
+Server: Apache/2.2.29 (Unix) mod_ssl/2.2.29 OpenSSL/1.0.1e-fips mod_bwlimited/1.4 mod_fcgid/2.3.9
+X-Powered-By: PHP/5.5.23
+X-Pingback: http://linuxg.net/xmlrpc.php
+Link: <http://linuxg.net/wp-json/>; rel="https://api.w.org/", <http://linuxg.net/?p=40252>; rel=shortlink
+ charset UTF-8 uncompressed-len 0 predictor::resource-count 45 predictor::http://linuxg.net/wp-content/cache/scripts/95443f7bed039bd0fcda24e8c0d4ed30.css 1,1,1474279520,4097 predictor::http://linuxg.net/wp-content/plugins/ads-inside-post-aipwp/admin/style.css?ver=1 1,1,1474279520,4097 predictor::http://linuxg.net/wp-content/cache/scripts/4c14f5d5e601dd60670f2c76a5cc9433.js 1,1,1474279520,4097 predictor::https://wprp.zemanta.com/static/js/loader.js?version=3.6 1,1,1474279520,4097 predictor::http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js 1,1,1474279520,4097 predictor::http://linuxg.net/wp-includes/js/wp-emoji-release.min.js?ver=4.5.3 1,1,1474279520,4097 predictor::http://i.imgur.com/gLryKZi.png 1,1,1474279520,4097 predictor::http://contextual.media.net/nmedianet.js?cid=8CUEU1J6Y 1,1,1474279520,4097 predictor::http://linuxg.net/wp-content/plugins/wp-socializer/public/social-icons/wp-socializer-sprite-mask-32px.gif 1,1,1474279520,4097 predictor::http://linuxg.net/wp-content/cache/scripts/4038f352f2656dbb76bc567794be1167.js 1,1,1474279520,4097 predictor::http://linuxg.net/wp-content/plugins/akismet/_inc/form.js?ver=3.1.10 1,1,1474279520,4097 predictor::https://connect.facebook.net/en_US/all.js#xfbml=1 1,1,1474279520,4097 predictor::http://contextual.media.net/px.gif?ch=1&rn=1 1,1,1474279520,4097 predictor::http://s.mnet-ad.net/px.gif?ch=2&rn=1 1,1,1474279520,4097 predictor::http://contextual.media.net/fcmdynet.js?&cid=8CUEU1J6Y&cpcd=Sq0Uxunv1IyJXdSJQ_LQ_g%3D%3D&crid=665124074&size=600x250&cc=DE&vif=1&requrl=http%3A%2F%2Flinuxg.net%2Fhow-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives%2F&kwrf=http%3A%2F%2Fwww.google.de&vi=1474279521344896422&lw=1&ugd=4&re=1 1,1,1474279520,4097 predictor::http://qsearch.media.net/bping.php?cid=8CUEU1J6Y&crid=665124074&vi=1474279521344896422&ugd=4&lf=6&requrl=http%3A%2F%2Flinuxg.net%2Fhow-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives%2F&kwrf=http%3A%2F%2Fwww.google.de&r=1474279521476&hvsid=00001474279521472023716052028742 1,1,1474279520,4097 predictor::https://pagead2.googlesyndication.com/pub-config/r20160601/ca-pub-9922031711745112.js 1,1,1474279520,4097 predictor::http://pagead2.googlesyndication.com/pagead/js/r20160915/r20160727/show_ads_impl.js 1,1,1474279520,4097 predictor::https://www.facebook.com/impression.php/fc38f28898065a/?lid=115&payload=%7B%22source%22%3A%22jssdk%22%7D 1,1,1474279520,4097 predictor::http://linuxg.net/wp-content/plugins/wp-socializer/public/social-icons/wp-socializer-sprite-32px.png?v1 1,1,1474279520,4097 predictor::https://pagead2.googlesyndication.com/pagead/osd.js 1,1,1474279520,4097 predictor::http://qsearch.media.net/bping.php?cid=8CUEU1J6Y&crid=787703320&vi=1474279521728313897&ugd=4&lf=6&requrl=http%3A%2F%2Flinuxg.net%2Fhow-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives%2F&kwrf=http%3A%2F%2Fwww.google.de&r=1474279522190&hvsid=00001474279522186023716052026261 1,1,1474279520,4097 predictor::http://medianet-d.openx.net/w/1.0/jstag 1,1,1474279520,4097 predictor::http://contextual.media.net/rtbspub?&cid=8CUEU1J6Y&crid=787703320&size=336x280&rp=0.15&vi=1474279521728313897&ugd=4&requrl=http%3A%2F%2Flinuxg.net%2Fhow-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives%2F&kwrf=http%3A%2F%2Fwww.google.de&useAppData=1&hlt=1&tr=0.2886048235180234 1,1,1474279520,4097 predictor::http://contextual.media.net/fcmdynet.js?&cid=8CUEU1J6Y&cpcd=Sq0Uxunv1IyJXdSJQ_LQ_g%3D%3D&crid=787703320&size=336x280&cc=DE&vif=1&requrl=http%3A%2F%2Flinuxg.net%2Fhow-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives%2F&kwrf=http%3A%2F%2Fwww.google.de&vi=1474279521728313897&lw=1&ugd=4&re=1&hlt=1&dfp=1&rtbs=1 1,1,1474279520,4097 predictor::https://pagead2.googlesyndication.com/pagead/js/r20160915/r20160727/creativetoolset/expansion_publ.js 1,1,1474279520,4097 predictor::http://www.googletagservices.com/tag/js/gpt.js 1,1,1474279520,4097 predictor::http://contextual.media.net/__media__/js/util/nrr.js?v=106 1,1,1474279520,4097 predictor::http://res.media.net/__media__/js/AdChoices.png 1,1,1474279520,4097 predictor::http://u.openx.net/abp.gif?ch=1&rn=2.1362151278371178 1,1,1474279520,4097 predictor::http://u.openx.net/abp.gif?ch=2&rn=2.1362151278371178 1,1,1474279520,4097 predictor::http://medianet-d.openx.net/w/1.0/acj?ai=46117e56-53ee-4d31-c6b4-b3d5d175cb87&o=3249542408&callback=OX_3249542408&ju=http%3A//linuxg.net/how-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives/&jr=https%3A//www.google.de/&auid=538170220&dims=1535x709&adxy=0%2C0&res=1600x804x24&plg=pm&ch=UTF-8&tz=-120&ws=0x0&ifr=1&tws=1535x709 1,1,1474279520,4096 predictor::http://partner.googleadservices.com/gpt/pubads_impl_95.js 1,1,1474279520,4097 predictor::http://qsearch.media.net/bping.php?cid=8CUEU1J6Y&crid=787703320&vi=1474279522817864432&ugd=4&lf=6&requrl=http%3A%2F%2Flinuxg.net%2Fhow-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives%2F&kwrf=http%3A%2F%2Fwww.google.de&r=1474279522852&hvsid=00001474279522848023716052028034 1,1,1474279520,4097 predictor::http://contextual.media.net/fcmdynet.js?&cid=8CUEU1J6Y&cpcd=Sq0Uxunv1IyJXdSJQ_LQ_g%3D%3D&crid=787703320&size=336x280&cc=DE&vif=1&requrl=http%3A%2F%2Flinuxg.net%2Fhow-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives%2F&kwrf=http%3A%2F%2Fwww.google.de&vi=1474279522817864432&lw=1&ugd=4&re=1 1,1,1474279520,4097 predictor::http://www.google-analytics.com/ga.js 1,1,1474279520,4096 predictor::http://u.openx.net/abp.gif?ch=1&rn=1.4670871614926897 1,1,1474279520,4097 predictor::http://u.openx.net/abp.gif?ch=2&rn=1.4670871614926897 1,1,1474279520,4097 predictor::http://medianet-d.openx.net/w/1.0/rud?dr=1&ud.event_type=ABP&ud.domain=linuxg.net&ud.abp_enabled=0 1,1,1474279520,4097 predictor::http://pagead2.googlesyndication.com/pagead/expansion_embed.js?source=safeframe 1,1,1474279520,4097 predictor::http://pagead2.googlesyndication.com/pagead/osd.js 1,1,1474279520,4097 predictor::http://qsearch-a.akamaihd.net/log?logid=kfk&evtid=rtbstl&url=http%3A%2F%2Flinuxg.net%2Fhow-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives%2F&domain=linuxg.net&size=336x280&ext_user_id=0&iid=0&auction_id=cab5681fa7884999846a025ba131d79a&ip=141.91.210.210&crid=787703320&b12b=0.0&b4b=0.04&b9b=0.15&bc=0.15&rtbW=9&app_dis=1&cc=DE&rc=HE&bname=&bid_type=-1&bmlevel=0&mnet_segment=0.15&cmw=3&subBdr=0&dfp=1&source=2&dt=4 1,1,1474279520,4097 predictor::http://us-ads.openx.net/w/1.0/jstag 1,1,1474279520,4097 predictor::http://us-ads.openx.net/w/1.0/acj?o=5941281225&callback=OX_5941281225&ju=http%3A//linuxg.net/how-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives/&jr=https%3A//www.google.de/&auid=537253288&dims=1535x709&adxy=0%2C0&res=1600x804x24&plg=pm&ch=UTF-8&tz=-120&ws=0x0&ifr=1&tws=1535x709 1,1,1474279520,4097 predictor::http://qsearch.media.net/bqi.php?&lf=3&cid=8CUEU1J6Y&crid=787703320&pid=8PO5WBMO4&size=336x280&vi=1474279521728313897&ugd=4&requrl=http%3A%2F%2Flinuxg.net%2Fhow-to-install-sublime-text-3-build-3083-on-ubuntu-15-04-ubuntu-14-10-ubuntu-14-04-ubuntu-12-04-and-derivatives%2F&kwrf=http%3A%2F%2Fwww.google.de&bdrid=3&subBdr=0&vsid=1172811210520235&hvsid=00001474279522186023716052026261 1,1,1474279520,4097   ©Ý
