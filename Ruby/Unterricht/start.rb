@@ -8,4 +8,4 @@ def set_time
 	zeit = Time.now.strftime("%d.%m.%Y")
 end
 
-puts movie_listing(ARGV[0], 10)
+puts movie_listing(ARGV[0], AGRV[1])
