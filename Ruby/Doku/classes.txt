@@ -36,3 +36,43 @@ Instazvariable / Eigenschaften
 	Beispiel: @name
 	Das Besondere einer Instanzvariablen oder Eigenschaften ist, dass sie in der ganzen Klasse gilt und verwertet werden kann.
 	Wichtig: Variablen die innerhalb von einem Block definiert werden und kein @ vorangestellt haben, sind sogenannte lokale Variablen und gelten nur innerhalb des Blockes in dem sie definiert sind.
+
+	Eine Instanzvariable wird zu einer Eigenschaft, indem es in der Klasse Methoden gibt, die den Zugriff von Außerhalb (Aufruf durch das Objekt)
+	ermöglichen.
+	Eine Eigenschaft hat einen sogenannten Setter, der es ermöglicht einen Wert zu setzen; und einer Getter, der einen Wert zurückgibt.
+
+		Getter:
+		def name
+			@name
+		end
+	Die Methode heisst genauso wie die Instanzvariable, ohne das @. Sie hat die Aufgabe, den Wert der Instanzvariable name zurückzugeben
+	Aufruf:
+		puts obj.name
+		gibt den Namen des Players aus
+	Kurzform:
+		Anstelle einer Methodendefinition kann ich eine Kurzform 
+		verwenden:
+			attr_reader :name
+
+	Setter:
+		def name=(name)
+			@name = name
+		end
+	Der Setter zum Speichern eines Wertes in einer Instanzvariablen
+	heisst wie die Instanzvariablen mit einem = im Namen.
+	Aufruf:
+		obj.name = "Supergirl"
+
+
+	Kurzform:
+		attr_writer :name
+
+	Kurzform für Setter und Getter:
+		attr_accessor :name
+
+	Virtuelles Attribut:
+		Eine virtuelles Attribut ist eine Methode, die so aussieht, bzw.
+		genutzt werden kann, wie eine Eigenschaft, die allerdings keine eigene Instanzvariable hat; also keine echte Eigenschaft ist, obwohl sie von außen so aussieht.
+			def normalize_rank
+				@rank * 1000
+			end

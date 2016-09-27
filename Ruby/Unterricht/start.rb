@@ -67,7 +67,7 @@
 
 #player1 = Player1.new("Ludwig", 100)
 #puts player1.say_hello
-
+#--------------------------------------------------------------------------------------
 #class Player
 
 	def initialize(pname, phealth=100)
@@ -97,16 +97,21 @@
 #puts player2
 #player2.blame
 #puts player2
-
+#----------------------------------------------------------------------------------------
 class Movie
 
 	attr_reader :title
+	attr_writer :title
+	attr_accessor :title
 
 	def initialize(title, rank=0)
 		@title = title
 		@rank = rank
 	end
-
+	def normalize_rank
+		@rank * 1000
+	end
+	#Getter für einen veränderten rank
 	def thumbs_up
 		@rank += 1
 	end
@@ -125,4 +130,6 @@ class Movie
 end
 movie = Movie.new("Goonies", 10)
 puts movie.title
-puts movie
+movie.title = "GYnnies"
+puts movie.title
+puts movie.normalize_rank
