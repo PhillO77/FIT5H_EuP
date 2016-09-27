@@ -1,0 +1,107 @@
+a. erstellen Sie eine Klasse mit der Bezeichnung Player
+class Player
+	def initialize
+	end
+end
+
+
+b. erstellen Sie ein Objekt player1 der Klasse 
+
+class Player
+
+	def player1
+		
+	end
+
+end
+
+c. erstellen Sie eine initialize - Methode, die die Parameter name und health hat und aus diesen Werten die Instanzvariablen @name und @health initialisiert
+
+class Player
+	def initialize(pname, phealth)
+		@name = pname
+		@health = phealth
+	end	
+
+end
+
+d. updaten Sie das Objekt player1 und lassen sich das objekt anzeigen
+
+class Player
+	def initialize(pname, phealth)
+		@name = pname
+		@health = phealth
+	end	
+	def list_all
+		"Player heisst: #{@name} und hat die Gesundheit #{@health}"
+	end
+
+end
+obj = Player.new("Hans")
+puts obj.list_all
+
+e. setzen Sie fuer health einen Standardwert 100
+
+class Player
+	def initialize(pname, phealth)
+		@name = pname
+		@health = phealth
+	end	
+	def player1
+		"Player1 heisst: #{@name} und hat die Gesundheit #{@health}"
+	end
+	def player2
+		"Player2 heisst: #{@name} und hat die Gesundheit #{@health}"
+	end
+end
+obj = Player.new("Hans", 100)
+obj2 =Player.new("Peter", 100)
+puts obj.player1
+puts obj2.player2
+
+f. legen Sie eine neues Objekt player2 an, das nur den Namen als Parameter hat
+
+class Player
+	def initialize(pname, phealth=100)
+		@name = pname
+		@health = phealth
+	end	
+	def player1
+		"Player1 heisst: #{@name} und hat die Gesundheit #{@health}"
+	end
+	
+end
+obj = Player.new("Hans")
+obj2 =Player.new("Peter")
+puts obj.player1
+puts obj2.player1
+
+g. passen Sie die say_hello - Methode aus der vorherigen Übung zur Ausgabe ein, so dass puts player1.say_hello die Ausgabe ergibt
+
+class Player1
+	def initialize(pname, phealth=100)
+		@name = pname
+		@health = phealth
+
+	def say_hello
+	"Ich bin #{@name} mit einem Wert von #{@health}."
+	end
+
+
+puts Player1.say_hello("Ludwig", 100)
+
+h. fuegen Sie eine Instanzmethode blam und w00t hinzu, die den Wert fuer health umd 10 hochsetzt, bzw. reduziert und ausgibt: Tom got blamed, bzw. w00ted.
+
+class Player1
+	def initialize(pname, phealth=100)
+		@name = pname
+		@health = phealth
+
+	def say_hello
+	"Ich bin #{@name} mit einem Wert von #{@health}."
+	end
+
+
+puts Player1.say_hello("Ludwig", 100)
+
+i. die say_hello - Methode soll aufgerufen werden, wenn nur das Objekt ausgegeben werden soll, also puts players erfolgt.
