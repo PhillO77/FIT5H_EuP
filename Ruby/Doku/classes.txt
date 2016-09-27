@@ -76,3 +76,5 @@ Instazvariable / Eigenschaften
 			def normalize_rank
 				@rank * 1000
 			end
+	Aufruf:
+		puts obj.normalize_health
