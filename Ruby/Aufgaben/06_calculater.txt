@@ -1,0 +1,30 @@
+Erstellen Sie eine Klasse Calculator mit einem Konstruktor, der zwei Zahlen entgegennimmt und in Instanzvariablen speichert. 
+Eine Methode add, und eine Methode subtract führt eine Addition und eine Substraktion durch und gibt das Ergebnis zurueck.
+Legen Sie ein Objekt an und wenden Sie die Methoden add und subtract an.
+
+    Contact GitHub API Training Shop Blog About 
+
+class Calculator
+
+	attr_accessor :zahl1, :zahl2
+
+	def initialize(zahl1, zahl2)
+		@zahl1 = zahl1
+		@zahl2 = zahl2 
+	end
+	def add
+		ausgabe1 = @zahl1 + @zahl2
+		
+	end
+
+	def subtract
+		ausgabe2 = @zahl1 - @zahl2
+	
+	end
+end
+obj=Calculator.new(5, 10)
+obj.zahl1 = 100
+obj.zahl2 = 50
+
+puts obj.add
+puts obj.subtract

@@ -1,0 +1,27 @@
+Definition 
+	Array ist eine geordnetet Liste, die Verweise auf andere Objekte enthält
+
+
+Neues Array anlegen
+	seats = []
+	seats = Array.new
+
+	seats = [String.new("wert1"), "wert2"]
+	seats = %w(wert1 wert2)
+
+Werte Hinzufügen
+	seats << "Wert3"
+	seats[3] = "wert4"
+	seats.push("wert5")
+
+Methoden von Arrays
+	Array grösse:
+		seats.size
+	Letztes Element Entfernen
+		seats.pop
+	Array leer
+		seats.empty?
+	Löschen von Elementen
+		seats.delete_at(3)
+
+
