@@ -180,3 +180,54 @@ obj=Customer.new("9999", "Lodgz")
 obj.firstname = "Theo"
 obj.street = "Hermelinweg 7"
 puts obj.print_address
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+class Playlist
+	def initialize(name)
+		@name = name
+		@movies = []
+	end
+	def add_movie(movie)
+		@movies << movie 
+	end
+	def play
+		puts "#{@name} Playlist:"
+		@movies.each do |movie|
+			puts movie
+		end
+	end
+end
+class Movie
+
+	attr_accessor :title
+	
+
+	def initialize(title, rank=0)
+		@title = title
+		@rank = rank
+	end
+	def thumbs_down
+		@rank -= 1
+	end
+
+	def title=(title)
+		@title = title
+	end
+
+	def to_s
+		"#{@title} has a rank of #{@rank}."
+	end
+end
+
+movie1 = Movie.new("Goonies", 10)
+movie2 = Movie.new("Batman", 5)
+movie3 = Movie.new("Spiderman", 8)
+
+
+playlist1 = Playlist.new("Theo")
+playlist1.add_movie(movie1)
+playlist1.add_movie(movie2)
+playlist1.add_movie(movie3)
+playlist1.play 

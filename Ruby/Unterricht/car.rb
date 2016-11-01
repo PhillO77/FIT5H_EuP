@@ -12,7 +12,10 @@
 #10Erstellen Sie eine Ausgabe: sortiert nach PS
 #11 Legen Sie drei weitere objekte an von der Klasse Car an. Die daten stehen in einem hash, wobei die erste position den typ und die zweite position ps enthält:
 #vals = { 'BMW' => 200, 'Trabbi' => 150, 'Honda' => 20}.Lassen Sie den Hash durchlaufe, erzeugen jeweils ein Car-objekt und legen diesen im Array cars2 ab. 
-
+#12 Erstellen sie eine klasse 'Driver' mit der eigenschaft 'name', die im konstruktor gesetzt werden muss.
+#es gibt eine methode add_cars mit der für das Driver-objekt ein Fahrzeug hinzugefügt werden kann. 
+#Es gibt eine Ausgabe show_cars die die Fahrzeuge mit der Typenbeschreibung auflisten. Legen sie ein Objekt Theo an ordnen sie von den car-arrays jeweils das 
+#erste dem driver-objekt zu. lassen sie die daten der zugeordnenten Fahrzeuge ausgeben.
 #1
 class Car
 
@@ -66,13 +69,41 @@ cars = [car1, car2, car3]
 
 #9
 cars.each do |car|
-	puts car.typ.empty? ? "Kein Wert" : car.typ
+	#puts car.typ.empty? ? "Kein Wert" : car.typ
 
-	if car.typ.empty?
-		puts "Kein Wert"
-	else
-	puts car.typ 
-	end
 end
+#11
+vals = { 'BMW' => 200, 'Trabbi' => 150, 'Honda' => 20}
+cars2 = []
+vals.each do | typ, ps|
+	cars2 << Car.new(ps, typ)
+end
+#puts cars2.inspect
+
+#12 Erstellen sie eine klasse 'Driver' mit der eigenschaft 'name', die im konstruktor gesetzt werden muss.
+#es gibt eine methode add_cars mit der für das Driver-objekt ein Fahrzeug hinzugefügt werden kann. 
+#Es gibt eine Ausgabe show_cars die die Fahrzeuge mit der Typenbeschreibung auflisten. Legen sie ein Objekt Theo an ordnen sie von den car-arrays jeweils das 
+#erste dem driver-objekt zu. lassen sie die daten der zugeordnenten Fahrzeuge ausgeben.
+
+class Driver
+	attr_accessor :name
+
+	def initialize(name)
+		@name = name
+		@cars = []
+	end	
+		def add_cars(car)
+		@cars << car
+		end
+			def show_cars
+				@cars.each do |car|
+					puts car.typ
+			end
 
 
+end
+end
+theo = Driver.new('Theo')
+theo.add_cars(cars[0])
+theo.add_cars(cars2[0])
+theo.show_cars
