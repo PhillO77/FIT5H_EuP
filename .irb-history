@@ -1,0 +1,92 @@
+var = "Ruby ist perfekt"
+puts var. upcase
+car.class
+var.class
+puts var. upcase!
+puts var. downcase!
+var.methods
+puts Time.new
+puts Time.now
+var = 1+1
+tage = 365
+stunden = 24
+tage*stunden
+str = "Hello Ruby!"
+str
+str.upcase
+ruby hello.rb
+hello = hello.rb
+name1 = "larry"
+health = 60
+puts "#{name1}'s health is #{health}"
+puts name1 + "'s health is" + health
+puts "#{name1}'s health is#{health}
+puts "#{name1}'s health is#{health*3}
+puts "#{name1}'s health is#{3*health}
+puts "#{name1}'s health is#{3 * health}
+puts "#{name1}'s health is #{3 * health}
+puts "#{name1}'s health is #{ health / 9. to_i}
+puts "#{name1}'s health is #{ health / 9. to_f}
+var = "irgendwas"
+var2 = var
+var[0] = "I"
+puts var
+var.object_id
+puts var.to_s
+var.reverse
+var.reverse.reverse
+var.center(20)
+var.ljust(30, 'o')
+erg = ver.empty?
+players1 = "Larry"
+players2 = "Curly"
+players3 = "Moe"
+players4 = "Shemp"
+allenamen = <<HEREDOC
+#{players1} has a health of 60.
+#{players2.upcase} has a health of 125.
+*************#{players3} has a health of 100*************
+#{players4}......................... 90 health
+Players:
+#{players1}
+#{players2}
+#{players3}
+The game started on Thursday 08/02/2012 at 11:42AM
+HEREDOC
+puts allenamen
+seats = ['kermit', 'fozzie', 'gonzo']
+seats.class[2]
+seats.class
+seats[2]
+clear
+seats = Array.new(3)
+seats = %w(kermit fozzie gonz)
+seats = << "piggy"
+seats << "piggy"
+seats.insert(2, "Theo")
+seats.size
+seats.pop
+seats.empty
+seats.empty?
+seats.delete at(2)
+seats
+seats.delete at(3)
+seats.delete_at(3)
+jahreszeiten = %w(Sommer Herbst Winter)
+jahreszeiten.size
+jahreszeiten[1]
+jahreszeiten << "fruejahr"
+jahreszeiten.pop
+ri
+join
+jahreszeiten.join("und")
+jahreszeiten.rotate
+Player = %w(Larry Curly Moe)
+Players.each do |players|
+Player.each do |players|
+puts "Ausgabe der Spieler #{players.size}"
+puts players
+end
+jahreszeiten.rotate!
+jahreszeiten
+exit

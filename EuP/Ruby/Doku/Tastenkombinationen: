@@ -1,0 +1,44 @@
+Tastenkombinationen:
+
+CTRL-l - Clears the screen and places the command prompt at the top of the page.
+CTRL-r - Starts a search against the command history. Start by typing in what you want to search by then press CTRL-r to see the matches.
+CTRL-c - Kills the current running foreground program.
+CTRL-z - Stop/sleep the current running foreground program.
+CTRL-s - Stops the output to the screen.
+CTRL-q - Allows output to the screen.
+CTRL-a - Moves the cursor the start of the line
+CTRL-e - Moves the cursor to the end of the line
+CTRL-f - Moves the cursor 1 character forward
+CTRL-b - Moves the cursor 1 character backward
+
+Funktion:
+-git ist eine Versionsverwaltung, ermöglicht also auf frühere Versionsständen einer datei zuzugreifen
+git wird in der softwareentwicklung immer verwendet
+git ermöglicht komfortabel das arbeiten mehrerer Personen an einem Projekt
+
+Website github:
+	github.com
+	Eigene Projekte können hier abgelegt werden
+	projekte anderer Personen stehen hier zur Ansicht zur verfügung
+
+Erstellen eines lokalen Repositorys:
+1. Ordner erstellen
+	mkdir EuP
+2. Ordner mit git initialisieren
+	git init
+3. Datei erzeugen zum Testen
+	touch test.txt
+4. Datei zum Repository hinzufügen
+	git add . -A
+5. Datei commiten
+	git commit -m "first commit"
+6. Das lokale Repos mit dem Remote Repos verbinden
+	git remote add origin https://github.com/PhillO77/FIT5H_EuP.git
+7. Die lokalen Aenderungen zum Remote Repos Hochladen
+	git push -u origin master
+
+Aktualisieren eines Projektes 
+1.mit cd in das basisverzeichnis des projektes gehen
+2.git add . -A
+3.git commit -am 'Text zur Charakterisierung'
+git push origin master

@@ -3,62 +3,132 @@
       xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
       xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
 >
-  <bookmark href="file:///home/philippe/Dokumente/Unbenannt%201" added="2016-09-12T12:04:36Z" modified="2016-09-12T12:04:36Z" visited="2016-09-12T12:04:36Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/octet-stream"/>
-        <bookmark:applications>
-          <bookmark:application name="LibreOffice 5.1" exec="&apos;soffice %u&apos;" modified="2016-09-12T12:04:36Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/philippe/Dokumente/Unbenannt%201.odt" added="2016-09-12T12:04:37Z" modified="2016-09-12T12:04:37Z" visited="2016-09-12T12:04:37Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="application/vnd.oasis.opendocument.text"/>
-        <bookmark:applications>
-          <bookmark:application name="LibreOffice 5.1" exec="&apos;soffice %u&apos;" modified="2016-09-12T12:04:37Z" count="2"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/philippe/KuA/test.txt" added="2016-09-19T10:18:24Z" modified="2016-09-19T10:18:24Z" visited="2016-09-19T10:18:24Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/plain"/>
-        <bookmark:applications>
-          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2016-09-19T10:18:24Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/philippe/KuA/README.md" added="2016-09-19T10:18:32Z" modified="2016-09-19T10:18:32Z" visited="2016-09-19T10:18:33Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/markdown"/>
-        <bookmark:applications>
-          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2016-09-19T10:18:32Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/philippe/KuA/doku/git_init.txt" added="2016-09-19T10:18:47Z" modified="2016-09-19T10:18:47Z" visited="2016-09-19T10:18:48Z">
-    <info>
-      <metadata owner="http://freedesktop.org">
-        <mime:mime-type type="text/plain"/>
-        <bookmark:applications>
-          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2016-09-19T10:18:47Z" count="1"/>
-        </bookmark:applications>
-      </metadata>
-    </info>
-  </bookmark>
-  <bookmark href="file:///home/philippe/KuA/doku" added="2016-09-19T10:19:10Z" modified="2016-09-19T10:19:10Z" visited="2016-09-19T10:19:11.234982Z">
+  <bookmark href="file:///home/philippe/KuA/doku" added="2016-09-19T10:19:10Z" modified="2016-10-31T10:55:12Z" visited="2016-09-19T10:19:11Z">
     <info>
       <metadata owner="http://freedesktop.org">
         <mime:mime-type type="inode/directory"/>
         <bookmark:applications>
-          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2016-09-19T10:19:10Z" count="1"/>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2016-10-31T10:55:12Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/philippe/EuP/Ruby/Doku/Beispiel_Eigenes%20class" added="2016-10-04T08:06:11Z" modified="2016-10-04T08:06:11Z" visited="2016-10-04T08:06:11Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2016-10-04T08:06:11Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/philippe/EuP/Ruby/Doku/Array.txt" added="2016-10-04T08:38:31Z" modified="2016-10-04T08:38:31Z" visited="2016-10-04T08:38:31Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2016-10-04T08:38:31Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/philippe/EuP/Ruby/Aufgaben/Array.txt" added="2016-10-04T09:39:56Z" modified="2016-10-04T09:39:56Z" visited="2016-10-04T09:39:56Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2016-10-04T09:39:56Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/philippe/EuP/Ruby/Aufgaben/08_objects_interacting.txt" added="2016-10-04T10:45:06Z" modified="2016-10-04T10:45:06Z" visited="2016-10-04T10:45:07Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2016-10-04T10:45:06Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/philippe/EuP/Ruby/Aufgaben/08_uebung_bank.txt" added="2016-10-04T10:45:36Z" modified="2016-10-04T10:45:36Z" visited="2016-10-04T10:45:36Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2016-10-04T10:45:36Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/philippe/KuA" added="2016-10-10T09:50:02Z" modified="2016-10-10T09:50:02Z" visited="2016-10-10T09:50:02Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2016-10-10T09:50:02Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/philippe/KuA/doku/vim_basis_befehle.txt" added="2016-10-31T11:08:36Z" modified="2016-10-31T11:08:36Z" visited="2016-10-31T11:08:37Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2016-10-31T11:08:36Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/philippe/KuA/doku/console_basis.txt" added="2016-10-31T11:47:36Z" modified="2016-10-31T11:47:38Z" visited="2016-10-31T11:47:36Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2016-10-31T11:47:38Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/philippe/KuA/doku/file_system.txt" added="2016-10-31T12:07:55Z" modified="2016-10-31T12:07:55Z" visited="2016-10-31T12:07:55Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2016-10-31T12:07:55Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/philippe/KuA/doku/bash_spezifika.txt" added="2016-10-31T12:56:51Z" modified="2016-10-31T12:56:51Z" visited="2016-10-31T12:56:51Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2016-10-31T12:56:51Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/philippe/KuA/doku/Linux_basis.txt" added="2016-10-31T13:10:31Z" modified="2016-10-31T13:10:31Z" visited="2016-10-31T13:10:31Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/plain"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2016-10-31T13:10:31Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/philippe/EuP" added="2016-11-01T07:16:57Z" modified="2016-11-01T07:16:57Z" visited="2016-11-01T07:16:57.391417Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Sublime Text" exec="&apos;sublime_text %u&apos;" modified="2016-11-01T07:16:57Z" count="1"/>
         </bookmark:applications>
       </metadata>
     </info>

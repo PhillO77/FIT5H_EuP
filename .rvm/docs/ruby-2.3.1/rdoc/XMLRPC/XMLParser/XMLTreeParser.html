@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class XMLRPC::XMLParser::XMLTreeParser - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+</script>
+
+<script src="../../js/jquery.js"></script>
+<script src="../../js/darkfish.js"></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="AbstractTreeParser.html">XMLRPC::XMLParser::AbstractTreeParser</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-_nodeType">#_nodeType</a>
+    
+    <li ><a href="#method-i-createCleanedTree">#createCleanedTree</a>
+    
+    <li ><a href="#method-i-methodCall_document">#methodCall_document</a>
+    
+    <li ><a href="#method-i-methodResponse_document">#methodResponse_document</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-XMLRPC::XMLParser::XMLTreeParser">
+  <h1 id="class-XMLRPC::XMLParser::XMLTreeParser" class="class">
+    class XMLRPC::XMLParser::XMLTreeParser
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/xmlrpc/parser.rb, line 646</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>
+  <span class="ruby-identifier">require</span> <span class="ruby-string">&quot;xmltreebuilder&quot;</span>
+
+  <span class="ruby-comment"># The new XMLParser library (0.6.2+) uses a slightly different DOM implementation.</span>
+  <span class="ruby-comment"># The following code removes the differences between both versions.</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span> <span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">DOM</span><span class="ruby-operator">::</span><span class="ruby-constant">Builder</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">defined?</span> <span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">DOM</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span><span class="ruby-operator">::</span><span class="ruby-constant">DOCUMENT</span> <span class="ruby-comment"># code below has been already executed</span>
+    <span class="ruby-identifier">klass</span> = <span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">DOM</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span>
+    <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">const_set</span>(<span class="ruby-value">:DOCUMENT</span>, <span class="ruby-identifier">klass</span><span class="ruby-operator">::</span><span class="ruby-constant">DOCUMENT_NODE</span>)
+    <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">const_set</span>(<span class="ruby-value">:TEXT</span>, <span class="ruby-identifier">klass</span><span class="ruby-operator">::</span><span class="ruby-constant">TEXT_NODE</span>)
+    <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">const_set</span>(<span class="ruby-value">:COMMENT</span>, <span class="ruby-identifier">klass</span><span class="ruby-operator">::</span><span class="ruby-constant">COMMENT_NODE</span>)
+    <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">const_set</span>(<span class="ruby-value">:ELEMENT</span>, <span class="ruby-identifier">klass</span><span class="ruby-operator">::</span><span class="ruby-constant">ELEMENT_NODE</span>)
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="private-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Private Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-_nodeType" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">_nodeType</span><span
+            class="method-args">(node)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="_nodeType-source">
+            <pre><span class="ruby-comment"># File lib/xmlrpc/parser.rb, line 663</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">_nodeType</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">tp</span> = <span class="ruby-identifier">node</span>.<span class="ruby-identifier">nodeType</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">tp</span> <span class="ruby-operator">==</span> <span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">SimpleTree</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span><span class="ruby-operator">::</span><span class="ruby-constant">TEXT</span> <span class="ruby-keyword">then</span> <span class="ruby-value">:TEXT</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">tp</span> <span class="ruby-operator">==</span> <span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">SimpleTree</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span><span class="ruby-operator">::</span><span class="ruby-constant">COMMENT</span> <span class="ruby-keyword">then</span> <span class="ruby-value">:COMMENT</span>
+  <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">tp</span> <span class="ruby-operator">==</span> <span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">SimpleTree</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span><span class="ruby-operator">::</span><span class="ruby-constant">ELEMENT</span> <span class="ruby-keyword">then</span> <span class="ruby-value">:ELEMENT</span>
+  <span class="ruby-keyword">else</span> <span class="ruby-value">:ELSE</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-createCleanedTree" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">createCleanedTree</span><span
+            class="method-args">(str)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="createCleanedTree-source">
+            <pre><span class="ruby-comment"># File lib/xmlrpc/parser.rb, line 687</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">createCleanedTree</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">doc</span> = <span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">SimpleTreeBuilder</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">str</span>)
+  <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">documentElement</span>.<span class="ruby-identifier">normalize</span>
+  <span class="ruby-identifier">removeWhitespacesAndComments</span>(<span class="ruby-identifier">doc</span>)
+  <span class="ruby-identifier">doc</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-methodCall_document" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">methodCall_document</span><span
+            class="method-args">(node)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="methodCall_document-source">
+            <pre><span class="ruby-comment"># File lib/xmlrpc/parser.rb, line 680</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">methodCall_document</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">assert</span>( <span class="ruby-identifier">node</span>.<span class="ruby-identifier">nodeType</span> <span class="ruby-operator">==</span> <span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">SimpleTree</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span><span class="ruby-operator">::</span><span class="ruby-constant">DOCUMENT</span> )
+  <span class="ruby-identifier">hasOnlyOneChild</span>(<span class="ruby-identifier">node</span>, <span class="ruby-string">&quot;methodCall&quot;</span>)
+
+  <span class="ruby-identifier">methodCall</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">firstChild</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-methodResponse_document" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">methodResponse_document</span><span
+            class="method-args">(node)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="methodResponse_document-source">
+            <pre><span class="ruby-comment"># File lib/xmlrpc/parser.rb, line 673</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">methodResponse_document</span>(<span class="ruby-identifier">node</span>)
+  <span class="ruby-identifier">assert</span>( <span class="ruby-identifier">node</span>.<span class="ruby-identifier">nodeType</span> <span class="ruby-operator">==</span> <span class="ruby-constant">XML</span><span class="ruby-operator">::</span><span class="ruby-constant">SimpleTree</span><span class="ruby-operator">::</span><span class="ruby-constant">Node</span><span class="ruby-operator">::</span><span class="ruby-constant">DOCUMENT</span> )
+  <span class="ruby-identifier">hasOnlyOneChild</span>(<span class="ruby-identifier">node</span>, <span class="ruby-string">&quot;methodResponse&quot;</span>)
+
+  <span class="ruby-identifier">methodResponse</span>(<span class="ruby-identifier">node</span>.<span class="ruby-identifier">firstChild</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

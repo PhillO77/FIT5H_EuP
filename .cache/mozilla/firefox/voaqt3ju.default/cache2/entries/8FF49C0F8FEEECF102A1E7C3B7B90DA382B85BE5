@@ -1,0 +1,401 @@
+
+    /*extra:17538306.154*/
+    
+
+
+.tabs li.active{
+display: none;
+}
+.slideEdge{
+height: 107px;
+}
+
+.bildlive header ol.tabs, .bildlive header ol.tabs li {
+    display: none;
+    float: none;
+    margin: 0;
+}
+.bildlive .mark {
+    display: none;
+}
+
+
+.top5 .slim header {
+display: none;
+}
+.slim {
+margin-top: 18px;
+}
+
+
+.misc.posLast > header {
+    margin: -14px 0 -16px;
+}
+
+
+.content .lead.no-gap {
+ margin: 0;
+}
+
+
+.a-1.blan {
+    margin: 0;
+}
+.abc-2.blan {
+margin-top: 12px;
+}
+
+.abc-2.blan .rectangle,
+.abc-2.blan .txe {
+    padding: 0;
+}
+.abc-2.blan .rectangle .mark,
+.abc-2.blan .txe .mark {
+    position: absolute;
+    top: 20px;
+    right: -14px;
+    -moz-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+}
+.abc-2.blan .rectangle object,
+.abc-2.blan .rectangle iframe,
+.abc-2.blan .rectangle img,
+.abc-2.blan .txe object,
+.abc-2.blan .txe iframe,
+.abc-2.blan .txe img {
+margin: 0;
+}
+
+.opt1 > header {
+display: none !important;
+}
+
+.s5 ol.tabs{
+display: none;
+}
+
+
+.edge > div {
+padding-top: 6px;
+padding-bottom: 6px;
+}
+
+
+
+.t15o1.overlay .headline > span {
+    color: #fff;
+    font-family: "Gotham Cond",Arial,Helvetica,Tahoma,sans-serif;
+    font-size: 58px;
+    font-weight: 800;
+    padding: 0 12px;
+    background: none;
+}
+.fonts-loaded .t15o1 .kicker {
+ text-shadow:none;
+ color: #fff;
+ font-size: 18px;
+ background-color: #dd0000; 
+ font-family: "Gotham",Arial,Helvetica,Tahoma,sans-serif;
+     padding: 1px 10px 1px 10px;
+}
+.bildplus-block {
+  background: #dd0000; 
+  margin-bottom: 12px;
+}
+div[data-vr-zone='tb-bildplus-block'] .tlw-15{
+ margin-top: -12px;
+ margin-bottom: 12px;
+}
+
+    /*css-blockstyling:46059146.25*/
+    
+
+.lead.clearfix.space-3px {
+margin-bottom: 3px; 
+}
+.lead.clearfix.space-5px {
+margin-bottom: 5px; 
+}
+.lead.clearfix.space-8px {
+margin-bottom: 8px; 
+}
+.lead.clearfix.space-10px {
+margin-bottom: 10px; 
+}
+
+
+.uswahl2016spez{
+background: #003690 url(http://bilder.bild.de/fotos/us-praesiedentschaftswahlen-2016-200115825-47856626/Bild/2.bild.jpg) 0 0 no-repeat;
+padding-top: 150px;
+}
+.uswahl2016spez3er{
+background-color: #003690;
+margin-top: -20px;
+padding-bottom: 12px;
+}
+
+
+.style-block-home3er911style{
+  background-color: #1F313F;
+ margin: -24px 0 12px 0;
+ padding-bottom: 12px;
+}
+
+.buli-block {
+http://bilder.bild.de/fotos/background-46059148/Bild/1.bild.gif
+    margin-bottom: 12px;
+}
+.buli-block-black {
+    background-color: #000;
+    margin-bottom: 12px;
+}
+.buli-block-unionjack {
+    background-color: #003690;
+    margin-bottom: 12px;
+}
+.style-block-bildbrand {
+    background-color: #dd0000;
+    margin-bottom: 12px;
+}
+.style-block-breaking {
+    background-color: #ff9900;
+    margin-bottom: 12px;
+}
+.style-block-buli {
+    background-color: #008AB6;
+    margin-bottom: 12px;
+}
+.style-block-pokemon {
+    background-color: #008AB6;
+    margin-bottom: 12px;
+}
+.style-block-russenrot {
+    background-color: #c50000;
+    margin-bottom: 12px;
+}
+.style-block-olympia {
+    background: url(http://bilder.bild.de/fotos/background-46908810/Bild/2.bild.gif) 0 0 repeat-y;
+    margin-bottom: 12px;
+}
+.t5o1 .photo {
+    object-fit: fill;
+    width: 323px;
+}
+div[data-vr-zone="000-aufmacher-3er"],
+div[data-vr-zone="000-aufmacher-3er-v f"],
+div[data-vr-zone="000-aufmacher-3er-v d"],
+div[data-vr-zone="000-aufmacher-3er-v a1"] {
+    margin-top: -20px;
+    margin-bottom: 12px;
+}
+div[data-vr-zone="ab-sonderslim-quad-klein"] .bob-2 .pos1 {
+    height: 323px;
+}
+div[data-vr-zone="000-aufmacher-4er-v e"] .pos3,
+div[data-vr-zone="000-aufmacher-4er-v e"] .posLast {
+    height: 323px;
+    top: 382px;
+}
+div[data-vr-zone="000-em-4er-aufmacher-oben-a-bc-2x-quad-s"] .pos3,
+div[data-vr-zone="000-em-4er-aufmacher-oben-a-bc-2x-quad-s"] .posLast,
+div[data-vr-zone="000-super-abc-quad-klein-4er-teaserblock-oben"] .pos3,
+div[data-vr-zone="000-super-abc-quad-klein-4er-teaserblock-oben"] .posLast {
+    margin-top: -24px;
+    height: 323px;
+}
+div[data-vr-zone="000-super-abc-quad-klein-4er-teaserblock-oben"] {
+    margin-top: -20px;
+}
+div[data-vr-zone="000-em-3er-aufmacher-oben-abc-livestream"] .ab-3 .posLast {
+    height: auto!important;
+}
+div[data-vr-zone="000-em-3er-aufmacher-oben-abc-livestream"] .pos1 {
+    z-index: 2;
+}
+div[data-vr-zone="000-em-3er-aufmacher-oben-3xquad-s"] {
+    margin-top: -20px;
+}
+.buli-block div[data-vr-zone="001-em-aa-aufmacher-spielnavi-15sp"] {
+    margin-bottom: -11px;
+}
+.buli-block div[data-vr-zone="000-em-3er-aufmacher-oben-3xquad-s"],
+.buli-block div[data-vr-zone="000-quad-klein-3er-teaserblock-oben"] {
+    margin-top: -32px;
+    margin-bottom: 8px;
+}
+div[data-vr-zone="000-quad-klein-3er-teaserblock-oben"] {
+    margin-top: -20px;
+    margin-bottom: 12px;
+}
+.style-block-russenrot div[data-vr-zone="01-aufmacherblock-ab"] {
+    margin-bottom: -20px;
+}
+.style-block-russenrot div[data-vr-zone="00-aufmacher-header"] {
+    margin-bottom: -12px;
+}
+
+.style-block-buli  div[data-vr-zone="000-aa-header-ohne-130px-aufmacherblock"],
+.style-block-buli div[data-vr-zone="000-aa-header-mit-news-130px-aufmacherblock"],
+.style-block-buli div[data-vr-zone="000-aa-header-ohne-110px-aufmacherblock"],
+.style-block-buli div[data-vr-zone="000-aaa-header-mit-insider-ohne-news-110px-aufmacherblock"],
+.style-block-buli div[data-vr-zone="000-aa-header-mit-news-110px-aufmacherblock"]{
+width: 999px;
+height: 200px;
+background-image: url(http://bilder.bild.de/fotos/rio2016-200050633-47612924/Bild/2.bild.jpg);
+margin-left: -6px;
+padding-left: 6px;
+margin-bottom: -140px
+}
+    /*911:47658318.18*/
+    
+.style-9-11{
+background-color: #1f313f;
+background-image: url(http://bilder.bild.de/fotos/15-jahre-nach-911-200105331-47708714/Bild/3.bild.jpg);
+background-repeat: no-repeat;
+margin-left: -6px;
+padding-left: 6px;
+padding-bottom: 12px;
+margin-bottom: 12px;
+
+}
+.style-911-header{
+width: 993px;
+height: 119px;
+display: block;
+}
+
+.style-9-11 div[data-vr-zone="000-aaa-aufmacherblock-oben-video-gross"]{
+height: 579px;
+}
+.style-9-11 div[data-vr-zone="000-aaa-aufmacherblock-oben"],
+.style-9-11 div[data-vr-zone="000-super-quad-2er-aufmacherblock-oben"],
+.style-9-11 div[data-vr-zone="000-aaa-aufmacherblock-oben-video-gross"],
+.style-9-11 div[data-vr-zone="000-quad-klein-3er-teaserblock-oben"],
+.style-9-11 div[data-vr-zone="000-super-abc-quad-klein-4er-teaserblock-oben"]{
+margin-top: -8px;
+}
+.style-9-11 .tll33794760{
+height: 358px;
+}
+.style-9-11 div[data-vr-zone="000-super-abc-quad-klein-4er-teaserblock-oben"]{
+margin-bottom: -13px;
+}
+.style-9-11 div[data-vr-zone="000-quad-klein-3er-teaserblock-oben"]{
+margin-bottom: 1px;
+}
+.style-9-11 div[data-vr-zone="000-super-ab-2er-aufmacherblock-oben"],
+.style-9-11 div[data-vr-zone="000-super-quad-3er-aufmacherblock-oben"],
+.style-9-11 div[data-vr-zone="000-aaa-aufmacherblock-oben"],
+.style-9-11 div[data-vr-zone="000-super-quad-2er-aufmacherblock-oben"]{
+margin-top: -12px;
+margin-bottom: -12px;
+}
+.style-9-11 div[data-vr-zone="000-aaa-aufmacherblock-oben-video-gross"]{
+margin-bottom: -20px;
+}
+.style-9-11 div[data-vr-zone="tb-super-quad-3er"]{
+margin-top: -32px;
+}
+    /*css-us-wahl:48008156.8*/
+    
+.style-us-wahl{
+background-color: #003690;
+background-image: url(http://bilder.bild.de/fotos/us-praesiedentschaftswahlen-2016-200115825-47856626/Bild/2.bild.jpg);
+background-repeat: no-repeat;
+margin-left: -6px;
+padding-left: 6px;
+padding-bottom: 12px;
+margin-bottom: 12px;
+}
+
+.style-911-header{
+width: 993px;
+height: 119px;
+display: block;
+}
+
+.style-tv-duell-header{
+width: 993px;
+display: block;
+margin-top: -20px;
+}
+
+.style-us-wahl div[data-skinning="000-aaa-aufmacherblock-oben-video-gross"]{
+height: 579px;
+}
+.style-us-wahl div[data-skinning="000-aaa-aufmacherblock-oben"],
+.style-us-wahl div[data-skinning="000-super-quad-2er-aufmacherblock-oben"],
+.style-us-wahl div[data-skinning="000-aaa-aufmacherblock-oben-video-gross"],
+.style-us-wahl div[data-skinning="000-quad-klein-3er-teaserblock-oben"],
+.style-us-wahl div[data-skinning="000-super-abc-quad-klein-4er-teaserblock-oben"]{
+margin-top: -8px;
+}
+.style-us-wahl .tll33794760{
+height: 358px;
+}
+.style-us-wahl div[data-skinning="000-super-abc-quad-klein-4er-teaserblock-oben"]{
+margin-bottom: -13px;
+}
+.style-us-wahl div[data-skinning="000-quad-klein-3er-teaserblock-oben"]{
+margin-bottom: 1px;
+}
+.style-us-wahl div[data-skinning="000-super-ab-2er-aufmacherblock-oben"],
+.style-us-wahl div[data-skinning="000-super-quad-3er-aufmacherblock-oben"],
+.style-us-wahl div[data-skinning="000-super-quad-2er-aufmacherblock-oben"]{
+margin-top: -12px;
+margin-bottom: -12px;
+}
+.style-us-wahl div[data-skinning="000-aaa-aufmacherblock-oben-video-gross"]{
+margin-bottom: -20px;
+}
+.style-us-wahl div[data-skinning="tb-super-quad-3er"]{
+margin-top: -32px;
+}
+.style-us-wahl div[data-skinning="000-aaa-aufmacherblock-video-gross"]{
+margin-bottom: 188px;
+}
+.style-us-wahl div[data-skinning="000-super-quad-2er-aufmacherblock-oben-s"]{
+margin-bottom: -20px;
+}
+    /*css-olympia:46922626.7*/
+    
+.style-block-olympia div[data-vr-zone="000-aaa-header-rio"],
+.style-block-olympia div[data-vr-zone="000-aa-header-ohne-130px-aufmacherblock"],
+.style-block-olympia div[data-vr-zone="000-aa-header-mit-news-130px-aufmacherblock"],
+.style-block-olympia div[data-vr-zone="000-aa-header-ohne-110px-aufmacherblock"],
+.style-block-olympia div[data-vr-zone="000-aa-header-mit-news-110px-aufmacherblock"]{
+width: 999px;
+height: 200px;
+background-image: url(http://bilder.bild.de/fotos/rio2016-200050633-46922462/Bild/3.bild.jpg);
+margin-left: -6px;
+padding-left: 6px;
+margin-bottom: -92px
+}¼ÃRè“	      XI0XI0=ãXFª   b    :http://www.bild.de/code/extra,17538306.154-46059146.25-47658318.18-48008156.8-46922626.7.bild.css strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Via: 1.1 ISA01TMG
+Expires: Mon, 31 Oct 2016 13:27:06 GMT
+Date: Mon, 31 Oct 2016 13:26:32 GMT
+Content-Type: text/css;charset=utf-8
+Server: Apache
+Content-Language: de-DE
+X-UA-Compatible: IE=Edge
+Last-Modified: Mon, 31 Oct 2016 13:26:06 GMT
+X-Refresh: h=4|g=103975.000|c=(null)|rd=Mon, 31 Oct 2016 13:26:06 GMT|dd=Mon, 31 Oct 2016 13:26:14 GMT
+Cache-Control: public, max-age=34
+Vary: Origin
+ original-response-headers Via: 1.1 ISA01TMG
+Connection: Keep-Alive
+Proxy-Connection: Keep-Alive
+Transfer-Encoding: chunked
+Expires: Mon, 31 Oct 2016 13:27:06 GMT
+Date: Mon, 31 Oct 2016 13:26:32 GMT
+Content-Type: text/css;charset=utf-8
+Server: Apache
+Content-Language: de-DE
+X-UA-Compatible: IE=Edge
+Last-Modified: Mon, 31 Oct 2016 13:26:06 GMT
+X-Refresh: h=4|g=103975.000|c=(null)|rd=Mon, 31 Oct 2016 13:26:06 GMT|dd=Mon, 31 Oct 2016 13:26:14 GMT
+Cache-Control: public, max-age=34
+Vary: Origin
+ uncompressed-len 0 necko:classified 1   %

@@ -98,3 +98,62 @@ git push -u origin master
 git pull -u origin master
 git pull  origin master
 git push -u origin master
+cd EuP
+git init 
+git add . -A
+git commit -m "aktuells"
+git push origin master
+git add . -A
+git commit  "aktuells"
+git push origin master
+git add . -A
+git commit  "aktuells"
+git push origin master
+clear
+cd Unterricht
+ls
+ruby
+cd ruby
+cd Ruby
+ls
+cd EuP
+git add . -A
+git commit  "aktuells"
+git push origin master
+git add . -A
+git commit -am "Neu"
+git push origin master
+PhillO77
+ls
+cd KuA
+ls
+cd doku
+cd ..
+ls / l
+ls / -l
+clear
+ls
+type cd
+type rm
+sudo less bin/rm
+clear
+cd
+ls -a
+less .bachrc
+la -a
+ls /
+ls / etc
+ls etc
+ls Dokumente/
+ls .bashrc
+ls > verzeichnissinhalt.txt
+less verzeichnissinhalt
+less verzeichnissinhalt.txt
+cat > dateiname.txt
+cat dateiname.txt
+rm dateiname.txt
+cd dokumente/
+cd Dokumente/
+touch datei.txt
+clear
+git add . -A

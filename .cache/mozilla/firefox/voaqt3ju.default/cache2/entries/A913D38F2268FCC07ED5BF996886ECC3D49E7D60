@@ -1,0 +1,660 @@
+(function() {
+    //Resize-Event adden
+    window.addEventListener("resize", resizeingAll);
+    //Warten bis Content da ist und dann initialisieren
+    window.addEventListener("load",initAll);
+    //
+})();
+var container= document.getElementById("container");
+container.style.visibility="hidden";
+var banner= document.getElementById("banner");
+var bannerClassArray= document.getElementsByClassName("bannerClass");
+//TEXTE 1
+var containerClass= document.getElementsByClassName("containerClass");
+var txt_1_container= document.getElementById("txt_1_container");
+var txt_1_wrapper= document.getElementById("txt_1_wrapper");
+var txt_1_1= document.getElementById("txt_1_1");
+var txt_1_3= document.getElementById("txt_1_3");
+var txt_1_4= document.getElementById("txt_1_4");
+//
+//TEXTE 2
+var txt_2_container= document.getElementById("txt_2_container");
+var txt_2_wrapper= document.getElementById("txt_2_wrapper");
+var txt_2_1= document.getElementById("txt_2_1");
+var txt_2_2_1= document.getElementById("txt_2_2_1");
+var txt_2_2_2= document.getElementById("txt_2_2_2");
+var txt_2_3= document.getElementById("txt_2_3");
+var txt_2_4= document.getElementById("txt_2_4");
+//
+//TEXTE 3
+var txt_3_container= document.getElementById("txt_3_container");
+var txt_3_wrapper= document.getElementById("txt_3_wrapper");
+var txt_3_1= document.getElementById("txt_3_1");
+var txt_3_1_2=document.getElementById("txt_3_1_2");
+var txt_3_2= document.getElementById("txt_3_2");
+var txt_3_2= document.getElementById("txt_3_2");
+var txt_3_3= document.getElementById("txt_3_3");
+var txt_3_4= document.getElementById("txt_3_4");
+//
+var clickCtn=1;
+//ACTIVE for SLIDER
+var active=2;
+//PLUS
+var plus1=document.getElementById("plus1");
+var plus2=document.getElementById("plus2");
+var plus3=document.getElementById("plus3");
+var plus4=document.getElementById("plus4");
+//MOTIVE
+var motive_1_container=document.getElementById("motive_1_container");
+var motive_1_wrapper=document.getElementById("motive_1_wrapper");
+var motive_1=document.getElementById("motive_1");
+
+var motive_2_container=document.getElementById("motive_2_container");
+var motive_2_wrapper=document.getElementById("motive_2_wrapper");
+
+var motive_2=document.getElementById("motive_2");
+//BURGER
+var burger_container=document.getElementById("burger_container");
+var burger=document.getElementById("burger");
+//COKE
+var coke_container=document.getElementById("coke_container");
+var coke_wrapper=document.getElementById("coke_wrapper");
+var coke=document.getElementById("coke");
+//NEU
+var neu=document.getElementById("neu");
+//CTA
+var cta_container=document.getElementById("cta_container");
+var cta_wrapper=document.getElementById("cta_wrapper");
+var cta_wide=document.getElementById("cta_wide");
+var cta_small=document.getElementById("cta_small");
+//
+var clickThrough=document.getElementById("clickThrough");
+//ARROWS
+var arrow_left=document.getElementById("arrow_left");
+var arrow_right=document.getElementById("arrow_right");
+
+//LEGALINE
+var legaline_container=document.getElementById("legaline_container");
+var legaline=document.getElementById("legaline");
+//
+var clickThrough=document.getElementById("clickThrough");
+//ANIMATIONSWERTE-BurgerAnis
+var anitime1=0.3;
+var anitime2=1;
+var anidelay1=anitime1-0.1;
+var anidelay2=anidelay1+anitime2-0.1;
+var aniX_11=300;
+var aniX_22=30;
+var aniX_33=-aniX_22;
+var aniX_44=-aniX_11;
+
+var aniX_55=-50;
+var aniX_66=-5;
+var aniX_77=-aniX_66;
+var aniX_88=-aniX_55;
+//Dynamische Animation
+var t={percent:0};
+var w={percent:1};
+
+var helpW=200;
+var helpH=1000;
+
+var cta_loop=0;
+var arrow_loop=0;
+
+var loopCnt=0;
+var buehnenW;
+var buehnenH;
+var resizeValue=1;
+var resizeValue2=1;
+var blocked=false;
+var neuBannerBreite;
+var myTimeout;
+var timeLine={time:0};
+var timeLine2={time:0};
+     //banner = myFT.$("#banner");
+
+//RESIZING!
+function resizeingAll(){
+    resizeAll();
+}
+function resizeAll(){
+    blocked=true;
+    //BuhnenW und BuhenenH setten
+    //BuhnenW und BuhenenH setten
+    buehnenW = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if(buehnenW<100){buehnenW=100};
+    buehnenH = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    if(buehnenH<600){buehnenH=600};
+    //ResizeValue berechnen
+    resizeValue=buehnenH/helpH;
+    //
+    neuBannerBreite=buehnenW/resizeValue;
+    TweenLite.set(banner,{width:neuBannerBreite});
+    //ANPASSUNGEN DES BANNERS
+    TweenLite.set(banner,{scale:resizeValue});
+    //
+    if(buehnenW/buehnenH < 70/600){
+        positionierungBG_0();
+    }
+    else if(buehnenW/buehnenH < 120/600){
+        positionierungBG_1();
+    }
+    else if(buehnenW/buehnenH < 160/600){
+        positionierungBG_2();
+    }
+    else if(buehnenW/buehnenH < 200/600){
+        positionierungBG_3();
+    }
+    else if(buehnenW/buehnenH < 250/600){
+        positionierungBG_4();
+    }
+    else if(buehnenW/buehnenH < 340/600){
+        positionierungBG_5();
+    }
+    else if(buehnenW/buehnenH < 500/600){
+        positionierungBG_6();
+    }
+    else if(buehnenW/buehnenH < 600/600){
+        positionierungBG_7();
+    }
+    else{
+        positionierungBG_8();
+    }
+    //container anpassen, nervig muss man aber machen =)
+    container.style.width=banner.getBoundingClientRect().width+"px";
+
+    blocked=false;
+}
+/*<--------------------  Ende Resize --------------------*/
+//POSITIONINGS
+
+function positionierungBG_0(){
+  //< 90/600
+  txt_3_1_2.style.display="block";
+  cta_small.style.display="block";
+  cta_wide.style.display="none";
+  //MOTIVE
+  TweenLite.set(motive_1_container,{left:"55%",top:"25%",scale:0.18});
+  //BURGER
+  TweenLite.set(burger_container,{left:"80%",top:"65%",scale:0.45});
+  //TXT1
+  TweenLite.set(txt_1_container,{left:"52%",top:"30%",scale:0.22});
+  //TXT2
+  TweenLite.set(txt_2_container,{left:"65%",top:"36%",scale:0.28});
+  //TXT3
+  TweenLite.set(txt_3_container,{left:"70%",top:"8%",scale:0.25});
+  //COKE
+  TweenLite.set(coke_container,{left:"75%",top:"43%",scale:0.95});
+  //CTA
+  TweenLite.set(cta_container,{left:"50%",top:"28%",scale:.35});
+  //LOGO
+  TweenLite.set(logo_container,{scale:.7});
+  change_txt_1();
+  change_txt_2();
+  change_txt_3();
+}
+function positionierungBG_1(){
+  //< 120/600
+  txt_3_1_2.style.display="block";
+  cta_small.style.display="block";
+  cta_wide.style.display="none";
+  //MOTIVE
+  TweenLite.set(motive_1_container,{left:"55%",top:"23%",scale:0.22});
+  //BURGER
+  TweenLite.set(burger_container,{left:"75%",top:"68%",scale:0.5});
+  //TXT1
+  TweenLite.set(txt_1_container,{left:"55%",top:"28%",scale:0.25});
+  //TXT2
+  TweenLite.set(txt_2_container,{left:"64%",top:"35%",scale:0.3});
+  //TXT3
+  TweenLite.set(txt_3_container,{left:"68%",top:"8%",scale:0.31});
+  //COKE
+  TweenLite.set(coke_container,{left:"65%",top:"46%",scale:1});
+  //CTA
+  TweenLite.set(cta_container,{left:"52%",top:"28%",scale:0.5});
+  //LOGO
+  TweenLite.set(logo_container,{scale:.7});
+  change_txt_1();
+  change_txt_2();
+  change_txt_3();
+}
+function positionierungBG_2(){
+  //< 160/600
+  txt_3_1_2.style.display="block";
+  cta_small.style.display="block";
+  cta_wide.style.display="none";
+  //MOTIVE
+  TweenLite.set(motive_1_container,{left:"56%",top:"19%",scale:0.36});
+  //BURGER
+  TweenLite.set(burger_container,{left:"75%",top:"68%",scale:0.7});
+  //TXT1
+  TweenLite.set(txt_1_container,{left:"51%",top:"27%",scale:0.42});
+  //TXT2
+  TweenLite.set(txt_2_container,{left:"65%",top:"38%",scale:0.45});
+  //TXT2
+  TweenLite.set(txt_3_container,{left:"67%",top:"8%",scale:0.45});
+  //COKE
+  TweenLite.set(coke_container,{left:"50%",top:"42%",scale:1.2});
+  //CTA
+  TweenLite.set(cta_container,{left:"55%",top:"27%",scale:0.55});
+  //LOGO
+  TweenLite.set(logo_container,{scale:.7, right:0});
+  change_txt_1();
+  change_txt_2();
+  change_txt_3();
+}
+function positionierungBG_3(){
+  //< 200/600
+  txt_3_1_2.style.display="block";
+  cta_small.style.display="block";
+  cta_wide.style.display="none";
+  //MOTIVE
+  TweenLite.set(motive_1_container,{left:"57%",top:"17%",scale:0.48});
+  //BURGER
+  TweenLite.set(burger_container,{left:"68%",top:"66%",scale:0.8});
+  //TXT1
+  TweenLite.set(txt_1_container,{left:"51%",top:"30%",scale:0.5});
+  //TXT2
+  TweenLite.set(txt_2_container,{left:"65%",top:"39%",scale:0.6});
+  //TXT2
+  TweenLite.set(txt_3_container,{left:"68%",top:"10%",scale:0.6});
+  //COKE
+  TweenLite.set(coke_container,{left:"33%",top:"41%",scale:1.3});
+  //CTA
+  TweenLite.set(cta_container,{left:"58%",top:"28%",scale:0.60});
+  //LOGO
+  TweenLite.set(logo_container,{scale:.7});
+  change_txt_1();
+  change_txt_2();
+  change_txt_3();
+}
+function positionierungBG_4(){
+  //< 250/600
+  txt_3_1_2.style.display="none";
+  cta_small.style.display="block";
+  cta_wide.style.display="none";
+  //MOTIVE
+  TweenLite.set(motive_1_container,{left:"55%",top:"24%",scale:0.55});
+  //BURGER
+  TweenLite.set(burger_container,{left:"58%",top:"66%",scale:0.8});
+  //TXT1
+  TweenLite.set(txt_1_container,{left:"50%",top:"42%",scale:0.4});
+  //TXT2
+  TweenLite.set(txt_2_container,{left:"55%",top:"38%",scale:0.4});
+  //TXT2
+  TweenLite.set(txt_3_container,{left:"57%",top:"7%",scale:0.51});
+  //COKE
+  TweenLite.set(coke_container,{left:"32%",top:"41%",scale:1.35});
+  //CTA
+  TweenLite.set(cta_container,{left:"58%",top:"25%",scale:.75});
+  //LOGO
+  TweenLite.set(logo_container,{scale:.8});
+  change_txt1_wide();
+  change_txt2_wide();
+  change_txt3_wide();
+}
+function positionierungBG_5(){
+  //< 340/600
+  txt_3_1_2.style.display="none";
+  cta_small.style.display="block";
+  cta_wide.style.display="none";
+  //MOTIVE
+  TweenLite.set(motive_1_container,{left:"54%",top:"20%",scale:0.6});
+  //BURGER
+  TweenLite.set(burger_container,{left:"55%",top:"65%",scale:0.85});
+  //TXT1
+  TweenLite.set(txt_1_container,{left:"52%",top:"34%",scale:0.65});
+  //TXT2
+  TweenLite.set(txt_2_container,{left:"57%",top:"38%",scale:0.65});
+  //TXT2
+  TweenLite.set(txt_3_container,{left:"55%",top:"13%",scale:0.63});
+  //COKE
+  TweenLite.set(coke_container,{left:"30%",top:"38%",scale:1.45});
+  //CTA
+  TweenLite.set(cta_container,{left:"61%",top:"30%",scale:.8});
+  //LOGO
+  TweenLite.set(logo_container,{scale:.95});
+  change_txt1_wide();
+  change_txt2_wide();
+  change_txt3_wide();
+}
+function positionierungBG_6(){
+  //< 500/600
+  txt_3_1_2.style.display="none";
+  cta_small.style.display="none";
+  cta_wide.style.display="block";
+  //MOTIVE
+  TweenLite.set(motive_1_container,{left:"50%",top:"17%",scale:0.85});
+  //BURGER
+  TweenLite.set(burger_container,{left:"53%",top:"62%",scale:0.95});
+  //TXT1
+  TweenLite.set(txt_1_container,{left:"50%",top:"41%",scale:0.75});
+  //TXT2
+  TweenLite.set(txt_2_container,{left:"57%",top:"38%",scale:0.75});
+  //TXT2
+  TweenLite.set(txt_3_container,{left:"50%",top:"19%",scale:0.85});
+  //COKE
+  TweenLite.set(coke_container,{left:"25%",top:"39%",scale:1.5});
+  //CTA
+  TweenLite.set(cta_container,{left:"60%",top:"35%",scale:0.9});
+  //LOGO
+  TweenLite.set(logo_container,{scale:1.15});
+  //
+  change_txt1_wide();
+  change_txt2_wide();
+  change_txt3_wide();
+}
+function positionierungBG_7(){
+  //< 600/600
+  txt_3_1_2.style.display="none";
+  cta_small.style.display="none";
+  cta_wide.style.display="block";
+  //MOTIVE
+  TweenLite.set(motive_1_container,{left:"50%",top:"12%",scale:0.9 });
+  //BURGER
+  TweenLite.set(burger_container,{left:"50%",top:"56%",scale:1.1});
+  //TXT1
+  TweenLite.set(txt_1_container,{left:"51%",top:"38%",scale:0.8});
+  //TXT1
+  TweenLite.set(txt_2_container,{left:"55%",top:"35%",scale:0.8});
+  //TXT1
+  TweenLite.set(txt_3_container,{left:"45%",top:"18%",scale:0.9});
+  //COKE
+  TweenLite.set(coke_container,{left:"25%",top:"32%",scale:1.7 });
+  //CTA
+  TweenLite.set(cta_container,{left:"55%",top:"35%",scale:1});
+  //LOGO
+  TweenLite.set(logo_container,{scale:1.3});
+  change_txt1_wide();
+  change_txt2_wide();
+  change_txt3_wide();
+}
+function positionierungBG_8(){
+  // > 600
+  txt_3_1_2.style.display="none";
+  cta_small.style.display="none";
+  cta_wide.style.display="block";
+  //MOTIVE
+  TweenLite.set(motive_1_container,{left:"50%",top:"10%",scale:0.9 });
+  //BURGER
+  TweenLite.set(burger_container,{left:"50%",top:"54%",scale:1.15});
+  //TXT1
+  TweenLite.set(txt_1_container,{left:"52%",top:"36%",scale:0.8});
+  //TXT2
+  TweenLite.set(txt_2_container,{left:"52%",top:"33%",scale:0.8});
+  //TXT2
+  TweenLite.set(txt_3_container,{left:"43%",top:"18%",scale:0.9});
+  //COKE
+  TweenLite.set(coke_container,{left:"24%",top:"32%",scale:1.7 })
+  //CTA
+  TweenLite.set(cta_container,{left:"50%",top:"35%",scale:1});
+  //LOGO
+  TweenLite.set(logo_container,{scale:1.3});
+  change_txt1_wide();
+  change_txt2_wide();
+  change_txt3_wide();
+}
+
+function change_txt_1(){
+  TweenLite.set(txt_1_1,{left: -250,top: 0});
+  TweenLite.set(txt_1_3,{left: -80,top: 125});
+  TweenLite.set(txt_1_4,{left: 120,top: 90});
+}
+
+function change_txt1_wide(){
+  TweenLite.set(txt_1_1,{left: -330,top: 0});
+  TweenLite.set(txt_1_3,{left: 0,top: 80});
+  TweenLite.set(txt_1_4,{left: 200,top: 50});
+}
+function change_txt_2(){
+  TweenLite.set(txt_2_1,{scale:1.3, left: -250, top: -150});
+  TweenLite.set(txt_2_2_1, {left: -125,top: -240});
+  TweenLite.set(txt_2_2_2, {left: -250,top: -130});
+  TweenLite.set(txt_2_3,{left: -180,top: -40});
+  TweenLite.set(txt_2_4,{left: -255,top: 110});
+}
+function change_txt2_wide(){
+  TweenLite.set(txt_2_1,{left: -350,top: -105});
+  TweenLite.set(txt_2_2_1, {left: -300, top: -70});
+  TweenLite.set(txt_2_2_2, {left: -60, top: -145});
+  TweenLite.set(txt_2_3,{left: -390,top: 5});
+  TweenLite.set(txt_2_4,{left: -110,top: -25});
+}
+function change_txt_3(){
+  TweenLite.set(txt_3_1,{ left: -250, top: -150});
+  TweenLite.set(txt_3_1_2, {left: 75, top: -135});
+  TweenLite.set(txt_3_2, {left: -270, top: -60});
+  TweenLite.set(txt_3_3,{left: -20, top: -78});
+  TweenLite.set(txt_3_4,{left: -310, top: -20});
+  TweenLite.set(txt_3_5,{left: -195, top: 95});
+}
+function change_txt3_wide(){
+  TweenLite.set(txt_3_1,{ left: -380,top: -50 });
+  TweenLite.set(txt_3_2, { left: -60, top: -87 });
+  TweenLite.set(txt_3_3,{ left: 180,top: -102 });
+  TweenLite.set(txt_3_4,{ left: -170,top: -33 });
+  TweenLite.set(txt_3_5,{ left: -40,top: 80 });
+}
+//RESETTEN
+function resetAll(){
+    active=2;
+    //
+    TweenLite.set(bannerClassArray,{force3D:true});
+    TweenLite.set(banner,{rotation:0,transformOrigin:"0% 0%",force3D:true});
+    //Motive
+    //offsets wrapper y:-90 , motive1 scale:0.6 transformOrigin:"10% 0%"
+    TweenLite.set(motive_1_container,{opacity:1,transformOrigin:"0% 0%",scale:1,force3D:true});
+        TweenLite.set(motive_1_wrapper,{x:0,y:0, opacity:0,scale:0,rotation:0,transformOrigin:"50% 50%",force3D:true});
+            TweenLite.set(motive_1,{x:0,y:200,opacity:1,scale:1,rotation:0,transformOrigin:"10% 0%",force3D:true});
+            TweenLite.set(motive_2,{x:0,y:200,opacity:0,scale:0,rotation:0,transformOrigin:"50% 50%",force3D:true});
+    //offsets wrapper y:-90 , motive1 scale:0.6 transformOrigin:"10% 0%"
+    TweenLite.set(burger_container,{opacity:1,transformOrigin:"0% 0%",scale:1,force3D:true});
+        TweenLite.set(burger_wrapper,{x:500,y:-50, opacity:0,scale:1,rotation:0,transformOrigin:"50% 50%",force3D:true});
+            TweenLite.set(burger,{x:0,y:0,opacity:1,scale:1,rotation:0,transformOrigin:"10% 0%",force3D:true});
+    //COKE
+    TweenLite.set(coke_container,{opacity:1,transformOrigin:"0% 0%",scale:1,force3D:true});
+        TweenLite.set(coke_wrapper,{x:-100,y:-50, opacity:0,scale:.9,rotation:0,transformOrigin:"50% 50%",force3D:true});
+            TweenLite.set(coke,{x:0,y:0,opacity:1,scale:1,rotation:0,transformOrigin:"10% 0%",force3D:true});
+    //TXT1
+    TweenLite.set(txt_1_container,{opacity:0,rotation:0,transformOrigin:"0% 0%",force3D:true});
+        TweenLite.set(txt_1_wrapper,{x:0, y:0, opacity:1,scale:1,transformOrigin:"0% 0%",force3D:true});
+            TweenLite.set(txt_1_1,{x:0,y:280,opacity:1,scale:1,rotation:0,transformOrigin:"50% 50%",force3D:true});
+            TweenLite.set(txt_1_3,{x:0,y:280,opacity:1,scale:1,rotation:0,transformOrigin:"50% 50%",force3D:true});
+            TweenLite.set(txt_1_4,{x:0,y:280,opacity:1,scale:1,rotation:0,transformOrigin:"50% 50%",force3D:true});
+    //TXT2
+    TweenLite.set(txt_2_container,{opacity:0,rotation:0,transformOrigin:"0% 0%",force3D:true});
+        TweenLite.set(txt_2_wrapper,{opacity:1,scale:1,transformOrigin:"0% 0%",force3D:true});
+            TweenLite.set(txt_2_1,{x:0,y:0,opacity:1,scale:1,rotation:0,transformOrigin:"50% 50%",force3D:true});
+            TweenLite.set(txt_2_2_1,{x:0,y:0,opacity:1,scale:1,rotation:0,transformOrigin:"50% 50%",force3D:true});
+            TweenLite.set(txt_2_2_2,{x:0,y:0,opacity:1,scale:1,rotation:0,transformOrigin:"50% 50%",force3D:true});
+            TweenLite.set(txt_2_3,{x:0,y:0,opacity:1,scale:1,rotation:0,transformOrigin:"50% 50%",force3D:true});
+            TweenLite.set(txt_2_4,{x:0,y:0,opacity:1,scale:1,rotation:0,transformOrigin:"50% 50%",force3D:true});
+    //TXT3
+    TweenLite.set(txt_3_container,{opacity:0, rotation:0, transformOrigin:"50% 50%",force3D:true});
+        TweenLite.set(txt_3_wrapper,{opacity:1,scale:1,transformOrigin:"50% 50%",force3D:true});
+            TweenLite.set(txt_3_1,{x:0,y:0,opacity:1,scale:1,rotation:0,transformOrigin:"50% 50%",force3D:true});
+            TweenLite.set(txt_3_1_2,{x:0,y:0,opacity:1,scale:1,rotation:0,transformOrigin:"50% 50%",force3D:true});
+            TweenLite.set(txt_3_2,{x:0,y:0,opacity:1,scale:1,rotation:0,transformOrigin:"50% 50%",force3D:true});
+            TweenLite.set(txt_3_3,{x:0,y:0,opacity:1,scale:1,rotation:0,transformOrigin:"50% 50%",force3D:true});
+            TweenLite.set(txt_3_4,{x:0,y:0,opacity:1,scale:1,rotation:0,transformOrigin:"50% 50%",force3D:true});
+            TweenLite.set(txt_3_5,{x:0,y:0,opacity:1,scale:1,rotation:0,transformOrigin:"50% 50%",force3D:true});
+    //CTA
+    TweenLite.set(cta_container,{opacity:0, scale:1, transformOrigin:"0% 0%", force3D:true});
+        TweenLite.set(cta_wrapper,{opacity:1,rotation:0,scale:1, transformOrigin:"0% 0%", force3D:true});
+          TweenLite.set(cta_wide,{opacity:1,rotation:0,transformOrigin:"50% 50%",force3D:true});
+          TweenLite.set(cta_small,{opacity:1,rotation:0,transformOrigin:"50% 50%",force3D:true});
+    //LOGO
+    TweenLite.set(logo_container,{opacity:1,transformOrigin:"100% 0%",force3D:true});
+    TweenLite.set(logo,{opacity:1,force3D:true});
+    //CLICKTHROUGH
+    TweenLite.set(clickThrough,{opacity:0});
+}
+//ANIMATIONEN
+function animate_0(){
+    //
+    TweenLite.to(motive_1_wrapper,1.5,{scale:1,rotation:0.02,ease: Elastic.easeOut.config(1, 0.3), delay:0.5});
+    TweenLite.to(motive_1_wrapper,0.2,{opacity:1, delay:0.5});
+    TweenLite.fromTo(timeLine,1.5,{time:0},{time:1,onComplete:animate_1});
+}
+function animate_1(){
+    //offsets wrapper y:-90 , motive1 scale:0.6 transformOrigin:"10% 0%" ,
+    TweenLite.to(motive_1, 0.2, {rotation:0.02, scale:0.6 });
+    TweenLite.to(motive_2, 1.5, {scale:1.2, rotation:0.02, ease: Elastic.easeOut.config(1, 0.3) });
+    TweenLite.to(motive_2, 0.2, {opacity:1 });
+    TweenLite.fromTo(timeLine, 1.5, {time:0}, {time:1,onComplete:animate_2});
+}
+function animate_2(){
+    TweenLite.to(motive_1_wrapper,0.3,{rotation:0,y:-90});
+    TweenLite.from(txt_1_1,0.3,{opacity:0,rotation:0.02,y:500,ease: Back.easeOut.config(1.7),delay:0});
+    TweenLite.from(txt_1_3,0.3,{opacity:0,rotation:0.02,y:500,ease: Back.easeOut.config(1.7),delay:0.2});
+    TweenLite.from(txt_1_4,0.3,{opacity:0,rotation:0.02,y:500,ease: Back.easeOut.config(1.7),delay:0.3});
+    //
+    TweenLite.set(txt_1_container,{opacity:1, rotation:0.02});
+    //
+    TweenLite.fromTo( timeLine, 1.7, {time:0},{ time:1, onComplete:animate_3 });
+}
+function animate_3(){
+    TweenLite.to(burger_wrapper,1.2,{scale:1, x:0, rotation:0.02,ease: Elastic.easeOut.config(0.7, 0.3), delay:0.2});
+    TweenLite.to(burger_wrapper,0.2,{opacity:1, delay:0.2});
+    //
+    TweenLite.to(motive_1_wrapper,0.8, { x:-20, y:-370, rotation:0.02, scale:0.55, ease: Elastic.easeOut.config(0.6, 0.6), delay:0.2});
+    TweenLite.to(txt_1_wrapper,0.2, { x:-200, y:0, opacity:0, rotation:0.02, scale:1, ease: Power2.easeIn});
+
+    TweenLite.fromTo( timeLine, 0.3, {time:0},{ time:1, onComplete:animate_4 });
+}
+function animate_4(){
+    //
+    TweenLite.set(txt_2_container,{opacity:1, rotation:0.02});
+    //
+    TweenLite.from(txt_2_1,1.3,{opacity:0,rotation:0.02,scale:0,ease: Elastic.easeOut.config(1, 0.4),delay:0.1});
+    TweenLite.from(txt_2_2_1,1.3,{opacity:0,rotation:0.02,scale:0,ease: Elastic.easeOut.config(1, 0.4),delay:0.2});
+    TweenLite.from(txt_2_2_2,1.3,{opacity:0,rotation:0.02,scale:0,ease: Elastic.easeOut.config(1, 0.4),delay:0.3});
+    TweenLite.from(txt_2_3,1.3,{opacity:0,rotation:0.02,scale:0,ease: Elastic.easeOut.config(1, 0.4),delay:0.4});
+    TweenLite.from(txt_2_4,1.3,{opacity:0,rotation:0.02,scale:0,ease: Elastic.easeOut.config(1, 0.4),delay:0.5});
+    //
+    TweenLite.fromTo(timeLine, 2.5, {time:0},{ time:1, onComplete:animate_5 });
+}
+function animate_5(){
+    TweenLite.to( txt_2_container, 0.5,{ opacity:0, rotation:0 });
+    TweenLite.to( txt_3_container,0.6,{ opacity:1, rotation:0.02 });
+    //
+    TweenLite.from(txt_3_1,1.3,{opacity:0,rotation:0.02,scale:0,ease: Elastic.easeOut.config(1, 0.4),delay:0.5});
+    TweenLite.from(txt_3_1_2,1.3,{opacity:0,rotation:0.02,scale:0,ease: Elastic.easeOut.config(1, 0.4),delay:0.5});
+    TweenLite.from(txt_3_2,1.3,{opacity:0,rotation:0.02,scale:0,ease: Elastic.easeOut.config(1, 0.4),delay:0.5});
+    TweenLite.from(txt_3_3,1.3,{opacity:0,rotation:0.02,scale:0,ease: Elastic.easeOut.config(1, 0.4),delay:0.5});
+    TweenLite.from(txt_3_4,1.3,{opacity:0,rotation:0.02,scale:0,ease: Elastic.easeOut.config(1, 0.4),delay:0.5});
+    TweenLite.from(txt_3_5,1.3,{opacity:0,rotation:0.02,scale:0,ease: Elastic.easeOut.config(1, 0.4),delay:0.5});
+    //
+    TweenLite.to(coke_wrapper,1.1,{scale:1, x:0, y:-20, rotation:0.02,ease: Elastic.easeOut.config(0.5, 0.5),delay:0.4});
+    TweenLite.to(coke_wrapper,0.3,{opacity:1, delay:0.4});
+
+    TweenLite.to(motive_1_wrapper,0.2,{opacity:0, rotation:0});
+    //
+    TweenLite.fromTo(timeLine, 2,{ time:0}, {time:1, onComplete:animate_6});
+}
+function animate_6(){
+
+    //
+    TweenLite.set(cta_container,{opacity:1, delay:0.2})
+    TweenLite.fromTo(cta_wrapper,0.3,{scale:0, opacity:0, rotation:0.02},{scale:1.3,opacity:1, rotation:0, delay:0.2});
+    TweenLite.to(cta_wrapper,0.2,{scale:1, rotation:0.02, delay:0.5});
+    //
+    TweenLite.fromTo(timeLine, 1.6,{ time:0}, {time:1, onComplete:animate_7});
+}
+function animate_7(){
+    //
+    ctaAnimate();
+    //
+    TweenLite.fromTo(timeLine, 2.5,{ time:0}, {time:1, onComplete:animate_8});
+}
+function animate_8(){
+    //
+    TweenLite.to(txt_3_container,0.4,{opacity:0, rotation:0});
+    TweenLite.to(coke_wrapper, 0.4,{opacity:0, rotation:0, delay:0.2});
+    TweenLite.to(burger_wrapper,0.4,{opacity:0, rotation:0, delay:0.2});
+    TweenLite.to(cta_wrapper,0.4,{opacity:0, rotation:0, delay:0.2});
+    //
+    TweenLite.fromTo(timeLine, 1,{ time:0}, {time:1, onComplete:endAnimation});
+}
+
+function ctaAnimate(){
+    if(cta_loop < 3){
+      TweenLite.to(cta_wrapper, 0.2,{ scale:1.2, rotation:0, Ease: Back.easeOut.config(1)});
+      TweenLite.to(cta_wrapper, 0.2,{ scale:1, rotation:0.02, Ease: Back.easeOut.config(1), delay:0.2, onComplete:ctaAnimate});
+    }
+    else{}
+    cta_loop++;
+}
+
+function endAnimation(){
+    //Alles zurÃ¼cksetzen
+    killAllTweens();
+    cta_loop=0;
+    resetAll();
+    resizeAll();
+    animate_0();
+}
+function killAllTweens(){
+}
+//SLIDER
+  function addingEvents(){
+    clickThrough.addEventListener("click",clickhandler);
+    try{
+        myFT.on("sizechange",resizeingAll);
+    }
+    catch(err){
+    }
+  }
+  function cta_1_Handler(){
+    myFT.tracker("denim_guide_clicked");
+    cta_1_wrapper.removeEventListener("click", cta_1_Handler,false);
+    animate_2();
+  }
+//clickTag
+
+function clickhandler(event){
+    myFT.clickTag(1);
+}
+//Warten bis Content da ist und dann initialisieren
+window.addEventListener("load",initAll);
+function initAll(){
+    //einmal initial Positionieren
+    addingEvents();
+    resetAll();
+    resizeAll();
+    container.style.visibility="visible";
+    //Dann Animationen starten
+    startAnimations();
+}
+ function startAnimations(){
+    //Alles zurÃ¼cksetzen
+    resetAll();
+    resizeAll();
+    animate_0();
+}
+	áj¯V      Wê&éWê&é<ðhWê*Š   a    :http://cdn.flashtalking.com/63743/RICHLOAD_BTHS_Coke_AxelSpringer_Dynamic_Sitebar_120x600/phs.js necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Via: 1.1 ISA01TMG
+Expires: Tue, 27 Sep 2016 08:15:06 GMT
+Date: Tue, 27 Sep 2016 07:59:37 GMT
+Content-Type: text/javascript
+Etag: "f34468d35d91223206713192ada81ca0"
+Server: Flashtalking (AKA)
+Accept-Ranges: bytes
+Last-Modified: Fri, 19 Aug 2016 15:36:13 GMT
+x-amz-version-id: null
+Cache-Control: max-age=929
+ original-response-headers Via: 1.1 ISA01TMG
+Connection: Keep-Alive
+Proxy-Connection: Keep-Alive
+Transfer-Encoding: chunked
+Expires: Tue, 27 Sep 2016 08:15:06 GMT
+Date: Tue, 27 Sep 2016 07:59:37 GMT
+Content-Type: text/javascript
+Etag: "f34468d35d91223206713192ada81ca0"
+Server: Flashtalking (AKA)
+Accept-Ranges: bytes
+Last-Modified: Fri, 19 Aug 2016 15:36:13 GMT
+x-amz-version-id: null
+Cache-Control: max-age=929
+ uncompressed-len 0   ab

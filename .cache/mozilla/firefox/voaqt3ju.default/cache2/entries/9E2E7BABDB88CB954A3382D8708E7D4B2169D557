@@ -1,0 +1,2334 @@
+﻿
+<!DOCTYPE html>
+<!-- SPEEDTEST -->
+<script>
+    window.speedTest = [];
+    window.speedTest.oldPush = window.speedTest.push;
+    window.speedTest.push = function (_val_) {
+        if (typeof _val_ === "object" && this.length > 0) {
+            var prev = this[this.length - 1].time;
+            _val_.delta = _val_.time - prev;
+        } else _val_.delta = 0;
+
+        _val_.index = this.length;
+        _val_.uTimeStamp = _val_.time;
+        this.oldPush(_val_);
+
+        if (typeof window.newrelic !== "undefined") {
+            newrelic.addPageAction("speedMeasure", _val_);
+        }
+
+        try {
+            // todo: remove this code, and replace this with a URL param
+            (document.location.host === "iis-1.playbuzz.com" ||
+                document.location.host === "iis-4.playbuzz.com") && console.log(JSON.stringify(_val_));
+        } catch (e) {
+            console.log('speed-exception', (e));
+        }
+
+    }
+    window.speedTest.push({ key: "loadStart", time: new Date().getTime() });
+    window.performanceAnalytics = {};
+</script>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#" lang="en">
+<head>
+    <!-- SPEEDTEST -->
+    <script>window.speedTest.push({ key: "headStart", time: new Date().getTime() });</script>
+
+
+
+    <script>
+        //Define googletags on first steps of the page
+        var googletag = googletag || {};
+        googletag.cmd = googletag.cmd || [];
+
+        window.pbads = window.pbads || {};
+        window.pbads.targeting = [];
+    </script>
+
+    
+    <link rel="canonical" href="http://www.playbuzz.com/bildll10/a-wetten-dass-du-dir-keine-zehn-bilder-anschauen-kannst" />
+    <meta http-equiv="content-language" content="de-DE" />
+    <meta name="description" content="Rani Haese (16) aus Australien ist eine begnadete Blut-Wunden-K&#252;nstlerin." />
+        <meta name="robots" content="noindex">
+    
+
+
+                <script>
+                    window.cookieExpiry = new Date("10/30/2020");
+                    window.Cookie = "Experiments: {RecommendationService:OutBrian,SubscribeButtonMobile:buttonHidden,GameAdsExp3:AdsOn,ShareBarMobileABTest:FB_W_E_PIN}, LastUpdate:10/31/2016 4:00:12 AM"
+                    window.ABTestAnalytics = [];
+                </script>
+
+
+
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width" />
+
+
+
+    <!-- header CSS -->
+    
+    <link href="//cdn.playbuzz.com/content/bundles/production/af3422f/game/embed/reveal/css" rel="stylesheet"/>
+
+
+
+
+    <!-- end of header CSS -->
+
+    
+    
+        
+    
+
+    
+
+
+    <meta property="og:site_name" content="Playbuzz" />
+    
+    <meta property="og:url" content="http://www.playbuzz.com/bildll10/a-wetten-dass-du-dir-keine-zehn-bilder-anschauen-kannst" />
+    <meta property="og:title" content="Wetten, dass du dir keine zehn Bilder anschauen kannst?" />
+    <meta property="og:description" content="Rani Haese (16) aus Australien ist eine begnadete Blut-Wunden-K&#252;nstlerin." />
+
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="http://cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/08be0a15-999f-4f64-8fb6-4cb4da1b38ab_560_420.jpg" />
+        <meta property="og:image:width" content="560" />
+        <meta property="og:image:height" content="420" />
+    <meta property="article:published_time" content="2016-10-31T09:48+00:00" />
+    <meta property="article:modified_time" content="2016-10-31T13:28+00:00" />
+    <meta property="article:publisher" content="https://www.facebook.com/playbuzz" />
+
+    <meta itemprop="image" content="http://cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/08be0a15-999f-4f64-8fb6-4cb4da1b38ab_560_420.jpg">
+
+
+    <meta property="fb:app_id" content="527957123932456" />
+    <meta property="fb:admins" content="709648557" />
+    <meta property="fb:admins" content="100004994733705" />
+    <meta property="fb:admins" content="506025859" />
+    <meta property="fb:admins" content="1033186164" />
+    <meta property="fb:admins" content="727908807" />
+    <meta property="fb:admins" content="549695877" />
+    <meta property="fb:admins" content="740606389" />
+    <meta property="fb:admins" content="656403766" />
+    <meta property="fb:admins" content="1074031497" />
+    <meta property="fb:admins" content="586673781" />
+    <meta property="fb:admins" content="1613670027" />
+    
+
+    
+    <meta property="fb:pages" content="501748733244604" />
+
+    <meta name="twitter:domain" content="www.playbuzz.com" />
+    <meta name="twitter:site" content="@play_buzz" />
+    
+    <meta name="twitter:url" content="http://www.playbuzz.com/bildll10/a-wetten-dass-du-dir-keine-zehn-bilder-anschauen-kannst" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+
+    <title>Wetten, dass du dir keine zehn Bilder anschauen kannst? | Playbuzz</title>
+
+    <!--[if lt IE 10]>
+    <script>
+        document.createElement('header');
+        document.createElement('nav');
+        document.createElement('section');
+        document.createElement('article');
+        document.createElement('aside');
+        document.createElement('footer');
+        document.createElement('hgroup');
+    </script>
+    <![endif]-->
+                <style>
+                html {
+                    overflow: auto;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                body {
+                    overflow: hidden;
+                    margin: 0;
+                    padding: 0;
+                }
+            </style>
+
+
+    <!-- SPEEDTEST -->
+    <script>window.speedTest.push({ key: "headEnd", time: new Date().getTime() });</script>
+
+    
+
+<!--
+    Not rendering playbuzz fonts
+-->
+        <script>
+            var pbEndCardRecommendation = "";
+        </script>
+
+</head>
+
+
+
+
+<body class="pb_feed_body  
+    gamedetailsbackground 
+  embedded-item-container"   data-gameid="1c523e26-d8c4-4c1e-8c82-7475f7235f67"    >
+    <!-- SPEEDTEST -->
+    <script>window.speedTest.push({ key: "bodyStart", time: new Date().getTime() });</script>
+            <script>
+                window.cdnUrl = 'cdn.playbuzz.com/cdn/';
+            </script>
+        <script>
+            var useFf = 'true';
+        </script>
+
+    
+<script>
+        window.pb = window.pb || {};
+        window.pb.isFeed = 'True';
+</script>
+
+    
+
+
+    <div id="fb_pixel_pinterest"></div>
+    <div id="fb_pixel_facebook"></div>
+
+
+
+        <script>
+            // moved the CSSJSON out of the infra bundle - minified version of cssjson.js
+            var CSSJSON=new function(){var a=this;a.init=function(){String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g,"")},String.prototype.repeat=function(a){return new Array(1+a).join(this)}},a.init();var e=/\/\*[\s\S]*?\*\//g,f=/([^\:]+):([^\;]*);/,g=/(\/\*[\s\S]*?\*\/)|([^\s\;\{\}][^\;\{\}]*(?=\{))|(\})|([^\;\{\}]+\;(?!\s*\*\/))/gim,h=1,j=2,k=3,l=4,m=function(a){return"undefined"==typeof a||0==a.length||null==a};a.toJSON=function(b,c){var d={children:{},attributes:{}},n=null,o=0;if("undefined"==typeof c)var c={ordered:!1,comments:!1,stripComments:!1,split:!1};for(c.stripComments&&(c.comments=!1,b=b.replace(e,""));null!=(n=g.exec(b));)if(!m(n[h])&&c.comments){var p=n[h].trim();d[o++]=p}else if(m(n[j])){if(!m(n[k]))return d;if(!m(n[l])){var w=n[l].trim(),x=f.exec(w);if(x){var q=x[1].trim(),y=x[2].trim();if(c.ordered){var s={};s.name=q,s.value=y,s.type="attr",d[o++]=s}else if(q in d.attributes){var z=d.attributes[q];z instanceof Array||(d.attributes[q]=[z]),d.attributes[q].push(y)}else d.attributes[q]=y}else d[o++]=w}}else{var q=n[j].trim(),r=a.toJSON(b,c);if(c.ordered){var s={};s.name=q,s.value=r,s.type="rule",d[o++]=s}else{if(c.split)var t=q.split(",");else var t=[q];for(i in t){var u=t[i].trim();if(u in d.children)for(var v in r.attributes)d.children[u].attributes[v]=r.attributes[v];else d.children[u]=r}}}return d},a.toCSS=function(a,b,c){var d="";if("undefined"==typeof b&&(b=0),"undefined"==typeof c&&(c=!1),a.attributes)for(i in a.attributes){var e=a.attributes[i];if(e instanceof Array)for(var f=0;f<e.length;f++)d+=n(i,e[f],b);else d+=n(i,e,b)}if(a.children){var g=!0;for(i in a.children)c&&!g?d+="\n":g=!1,d+=o(i,a.children[i],b)}return d};var n=function(a,b,c){return"\t".repeat(c)+a+": "+b+";\n"},o=function(b,c,d){var e="\t".repeat(d)+b+" {\n";return e+=a.toCSS(c,d+1),e+="\t".repeat(d)+"}\n"}};
+
+            // Insert custom partner css for the current format.
+            (function (document) {
+                'use strict';
+                var formatId = 'Reveal',
+                    customCSS = {"multiplechoice":{"children":{".question_freetext, .animated_gif .question_freetext_with_media":{"attributes":{"background-color":"rgba(221,0,0, 0.8) !important"}},"#score_container":{"attributes":{"background-color":"#DD0000","border-bottom":"2px solid #A80000"}},".question_number":{"attributes":{"background-color":"#DD0000"}},".return_free_text_button":{"attributes":{"background-color":"rgba(221,0,0, 0.8)"}},".question_box_wrong":{"attributes":{"background-color":"#DD0000","border-bottom":"1px solid #A80000"}},".question_box_correct":{"attributes":{"background-color":"#339900","border-bottom":"1px solid #226600"}},".correct_answer":{"attributes":{"background-color":"#339900"}},".main_section.feed_main_section .final_result_score_header, .final_result_score_header":{"attributes":{"color":"#DD0000"}},".final_result_score, #final_result_score_text":{"attributes":{"background-color":"#DD0000"}},"#final_result_score_length,\n.question_number,\n.question_freetext":{"attributes":{"color":"white"}},".media_container_text_only>.question_freetext":{"attributes":{"color":"white"}}}},"poll":{"children":{".caption":{"attributes":{"color":"black"}}}},"playbuzzpoll":{"children":{".caption":{"attributes":{"color":"black"}},".answer_txt":{"attributes":{"color":"black"}},".plainBlock .questionWrapper li":{"attributes":{"background-color":"#EDEDED"}},".questionUnAnswered li:hover":{"attributes":{"background-color":"#f7f7f7"}},".odometerWrapper":{"attributes":{"color":"black"}},".plainBlock .questionWrapper .selectedAnswer .visualAnswer, .plainBlock .questionWrapper .selectedResult .visualAnswer":{"attributes":{"background-color":"#9b9b9b"}},".TextOnly .questionWrapper .visualAnswer, .ImagesAndTextList .questionWrapper .visualAnswer":{"attributes":{"background-color":"#CACACA"}}}},"testyourself":{"children":{".play_game_button":{"attributes":{"background-color":"#DD0000"}},".isHover .play_game_button:hover, .isHover .play_again_button:hover":{"attributes":{"background-color":"#A80000"}},".question_box_done":{"attributes":{"background-color":"#DD0000","border-bottom":"1px solid #A80000"}},".isHover .selectable_answer:hover, .selectable_answer.active_answer":{"attributes":{"background-color":"#DD0000 !important"}},"#result_details":{"attributes":{"color":"#DD0000"}},".result_text_wrapper":{"attributes":{"color":"#000"}},".media_container_text_only>.question_freetext":{"attributes":{"color":"#DD0000"}},".question_freetext":{"attributes":{"background-color":"rgba(221,0,0, 0.8)"}}}},"list":{"children":{".list-label.list-classic":{"attributes":{"background-color":"#DD0000 !important"}},".description":{"attributes":{"color":"#000 !important"}}}},"swiper":{"children":{".gotIt, .rightCorner":{"attributes":{"background-color":"#339900 !important"}},".leftCorner":{"attributes":{"background-color":"#DD0000 !important"}},".endResultsWrapper h2":{"attributes":{"background-color":"#339900 !important"}},".indexWrapper":{"attributes":{"background-color":"#339900 !important"}},".userVote.positiveVote":{"attributes":{"background-color":"#339900 !important","border-radius":"0"}},".userVote.negativeVote":{"attributes":{"background-color":"#DD0000 !important","border-radius":"0"}},".hoverBack":{"attributes":{"background-color":"#339900 !important"}},".jumpLeft, .jumpRight":{"attributes":{"color":"#339900 !important"}},".jumpLeft:hover, .jumpRight:hover":{"attributes":{"color":"white !important","background-color":"#339900 !important"}},".icon-repeat":{"attributes":{"background-color":"#339900 !important"}}}},"countdown":{"children":{".rank-bullet:after":{"attributes":{"border-radius":"0","background-color":"#DD0000"}},".textbox-rank-bullet>span":{"attributes":{"border-radius":"0","background-color":"#DD0000"}},".details-wrapper.details-inner":{"attributes":{"padding-left":"0"}},".details-wrapper.list-layout":{"attributes":{"background-color":"white"}},".title-wrapper, .description-inner":{"attributes":{"color":"black"}},".item-text-wrapper":{"attributes":{"color":"black"}},".read-more-link":{"attributes":{"color":"black"}}}}};
+
+                try {
+                    formatId = formatId.toLowerCase();
+                    if (typeof customCSS[formatId] !== 'object') {
+                        return;
+                    }
+
+                    var head = document.getElementsByTagName('head');
+                    if (head.length === 0) {
+                        return;
+                    }
+
+                    var customStyle = document.createElement('style');
+                    customStyle.innerHTML = CSSJSON.toCSS(customCSS[formatId]);
+                    head[0].appendChild(customStyle);
+
+                } catch (e) {
+                    console.log('speed-exception', (e));
+                }
+
+            })(document);
+        </script>
+
+    <section class="main_section feed_main_section autoHeight multiple_items_display" data-page-type="Game:Play">
+        
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // Insert custom partner css for the current format.
+        (function (document) {
+            'use strict';
+            var formatId = 'Reveal',
+                customCSS = {"multiplechoice":{"children":{".question_freetext, .animated_gif .question_freetext_with_media":{"attributes":{"background-color":"rgba(221,0,0, 0.8) !important"}},"#score_container":{"attributes":{"background-color":"#DD0000","border-bottom":"2px solid #A80000"}},".question_number":{"attributes":{"background-color":"#DD0000"}},".return_free_text_button":{"attributes":{"background-color":"rgba(221,0,0, 0.8)"}},".question_box_wrong":{"attributes":{"background-color":"#DD0000","border-bottom":"1px solid #A80000"}},".question_box_correct":{"attributes":{"background-color":"#339900","border-bottom":"1px solid #226600"}},".correct_answer":{"attributes":{"background-color":"#339900"}},".main_section.feed_main_section .final_result_score_header, .final_result_score_header":{"attributes":{"color":"#DD0000"}},".final_result_score, #final_result_score_text":{"attributes":{"background-color":"#DD0000"}},"#final_result_score_length,\n.question_number,\n.question_freetext":{"attributes":{"color":"white"}},".media_container_text_only>.question_freetext":{"attributes":{"color":"white"}}}},"poll":{"children":{".caption":{"attributes":{"color":"black"}}}},"playbuzzpoll":{"children":{".caption":{"attributes":{"color":"black"}},".answer_txt":{"attributes":{"color":"black"}},".plainBlock .questionWrapper li":{"attributes":{"background-color":"#EDEDED"}},".questionUnAnswered li:hover":{"attributes":{"background-color":"#f7f7f7"}},".odometerWrapper":{"attributes":{"color":"black"}},".plainBlock .questionWrapper .selectedAnswer .visualAnswer, .plainBlock .questionWrapper .selectedResult .visualAnswer":{"attributes":{"background-color":"#9b9b9b"}},".TextOnly .questionWrapper .visualAnswer, .ImagesAndTextList .questionWrapper .visualAnswer":{"attributes":{"background-color":"#CACACA"}}}},"testyourself":{"children":{".play_game_button":{"attributes":{"background-color":"#DD0000"}},".isHover .play_game_button:hover, .isHover .play_again_button:hover":{"attributes":{"background-color":"#A80000"}},".question_box_done":{"attributes":{"background-color":"#DD0000","border-bottom":"1px solid #A80000"}},".isHover .selectable_answer:hover, .selectable_answer.active_answer":{"attributes":{"background-color":"#DD0000 !important"}},"#result_details":{"attributes":{"color":"#DD0000"}},".result_text_wrapper":{"attributes":{"color":"#000"}},".media_container_text_only>.question_freetext":{"attributes":{"color":"#DD0000"}},".question_freetext":{"attributes":{"background-color":"rgba(221,0,0, 0.8)"}}}},"list":{"children":{".list-label.list-classic":{"attributes":{"background-color":"#DD0000 !important"}},".description":{"attributes":{"color":"#000 !important"}}}},"swiper":{"children":{".gotIt, .rightCorner":{"attributes":{"background-color":"#339900 !important"}},".leftCorner":{"attributes":{"background-color":"#DD0000 !important"}},".endResultsWrapper h2":{"attributes":{"background-color":"#339900 !important"}},".indexWrapper":{"attributes":{"background-color":"#339900 !important"}},".userVote.positiveVote":{"attributes":{"background-color":"#339900 !important","border-radius":"0"}},".userVote.negativeVote":{"attributes":{"background-color":"#DD0000 !important","border-radius":"0"}},".hoverBack":{"attributes":{"background-color":"#339900 !important"}},".jumpLeft, .jumpRight":{"attributes":{"color":"#339900 !important"}},".jumpLeft:hover, .jumpRight:hover":{"attributes":{"color":"white !important","background-color":"#339900 !important"}},".icon-repeat":{"attributes":{"background-color":"#339900 !important"}}}},"countdown":{"children":{".rank-bullet:after":{"attributes":{"border-radius":"0","background-color":"#DD0000"}},".textbox-rank-bullet>span":{"attributes":{"border-radius":"0","background-color":"#DD0000"}},".details-wrapper.details-inner":{"attributes":{"padding-left":"0"}},".details-wrapper.list-layout":{"attributes":{"background-color":"white"}},".title-wrapper, .description-inner":{"attributes":{"color":"black"}},".item-text-wrapper":{"attributes":{"color":"black"}},".read-more-link":{"attributes":{"color":"black"}}}}};
+
+            try {
+                formatId = formatId.toLowerCase();
+                if (typeof customCSS[formatId] !== 'object') {
+                    return;
+                }
+
+                var head = document.getElementsByTagName('head');
+                if (head.length === 0) {
+                    return;
+                }
+
+                var customStyle = document.createElement('style');
+                customStyle.innerHTML = CSSJSON.toCSS(customCSS[formatId]);
+                head[0].appendChild(customStyle);
+
+            } catch (e) {}
+
+        })(document);
+    </script>
+
+<div class="ads_atf_wrapper adunit-wrapper">
+    <div class="adunit" id="ad-top-atf"></div>
+</div>
+
+
+
+
+
+
+<div class="play_main_container" itemscope itemtype="http://schema.org/CreativeWork">
+
+    
+
+
+
+
+
+    <div id="columns_container" class="rankList_columns_container">
+        
+        <div class="game_left_col" role="main">
+                <div class="socialBar_above_the_game">
+                    
+
+
+    <div class="embed_game_container" data-creator="bildll10" data-gamename="a-wetten-dass-du-dir-keine-zehn-bilder-anschauen-kannst">
+
+        <div class="embed_game" title="Embed this Item">
+            <span class="embed_game_icon"></span>
+            <span class="item">Embed</span>
+            <span class="section">Embed This Section</span>
+        </div>
+        <section class="embed_game_container_inner embed_window_background">
+            <div class="embed_window_wrapepr">
+
+                <div class="embed_window_header">
+                    Embed this <span id="HubOrGameText"></span>
+                    <div class="close_embed_window" title="Close"></div>
+                </div>
+
+                <div class="embed_window_param_wrapper">
+                    <a href="//publishers.playbuzz.com/how_to/embed-facebook-instant-article/" target="_blank" class="embed-help-facebook">
+                        <svg viewBox="0 0 30 30" class="embed-help-icon facebook-logo-rect">
+                            <rect fill="none" width="30" height="30" />
+                            <path id="facebook-logo-rect-facebook-logo-rect-white" d="M25.6754,3H4.3246C3.5929,3,3,3.5929,3,4.3246v21.3508C3,26.4069,3.5929,27,4.3246,27
+	                            h11.4945v-9.2941h-3.1276v-3.6221h3.1276v-2.6712c0-3.0999,1.8933-4.7878,4.6586-4.7878c1.3246,0,2.463,0.0986,2.7948,0.1427v3.2396
+	                            l-1.9179,0.0009c-1.5039,0-1.7951,0.7146-1.7951,1.7633v2.3125h3.5867l-0.467,3.6221h-3.1197V27h6.1158
+	                            C26.4069,27,27,26.4069,27,25.6754V4.3246C27,3.5929,26.4069,3,25.6754,3z" />
+                        </svg>
+                        Instant Articles supported
+                        <span class="click-here">
+                            Click here to embed
+                            <svg viewBox="0 0 8.7179 15.7123" class="pb-icon-chevron-right-lg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.0815,15.7123l-1.0634-1.0922l6.5805-6.7585L0,1.0837L1.056,0l7.6619,7.869
+                                                                                 L1.0815,15.7123z"/>
+                            </svg>
+                        </span>
+                    </a>
+                    <div class="hub_description">Embed a constantly updated feed of playful items about <span id="correctTag"></span>.</div>
+                    <div class="script_box_wrapepr">
+                        Embed Script
+                        <div class="copy_to_clipboard" data-clipboard-target="#embed_code" title="Copy To Clipboard"></div>      
+                        <div class="copied_message">
+                            <div class="copied_message_inner">
+                                <div class="copied_message_text">
+                                    Copied to clipboard
+                                </div>
+                            </div>
+                        </div>
+                        <textarea id="embed_code" class="script_box"></textarea>
+                    </div>
+                    <div class="tos">
+                        By Embedding, you agree that you have read and accepted
+                        the <a href="/PublisherTerms" target="_blank">Publisher Terms and Conditions</a>, the
+                        <a style="text-transform:none !important;" href="/TermsOfUse" target="_blank">Terms of Use</a> and the 
+                            <a href="/PrivacyPolicy" target="_blank">Privacy Policy.</a>
+                    </div>
+
+                    <div class="embed_window_param_inner">
+                        <form>
+                            <div class="embed_window_param">
+                                <div class="embed_param_cont">
+                                    <label><input class="embed_window_profile" type="checkbox" checked="checked" name="profile" /> Include My Items</label>
+                                </div>
+                                <label>Height <input class="embed_window_param_input" type="text" name="height" placeholder="auto" /><span>&nbsp;pixels</span></label>
+                            </div>
+                            <!--
+                            <div class="embed_window_param">
+                                <label>Margin-top</label>
+                                <input class="embed_window_param_input" type="text" value="0" name="marginTop" />
+                            </div>
+                            -->
+                            <div class="clear"></div>
+                            <div class="embed_window_configuration_wrapper">
+                                <label>Style</label><br />
+                                <input type="checkbox" class="embed_window_configuration" value="recommendations" checked /><span>Display recommendations for more items</span><br />
+                                <input type="checkbox" class="embed_window_configuration" value="useShares" checked /><span>Display share buttons <span style="font-size:10px">(will redirect to your page)</span></span><br />
+                                <input type="checkbox" class="embed_window_configuration" value="useComments" checked /><span>Use facebook comments</span><br />
+                                <input type="checkbox" class="embed_window_configuration" value="gameInfo" checked /><span>Display item info (the thumbnail, name, description and editor)</span><br />
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="embed-help-wrapper">
+                        <p>
+                            <img src="//cdn.playbuzz.com/content/images/wordpress_logo_30_30.png" class="embed-help-icon  wordpress-plugin-icon">
+                            Embed Playbuzz in your website with our <a href="//wordpress.org/plugins/playbuzz/" target="_blank">WordPress plugin</a>
+                        </p>
+                    </div>
+
+                    <p class="publishers_wrapper">
+                        Are you a publisher? <a href="//publishers.playbuzz.com/" target="_blank">Click here</a>
+                    </p>
+
+                </div>
+
+            </div>
+        </section>        
+    </div>
+
+                </div>
+
+            
+            <div class="game_container">
+                <div id="app_content">
+                    <div id="game_container">
+                        <div id="game_pattern_container">
+
+                            
+
+
+
+<article id="items_container">
+
+    <div id="game_preloader_container"></div> 
+    <div id="format_html">
+
+
+
+
+<div class="reveal_item_container hide_index " data-front-theme="purple_theme" data-back-theme="grey_theme" id="2b28dd87-d1c4-4f5c-ae00-e1524d2d4b42">
+    <div class="item_top">
+        
+            <div class="item_title_container">
+
+            </div>
+
+    </div>
+    <div class="item_body item_ratio_landscape">
+        
+        <div class="flip-container">
+            <div class="flipper flipper_container">
+
+
+
+
+<div class="face flipper abs back blue_theme" data-index="1">
+
+        <div class="mo_image_wrapper" >
+            <img src="//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/61c79e0f-a9f4-43f5-bfcf-05368a8854e7.jpg" class="mo_image" />
+                    </div>
+
+    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+
+
+
+<div class="face flipper abs front purple_theme" data-index="0">
+<div class="reveal_text_face">
+    
+        <span style="white-space: pre-line;">Startkar? 
+Ok. Dann schauen wir erst mal, wie viel Uhr es ist. </span>
+
+</div>    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+            </div>
+            <span class="clickStrip">klicken und entdecken!</span>
+        </div>
+    </div>
+</div>
+<div class="reveal_ad_space"></div>
+<div id="after-question_1" class="pbads reveal-format pbads_after-question"></div>
+<div class="reveal_ad_space"></div>
+
+
+
+
+<div class="reveal_item_container hide_index " data-front-theme="purple_theme" data-back-theme="grey_theme" id="51cdcd4b-aef9-422f-a7c9-f120689db9ca">
+    <div class="item_top">
+        
+            <div class="item_title_container">
+
+            </div>
+
+    </div>
+    <div class="item_body item_ratio_landscape">
+        
+        <div class="flip-container">
+            <div class="flipper flipper_container">
+
+
+
+
+<div class="face flipper abs back blue_theme" data-index="1">
+
+        <div class="mo_image_wrapper" >
+            <img src="//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/525d411a-d3e3-4769-b053-a5a1c8057fe8.jpg" class="mo_image" />
+                    </div>
+
+    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+
+
+
+<div class="face flipper abs front purple_theme" data-index="0">
+<div class="reveal_text_face">
+    
+        <span style="white-space: pre-line;">Oh schon so sp&#228;t. Wenn du jetzt weg musst… wir k&#246;nnen es verstehen. Wenn nicht, dann drehe diese Karte JETZT um.</span>
+
+</div>    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+            </div>
+            <span class="clickStrip">klicken und entdecken!</span>
+        </div>
+    </div>
+</div>
+<div class="reveal_ad_space"></div>
+<div id="after-question_2" class="pbads reveal-format pbads_after-question"></div>
+<div class="reveal_ad_space"></div>
+
+
+
+
+<div class="reveal_item_container hide_index " data-front-theme="purple_theme" data-back-theme="grey_theme" id="506252c7-1ceb-49c0-8ad1-da190cc445b4">
+    <div class="item_top">
+        
+            <div class="item_title_container">
+
+            </div>
+
+    </div>
+    <div class="item_body item_ratio_landscape">
+        
+        <div class="flip-container">
+            <div class="flipper flipper_container">
+
+
+
+
+<div class="face flipper abs back blue_theme" data-index="1">
+
+        <div class="mo_image_wrapper" >
+            <img src="//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/16ca4d24-4d95-4e73-99d1-3813ed9b78f9.jpg" class="mo_image" />
+                    </div>
+
+    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+
+
+
+<div class="face flipper abs front purple_theme" data-index="0">
+<div class="reveal_text_face">
+    
+        <span style="white-space: pre-line;">Gott, ist das unangenehm an den F&#252;&#223;en. Du hast es so gewollt. Hier kommt das n&#228;chste Bild, wenn du noch kannst …</span>
+
+</div>    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+            </div>
+            <span class="clickStrip">klicken und entdecken!</span>
+        </div>
+    </div>
+</div>
+<div class="reveal_ad_space"></div>
+<div id="after-question_3" class="pbads reveal-format pbads_after-question"></div>
+<div class="reveal_ad_space"></div>
+
+
+
+
+<div class="reveal_item_container hide_index " data-front-theme="purple_theme" data-back-theme="grey_theme" id="108a2556-83f5-457a-8c5c-3c3070883cbc">
+    <div class="item_top">
+        
+            <div class="item_title_container">
+
+            </div>
+
+    </div>
+    <div class="item_body item_ratio_landscape">
+        
+        <div class="flip-container">
+            <div class="flipper flipper_container">
+
+
+
+
+<div class="face flipper abs back blue_theme" data-index="1">
+
+        <div class="mo_image_wrapper" >
+            <img src="//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/29ea30e8-41fa-458e-b592-09ec8c2a0dda.jpg" class="mo_image" />
+                    </div>
+
+    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+
+
+
+<div class="face flipper abs front purple_theme" data-index="0">
+<div class="reveal_text_face">
+    
+        <span style="white-space: pre-line;">Mahlzeit!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+
+</div>    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+            </div>
+            <span class="clickStrip">klicken und entdecken!</span>
+        </div>
+    </div>
+</div>
+<div class="reveal_ad_space"></div>
+<div id="after-question_4" class="pbads reveal-format pbads_after-question"></div>
+<div class="reveal_ad_space"></div>
+
+
+
+
+<div class="reveal_item_container hide_index " data-front-theme="purple_theme" data-back-theme="grey_theme" id="d6fa85c4-ef5b-4d58-bd07-2aa1880bf830">
+    <div class="item_top">
+        
+            <div class="item_title_container">
+
+            </div>
+
+    </div>
+    <div class="item_body item_ratio_landscape">
+        
+        <div class="flip-container">
+            <div class="flipper flipper_container">
+
+
+
+
+<div class="face flipper abs back blue_theme" data-index="1">
+
+        <div class="mo_image_wrapper" >
+            <img src="//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/9026dfd7-0ed4-4e75-8269-8edebf56b512.jpg" class="mo_image" />
+                    </div>
+
+    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+
+
+
+<div class="face flipper abs front purple_theme" data-index="0">
+<div class="reveal_text_face">
+    
+        <span style="white-space: pre-line;">Sp&#252;rst du dieses Kribbeln? Deine Eingeweide drehen sich um in 3… 2… 1… KLICK.</span>
+
+</div>    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+            </div>
+            <span class="clickStrip">klicken und entdecken!</span>
+        </div>
+    </div>
+</div>
+<div class="reveal_ad_space"></div>
+<div id="after-question_5" class="pbads reveal-format pbads_after-question"></div>
+<div class="reveal_ad_space"></div>
+
+
+
+
+<div class="reveal_item_container hide_index " data-front-theme="purple_theme" data-back-theme="grey_theme" id="c9feff31-a230-4a8c-9c87-1bbbb1390fb8">
+    <div class="item_top">
+        
+            <div class="item_title_container">
+
+            </div>
+
+    </div>
+    <div class="item_body item_ratio_landscape">
+        
+        <div class="flip-container">
+            <div class="flipper flipper_container">
+
+
+
+
+<div class="face flipper abs back blue_theme" data-index="1">
+
+        <div class="mo_image_wrapper" >
+            <img src="//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/259637d8-af4e-45fc-a2aa-6b9309caaf45.jpg" class="mo_image" />
+                    </div>
+
+    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+
+
+
+<div class="face flipper abs front purple_theme" data-index="0">
+<div class="reveal_text_face">
+    
+        <span style="white-space: pre-line;">Du hast es bis hierher geschafft? Dann steigern wir den Ekel-Faktor jetzt erneut.</span>
+
+</div>    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+            </div>
+            <span class="clickStrip">klicken und entdecken!</span>
+        </div>
+    </div>
+</div>
+<div class="reveal_ad_space"></div>
+<div id="after-question_6" class="pbads reveal-format pbads_after-question"></div>
+<div class="reveal_ad_space"></div>
+
+
+
+
+<div class="reveal_item_container hide_index " data-front-theme="purple_theme" data-back-theme="grey_theme" id="eea08630-494c-4058-b7cf-5b5a095d6868">
+    <div class="item_top">
+        
+            <div class="item_title_container">
+
+            </div>
+
+    </div>
+    <div class="item_body item_ratio_landscape">
+        
+        <div class="flip-container">
+            <div class="flipper flipper_container">
+
+
+
+
+<div class="face flipper abs back blue_theme" data-index="1">
+
+        <div class="mo_image_wrapper" >
+            <img src="//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/2d477bf0-9834-4b7e-85ef-c9416eda329b.jpg" class="mo_image" />
+                    </div>
+
+    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+
+
+
+<div class="face flipper abs front purple_theme" data-index="0">
+<div class="reveal_text_face">
+    
+        <span style="white-space: pre-line;">Bzzzzzzz. GLEICH wirst du das Gef&#252;hl haben, dass jemand deine Fingerkuppen abgeschnitten hat.</span>
+
+</div>    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+            </div>
+            <span class="clickStrip">klicken und entdecken!</span>
+        </div>
+    </div>
+</div>
+<div class="reveal_ad_space"></div>
+<div id="after-question_7" class="pbads reveal-format pbads_after-question"></div>
+<div class="reveal_ad_space"></div>
+
+
+
+
+<div class="reveal_item_container hide_index " data-front-theme="purple_theme" data-back-theme="grey_theme" id="83ee2a28-ef71-41d3-86f0-1ef7b76dc98c">
+    <div class="item_top">
+        
+            <div class="item_title_container">
+
+            </div>
+
+    </div>
+    <div class="item_body item_ratio_landscape">
+        
+        <div class="flip-container">
+            <div class="flipper flipper_container">
+
+
+
+
+<div class="face flipper abs back blue_theme" data-index="1">
+
+        <div class="mo_image_wrapper" >
+            <img src="//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/5ac99152-8198-45de-bf3d-bd9557149fc0.jpg" class="mo_image" />
+                    </div>
+
+    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+
+
+
+<div class="face flipper abs front purple_theme" data-index="0">
+<div class="reveal_text_face">
+    
+        <span style="white-space: pre-line;">Oh Nein. Nein. Nein. Nein. Nein. Nein. 
+DAS WILL NIEMAND SEHEN. Wehe, du drehst diese Karte um.</span>
+
+</div>    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+            </div>
+            <span class="clickStrip">klicken und entdecken!</span>
+        </div>
+    </div>
+</div>
+<div class="reveal_ad_space"></div>
+<div id="after-question_8" class="pbads reveal-format pbads_after-question"></div>
+<div class="reveal_ad_space"></div>
+
+
+
+
+<div class="reveal_item_container hide_index " data-front-theme="purple_theme" data-back-theme="grey_theme" id="5e23f415-91b8-4494-8fef-cef0074f5c4b">
+    <div class="item_top">
+        
+            <div class="item_title_container">
+
+            </div>
+
+    </div>
+    <div class="item_body item_ratio_landscape">
+        
+        <div class="flip-container">
+            <div class="flipper flipper_container">
+
+
+
+
+<div class="face flipper abs back blue_theme" data-index="1">
+
+        <div class="mo_image_wrapper" >
+            <img src="//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/bf6dbd81-05c6-4a09-befd-c3a29e4d1451.jpg" class="mo_image" />
+                    </div>
+
+    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+
+
+
+<div class="face flipper abs front purple_theme" data-index="0">
+<div class="reveal_text_face">
+    
+        <span style="white-space: pre-line;">Du bist noch dabei? Ok, du hast es so gewollt… Ein weiterer Klick katapultiert dich in den „Ich-muss-mich-gleich-&#220;bergeben“-Modus.</span>
+
+</div>    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+            </div>
+            <span class="clickStrip">klicken und entdecken!</span>
+        </div>
+    </div>
+</div>
+<div class="reveal_ad_space"></div>
+<div id="after-question_9" class="pbads reveal-format pbads_after-question"></div>
+<div class="reveal_ad_space"></div>
+
+
+
+
+<div class="reveal_item_container hide_index " data-front-theme="purple_theme" data-back-theme="grey_theme" id="735b413d-21af-4993-8192-53a6003ee6c7">
+    <div class="item_top">
+        
+            <div class="item_title_container">
+
+            </div>
+
+    </div>
+    <div class="item_body item_ratio_landscape">
+        
+        <div class="flip-container">
+            <div class="flipper flipper_container">
+
+
+
+
+<div class="face flipper abs back blue_theme" data-index="1">
+
+        <div class="mo_image_wrapper" >
+            <img src="//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/b2ea5e93-e7a2-4eb1-a77b-bc1358454a7f.jpg" class="mo_image" />
+                    </div>
+
+    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+
+
+
+<div class="face flipper abs front purple_theme" data-index="0">
+<div class="reveal_text_face">
+    
+        <span style="white-space: pre-line;">BILD NR. 10. NACH DIESEM KLICK BIST DU DEFINITIV
+GAME OVER.</span>
+
+</div>    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+            </div>
+            <span class="clickStrip">klicken und entdecken!</span>
+        </div>
+    </div>
+</div>
+<div class="reveal_ad_space"></div>
+<div id="after-question_10" class="pbads reveal-format pbads_after-question"></div>
+<div class="reveal_ad_space"></div>
+
+
+
+
+<div class="reveal_item_container hide_index " data-front-theme="purple_theme" data-back-theme="grey_theme" id="eb0abd66-74fa-4a51-852e-5c498a12e78c">
+    <div class="item_top">
+        
+            <div class="item_title_container">
+
+            </div>
+
+    </div>
+    <div class="item_body item_ratio_landscape">
+        
+        <div class="flip-container">
+            <div class="flipper flipper_container">
+
+
+
+
+<div class="face flipper abs back blue_theme" data-index="1">
+
+        <div class="mo_image_wrapper" >
+            <img src="//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/f45d5147-cbe3-4313-8fbf-6f58f6ab30fb.jpg" class="mo_image" />
+                    </div>
+
+    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+
+
+
+<div class="face flipper abs front purple_theme" data-index="0">
+<div class="reveal_text_face">
+    
+        <span style="white-space: pre-line;">Noch nicht genug? Na gut, eins haben wir noch. Kommentiere bei Facebook, was du gesehen hast!</span>
+
+</div>    <span class="flipIcon"></span>
+    </div>
+
+
+
+
+            </div>
+            <span class="clickStrip">klicken und entdecken!</span>
+        </div>
+    </div>
+</div>
+<div class="reveal_ad_space"></div>
+<div id="after-question_11" class="pbads reveal-format pbads_after-question"></div>
+<div class="reveal_ad_space"></div>
+
+    </div>
+</article>
+
+
+
+                        </div> 
+                    </div>
+                </div>
+                
+
+
+
+            </div>
+                        
+
+            
+
+    <section name="discussion" id="discussion" class="discussion_container">
+
+            <div class="social_bar_full_width">
+            </div>
+    
+
+
+<script>
+    pbads.targeting.push({ "Lowerad": "Yes" });
+</script>
+
+<script>
+    window.UserData = {
+        subscribersCount: "10",
+        userId: "e9f31754-c77f-4882-ab9b-9a9e4e9c983d",
+        fullName: "Bild Live"
+    };
+</script>
+
+<div class="author_details_container ">
+    <div class="author_details_inner">
+        <div class="author_details_left author_col">
+            <div class="author_details_image">
+                <a href="/bildll10">
+                        <img src="//graph.facebook.com/737600826293737/picture?type=large" />
+                </a>
+            </div>
+            <div class="author_personal_details">
+                <div class="author_name"><a href="/bildll10">Bild Live</a></div>
+                
+                
+                
+
+<div class="subscribe_button_container">
+    <div class="subscribe_toggle font_hind_regular not_subscribed">
+        <div class="btn_data_view">
+            <span class='subscribe_icon pb_create_icon line_height_a'></span>
+            <span class='subscribe_text line_height_b'></span>
+            <div class="num_subscribers line_height_c" style="display: none">
+                <div class="num_subscribers_inner" data-num-subs="0"></div>
+            </div>
+        </div>
+        <span class='unsubscribe_text line_height_b'>UNSUBSCRIBE</span>
+        <span class='waiting_anim line_height_b'><img src="//cdn.playbuzz.com/content/images/processing.gif" /></span>
+    </div>
+</div>
+            </div>
+        </div>
+        <div class="author_details_right author_col">
+            <div class="author_text community_member_text">
+                <p>Diese Nachricht wurde von einem Mitglied unserer Gemeinschaft ver&#246;ffentlicht, wo jedermann begeisterte Kommentare hinterlassen kann.</p><!--This post was created by a member of our community, where anyone can post awesome content.-->
+                <p><a style="text-transform:none !important;" href="/TermsOfUse">Erfahren Sie mehr</a>&nbsp;oder<a href="/create"> erzeugen Sie Ihren eigenen</a></p><!--"Learn more--> <!--or--> <!--Create your own-->
+            </div>
+        </div>
+    </div>
+</div>    
+    
+    <div class="gameFooter">
+        
+
+
+                    <div class="suggestBox">
+
+
+            </div>
+
+        
+    </div>
+</section>
+
+
+        </div>
+
+
+    </div>
+    
+</div>
+
+<div class="bottom_ad_wrapper banner-ad adunit-wrapper">
+    <div class="bottom_ad_wrapper_inner">
+        <div class="adunit" id="ad-footer-1"></div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Temppoary solution for partners-->
+
+
+
+
+
+
+
+<script>
+    window.twitterViaText = 'play_buzz';
+    window.twitterExtraText = '';
+</script>
+
+
+
+    </section>
+
+    
+<script>
+        window.pb = window.pb || {};
+        window.pb.isFeed = 'True';
+</script>
+
+
+        <div class="feed_bottom_wrapper">
+
+
+
+<style>
+    .pb-powered-by {
+        float: left;
+        padding: 5px 0px;
+    }
+    .pb-powered-by a {
+        text-decoration: none;
+    }
+    .pb-powered-by .pb-powered-by-text {
+        font-family: "Helvetica Neue",helvetica,arial,clean,sans-serif;
+        color: #aaa;
+        font-size: 11px;
+        line-height: 26px;
+        height: 26px;
+        display: inline-block;
+        /*margin-right: 5px;*/
+    }
+    .pb-powered-by .pb-powered-by-logo {
+         width: 62px;
+         display: inline-block;
+         vertical-align: middle;
+         margin-top: 5px;
+    }
+</style>
+<div class="pb-powered-by">
+    <a href="/" target="_blank">
+        <span class="pb-powered-by-text">Powered by</span>
+        <span class="pb-powered-by-logo">
+            <svg version="1.1" id="playbuzz-logo-sm" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+            	 y="0px" viewBox="0 0 61 16" enable-background="new 0 0 61 16" xml:space="preserve">
+            <rect fill="none" width="61" height="16"/>
+            <g>
+            	<defs>
+            		<path id="SVGID_1_" d="M5.1597,4.4379C3.1421,4.4168,1.4582,5.938,1.2099,7.9096C1.2008,7.9823,1.1932,8.0553,1.1876,8.1289
+            			C1.1873,8.1357,1.1869,8.1426,1.1864,8.1494C1.1812,8.2205,1.1777,8.292,1.1767,8.3641l-0.069,6.5933l1.8999-2.5848l0.042-4.0076
+            			c0-0.0007,0-0.0014,0-0.0021c0.0133-1.1457,0.9504-2.0679,2.0906-2.056c1.1404,0.0119,2.0587,0.9483,2.0467,2.0872
+            			c-0.0119,1.1388-0.9496,2.0559-2.09,2.044C4.8912,10.436,4.6695,10.394,4.503,10.3186l-1.1577,1.6015
+            			c0.5404,0.2722,1.1391,0.4196,1.7316,0.4258c2.1832,0.0229,3.9783-1.7323,4.0011-3.9126
+            			C9.1008,6.2531,7.3429,4.4608,5.1597,4.4379z"/>
+            	</defs>
+            	<use xlink:href="#SVGID_1_"  overflow="visible" fill="#009CFF"/>
+            	<clipPath id="SVGID_2_">
+            		<use xlink:href="#SVGID_1_"  overflow="visible"/>
+            	</clipPath>
+
+            		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="-0.9092" y1="7.6216" x2="8.1423" y2="20.7426" gradientTransform="matrix(0.9999 0.0105 -0.0105 0.9999 1.9502 -5.7742)">
+            		<stop  offset="0" style="stop-color:#009CFF"/>
+            		<stop  offset="0.1837" style="stop-color:#009CFF"/>
+            		<stop  offset="0.3783" style="stop-color:#009CFF"/>
+            		<stop  offset="0.4031" style="stop-color:#0895FF"/>
+            		<stop  offset="0.4407" style="stop-color:#1C80FF"/>
+            		<stop  offset="0.4864" style="stop-color:#3F5FFF"/>
+            		<stop  offset="0.538" style="stop-color:#6E32FF"/>
+            		<stop  offset="0.587" style="stop-color:#A100FF"/>
+            		<stop  offset="0.7757" style="stop-color:#FF3BDE"/>
+            	</linearGradient>
+            	<path clip-path="url(#SVGID_2_)" fill="url(#SVGID_3_)" d="M5.2752,4.4422C4.11,5.2865,3.4763,6.6143,3.2658,7.9954
+            		c-0.1898,1.2454-0.1613,2.6456-0.1437,3.9009c0.5399,0.2721,1.3588,0.5617,2.0057,0.5684
+            		c2.2406,0.0235,4.0759-1.7543,4.0991-3.9707C9.2499,6.2988,7.486,4.4992,5.2752,4.4422z"/>
+            </g>
+            <path fill="#009CFF" d="M59.9705,4.5162H46.1342v1.7364h3.6048l-4.0022,5.6939h13.7978v-1.6648h-3.5292L59.9705,4.5162z
+            	 M49.1077,10.2816l4.035-5.689v1.66h3.4391l-3.9445,5.5965v-1.5674H49.1077z M12.507,10.8393c0,0.3846,0.0358,0.8436,0.113,1.2025
+            	h-2.0257c-0.0379-0.0552-0.0989-0.3299-0.1-0.5537V1.0317h2.0127V10.8393z M20.1378,10.8665c0,0.3899,0.0493,0.8417,0.1284,1.2027
+            	h-1.9718c-0.0373-0.0767-0.0962-0.3629-0.1109-0.73v-2.666L16.4785,9.014c-0.5961,0.0877-0.9383,0.4362-0.9383,0.9559
+            	c0,0.4949,0.378,0.8025,0.9865,0.8025c0.3526,0,0.6536-0.0742,0.9038-0.2118v1.2554c-0.1724,0.1483-0.7443,0.4391-1.3299,0.4391
+            	c-1.6812,0-2.5608-1.0883-2.5608-2.1634c0-1.2085,0.8013-2.0071,2.2293-2.2699l1.8407-0.3546
+            	c0.3804-0.0541,0.5736-0.2374,0.5736-0.5446c0-0.4692-0.3353-0.9703-1.276-0.9703c-0.9809,0-1.3905,0.662-1.4435,1.229
+            	l-1.7814-0.3914c0.1362-1.207,1.2762-2.4421,3.2095-2.4421c2.9294,0,3.2457,1.9823,3.2457,2.8345V10.8665z M37.1872,8.2421
+            	c0,2.3234-1.4473,3.9459-3.52,3.9459c-0.9626,0-1.7896-0.4076-2.2122-1.0904l-0.0227-0.0364v0.9563h-1.9516V0.9954h1.9464v7.2334
+            	v0.0285c0,0.0097-0.0002,0.0185,0,0.0282V8.373c0.0444,1.1941,0.8215,2.0277,1.8899,2.0277c1.1185,0,1.8696-0.8615,1.8696-2.1435
+            	c0-1.293-0.7336-2.1284-1.8696-2.1284c-0.4214,0-0.8163,0.1335-1.1312,0.3782V4.7694c0.2905-0.1952,0.9247-0.4278,1.5576-0.4278
+            	C35.8033,4.3416,37.1872,5.909,37.1872,8.2421z M41.5851,10.3552c0.2572,0,0.474-0.0526,0.6698-0.1511v1.631
+            	c-0.3233,0.2221-0.8255,0.3531-1.2179,0.3531c-1.6955,0-2.8344-1.1818-2.8344-2.9412V4.5124h2.0125v4.3234
+            	C40.2151,9.7872,40.7194,10.3552,41.5851,10.3552z M45.026,10.6476c0,0.6397,0.0429,1.1738,0.0625,1.3426H43.064
+            	c-0.0341-0.1571-0.0425-0.333-0.0507-0.6833v-0.1386v-0.0006V4.5122h2.0127V10.6476z M23.3088,10.1985l-2.9091-5.6402h2.2572
+            	L24.228,8.037L23.3088,10.1985z M26.5048,4.5582h2.1505l-4.5381,10.4372h-2.06L26.5048,4.5582z"/>
+            </svg>
+
+        </span>
+    </a>
+</div>
+
+
+        </div>
+            <!-- infrajs start -->
+<script src="//cdn.playbuzz.com/content/bundles/production/af3422f/libs/articleinfra/js"></script>
+        <!-- infrajs end -->
+<script>
+
+    // time helpers
+    // validate timestamp - return time if valid otherwise return null
+    function validateTimestamp(time) {
+        return (time !== undefined && time !== null && time >= 0 && time <= 1000 * 100) ? time : null; // 100sec
+    }
+    
+    // prepare some promises
+    var embedPerformanceReday = $.Deferred();
+    var itemPerformanceReady = $.Deferred();
+
+    // wait for all times data before sending preformance event
+    $.when(embedPerformanceReday, itemPerformanceReady).done(function(embedPerformance, itemPerformance) { 
+
+        if (!itemPerformance) return;
+
+        var embedStartTime,
+            embedSetupTime,
+            embedInjectionTime,
+            embedViewableTime,
+            articleViewableTime,
+            articleLoadTime;
+
+        // calculate for embed
+        if (embedPerformance && embedPerformance.embedDomLoadingTime) {
+            embedStartTime = embedPerformance.embedStartTime - embedPerformance.embedDomLoadingTime;
+            embedInjectionTime = embedPerformance.embedInjectionTime - embedPerformance.embedDomLoadingTime;
+            embedSetupTime = itemPerformance.connectTime - embedPerformance.embedDomLoadingTime;
+            embedViewableTime = embedPerformance.articleViewableTime - embedPerformance.embedDomLoadingTime;
+            articleViewableTime = itemPerformance.viewableTime - embedPerformance.embedDomLoadingTime;
+            articleLoadTime = itemPerformance.loadTime - embedPerformance.embedDomLoadingTime;
+        }
+        // calculate for pb.com
+        else {
+            embedStartTime = null;
+            embedSetupTime = null;
+            embedViewableTime = null;
+            embedInjectionTime = null;
+            articleViewableTime = itemPerformance.viewableTime - itemPerformance.connectTime;
+            articleLoadTime = itemPerformance.loadTime - itemPerformance.connectTime;
+        }
+        
+        // validate timestamp, incase timestamp is not valid set it to null
+        embedStartTime = validateTimestamp(embedStartTime);
+        embedSetupTime = validateTimestamp(embedSetupTime);
+        embedInjectionTime = validateTimestamp(embedInjectionTime);
+        embedViewableTime = validateTimestamp(embedViewableTime);
+        articleViewableTime = validateTimestamp(articleViewableTime);
+        articleLoadTime = validateTimestamp(articleLoadTime);
+
+        // for debug
+        //console.log("Performance: item: " + (gameData.gameName || "undefind"));
+        //console.log("Performance: embedStartTime - " + embedStartTime);
+        //console.log("Performance: embedInjectionTime - " + embedInjectionTime);
+        //console.log("Performance: embedSetupTime - " + embedSetupTime);
+        //console.log("Performance: articleViewableTime - " + articleViewableTime);
+        //console.log("Performance: embedViewableTime - " + embedViewableTime);
+        //console.log("Performance: articleLoadTime - " + articleLoadTime);
+
+        // send event
+        if (AwsBridge && AwsBridge.performanceAnalytics)
+            AwsBridge.performanceAnalytics(embedStartTime, embedSetupTime, articleViewableTime, embedViewableTime, articleLoadTime, embedInjectionTime);
+    });
+
+    // called from parent frmae to set embed performance analytics
+    $(document).on('embedAnalytics', function (event, eventData) {
+        try {
+            if (eventData) { embedPerformanceReday.resolve(eventData); }
+        } catch (e) { console.log('failed to set performace analytics from embed', e) }
+    });
+
+    // on page ready calculate articleLoadTime
+    $(document).ready(function () {
+        try {
+            if (window.performance && window.performance.timing && window.performance.timing.connectStart) {
+                
+                itemPerformanceReady.resolve({
+                    viewableTime: performanceAnalytics && performanceAnalytics.viewableTime,
+                    connectTime: window.performance.timing.connectStart,
+                    loadTime: (new Date()).getTime()
+                });
+            } else { articleLoadTime.reject(); }
+        } catch (e) { console.log("failed to measure load perforamce for item", e); }
+        
+    });
+
+    // if not in feed
+    if (document.location.toString().toLowerCase().search("feed=true") == -1) {
+        $(document).trigger('embedAnalytics', {});
+    }
+</script>    <!-- MAKE SURE THIS LINE IS ALWAYS AT THE BOTTOM! -->
+    <script>
+        if (performanceAnalytics) performanceAnalytics.viewableTime = (new Date()).getTime();
+        PlayBuzz.Events.dispatch(PlayBuzz.Events.loadEvents.DOM_READY, { time: new Date().getTime() }, true);
+    </script>
+
+    <!-- Cooladata starts here -->
+
+<script type="text/javascript">
+    (window.createPBCookie = function () {
+        var steps = [];
+        var isFeed, cookie, cookieVersion, isMobileApp, mobileUserId;
+
+        var canSaveCookie = (function () {
+            $.cookie("testSaveCookie", {});
+            var ok = $.cookie("testSaveCookie") !== null;
+            $.removeCookie("testSaveCookie");
+            return ok;
+        })();
+
+        function createGUID() { steps.push("2.1.1"); var e = []; var t = "0123456789abcdef"; for (var n = 0; n < 36; n++) { e[n] = t.substr(Math.floor(Math.random() * 16), 1) } e[14] = "4"; e[19] = t.substr(e[19] & 3 | 8, 1); e[8] = e[13] = e[18] = e[23] = "-"; var r = e.join(""); steps.push("2.1.2"); return r }
+        function getURLParam(_e) { var e = _e; if (e) e = e.toLowerCase(); var t = document.location.toString(); var n = t.split("?"); if (n.length <= 1) return null; var r = n[0]; var i = t.substr(r.length + 1); if (i.search("#") >= 0) { i = i.split("#")[0] } var s = {}; if (i) { var o = i.split("&"); try { for (var u = 0; u < o.length; u++) { var a = o[u].split("="); if (a.length > 1) { var f = a[0]; var l = a[1].toLowerCase(); if (e == f.toLowerCase()) return l; s[f] = l } } } catch (c) {
+    console.log('speed-exception', (c));
+ } } else return null; return e == undefined ? s : null }
+
+        function saveCookie(cookieObject) {
+            if (canSaveCookie) {
+                $.cookie("playbuzz", cookieObject, { expires: 365 });
+                return;
+            }
+
+            try {
+                localStorage.setItem("cookieCopy", JSON.stringify(cookieObject));
+            } catch (e) {
+    console.log('speed-exception', (e));
+}
+        }
+
+        function getCookie() {
+            var pbCookie = $.cookie("playbuzz");
+            if (pbCookie) return pbCookie;
+
+            try {
+                return JSON.parse(localStorage.getItem("cookieCopy"));
+            } catch (e) {
+    console.log('speed-exception', (e));
+ return null }
+        }
+
+        try {
+            isFeed = document.location.toString().toLowerCase().search("feed=true") >= 0;
+            isMobileApp = document.location.toString().toLowerCase().search("frommobileapp=true");
+
+            cookie = getCookie();
+            cookieVersion = 3.0;
+            steps.push(0);
+
+
+            mobileUserId = getURLParam("deviceId");
+
+            steps.push(1);
+
+            var uid = cookie ? cookie.userId : createGUID();
+            var sid = cookie ? cookie.session : createGUID();
+            var nick = cookie ? cookie.nickname : "Anonymous_user";
+            var origin = cookie ? cookie.origin : "Anonymous";
+            var hasAccount = cookie ? cookie.hasAccount == "true" : "false";
+
+            // remove empty values which existed in previous versions
+            if (uid == "") uid = createGUID();
+            if (sid == "") sid = createGUID();
+            if (nick == "") nick = "Anonymous_user";
+
+            if (cookie && (!cookie.version || cookie.version < cookieVersion)) {
+                steps.push(0.1);
+                //$.removeCookie("playbuzz");   needed for previous versions, no need to remove cookie now, just update some fields
+                cookie.userId = uid;
+                cookie.session = sid;
+                cookie.nickname = nick;
+                cookie.origin = origin;
+                cookie.hasAccount = hasAccount;
+                cookie.version = cookieVersion;
+                saveCookie(cookie);
+
+                //cookie = null;
+                steps.push(0.2);
+            }
+
+            steps.push(2);
+
+            if (isMobileApp && mobileUserId) {
+                nick = "iOS_app_user";
+                origin = "iOS_app";
+            } else {
+                if (/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/.test(uid) == false) {
+                    steps.push(2.1);
+                    $.removeCookie("playbuzz");
+                    $.removeCookie("pb_subs");
+                    uid = createGUID();
+                    steps.push(2.2);
+                }
+            }
+
+            steps.push(3);
+
+            if(getURLParam("nativeId")) {
+                uid = getURLParam("nativeId");
+            }
+
+            if (!cookie) {
+                steps.push(3.1);
+                saveCookie({
+                    created: (new Date()).getTime(),
+                    nickname: nick,
+                    origin: origin || "Anonymous",
+                    session: sid,
+                    userId: uid,
+                    hasAccount: hasAccount,
+                    version: cookieVersion
+                }, { expires: 365 });
+
+                steps.push(3.2);
+            }
+
+            var etlUserId = mobileUserId || uid;
+
+            window.cooladataUserId = etlUserId;
+
+            window.etlProperties = window.etlProperties || {};
+            window.etlProperties.userId = etlUserId;
+
+            try {
+                // Start Cooladata
+                // previous version - 2.1.9
+                (function(d,a){if(!a.__SV){var b,c,g,e;window.cooladata=a;a._i=[];a.init=function(b,c,f){function d(a,b){var c=b.split(".");2==c.length&&(a=a[c[0]],b=c[1]);a[b]=function(){a.push([b].concat(Array.prototype.slice.call(arguments,0)))}}var h=a;"undefined"!==typeof f?h=a[f]=[]:f="cooladata";g=["trackEvent","trackEventLater","trackPageload","flush","setConfig"];for(e=0;e<g.length;e++)d(h,g[e]);a._i.push([b,c,f])};a.__SV=1.2;b=d.createElement("script");b.type="text/javascript";b.async=!0;b.src="//cdn.cooladata.com/tracking/cooladata-2.1.12.min.js";c=d.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.cooladata||[]);
+
+                cooladata.init({
+                    "app_key": "8c0035b9c563467eb37d67e071791c02", // sample app key, to be replaced
+                    "user_id": etlUserId
+                });
+            } catch (e) {
+    console.log('speed-exception', (e));
+
+                Analytics.sendAnalyticsError("SDK load desktop", { line: "layout_111", error: e });
+            }
+
+            steps.push(4);
+            try {
+                if (!window._cdtracker) {
+                    steps.push(4.1);
+                    
+                    steps.push(4.2);
+                    $(document).ready(function () {
+                            
+                            if (window.CDBridge) {
+
+                                switch ('') {
+                                    case "hpLoaded":
+                                        CDBridge.hpLoaded && CDBridge.hpLoaded();
+                                        if (window.AwsBridge) {
+                                            AwsBridge.hpLoaded && AwsBridge.hpLoaded();
+                                        }
+                                        break;
+                                    case "codeGenPageLoaded":
+                                        CDBridge.codeGenPageLoaded && CDBridge.codeGenPageLoaded();
+                                        if (window.AwsBridge) {
+                                            AwsBridge.patternPageLoaded && AwsBridge.patternPageLoaded();
+                                        }
+                                        break;
+                                    case "searchResultsloaded":
+                                        CDBridge.searchResultsloaded && CDBridge.searchResultsloaded();
+                                        if (window.AwsBridge) {
+                                            AwsBridge.patternPageLoaded && AwsBridge.patternPageLoaded();
+                                        }
+                                        break;
+                                    case "articleEdited":
+                                        CDBridge.articleEdited && CDBridge.articleEdited();
+                                        if (window.AwsBridge) {
+                                            AwsBridge.patternPageLoaded && AwsBridge.patternPageLoaded();
+                                        }
+                                        break;
+                                    case "externalFeedLoaded":
+                                        CDBridge.externalFeedLoaded && CDBridge.externalFeedLoaded();
+                                        if (window.AwsBridge) {
+                                            AwsBridge.patternPageLoaded && AwsBridge.patternPageLoaded();
+                                        }
+                                        break;
+                                    case "editProfilePageLoaded":
+                                        CDBridge.editProfilePageLoaded && CDBridge.editProfilePageLoaded();
+                                        if (window.AwsBridge) {
+                                            AwsBridge.patternPageLoaded && AwsBridge.patternPageLoaded();
+                                        }
+                                        break;
+                                    default:
+                                        if ('false' != 'false') {
+                                            CDBridge.pageLoaded && CDBridge.pageLoaded();
+                                            if (window.AwsBridge) {
+                                                AwsBridge.patternPageLoaded && AwsBridge.patternPageLoaded();
+                                            }
+                                        }
+                                        break;
+                                }
+                            }
+                            
+                    });
+
+                }
+            } catch (err) {
+    console.log('speed-exception', (err));
+
+                console.error("Couldn't set up cooladata:", err);
+                Analytics.sendAnalyticsError("SDK load desktop", { line: "layout_169", error: err, steps: steps });
+            }
+        } catch (e) {
+            try {
+                console.error("Couldn't generate cookie: ", e);
+                Analytics.sendAnalyticsError("SDK load desktop", { line: "layout_173", error: e, steps: steps });
+            } catch (e) {
+    console.log('speed-exception', (e));
+ }
+            cookie = {};
+
+            cookie.userId = createGUID();
+            cookie.session = createGUID();
+            cookie.nickname = "Anonymous_user";
+            cookie.origin = origin || "Anonymous";
+            cookie.hasAccount = "false";
+            cookie.version = cookieVersion;
+            cookie.created = (new Date()).getTime();
+
+            saveCookie(cookie);
+        }
+
+        steps.push(5);
+        if (!uid) {
+
+            steps.push(5.1);
+            Analytics.sendAnalyticsError("SDK load desktop", {
+                line: "layout_176",
+                error: "uid wasn't generated",
+                steps: steps,
+                jQuery: window.jQuery != undefined,
+                hasCookieAPI: window.jQuery != undefined && $.cookie != undefined,
+                cookie: cookie,
+                isFeed: isFeed
+            });
+        }
+    })();
+</script>
+
+    <script type="text/javascript">
+    (function(window)
+    {
+        window.pb = window.pb || {};
+        window.pb.analytics = window.pb.analytics || {};
+        window.pb.analytics.viewPageType = '';
+        window.pb.analytics.actionPageType = 'articlepage';
+    })(window);
+
+</script>
+
+
+    
+<script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-34510589-6');
+    ga('set', 'anonymizeIp', true);
+    ga('require', 'displayfeatures');
+
+        
+            ga('send', 'pageview', 'bildll10/a-wetten-dass-du-dir-keine-zehn-bilder-anschauen-kannst?src=embd');
+                
+</script>
+
+    <script>
+        (function () {
+            function initAnalytics() {
+                if (window.Analytics) {
+                    Analytics.init();
+                } else {
+                    setTimeout(initAnalytics, 250);
+                }
+            }
+
+            initAnalytics();
+        })();
+    </script>
+
+
+        <script>
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.search;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+
+            var showPoweredBy = getParameterByName('showPoweredBy');
+
+            var parser = document.createElement('a');
+            parser.href = document.referrer;
+
+            var isPbRef = parser.hostname.indexOf('.playbuzz.com') !== -1;
+            
+            if(showPoweredBy === 'false' && isPbRef) {
+                $('.pb-powered-by').css('display', 'none');
+            }
+        </script>
+
+    
+
+<script>
+    
+    try {
+        // Random by Weights
+        var randomWeights = function (keyWeightObject) {
+
+            var items = Object.keys(keyWeightObject);
+            var weights = [];
+            for (var k in keyWeightObject) {
+                if (keyWeightObject.hasOwnProperty(k)) {
+                    weights.push(keyWeightObject[k]);
+                }
+            }
+
+            var total = 0;
+            var ranges = weights.slice(0);
+            for (var i = 0, len = weights.length; i < len; i++) {
+                ranges[i] = [total, total += ranges[i]];
+            }
+            var randomNumber = parseInt(Math.random() * total);
+            for (; randomNumber < ranges[--i][0];);
+            return items[i];
+        };
+
+        // Targeting
+        var adTargeting = [];
+
+        var targetingString = "";
+
+        var targetCollection = JSON.parse("{\"ABTEST\":{\"stickinessType\":\"user\",\"values\":{\"A\":1,\"B\":1,\"C\":1,\"D\":1,\"E\":6}},\"in_banner\":{\"stickinessType\":\"user\",\"values\":{\"Yes\":50,\"No\":50}}}");
+        // get user cookie
+        var userCookieObject = $.cookie("DFPTargetingByUser") || {};
+        // get session cookie
+        var sessionCookieObject = $.cookie("DFPTargetingBySession") || {};
+
+        var updateSessionCookie = false;
+
+        var updateUserCookie = false;
+
+        // targeting and cookie updating
+        for (var ABTestName in targetCollection) {
+            if (targetCollection.hasOwnProperty(ABTestName)) {
+
+                var targetValue = {};
+
+                switch (targetCollection[ABTestName].stickinessType) {
+
+                    case "none":
+                        // no stickiness so: generate random value and set to targeting
+                        targetValue[ABTestName] = randomWeights(targetCollection[ABTestName].values);
+                        break;
+
+                    case "session":
+                        if (ABTestName in sessionCookieObject) {
+                            targetValue[ABTestName] = sessionCookieObject[ABTestName];
+                        } else {
+                            // no cookie so: generate random value and set to targeting
+                            targetValue[ABTestName] = randomWeights(targetCollection[ABTestName].values);
+                            // set targeting to the session cookie object
+                            sessionCookieObject[ABTestName] = targetValue[ABTestName];
+                            updateSessionCookie = true;
+                        }
+                        break;
+
+                    case "user":
+                    default:
+                        if (ABTestName in userCookieObject) {
+                            targetValue[ABTestName] = userCookieObject[ABTestName];
+                        } else {
+                            // no cookie so: generate random value and set to targeting
+                            targetValue[ABTestName] = randomWeights(targetCollection[ABTestName].values);
+                            // set targeting to the user cookie object
+                            userCookieObject[ABTestName] = targetValue[ABTestName];
+                            updateUserCookie = true;
+                        }
+                }
+
+                targetingString = targetingString + ABTestName + "-" + targetValue[ABTestName] + ";";
+                window.adTargeting.push({ "target": ABTestName, "value": targetValue[ABTestName] });
+            }
+        }
+        // update the user cookie
+        if (updateUserCookie) {
+            $.cookie("DFPTargetingByUser", userCookieObject, { expires: 365 });
+        }
+        // update the session cookie
+        if (updateSessionCookie) {
+            $.cookie("DFPTargetingBySession", sessionCookieObject);
+        }
+        /// export
+        window.adTargeting = adTargeting;
+        window.adTargetingString = targetingString;
+
+    } catch (e) {
+    console.log('speed-exception', (e));
+ /* ignore */ }
+
+    
+
+</script>
+
+    
+        
+
+
+
+                <!-- PBADS: NO ADS -->
+
+
+    
+
+
+    
+    
+
+<script>
+    window.PlayBuzz = window.PlayBuzz || {};
+
+    (function () {
+        try {
+            PlayBuzz.embedProperties = {
+                articleEmbedMargin: (isNaN("0") ? 0 : 0),
+                articleEmbedUserId: Tools.getURLParam("embedBy"),
+                articleShowRecommendations: "false".toLowerCase() === "true",
+                articleShowShareBar: "true".toLowerCase() === "true",
+                articleShowComments: "false".toLowerCase() === "true",
+                articleShowInfo: "false".toLowerCase() === "true",
+            };
+        } catch (e) {
+    console.log('speed-exception', (e));
+}
+    })();
+</script>
+
+
+<script>
+    window.isSubscriptionVisible = "true";
+    window.isSubscriptionUIVisible = "true";
+    window.isSubscriptionAPIDisabled = "false";
+</script>
+
+    <script>
+        try {
+            window.displaySettings = {
+                useFacebookUrlShare:         "true",
+                showComments:                "false",
+                marginTop:                   "0",
+                showGameDetails:             "false",
+                showRecommendations:         "false",
+                showShares:                  "true"
+            };
+        } catch (e) {
+    console.log('speed-exception', (e));
+}
+    </script>
+
+
+
+<script type="text/javascript">
+
+    //fix for send analitics for preview.
+    var isPreview = "False".toLowerCase();
+    if (!isPreview) {
+        isPreview = "false";
+    }
+
+
+    (function() {
+        var shouldSendReport = false;
+        var msg;
+
+        //if (typeof game != 'undefined') {
+        try {
+
+            window.gameData = {
+                gameLocale: "de-DE",
+                gameId: "1c523e26-d8c4-4c1e-8c82-7475f7235f67",
+                gameSpecificData: {"ContainerType":"Reveal","ContainerId":"1c523e26-d8c4-4c1e-8c82-7475f7235f67","ContainerIndex":0,"Items":[{"ContainerType":"RevealItem","ContainerId":"2b28dd87-d1c4-4f5c-ae00-e1524d2d4b42","ContainerIndex":0,"Ratio":"landscape","Items":[{"ContainerType":"RevealFace","ContainerId":"a1f5d2a9-712a-423e-8081-f7284b4ac05b","ContainerIndex":0,"FaceMOType":0,"Text":{"type":"text","id":"d24cc2d9-7e84-4d59-8247-9a65962084d7","data":{"text":"Startkar? \nOk. Dann schauen wir erst mal, wie viel Uhr es ist. "}},"TextBackground":"purple"},{"ContainerType":"RevealFace","ContainerId":"44b3f11a-6958-4ff4-8703-f1b4f2ce4313","ContainerIndex":1,"FaceMOType":1,"Image":{"type":"image","id":"42bdf213-1a40-4aa4-8600-1b85ca3b5a04","data":{"width":640,"height":480,"fileType":"jpg","isAnimated":false,"credits":"","originalImage":{"id":"9d906828-ba2e-4896-85b1-1cd3ba436398","data":{"width":504,"height":356,"fileType":"jpg","isAnimated":false,"credits":null},"type":"image","url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/9d906828-ba2e-4896-85b1-1cd3ba436398.jpg"},"cropData":{"x":17,"y":6,"width":457,"height":343}},"url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/61c79e0f-a9f4-43f5-bfcf-05368a8854e7.jpg"},"Text":{"type":"text","id":"57b11bcc-306d-4533-8e49-4512be12f897","data":{"text":""}},"TextBackground":"blue"}]},{"ContainerType":"RevealItem","ContainerId":"51cdcd4b-aef9-422f-a7c9-f120689db9ca","ContainerIndex":1,"Ratio":"landscape","Items":[{"ContainerType":"RevealFace","ContainerId":"5bec8f1e-3aff-4a25-8bac-40b9e730ce16","ContainerIndex":0,"FaceMOType":0,"Text":{"type":"text","id":"c7c3ae3b-89de-42d0-8fae-8a8e3f48a473","data":{"text":"Oh schon so spät. Wenn du jetzt weg musst… wir können es verstehen. Wenn nicht, dann drehe diese Karte JETZT um."}},"TextBackground":"purple"},{"ContainerType":"RevealFace","ContainerId":"e9cc0587-cb6c-4157-8257-5ca3699ca74b","ContainerIndex":1,"FaceMOType":1,"Image":{"type":"image","id":"c2d3615d-8c6e-4428-8e97-4eb756fb60c2","data":{"width":640,"height":478,"fileType":"jpg","isAnimated":false,"credits":"","originalImage":{"id":"193566c7-dbf9-4fda-9a7e-e6b19af2e0ce","data":{"width":597,"height":395,"fileType":"jpg","isAnimated":false,"credits":null},"type":"image","url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/193566c7-dbf9-4fda-9a7e-e6b19af2e0ce.jpg"},"cropData":{"x":60,"y":3,"width":489,"height":365}},"url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/525d411a-d3e3-4769-b053-a5a1c8057fe8.jpg"},"Text":{"type":"text","id":"8173845a-3287-4f0a-85a9-c29ef2c6eead","data":{"text":""}},"TextBackground":"blue"}]},{"ContainerType":"RevealItem","ContainerId":"506252c7-1ceb-49c0-8ad1-da190cc445b4","ContainerIndex":2,"Ratio":"landscape","Items":[{"ContainerType":"RevealFace","ContainerId":"68fdfeb9-2717-4194-8ab5-7afaa3b93d1b","ContainerIndex":0,"FaceMOType":0,"Text":{"type":"text","id":"c31d3e6e-eb76-4d20-b139-724b4f8f336d","data":{"text":"Gott, ist das unangenehm an den Füßen. Du hast es so gewollt. Hier kommt das nächste Bild, wenn du noch kannst …"}},"TextBackground":"purple"},{"ContainerType":"RevealFace","ContainerId":"cc4f6b0d-f2b9-4531-896f-d7899b3d320b","ContainerIndex":1,"FaceMOType":1,"Image":{"type":"image","id":"6accd7b5-3f38-4a7b-899b-e57530c8166a","data":{"width":640,"height":480,"fileType":"jpg","isAnimated":false,"credits":"","originalImage":{"id":"d718f6e6-06e7-4add-84dc-a67e80f92e41","data":{"width":535,"height":345,"fileType":"jpg","isAnimated":false,"credits":null},"type":"image","url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/d718f6e6-06e7-4add-84dc-a67e80f92e41.jpg"},"cropData":{"x":3,"y":6,"width":448,"height":336}},"url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/16ca4d24-4d95-4e73-99d1-3813ed9b78f9.jpg"},"Text":{"type":"text","id":"5872d9d3-a908-4f7a-8756-fe582ee53f98","data":{"text":""}},"TextBackground":"blue"}]},{"ContainerType":"RevealItem","ContainerId":"108a2556-83f5-457a-8c5c-3c3070883cbc","ContainerIndex":3,"Ratio":"landscape","Items":[{"ContainerType":"RevealFace","ContainerId":"f6429ae1-bbb9-411a-b124-8f3c174a6ca4","ContainerIndex":0,"FaceMOType":0,"Text":{"type":"text","id":"8cb89a05-504e-461e-8296-8b58270a0584","data":{"text":"Mahlzeit!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"}},"TextBackground":"purple"},{"ContainerType":"RevealFace","ContainerId":"02c85729-5906-493c-80e1-fbef8e812a4d","ContainerIndex":1,"FaceMOType":1,"Image":{"id":"a2e0f8e6-f0a5-4112-888a-d1e253694cd1","data":{"width":636,"height":480,"fileType":"jpg","isAnimated":false,"credits":"","originalImage":{"id":"99f0323f-21e1-4872-bfa0-5c3c06e500cf","data":{"width":505,"height":347,"fileType":"jpg","isAnimated":false,"credits":null},"type":"image","url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/99f0323f-21e1-4872-bfa0-5c3c06e500cf.jpg"},"cropData":{"x":5,"y":4,"width":448,"height":338}},"type":"image","url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/29ea30e8-41fa-458e-b592-09ec8c2a0dda.jpg"},"Text":{"type":"text","id":"eb2a8ed6-060e-44d9-9022-b7640a274d2c","data":{"text":""}},"TextBackground":"blue"}]},{"ContainerType":"RevealItem","ContainerId":"d6fa85c4-ef5b-4d58-bd07-2aa1880bf830","ContainerIndex":4,"Ratio":"landscape","Items":[{"ContainerType":"RevealFace","ContainerId":"7c86ad0f-9867-4eb0-8c15-97f4d38f6741","ContainerIndex":0,"FaceMOType":0,"Text":{"type":"text","id":"b40a9192-7ec9-4503-8f13-f224fa720d39","data":{"text":"Spürst du dieses Kribbeln? Deine Eingeweide drehen sich um in 3… 2… 1… KLICK."}},"TextBackground":"purple"},{"ContainerType":"RevealFace","ContainerId":"7840b76d-7695-4880-8156-6ef94062173b","ContainerIndex":1,"FaceMOType":1,"Image":{"type":"image","id":"bff01b2a-7cac-4e17-acff-c6b5c74b6eda","data":{"width":640,"height":478,"fileType":"jpg","isAnimated":false,"credits":"","originalImage":{"id":"4b3f7e35-f3ac-4e5c-b380-93b94f6fcfe8","data":{"width":507,"height":345,"fileType":"jpg","isAnimated":false,"credits":null},"type":"image","url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/4b3f7e35-f3ac-4e5c-b380-93b94f6fcfe8.jpg"},"cropData":{"x":10,"y":3,"width":449,"height":335}},"url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/9026dfd7-0ed4-4e75-8269-8edebf56b512.jpg"},"Text":{"type":"text","id":"bc7c7804-a789-4a4c-8595-2464efec6685","data":{"text":""}},"TextBackground":"blue"}]},{"ContainerType":"RevealItem","ContainerId":"c9feff31-a230-4a8c-9c87-1bbbb1390fb8","ContainerIndex":5,"Ratio":"landscape","Items":[{"ContainerType":"RevealFace","ContainerId":"f96725d6-0d09-44c5-8db1-a732dae440fc","ContainerIndex":0,"FaceMOType":0,"Text":{"type":"text","id":"aade895c-9532-48e0-9c93-b7720cfbd17a","data":{"text":"Du hast es bis hierher geschafft? Dann steigern wir den Ekel-Faktor jetzt erneut."}},"TextBackground":"purple"},{"ContainerType":"RevealFace","ContainerId":"9645255b-e02f-4b16-88d0-c1501937e641","ContainerIndex":1,"FaceMOType":1,"Image":{"type":"image","id":"5cb11afb-465e-47df-9389-c1894183ad7c","data":{"width":640,"height":480,"fileType":"jpg","isAnimated":false,"credits":"","originalImage":{"id":"f1dc17f2-03c2-4f1d-855a-8c6e0b321890","data":{"width":538,"height":357,"fileType":"jpg","isAnimated":false,"credits":null},"type":"image","url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/f1dc17f2-03c2-4f1d-855a-8c6e0b321890.jpg"},"cropData":{"x":4,"y":4,"width":464,"height":348}},"url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/259637d8-af4e-45fc-a2aa-6b9309caaf45.jpg"},"Text":{"type":"text","id":"5c93e55f-5c5f-4c2b-8f33-564930df9fbb","data":{"text":""}},"TextBackground":"blue"}]},{"ContainerType":"RevealItem","ContainerId":"eea08630-494c-4058-b7cf-5b5a095d6868","ContainerIndex":6,"Ratio":"landscape","Items":[{"ContainerType":"RevealFace","ContainerId":"14e078d1-7ca9-447d-84a0-9b8efe71a8b9","ContainerIndex":0,"FaceMOType":0,"Text":{"type":"text","id":"fee757cd-c2f1-4140-8566-184d6c0cbc94","data":{"text":"Bzzzzzzz. GLEICH wirst du das Gefühl haben, dass jemand deine Fingerkuppen abgeschnitten hat."}},"TextBackground":"purple"},{"ContainerType":"RevealFace","ContainerId":"c9f7ca29-da3b-4aed-abbb-81f6ac66b46c","ContainerIndex":1,"FaceMOType":1,"Image":{"type":"image","id":"3ce84b61-4f93-4cd4-8017-9c5eb4ef1daf","data":{"width":640,"height":480,"fileType":"jpg","isAnimated":false,"credits":"","originalImage":{"id":"13134a6e-d57a-4ce0-a498-4b007e9ee570","data":{"width":510,"height":354,"fileType":"jpg","isAnimated":false,"credits":null},"type":"image","url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/13134a6e-d57a-4ce0-a498-4b007e9ee570.jpg"},"cropData":{"x":2,"y":9,"width":448,"height":336}},"url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/2d477bf0-9834-4b7e-85ef-c9416eda329b.jpg"},"Text":{"type":"text","id":"6f7415b4-79c3-4b0d-85c3-62d69ef0ec1c","data":{"text":""}},"TextBackground":"blue"}]},{"ContainerType":"RevealItem","ContainerId":"83ee2a28-ef71-41d3-86f0-1ef7b76dc98c","ContainerIndex":7,"Ratio":"landscape","Items":[{"ContainerType":"RevealFace","ContainerId":"8491441b-acb2-4058-93bc-e04b50d9653e","ContainerIndex":0,"FaceMOType":0,"Text":{"type":"text","id":"f6578074-bb8d-4a2f-a8f8-1a0bd6fb6e92","data":{"text":"Oh Nein. Nein. Nein. Nein. Nein. Nein. \nDAS WILL NIEMAND SEHEN. Wehe, du drehst diese Karte um."}},"TextBackground":"purple"},{"ContainerType":"RevealFace","ContainerId":"f955d45e-7005-4ec4-96e8-d00724ff3596","ContainerIndex":1,"FaceMOType":1,"Image":{"type":"image","id":"a58c8bcd-6de6-44b9-baeb-49214aae728c","data":{"width":640,"height":479,"fileType":"jpg","isAnimated":false,"credits":"","originalImage":{"id":"fc6edea6-5aa4-4406-82d3-570e55adb96f","data":{"width":534,"height":665,"fileType":"jpg","isAnimated":false,"credits":null},"type":"image","url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/fc6edea6-5aa4-4406-82d3-570e55adb96f.jpg"},"cropData":{"x":0,"y":209,"width":534,"height":400}},"url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/5ac99152-8198-45de-bf3d-bd9557149fc0.jpg"},"Text":{"type":"text","id":"5d47352b-3cb1-48c9-9141-1c6e901aab44","data":{"text":""}},"TextBackground":"blue"}]},{"ContainerType":"RevealItem","ContainerId":"5e23f415-91b8-4494-8fef-cef0074f5c4b","ContainerIndex":8,"Ratio":"landscape","Items":[{"ContainerType":"RevealFace","ContainerId":"aad06391-d79c-4a44-a7f4-7ef8a2e54a6b","ContainerIndex":0,"FaceMOType":0,"Text":{"type":"text","id":"e23d599a-dc2d-48eb-a7d4-77010dcb76d9","data":{"text":"Du bist noch dabei? Ok, du hast es so gewollt… Ein weiterer Klick katapultiert dich in den „Ich-muss-mich-gleich-Übergeben“-Modus."}},"TextBackground":"purple"},{"ContainerType":"RevealFace","ContainerId":"281b494a-9d4b-45c8-8ed9-ef168ec84953","ContainerIndex":1,"FaceMOType":1,"Image":{"type":"image","id":"0a194d07-3689-4346-b773-e549ce7495c8","data":{"width":640,"height":480,"fileType":"jpg","isAnimated":false,"credits":"","originalImage":{"id":"037cc896-7e5e-4d06-8154-a743d312eec5","data":{"width":536,"height":649,"fileType":"jpg","isAnimated":false,"credits":null},"type":"image","url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/037cc896-7e5e-4d06-8154-a743d312eec5.jpg"},"cropData":{"x":16,"y":6,"width":517,"height":388}},"url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/bf6dbd81-05c6-4a09-befd-c3a29e4d1451.jpg"},"Text":{"type":"text","id":"3b341445-20e6-4e4c-82f0-c83ab3bf8435","data":{"text":""}},"TextBackground":"blue"}]},{"ContainerType":"RevealItem","ContainerId":"735b413d-21af-4993-8192-53a6003ee6c7","ContainerIndex":9,"Ratio":"landscape","Items":[{"ContainerType":"RevealFace","ContainerId":"ca536de5-83c9-42c3-8d1c-6edd45af6d74","ContainerIndex":0,"FaceMOType":0,"Text":{"type":"text","id":"136ab255-3df8-4827-9141-4e4679b4405e","data":{"text":"BILD NR. 10. NACH DIESEM KLICK BIST DU DEFINITIV\nGAME OVER."}},"TextBackground":"purple"},{"ContainerType":"RevealFace","ContainerId":"2848bca5-b54b-4aa5-8d50-cdd0a90e72ba","ContainerIndex":1,"FaceMOType":1,"Image":{"type":"image","id":"a5702953-c716-41f4-8b1d-6ff2a55eb331","data":{"width":640,"height":479,"fileType":"jpg","isAnimated":false,"credits":"","originalImage":{"id":"c941fd24-9430-49fd-b8eb-e5ed5b5a13cd","data":{"width":513,"height":355,"fileType":"jpg","isAnimated":false,"credits":null},"type":"image","url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/c941fd24-9430-49fd-b8eb-e5ed5b5a13cd.jpg"},"cropData":{"x":51,"y":4,"width":448,"height":335}},"url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/b2ea5e93-e7a2-4eb1-a77b-bc1358454a7f.jpg"},"Text":{"type":"text","id":"5999a4eb-d60c-4b4f-8076-b4bbee9fd94a","data":{"text":""}},"TextBackground":"blue"}]},{"ContainerType":"RevealItem","ContainerId":"eb0abd66-74fa-4a51-852e-5c498a12e78c","ContainerIndex":10,"Ratio":"landscape","Items":[{"ContainerType":"RevealFace","ContainerId":"f0d9d9f1-b8e4-4dee-812b-955be87ba85a","ContainerIndex":0,"FaceMOType":0,"Text":{"type":"text","id":"0c9e6136-06ef-4e21-90d4-e8a47681910e","data":{"text":"Noch nicht genug? Na gut, eins haben wir noch. Kommentiere bei Facebook, was du gesehen hast!"}},"TextBackground":"purple"},{"ContainerType":"RevealFace","ContainerId":"71d8f22f-2843-47bd-a424-afb5af5995a3","ContainerIndex":1,"FaceMOType":1,"Image":{"type":"image","id":"f8b25f78-6377-42a2-a6c5-a7185177969c","data":{"width":640,"height":480,"fileType":"jpg","isAnimated":false,"credits":"","originalImage":{"id":"c7f3a597-b384-492d-94a3-2d238ceba851","data":{"width":593,"height":590,"fileType":"jpg","isAnimated":false,"credits":null},"type":"image","url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/c7f3a597-b384-492d-94a3-2d238ceba851.jpg"},"cropData":{"x":0,"y":34,"width":593,"height":445}},"url":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/f45d5147-cbe3-4313-8fbf-6f58f6ab30fb.jpg"},"Text":{"type":"text","id":"4cff12f5-2f08-411e-aaac-20f4663bd884","data":{"text":""}},"TextBackground":"blue"}]}]},
+                gameImg: "//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/08be0a15-999f-4f64-8fb6-4cb4da1b38ab_560_420.jpg",
+                patternData: {"gameThumb":{"originalImageURL":"//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/d0ba23f4-1673-46a8-a0e6-f72fef702282.jpg","croppedImageURL":"08be0a15-999f-4f64-8fb6-4cb4da1b38ab.jpg","coords":{"x":26,"y":0,"width":472,"height":355},"imageSize":"thumbnail","width":513,"height":355,"isAnimated":false,"fileType":"jpg","originalFileType":"jpg","credentials":{"type":"NA","value":""}},"Footer":"","totalTime":1334760,"articleStartTime":1477906269201,"gameShareImage":null,"displayItemNumbers":"false"},
+                gameName: "a-wetten-dass-du-dir-keine-zehn-bilder-anschauen-kannst",
+                creatorName: "bildll10",
+                creatorId: "e9f31754-c77f-4882-ab9b-9a9e4e9c983d",
+                patternId: "Reveal",
+                gameNameForShare: "Wetten, dass du dir keine zehn Bilder anschauen kannst?",
+                gameDescription: "Rani Haese (16) aus Australien ist eine begnadete Blut-Wunden-Künstlerin.",
+                tags: "Art,halloween,make-up",
+                createTime: "10/31/2016 9:48:59 AM",
+                publishTime: "1477907339543", //last publish date
+                lastEdit: "10/31/2016 1:28:38 PM",
+                lastEditEpoch: "1477920518813",
+                shareGameImage: "//cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/08be0a15-999f-4f64-8fb6-4cb4da1b38ab.jpg",
+                originalPublishDate: "1477907339543", //first time published
+                relevancy: "unknown",
+                isPublic: "False" != "True",
+                // #branded - search for this keyword to find all locations of brand code
+                isBranded: "" == "true",
+                locale: "de-DE",
+                translatedFrom: "1c523e26-d8c4-4c1e-8c82-7475f7235f67",
+                originalLocale: "de-DE",
+                wasCreatedBeforeWeStartedCollectingEvents: "false"  === "true"
+            };
+        } catch (e) {
+            console.log('speed-exception', (e));
+
+            shouldSendReport = true;
+            msg = "gameData not created: " + e.message;
+        }
+
+        //try catch object.freeze on window.gameData for freezeing the object
+        try {
+            Object.freeze(window.gameData);
+        } catch (ex) {
+            console.log('speed-exception', (ex));
+
+            var console = console || {};
+            console.log = console.log || function(){};
+            console.log("Object.freeze failed");
+        }
+
+        (function() {
+            try {
+                if(!window.gameData) {
+                    shouldSendReport = true;
+                    msg = msg || "gameData not created";
+                } else {
+                    if(window.String && String.isNullOrEmpty) {
+                        shouldSendReport = shouldSendReport || String.isNullOrEmpty(gameData.patternId) || String.isNullOrEmpty(gameData.gameName) || String.isNullOrEmpty(gameData.creatorName);
+                        msg = msg || "gameData not created";
+                    }
+                }
+            } catch (e) {
+                console.log('speed-exception', (e));
+
+                shouldSendReport = true;
+                msg = "gameData not created: " + e.message;
+            }
+        })();
+
+        var ignoredPatternsArray = ["list","countdown","videosnaps","shorts"];
+        if(isPreview  =="false" && $.inArray(window.gameData.patternId.toLowerCase(),ignoredPatternsArray) == -1)
+        {
+            CDBridge.articleLoaded();
+            AwsBridge.articleLoaded();
+        }
+
+
+        window.canonicalNameForFB = "http://www.playbuzz.com/bildll10/a-wetten-dass-du-dir-keine-zehn-bilder-anschauen-kannst";
+
+        (function(){
+            window.SI = {
+                samplingDisabled : "false" == "true",
+                samplingClientsPercentage : Number("100")
+            };
+
+        }());
+
+
+        (function(){
+            try{
+                window.pbUrlToShare = "http://r.playbuzz.com/R/bildll10/a-wetten-dass-du-dir-keine-zehn-bilder-anschauen-kannst/redirectpage_e-_h-_w-_d-playbuzz_d-com_k-bildll10_k-a-wetten-dass-du-dir-keine-zehn-bilder-anschauen-/kannst_a-params_e-pb_url_e-bildll10_k-a-wetten-dass-du-dir-keine-zehn-bilder-anschauen-kannst";
+                window.shareBarParams = "{\&quot;availableButtonsMobile\&quot;:[\&quot;Facebook\&quot;,\&quot;Vkontakte\&quot;,\&quot;Whatsapp\&quot;,\&quot;Pinterest\&quot;,\&quot;Sms\&quot;,\&quot;Twitter\&quot;,\&quot;Tumblr\&quot;,\&quot;GooglePlus\&quot;,\&quot;Reddit\&quot;,\&quot;Email\&quot;,\&quot;Copy\&quot;],\&quot;availableButtons\&quot;:[\&quot;Facebook\&quot;,\&quot;Vkontakte\&quot;,\&quot;Twitter\&quot;,\&quot;Pinterest\&quot;,\&quot;Email\&quot;,\&quot;Tumblr\&quot;,\&quot;Reddit\&quot;,\&quot;GooglePlus\&quot;,\&quot;Whatsapp\&quot;,\&quot;Copy\&quot;],\&quot;numVisible\&quot;:4,\&quot;numVisibleMobile\&quot;:3,\&quot;showMoreButton\&quot;:true,\&quot;addedClasses\&quot;: \&quot;\&quot;}";
+                window.shareUsingSdk= "False" == "True";
+                window.isFBWebView = "False" == "True";
+                $(document).trigger("shareParamsLoaded");
+            }
+            catch (e) {
+                console.log('speed-exception', (e));
+
+                shouldSendReport = true;
+                msg = msg || " shareBar not created: " + e.message;
+            }
+
+        })();
+
+        (function(){
+            window.userLanguages = !!navigator.languages && navigator.languages.length > 0 ? navigator.languages.join('|') : '';
+            window.userLanguages = window.userLanguages + '|' +  gameData.locale;
+        })();
+
+    })();
+
+</script>
+
+
+
+    
+    <script>
+        window.pageType = { type: "article", id: window.gameData.gameId, patternId: window.gameData.patternId, url: document.location.href.split('?')[0] };
+    </script>
+
+
+    
+
+    <script>
+        window.pageType = { type: "externalBrowser", url: document.location.toString() };
+    </script>
+
+
+    
+
+        
+
+
+    
+
+    
+<script type='text/javascript'>
+
+    var _veroq = _veroq || [];
+
+    var getVeroInitProps = {
+        api_key: 'a41e0b1fb3be63fdff10bd22e8c5667fa1988639'
+    }
+
+    if (document.location.host.toLowerCase().indexOf('www.playbuzz.com') < 0) {
+        //getVeroInitProps.development_mode = true;
+    }
+
+    _veroq.push(['init', getVeroInitProps]);
+    
+    (function () {
+        var ve = document.createElement('script');
+        ve.type = 'text/javascript';
+        ve.async = true;
+        ve.src = '//d3qxef4rp70elm.cloudfront.net/m.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ve, s);
+    })();
+
+</script>
+
+
+
+
+
+
+    <!-- taboola scripts -->
+    
+    <!-- taboola scripts end -->
+
+        <script>
+            var analytics = {
+                experimentName: 'GameAdsExp3',
+                experimentVariation: 'AdsOn',
+                slot: '4'
+            };
+
+            window.ABTestAnalytics.push(analytics);
+    </script>
+    <script>
+            var analytics = {
+                experimentName: 'RecommendationService',
+                experimentVariation: 'OutBrian',
+                slot: '1'
+            };
+
+            window.ABTestAnalytics.push(analytics);
+    </script>
+
+
+
+    <script type="text/javascript">
+        (function () {
+            var _fbq = window._fbq || (window._fbq = []);
+            if (!_fbq.loaded) {
+                var fbds = document.createElement('script');
+                fbds.async = true;
+                fbds.src = 'https://connect.facebook.net/en_US/fbds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(fbds, s);
+                _fbq.loaded = true;
+            }
+            _fbq.push(['addPixelId', '568445403278652']);
+        })();
+        window._fbq = window._fbq || [];
+        window._fbq.push(['track', 'PixelInitialized', {}]);
+    </script>
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=568445403278652&amp;ev=PixelInitialized" /></noscript>
+    
+        <!-- scripts section start -->
+
+    <!-- format scripts -->
+    <script src="//cdn.playbuzz.com/content/bundles/production/af3422f/game/embed/reveal/js"></script>
+
+
+    <script type="text/javascript">
+        //for analytic- dont send pageload for preview fallback.
+        var isPreview = "False".toLowerCase();
+        if (!isPreview) {
+            isPreview = "false";
+        }
+
+
+        window.resourceSet = "{&quot;openlistOr&quot;:&quot;Or&quot;,&quot;fromTheWeb&quot;:&quot;From The Web&quot;,&quot;clickToReveal&quot;:&quot;klicken und entdecken!&quot;,&quot;TwoChoicesPoll&quot;:&quot;Schon abgestimmt. Weiter!&quot;,&quot;ArticleDisclaimer&quot;:&quot;Diese Nachricht wurde von einem Mitglied unserer Gemeinschaft ver&#246;ffentlicht, wo jedermann begeisterte Kommentare hinterlassen kann.&quot;,&quot;SponsoredTag&quot;:&quot;SPONSORED&quot;,&quot;CreateLink1&quot;:&quot;M&#246;chtest du dein eigenes erstellen?&quot;,&quot;CreateLink2&quot;:&quot;Hier klicken&quot;,&quot;StartOver&quot;:&quot;Erneut spielen&quot;,&quot;CreateYourOwn&quot;:&quot;erzeugen Sie Ihren eigenen&quot;,&quot;or&quot;:&quot;oder&quot;,&quot;likeUsBoxFbPageUrl&quot;:&quot;//www.facebook.com/PlaybuzzDE&quot;,&quot;fromPlaybuzz&quot;:&quot;From Playbuzz&quot;,&quot;multipleChoiceEndTextPart2&quot;:&quot;Du hast&quot;,&quot;multipleChoiceEndTextPart1&quot;:&quot;Gl&#252;ckw&#252;nsche!&quot;,&quot;right&quot;:&quot;Richtig!&quot;,&quot;share&quot;:&quot;Teile dein Ergebnis&quot;,&quot;GotIt&quot;:&quot;Los geht\u0027s!&quot;,&quot;I_got&quot;:&quot;Ich habe:&quot;,&quot;pollText&quot;:&quot;Ich habe abgestimmt&quot;,&quot;shareEmail&quot;:&quot;Email&quot;,&quot;shareText5&quot;:&quot;Twittern&quot;,&quot;shareText4&quot;:&quot;Teilen&quot;,&quot;shareText7&quot;:&quot;Поделиться&quot;,&quot;shareText6&quot;:&quot;Auf Pinterest teilen&quot;,&quot;shareText3&quot;:&quot;Auf Twitter teilen&quot;,&quot;shareText2&quot;:&quot;Auf Facebook teilen&quot;,&quot;pollText7&quot;:&quot;w&#228;hlten&quot;,&quot;pollText6&quot;:&quot;Deine...&quot;,&quot;pollText5&quot;:&quot;N&#228;chste Frage&quot;,&quot;pollText4&quot;:&quot;Abstimmen&quot;,&quot;pollText3&quot;:&quot;Gew&#228;hlt&quot;,&quot;pollText2&quot;:&quot;Weitere Ergebnisse anzeigen&quot;,&quot;pollText1&quot;:&quot;Stimmen&quot;,&quot;openlistBtnPost&quot;:&quot;ADD POST&quot;,&quot;LearnMore&quot;:&quot;Erfahren Sie mehr&quot;,&quot;YouVoted&quot;:&quot;Du hattest gew&#228;hlt&quot;,&quot;endCardKeepReading&quot;:&quot;Entdecke auch&quot;,&quot;likeUsBoxSubHeader&quot;:&quot;Danke f&#252;r Dein Like!&quot;,&quot;shareCopy&quot;:&quot;Copy Link&quot;,&quot;treanslatedBy&quot;:&quot;Translated by&quot;,&quot;openlistDragUpload&quot;:&quot;Upload or Drag Image&quot;,&quot;likeUsBoxHeader&quot;:&quot;Danke, dass Du da bist.&quot;,&quot;openlistEnterUrl&quot;:&quot;Enter URL&quot;,&quot;Results&quot;:&quot;Ergebnisse&quot;,&quot;moreGames&quot;:&quot;Mehr&quot;,&quot;TestYourselfTextPart1&quot;:&quot;LOS GEHT’S!&quot;,&quot;TestYourselfTextPart2&quot;:&quot;Erneut spielen?&quot;,&quot;TestYourselfTextPart3&quot;:&quot;Berechnet...&quot;,&quot;openlistAddSomething&quot;:&quot;Add something awesome...&quot;,&quot;createdByPart1&quot;:&quot;Erstellt von&quot;,&quot;createdByPart2&quot;:&quot;am&quot;,&quot;openlistUploadImage&quot;:&quot;Upload Image&quot;,&quot;out_of&quot;:&quot;von&quot;,&quot;facebookComments&quot;:&quot;Facebook Unterhaltungen&quot;,&quot;SwiperL&quot;:&quot;F&#252;r NEIN nach links wischen&quot;,&quot;SwiperR&quot;:&quot;F&#252;r JA nach rechts wischen&quot;,&quot;originalArticleBy&quot;:&quot;Original Article by&quot;,&quot;tags&quot;:&quot;Tags&quot;,&quot;Back&quot;:&quot;Zur&#252;ck&quot;,&quot;Next&quot;:&quot;N&#228;chste&quot;}";
+
+        $(document).on('fbCommentsReady gameReady', function() {
+            var loc = window.location.toString();
+            if ((loc.split('#')[1]) && (loc.split('#')[1] == 'discussion')) {
+                window.location.hash = 'discussion';
+            }
+        });
+
+        $(document).on('userLoggedIn', function(event, userData) {
+            userHandler.setUserData(userData);
+        });
+
+        // Todo: create a shared script that runs in the begining
+        $(document).ready(function() {
+            if (isPreview == "false") {
+                Analytics.sendGameLoadedEvent();
+                CDBridge.pageLoadTracker();
+                AwsBridge.pageLoadTracker();
+            }
+
+            try {
+                if (typeof window.PlayBuzz !== "undefined" && PlayBuzz.core) {
+                    var id = PlayBuzz.core.getURLParam("divId");
+                    window.PlayBuzz && PlayBuzz.core.sendMessageToParent({
+                        name: "documentReady",
+                        id: id
+                    });
+                }
+            } catch (e) {
+            }
+
+            // MultiLanguage support
+            $(".play_main_container").addClass("play_language_" + "de-DE");
+
+            if (window.PlayBuzz && PlayBuzz.core)   PlayBuzz.core.enableEmbedDataBridge = false;
+
+        });
+    </script>
+        <!-- scripts section end -->
+        <!-- sharebarbundles section start -->
+        <!-- sharebarbundles section end -->
+    
+
+
+        <script>
+            (function () {
+                var TS = window.performance && window.performance.timing && window.performance.timing.connectStart || new Date().getTime();
+                CDBridge.pageLoadTracker("connectStart", TS);
+                AwsBridge.pageLoadTracker("connectStart", TS);
+                CDBridge.pageLoadTracker("domStart");
+                AwsBridge.pageLoadTracker("domStart");
+            })();
+        </script>
+
+    <div id="interstitial-ad" class="pbads"></div>
+    <div class="adunit" id="ad-tags-placeholder"></div>
+    <div class="adunit" id="ad-tags-outofpage" data-outofpage="true"></div>
+
+    <!-- Ads Scripts -->
+    
+        
+<script src="//cdn.playbuzz.com/content/bundles/production/af3422f/pbads/dfp/js"></script>
+
+
+
+
+<script>
+
+    var UTMDomains = {".google.":"org_search",".ask.":"org_search",".yahoo.":"org_search",".bing.":"org_search",".aol.":"org_search","yandex.":"org_search","duckduckgo.com":"org_search",".pinterest.com":"org_pinterest","facebook.com":"org_facebook"};
+    var UTMSponsoredArticles = {"d4b517e5-2d1f-4c03-9eef-b76424807775":"AmexCampaign","c5bd6434-3c8e-412d-b8dd-76a368de899d":"halifax","f71b8959-4bfe-48da-8df6-e1c7c6be26c2":"halifax","64426526-fe99-4050-8524-4bcb3b969f8f":"halifax"};
+    var InBannerCampaignId = "352434297";
+    var InQuestionCampaignIdDisregard = "none";
+    var InQuestionCampaignIdDisregardArray = []; 
+    var IsPBFeed = ("True" === "True");
+    var dfpTargeting = {};
+
+
+
+    if (InQuestionCampaignIdDisregard !== "none" && InQuestionCampaignIdDisregard.length>0) {
+        InQuestionCampaignIdDisregardArray = InQuestionCampaignIdDisregard.split(';').map(Number); 
+    }
+
+    try {
+        var sponsoredArticleIds = Object.keys(UTMSponsoredArticles);
+        if (sponsoredArticleIds.indexOf(gameData.gameId) >= 0) {
+            dfpTargeting["userSuvey"] = UTMSponsoredArticles[gameData.gameId];
+        }
+    } catch (err) {
+        console.log("failed to set UTM Sponsored Articles UTM");
+    }
+
+    try {
+
+        // abtest targeting
+        for (var index = 0; index < window.adTargeting.length; ++index) {
+            dfpTargeting[window.adTargeting[index].target] = window.adTargeting[index].value;
+        }
+
+        // mobile targeting
+        dfpTargeting["MobileApp"] = document.location.toString().toLowerCase().search("frommobileapp=true") != -1 ? "Yes" :  "No";
+
+        // item targeting
+        if (window.gameData) {
+            dfpTargeting["name"] = window.gameData.gameId;
+            dfpTargeting["pattern"] = window.gameData.patternId;
+
+            if (window.gameData.tags) {
+
+                var dfpTags = [];
+                try {
+                    var predifinedTags = ["Celebrities", "Tv", "Film", "Music", "Style", "Sexy", "Cute", "Funny", "Retro", "Food", "Love", "Animals", "Holidays", "Art", "Books", "Games", "Tech", "Internet", "World", "Sports", "Politics" ,"News"];
+                    var itemTags = window.gameData.tags.split(',');
+                    dfpTags = itemTags.filter(function(tag) {
+                        return (predifinedTags.indexOf(tag) != -1);
+                    });
+
+                } catch (e) { console.log("failed to set dfp tags targeting", e); }
+
+            }
+
+            dfpTargeting["tags"] = dfpTags.toString();
+        }
+
+        // utm targeting
+        var pbUtmCookie = new UtmCookie();
+        var utmTerm = pbUtmCookie.getTerm(),
+            utmMedium = pbUtmCookie.getMedium(),
+            utmSource = pbUtmCookie.getSource();
+        if (utmMedium !== null) { dfpTargeting['utm_medium'] = utmMedium; }
+        if (utmTerm !== null) { dfpTargeting['utm_term'] = utmTerm; }
+        if (utmSource !== null) { dfpTargeting['utm_source'] = utmSource; }
+
+        // ads module targeting
+        if (window.pbads && window.pbads.loaded) {
+
+            // set largeplayer ( = pbads module loaded)
+            dfpTargeting["Largeplayer"] = "Yes";
+
+            // set abtest
+            try { var abtest = pbads.abtest.getActiveVariation();} catch (ex) { abtest = "NA"; }
+            dfpTargeting["pbadsabtest"] = abtest;
+
+        } else {
+            dfpTargeting["Largeplayer"] = "No";
+        }
+
+        try {
+            var taretingByUrl = Tools.getUrlParameterByName("pbads_preview");
+            if (taretingByUrl != null) { dfpTargeting["preview"] = taretingByUrl }
+        } catch(e) { console.log("failed set preview dfp targeting");  }
+
+        try {
+            //need to check if we have referer and according to the new rules decide if we should override the utm's?
+            var ReferredURL = "www.bild.de";
+            if (!Tools.getUrlParameterByName("utm_source")) {
+                //check if the referer is Playbuzz or not
+                if (ReferredURL.indexOf("playbuzz.com") == -1) {
+                    //meaning we got to Playbuzz but not from an internal URL
+                    //check if the referer domain is in predefined in UTM domains
+                    //if not - reset UTM's
+                    var isDomainInUTMList = false;
+                    var foundDomain = "";
+                    //check that we got a list of domains
+                    if (typeof(UTMDomains) == "object") {
+                        //get domains
+                        var UTMDomainsList = Object.keys(UTMDomains);
+                        for (UTMDomain in UTMDomainsList) {
+                            //check if referer domain contains UTM domain
+                            if (ReferredURL.indexOf(UTMDomainsList[UTMDomain]) >= 0) {
+                                //if match found - save the domain and mark that it was found
+                                foundDomain = UTMDomainsList[UTMDomain];
+                                isDomainInUTMList = true;
+                                break;
+                            }
+                        }
+                    }
+                    if (isDomainInUTMList) {
+                        dfpTargeting['utm_source'] = foundDomain;
+                        dfpTargeting['utm_medium'] = UTMDomains[foundDomain];
+                    } else {
+                        dfpTargeting['utm_source'] = "";
+                        dfpTargeting['utm_medium'] = "";
+                        dfpTargeting['utm_term'] = "";
+                    }
+                    //override UTM Cookie
+                    pbUtmCookie.cookie.utm_medium = dfpTargeting['utm_medium'];
+                    pbUtmCookie.cookie.utm_source = dfpTargeting['utm_source'];
+                    pbUtmCookie.setBrowserCookie();
+                } else {
+                    //meaning this is an internal playbuzz.com navigation
+                    if (!IsPBFeed) {
+                        MonetizationBridge.NextPageVisit();
+                    }
+                }
+            }
+        } catch(err) {
+            console.log("failed to set/reset pbads UTM targeting by Domain");
+        }
+        // set targeting from pbads targeting queue
+        if (window.pbads && window.pbads.targeting) {
+            try {
+                window.pbads.targeting.forEach(function(entry) {
+                    Object.keys(entry).forEach(function (key) {
+                        dfpTargeting[key] = entry[key];
+                    });
+                });
+            } catch (ex) { console.log("failed to set pbads queue targeting", ex); }
+        }
+
+
+    }
+    catch (ex) { console.warn("failed to set dfp targeting", ex); }
+
+</script>
+
+
+
+<script>
+
+    var enableAds = false;
+
+    // initiating dfp
+    try {
+        var dfpUnitsConfig= "{\"path\":\"network_game_play_reveal\",\"config\":{\"ad-tags-placeholder\":{\"adunit\":\"1x1_pixel_Network\",\"dimensions\":\"1x1\"}}}";
+        pbads.dfp.init('94166617', dfpTargeting, dfpUnitsConfig);
+
+    } catch (e) {
+        // log to console --> we need alert if we get this error
+        console.error("FATAL: failed to load dfp module", e);
+    }
+
+
+    $(document).ready(function() {
+        // fetch dfp ads
+        try {
+
+            if (enableAds) {
+                    
+                // fetch units
+                pbads.dfp.fetch();
+
+                // refresh on game progress 50
+                if (window.gameData && (window.gameData.patternId === "TestYourself" || window.gameData.patternId === "multipleChoice")) {
+                    $(document).on("Game.Progress.50", function() { 
+                        try { 
+                            //need to change the query string
+                            window.location.hash = 'half'; //add half to URL
+                            //googletag.pubads().refresh() 
+                            pbads.dfp.refresh();
+                        } catch (e) { 
+                            console.warn("failed to fetch dfp adunits", e); 
+                        }
+                    });
+                }
+
+            } else {  
+                $(".adunit-wrapper").hide();                
+            }
+
+        } catch (e) {
+            // log to console --> we need alert if we get this error
+            console.error("FATAL: failed to fetch dfp adunits", e);
+        }
+    });
+
+</script>
+
+
+    
+
+</body>
+</html>
+�k��      XG�XH�=[          :http://www.playbuzz.com/bildll10/a-wetten-dass-du-dir-keine-zehn-bilder-anschauen-kannst?feed=true&src=http://www.playbuzz.com/bildll10/a-wetten-dass-du-dir-keine-zehn-bilder-anschauen-kannst&comments=undefined&divId=div0&articleCanonicalUrl=http%3A%2F%2Fwww.bild.de%2Flifestyle%2F2016%2Fmake-up%2Fblut-wunden-kuenstlerin-48532918.bild.html&width=640&height=auto&recommend=false&game=bildll10/a-wetten-dass-du-dir-keine-zehn-bilder-anschauen-kannst&useComments=false&gameInfo=false&embedBy=e9f31754-c77f-4882-ab9b-9a9e4e9c983d&social=true&socialReferrer=false&pageLoadTrackerId=71509599675601980&shouldTrackLoading=false&parentHost=www.bild.de&parentUrl=http%3A%2F%2Fwww.bild.de%2Flifestyle%2F2016%2Fmake-up%2Fblut-wunden-kuenstlerin-48532918.bild.html&referral=http%3A%2F%2Fwww.bild.de%2F necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Via: 1.1 ISA01TMG
+Expires: Mon, 31 Oct 2016 13:30:59 GMT
+Date: Mon, 31 Oct 2016 13:30:59 GMT
+Content-Type: text/html; charset=utf-8
+Access-Control-Allow-Origin: *
+p3p: CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"
+Pragma: no-cache
+Cache-Control: no-cache
+ original-response-headers Via: 1.1 ISA01TMG
+Connection: Keep-Alive
+Proxy-Connection: Keep-Alive
+Transfer-Encoding: chunked
+Expires: Mon, 31 Oct 2016 13:30:59 GMT
+Date: Mon, 31 Oct 2016 13:30:59 GMT
+Content-Type: text/html; charset=utf-8
+Access-Control-Allow-Origin: *
+p3p: CP="IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT"
+Pragma: no-cache
+Cache-Control: no-cache
+Set-Cookie: ASP.NET_SessionId=020te0mcpiq3yflm5yegydoi; path=/; HttpOnly
+Set-Cookie: akacd_mobile=2177452799~rv=44~id=5e66840cba60dfdf21a7fb256ebe3709; path=/; Expires=Mon, 31 Dec 2038 23:59:59 GMT
+ charset UTF-8 uncompressed-len 0 predictor::resource-count 27 predictor::http://cdn.playbuzz.com/content/bundles/production/af3422f/game/embed/reveal/css 1,1,1477920659,4097 predictor::http://cdn.playbuzz.com/content/images/wordpress_logo_30_30.png 1,1,1477920659,4097 predictor::http://cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/61c79e0f-a9f4-43f5-bfcf-05368a8854e7.jpg 1,1,1477920659,4097 predictor::http://cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/525d411a-d3e3-4769-b053-a5a1c8057fe8.jpg 1,1,1477920659,4097 predictor::http://cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/16ca4d24-4d95-4e73-99d1-3813ed9b78f9.jpg 1,1,1477920659,4097 predictor::http://cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/29ea30e8-41fa-458e-b592-09ec8c2a0dda.jpg 1,1,1477920659,4097 predictor::http://cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/9026dfd7-0ed4-4e75-8269-8edebf56b512.jpg 1,1,1477920659,4097 predictor::http://cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/259637d8-af4e-45fc-a2aa-6b9309caaf45.jpg 1,1,1477920659,4097 predictor::http://cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/2d477bf0-9834-4b7e-85ef-c9416eda329b.jpg 1,1,1477920659,4097 predictor::http://cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/5ac99152-8198-45de-bf3d-bd9557149fc0.jpg 1,1,1477920659,4097 predictor::http://cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/bf6dbd81-05c6-4a09-befd-c3a29e4d1451.jpg 1,1,1477920659,4097 predictor::http://cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/b2ea5e93-e7a2-4eb1-a77b-bc1358454a7f.jpg 1,1,1477920659,4097 predictor::http://cdn.playbuzz.com/cdn/1c523e26-d8c4-4c1e-8c82-7475f7235f67/f45d5147-cbe3-4313-8fbf-6f58f6ab30fb.jpg 1,1,1477920659,4097 predictor::http://graph.facebook.com/737600826293737/picture?type=large 1,1,1477920659,4096 predictor::http://cdn.playbuzz.com/content/images/processing.gif 1,1,1477920659,4097 predictor::http://cdn.playbuzz.com/content/bundles/production/af3422f/libs/articleinfra/js 1,1,1477920659,4097 predictor::http://cdn.playbuzz.com/content/bundles/production/af3422f/game/embed/reveal/js 1,1,1477920659,4097 predictor::http://cdn.playbuzz.com/content/bundles/production/af3422f/pbads/dfp/js 1,1,1477920659,4097 predictor::http://cdn.cooladata.com/tracking/cooladata-2.1.12.min.js 1,1,1477920659,4097 predictor::http://www.google-analytics.com/analytics.js 1,1,1477920659,4096 predictor::http://d3qxef4rp70elm.cloudfront.net/m.js 1,1,1477920659,4097 predictor::https://connect.facebook.net/en_US/fbds.js 1,1,1477920659,4096 predictor::http://cdn.playbuzz.com/content/images/social_buttons_icon_sprite_new.png 1,1,1477920659,4097 predictor::https://connect.facebook.net/de_DE/sdk.js 1,1,1477920659,4097 predictor::https://www.facebook.com/impression.php/f27231a5588059a/?api_key=527957123932456&lid=115&payload=%7B%22source%22%3A%22jssdk%22%7D 1,1,1477920659,4097 predictor::https://stats.g.doubleclick.net/r/collect?t=dc&aip=1&_r=3&v=1&_v=j47&tid=UA-34510589-6&cid=209188088.1477920673&jid=917581623&_u=QGAAgAAB~&z=1709876946 1,1,1477920659,4096 predictor::http://cdn.playbuzz.com/content/images/Reveal/full_4_lightDark_30X30.png 1,1,1477920659,4097  �Z

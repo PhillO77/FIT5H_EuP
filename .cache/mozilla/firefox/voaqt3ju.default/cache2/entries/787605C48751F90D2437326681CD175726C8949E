@@ -1,0 +1,345 @@
+ï»¿(function () {
+
+var sc=document.getElementsByTagName('script');
+	var placementScript=sc[ sc.length - 1 ];
+	for (var i=sc.length  - 1;i >= 0;i--) {
+	  if(sc[i].src.indexOf("/display_") != -1) {
+	    placementScript=sc[i];
+	    break;
+	  }
+	}
+	var qS=placementScript.src.replace(/^[^\?]+\??/,'');var params = pQ(qS);function pQ ( q ) {var Pa=new Object();if (!q) return Pa;var p=q.split(/[;&]/);for (var i=0;i<p.length;i++){var kv=p[i].split('=');if (!kv||kv.length!=2) continue;var key=unescape(kv[0]);var val=unescape(kv[1]);val=val.replace(/\+/g, ' ');Pa[key]=val;};return Pa;};
+	var jsQ = '';for (prop in params) { if (prop != 'display' && prop != 'responsive') { jsQ += prop + '=' + escape(params[prop]) + '&';} }; if (jsQ.length > 1) jsQ = jsQ.substring(0, jsQ.length - 1);
+	
+	// Define protocol
+ 	var protocol = placementScript.src.split("/")[0];
+    if (protocol.indexOf("file") > -1)
+		protocol = "https:";
+
+    // Global variables
+    var hasHtml5Support = supportsHtml5();
+    var container;
+    var animatedLoaded = false;
+
+    // Constructs local placement object
+    var placement = {};
+    placement.size = { width: params["size"].split("x")[0], height: params["size"].split("x")[1] };
+    placement.clicktag = (params["clicktag"] ? params["clicktag"] : "");
+    placement.responsive = (params["responsive"] != "off");
+    placement.politeloading = (params["politeloading"] != "off" && !/firefox/i.test(navigator.userAgent));
+    placement.ad = { id: params["ad"].split("_")[1], html5: "//html5.host.bannerflow.com/" + params["ad"], image: "//html5.host.bannerflow.com/image_" + params["ad"] };
+    placement.container = params["container"];
+    placement.displayType = (params["display"] == "image" ? "image" : (hasHtml5Support ? "animated" : "image") );
+    
+    // Display banner
+    if (document.getElementsByTagName("body").length > 0)
+      render();
+    else {
+      window.onload = function() {
+        placement.container = "body";
+        placement.politeloading = false;
+        placement.responsive = false;
+        render();
+      }
+    }
+    
+    function render() {
+        var ids = '1071106,57c56c6a6571972c5487187b;1075386,57c56c6b6571972c548718a2;1075479,57c56c6a6571972c54871881;1076366,57c56c6b6571972c548718c5;1076483,57c56c6cb801c93448561f51;1075667,57c56c6b6571972c548718c0;1076513,57c56c6c6571972c548718ca;1072221,57c56c6a6571972c5487187b;973170,575e682986585324e857f745;1075614,57c56c6b6571972c5487189b;1074156,57c56c6bb801c93448561f3e;1074597,57c56c6b6571972c548718b1;1075180,57c56c6b6571972c548718b2;1075605,57c56c6bb801c93448561f43;1076351,57c56c6cb801c93448561f4c;1074597,57c56c6b6571972c548718b1;900261,575e680549feac2408b027aa;1074156,57c56c6bb801c93448561f3e;1072223,57c56c6bb801c93448561f3b;973165,575e682986585324e857f750;917843,575e680d49feac2408b0285f;1075605,57c56c6bb801c93448561f43;901596,575e680749feac2408b027d7;902211,575e67d049feac2408b02643;916643,575e67d449feac2408b026b7;1074424,57c56c6bb801c93448561f3d;902206,575e67d249feac2408b02673;973163,575e682b86585324e857f778;775966,575e686249feac2408b02abb;901898,575e680849feac2408b027e9;915261,575e685949feac2408b02a58;898091,575e680349feac2408b0278f;973160,575e682a86585324e857f76a;900265,575e680549feac2408b027b3;1074426,57c56c6a6571972c5487187a;1076337,57c56c6bb801c93448561f47;778618,57c56c906571972c5487197a;973168,575e682a86585324e857f76f;902678,575e68aa86585324e857f982;902215,575e67ce49feac2408b0261d;902205,575e67d249feac2408b0267c;973167,575e682a86585324e857f760;778629,57c56c9db801c93448562012;932390,575e680e49feac2408b0287b;900257,575e680449feac2408b027a1;1075180,57c56c6b6571972c548718b2;902210,575e67d049feac2408b0264c;973163,575e682b86585324e857f778;973165,575e682986585324e857f750;973159,575e682b86585324e857f779;902224,575e67cb49feac2408b025c5;902223,575e67cb49feac2408b025cf;902222,575e67cc49feac2408b025d8;902221,575e67cc49feac2408b025e2;902220,575e67cd49feac2408b025ec;902219,575e67cd49feac2408b025f6;902218,575e67cd49feac2408b02600;902217,575e67ce49feac2408b0260a;902216,575e67ce49feac2408b02614;902214,575e67cf49feac2408b02627;902213,575e67cf49feac2408b02630;902212,575e67d049feac2408b0263a;907263,575e67d349feac2408b02690;907266,575e67d349feac2408b0269a;907273,575e67d349feac2408b026a4;907279,575e67d449feac2408b026ad;916650,575e67d549feac2408b026c1;916657,575e67d849feac2408b026db;916664,575e67d849feac2408b026e3;916671,575e67d849feac2408b026f9;916678,575e67d849feac2408b026f6;916689,575e67d849feac2408b02707;917833,575e67d849feac2408b026ff;922328,575e67d849feac2408b0270c;926212,575e67d849feac2408b02710;943649,575e67d949feac2408b0271a;902215,575e67ce49feac2408b0261d;973164,575e682986585324e857f75b;915268,575e685a49feac2408b02a62;902209,575e67d049feac2408b02656;902208,575e67d149feac2408b02660;902207,575e67d149feac2408b0266a;902204,575e67d249feac2408b02686;903019,575e68ae86585324e857f9e5;916990,575e680b49feac2408b02829;936423,575e680f49feac2408b02885;973161,575e682a86585324e857f765;'.split(';');
+        var foundId = '';
+        for (var i=0; i<ids.length; i++) {
+          if (ids[i].indexOf(placement.ad.id + ',') > -1) {
+            foundId = ids[i].split(',')[1].trim();
+            break;
+          }
+        }
+        if (foundId != '') {
+
+            var display = placement.displayType == 'image' ? '&display=image' : '';
+            var responsive = placement.responsive ? '&responsive=on' : '';
+            var polite = !placement.politeloading ? '&politeloading=off' : '';
+            var cont = params['container'] ? '&container=' + params['container'] : '';
+            var targetUrl = '';
+
+            
+            if (params['clicktag'] && params['clicktag'] != '')
+                targetUrl = params['clicktag'];
+
+
+            var s = document.createElement('script');
+            s.src = 'https://embed.bannerflow.com/' + foundId + '?targeturl=' + encodeURIComponent(targetUrl) + display + cont + responsive + polite;
+            s.type = 'application/javascript';
+            placementScript.parentNode.insertBefore(s, placementScript.nextSibling);
+
+        } else {
+            // Create container
+            container = createContainer(placement.size, placementScript);
+            
+            // Insert banner
+            insertBanner(placement, container);
+
+        } 
+    }
+    
+    function createContainer (size, insertAfter) {
+        if (placement.container) {
+            // Use pre-defined DIV as banner container
+            var div;
+            if (placement.container.indexOf('#') > -1)
+              div = document.getElementById(placement.container.replace('#', ''));
+            else
+              div = document.getElementsByTagName(placement.container)[0];
+          
+            var innerDiv = document.createElement('div');
+            div.appendChild(innerDiv);
+            return div;
+          
+        } else {
+            // Create new DIV to use as banner container
+            var div = document.createElement('div');
+            div.id = "bf" + new Date().getTime();			// Generate unique name (important if multiple BF placements on same page)
+            div.style.width = (placement.responsive ? '100%' : size.width + 'px');
+            div.style.height = (placement.responsive ? '100%' : size.height + 'px');
+            div.style.overflow = 'hidden';
+            insertAfter.parentNode.insertBefore(div, placementScript); // Inserts container right after script tag's position
+            // Q: Should we insert a progress animation to indicate that the banner is loading?
+            
+            var innerDiv = document.createElement('div');
+			
+            div.appendChild(innerDiv);
+            innerDiv.style.width = '100%';
+			innerDiv.style.height = '100%';
+            return div;
+        }
+    }
+    
+    
+  
+    function insertBanner(placement, container) {
+        
+        var iframe;
+        // Insert banner iframes into separate DIV wrappers
+        // This will make more advanced ad formats easier to implement as the DIVs are static and will not be swapped on polite loading
+        var spotContainer = document.createElement('div');
+        spotContainer.style.width = (placement.responsive && ! hasHtml5Support) ? (toNumber(placement.size.width) / toNumber(placement.size.width) * 100) + '%' : placement.size.width; 
+        spotContainer.style.height = (placement.responsive && ! hasHtml5Support) ? (toNumber(placement.size.height) / toNumber(placement.size.height) * 100) + '%' : placement.size.height;
+       
+        container.firstChild.appendChild(spotContainer);
+        spotContainer.style.width = '100%';
+		spotContainer.style.height = '100%';
+
+        if (placement.displayType == "image" || (placement.politeloading && placement.displayType == "animated")) {
+            iframe = createIframe(placement, "image");
+        } else
+            iframe = createIframe(placement, "animated");
+
+        spotContainer.appendChild(iframe);
+        
+        iframe.style.opacity = 1;
+        
+        
+        // Polite loading
+        if (placement.politeloading && placement.displayType == "animated") {
+            // Listen to when page is loaded
+            bindEvent(window, "load", function() {
+                // INIT PRELOADING
+                var politeContainer = document.createElement('div');
+                politeContainer.className = 'politecontainer';
+                politeContainer.style.width = '1px';
+                politeContainer.style.height = '1px';
+                politeContainer.style.position = 'absolute';
+                politeContainer.style.top = '-1px';
+                politeContainer.style.overflow = 'hidden';
+                politeContainer.name = "polite-container";
+                container.appendChild(politeContainer);
+                 
+                var politeIframe = createIframe(placement, "animated");
+                politeIframe.style.opacity = 0;
+                politeContainer.appendChild(politeIframe);
+                politeIframe.onload = function () {
+                    if (!animatedLoaded) {
+                        this.onload = null;
+                        // Animated version is loaded, swap image iframe with animated iframe
+                        var index = 0;
+                        var imgFrame =  container.children[0].firstChild;
+                        imgFrame.style.opacity = 0;
+                        var aniFrame = politeContainer.children[0];
+                        //aniFrame.style.opacity = 0;
+                        
+                        setTimeout(function(){ 
+                            aniFrame.style.opacity = 1;
+                            container.children[0].replaceChild(aniFrame, imgFrame);
+                        }, 100);
+                        animatedLoaded = true;
+                      
+                        // Refresh responsive size
+                        if (placement.responsive)
+                          onWindowResize();
+                    }
+                }
+                
+            });
+        }
+        
+        // RESPONSIVENESS
+        if (placement.responsive) {
+            bindEvent(window, "load", function () {
+                onWindowResize();
+                bindEvent(window, "resize", onWindowResize);
+            });
+            onWindowResize(); // Trigger initial resize
+        }
+        return spotContainer;
+    }
+    
+    function createIframe(placement, displayType) {
+        var src = (displayType == "image" ? placement.ad.image : placement.ad.html5);
+
+        var tracking = "&tracking=" + (displayType == "animated" && placement.politeloading ? "off" : "on");
+      
+        var iframe = document.createElement('iframe');
+        iframe.src = protocol + src + "?" + jsQ + tracking;
+      
+      
+        if (displayType == "image") {
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+        } else {
+            iframe.style.width = (placement.responsive && !hasHtml5Support) ? '100%' : placement.size.width + 'px';
+            iframe.style.height = (placement.responsive && !hasHtml5Support) ? '100%' : placement.size.height + 'px'; 
+        }
+        iframe.style.backgroundColor = 'transparent';
+        iframe.frameBorder = 0;
+        iframe.allowtransparency = 'true';
+        iframe.style.border = 'none';
+        iframe.scrolling = 'no';
+        
+        if (hasHtml5Support) {
+            //iframe.style.opacity = 0;
+            iframe.style.transition = 'opacity 100ms linear 100ms';
+        }
+        
+        return iframe;
+        
+        
+    }
+    
+    function bindEvent(el, eventName, eventHandler) {
+        if (el == window && eventName == "load" && document.readyState == "complete") {
+            eventHandler(null);
+        } else {
+            if (el.addEventListener)
+                el.addEventListener(eventName, eventHandler, false);
+            else if (el.attachEvent)
+                el.attachEvent('on'+eventName, eventHandler);
+        }
+    }
+    
+    function toNumber(str) {
+        return str.replace(/\D/g, '');
+    }
+    
+    // Responsive banners should automatically fill its given container size
+    function onWindowResize(e) {
+
+        // Iterera igenom alla
+        var innerContainer = container.getElementsByTagName('div')[0];
+        var firstSpot = innerContainer.children[0];
+      
+        //if (innerContainer && firstSpot) {
+        // Only Html5 browsers supports scaling
+        if (hasHtml5Support && isDisplayingAnimated()) {
+            
+            var scale = innerContainer.parentNode.offsetWidth / toNumber(placement.size.width);
+            
+            innerContainer.style['-webkit-transform'] = innerContainer.style['transform'] = innerContainer.style['-moz-transform'] = "scale("+scale+")translate3d(0,0,0)";
+            innerContainer.style['-webkit-transform-origin'] = "0 0";
+            innerContainer.style.transformOrigin = "0 0 0";
+            innerContainer.style.width = innerContainer.parentNode.offsetWidth + "px";
+            
+        }
+        //}
+        // Ajust height automatically in proportion to outer container's width
+        innerContainer.style.height = innerContainer.parentNode.offsetWidth / (toNumber(placement.size.width) / toNumber(placement.size.height)) + "px";
+        container.style.height = container.parentNode.offsetWidth / (toNumber(placement.size.width) / toNumber(placement.size.height)) + "px";
+
+    }
+  
+  function isDisplayingAnimated() {
+    if (placement.displayType == "image")
+      return false;
+    
+    return (placement.displayType == "animated" && ((placement.politeloading && animatedLoaded) || !placement.politeloading));
+    
+  }
+    
+    
+    /*
+    Detects if browser supports Html5 or not
+    -------------------------------------------------------
+    */
+    function supportsHtml5 () {
+        // Detects IE 9 or lower
+        var ie = (function(){
+            var undef, v = 3, div = document.createElement('div'), all = div.getElementsByTagName('i');
+            while ( div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->', all[0] );
+            return v > 4 ? v : undef;
+        }());
+        if (ie && ie < 11)
+            return false;
+        
+        // Detects Safari 5 or lower
+        if (navigator.appVersion) {
+            try {
+                var av = navigator.appVersion.split("/");
+                var ver = av[av.length - 2];
+                if (ver.indexOf('Safari') > -1 && Number(ver.split(".")[0]) <= 5)
+                    return false;
+            } catch (e) {}
+        }
+        // Detects CSS3 transition support
+        var b = document.body || document.documentElement;
+        var s = b.style;
+        var p = 'transition';
+        if(typeof s[p] == 'string') {return true; }
+        v = ['Moz', 'webkit', 'Webkit', 'Khtml', 'O', 'ms'],
+            p = p.charAt(0).toUpperCase() + p.substr(1);
+        for(var i=0; i<v.length; i++) {
+            if(typeof s[v[i] + p] == 'string') { return true; }
+        }
+        return false;
+    }
+})();
+‡Ð7ŠÉ      Wê&éWê&é<ðhWê(  D    :http://sportingbet.host.bannerflow.com/display_158.js?ad=ad_1119963_158.html&size=300x250&clicktag=http%3A//adserver.adtech.de/adlink%2F1555%2F6023539%2F0%2F170%2FAdId%3D15677939%3BBnId%3D1%3Bitime%3D963176151%3Blink%3Dhttp%253A//partner.sbaffiliates.com/processing/clickthrgh.asp%253Fbtag%253Da_59376b_44389&time=963176151 necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Via: 1.1 ISA01TMG
+Content-Length: 16226
+Date: Tue, 27 Sep 2016 07:59:37 GMT
+Content-Type: application/x-javascript
+Etag: 0x8D3D592F9BB9EDD
+Server: NetDNA-cache/2.2
+Cache-Control: public, max-age=300
+Content-MD5: btZQUC1JcXaNPGjNWeszig==
+Last-Modified: Mon, 05 Sep 2016 13:46:02 GMT
+x-ms-request-id: c06b397b-0001-002d-2194-18607d000000
+x-ms-version: 2009-09-19
+x-ms-write-protection: false
+x-ms-lease-status: unlocked
+x-ms-blob-type: BlockBlob
+X-Cache: HIT
+ original-response-headers Via: 1.1 ISA01TMG
+Connection: Keep-Alive
+Proxy-Connection: Keep-Alive
+Content-Length: 16226
+Date: Tue, 27 Sep 2016 07:59:37 GMT
+Content-Type: application/x-javascript
+Etag: 0x8D3D592F9BB9EDD
+Server: NetDNA-cache/2.2
+Cache-Control: public, max-age=300
+Content-MD5: btZQUC1JcXaNPGjNWeszig==
+Last-Modified: Mon, 05 Sep 2016 13:46:02 GMT
+x-ms-request-id: c06b397b-0001-002d-2194-18607d000000
+x-ms-version: 2009-09-19
+x-ms-write-protection: false
+x-ms-lease-status: unlocked
+x-ms-blob-type: BlockBlob
+X-Cache: HIT
+ uncompressed-len 0   ?b

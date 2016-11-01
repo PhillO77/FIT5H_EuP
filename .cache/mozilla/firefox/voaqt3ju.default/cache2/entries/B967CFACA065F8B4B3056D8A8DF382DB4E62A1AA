@@ -1,0 +1,757 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Rheinwerk Computing :: Ruby on Rails 2 – Arrays</title>
+<meta name="title" content="Rheinwerk Computing :: Ruby on Rails 2 - Arrays">
+<meta name="author" content="Hussein Morsy, Tanja Otto">
+<meta name="publisher" content="Rheinwerk Verlag GmbH 2008">
+<meta name="copyright" content="Rheinwerk Verlag GmbH 2008">
+<meta name="Description" content="Ruby on Rails 2 - Das Entwickler-Handbuch – Arrays">
+<meta name="audience" content="Alle">
+<meta name="robots" content="INDEX,FOLLOW">
+<meta http-equiv="content-language" content="de">
+<link rel="stylesheet" type="text/css" href="common/rw_open.css">
+<link rel="prev" href="ruby_on_rails_04_005.htm">
+<link rel="next" href="ruby_on_rails_04_007.htm"><script type="text/javascript"><!--
+function OpenWin(url,name,height,width)
+{
+var InfoWin = window.open(url,name,"directories=0,height="+height+",width=" + width + ",hotkeys=0,location=0,menubar=0,resizable=1,screenX=150,screenY=10,left=150,top=10,scrollbars=1,status=1,titlebar=0,toolbar=0");
+InfoWin.focus();
+}
+//--></script><link href="common/prettify.css" type="text/css" rel="stylesheet"><script type="text/javascript" src="common/prettify.js"></script></head>
+<body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#00549d">
+<tr>
+<td height="74" valign="bottom" colspan="2"><a href="https://www.rheinwerk-verlag.de/katalog/openbook?GPP=opror"><img src="common/rw_openbook.gif" width="200" height="56" border="0" alt="Rheinwerk Computing < openbook >" title="Rheinwerk Computing < openbook >"></a></td>
+<td width="80" height="74"><a href="https://www.rheinwerk-verlag.de/?GPP=opror"><img src="common/rw_computing.gif" border="0" alt="Rheinwerk Computing - Professionelle Bücher. Auch für Einsteiger." title="Rheinwerk Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+</tr>
+</table>
+<div align="right"><a href="https://www.rheinwerk-verlag.de/?GPP=opror" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="190" valign="top">
+<table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+<tr>
+<td class="tbl2"><a class="nav" href="index.htm#_top">Inhaltsverzeichnis</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_00_001.htm#mj28b5adc89042b409899f4e978a98f8bc">Geleitwort des Fachgutachters</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_00_002.htm#mj7ee64bd4926cb4dc86dcb869a6cb0dfd">Einleitung</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_01_001.htm#mjd57ab456246e7d495b228f4568476c9e">1 Einführung</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_02_001.htm#mjaef0368fa2a897976bc3e837e8196f58">2 Installation</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_03_001.htm#mj7d1e8041ad552322a7e2d77b3296abdc">3 Erste Schritte</a></td>
+</tr>
+<tr>
+<td><a class="navh" href="##mj26e3b2bea7783fa09d1de92163aa328d">4 Einführung in Ruby</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_05_001.htm#mjde6995f939fe3a60fa9879c59cb0a2be">5 Eine einfache Bookmarkverwaltung</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_06_001.htm#mjde54313abcdef8877132fa7c71b09a33">6 Test-Driven Development</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_07_001.htm#mjecb7cdec7754e1c39ee027ae49dc029d">7 Rails-Projekte erstellen</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_08_001.htm#mjce2899a5d363f71f6f0d073c9f13d6b6">8 Templatesystem mit ActionView</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_09_001.htm#mjdfb336e61bd3f73be40015fbf785a671">9 Steuerzentrale mit ActionController</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_10_001.htm#mj935a669b8046ac474dd757d3e53232cd">10 Datenbankzugriff mit ActiveRecord</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_11_001.htm#mj1675ba13594f6829dbc2dc253ab27fe9">11 E-Mails verwalten mit ActionMailer</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_12_001.htm#mj6611aa0ab17d37783d07ad1dea00f41c">12 Nützliche Helfer mit ActiveSupport</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_13_001.htm#mj97fa5f072fd766a6ab6fb1e27cf5d30e">13 Ajax on Rails</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_14_001.htm#mj16935a0074d126d9101108e6aa2fc56e">14 RESTful Rails und Webservices</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_15_001.htm#mj880e2a7894124fa5af009b929d4b6e06">15 Rails mit Plug-ins erweitern</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_16_001.htm#mj38e3b0b65d3ca792b3f58760167e6090">16 Performancesteigerung</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_17_001.htm#mjb7359aefc277da097b8585dc9d1f0c60">17 Sicherheit</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_18_001.htm#mj74ed02d407933df1db084656bcd7fe7e">18 Veröffentlichen einer Rails-Applikation auf einem Server</a></td>
+</tr>
+<!--<tr>
+<td><a class="navnav" href="stichwort.htm#_top">Stichwort</a></td>
+</tr>-->
+<!--<tr>
+<td><br><a href="http://download2.galileo-press.de/openbook/galileocomputing_ruby_on_rails.zip" class="navnav"><strong>Download:</strong><br>- ZIP, ca. 6,7 MB</a></td>
+</tr>-->
+<!--<tr><td><br><a href="https://www.rheinwerk-verlag.de/1204/?GPP=opror" class="navnav">Buch bestellen</a></td></tr>-->
+<tr>
+<td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+</tr>
+</table>
+</td>
+<td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+<td width="85%" valign="top" align="center"><div align="center">
+<table width="98%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+<tr>
+<td width="100%" class="start" colspan="1" height="22" align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="25%"><a href="ruby_on_rails_04_007.htm" class="navnav"> &lt;&lt;   zurück</a></td>
+<td width="49%"><div align="center"><a href="https://www.rheinwerk-verlag.de/?GPP=opror" class="navnav">Rheinwerk Computing /</a><a href="https://www.rheinwerk-verlag.de/openbook/?GPP=opror" class="navnav"> &lt;openbook&gt; /</a><a href="index.htm" class="navnav"> Ruby on Rails 2</a></div></td>
+<td align="right" width="25%"><div align="right"><a href="ruby_on_rails_04_009.htm" class="navnav">vor   &gt;&gt; </a></div></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td width="100%" valign="top"><table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+<tr>
+<td colspan="2"><a href="https://www.rheinwerk-verlag.de/1204/?GPP=opror" class="buchtitel">Ruby on Rails 2</a><span class="autor"> von Hussein Morsy, Tanja Otto</span><br><span class="untertitel">Das Entwickler-Handbuch</span></td>
+</tr>
+<tr>
+<td valign="top" width="211"><dl>
+<dt><a href="https://www.rheinwerk-verlag.de/1204/?GPP=opror" class="navnav"><img src="common/9783898427791.gif" border="0" alt="Buch: Ruby on Rails 2" title="Buch: Ruby on Rails 2"></a></dt>
+<dd><br><a href="https://www.rheinwerk-verlag.de/1204/?GPP=opror"><span class="autor"><strong>Ruby on Rails 2</strong><br>geb., mit DVD<br>699 S., 39,90 Euro<br>Rheinwerk Computing<br>ISBN 978-3-89842-779-1</span></a></dd>
+</dl><a href="https://www.rheinwerk-verlag.de/1204/?GPP=opror" class="navnav"><img src="common/pfeil_rechts5.gif" border="0" alt="Online bestellen">Print-Version jetzt bestellen</a><br /><span class="autor">* versandkostenfrei in (D) und (A)</span></td>
+<td width="80%"><table border="0">
+<tr>
+<td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="3" class="kap"><strong><a href="ruby_on_rails_04_001.htm#mj26e3b2bea7783fa09d1de92163aa328d" class="navnav">4 Einführung in Ruby</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_001.htm#mj524e96bac0dfd7b13d55a449488aaed8" class="navnav">4.1 Was ist Ruby?</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_002.htm#mjb9fdeab762a437689f75e1401903a9e5" class="navnav">4.2 Ruby-Code ausführen</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_003.htm#mj9a95206d8652f7835a53b4173c92a21b" class="navnav">4.3 Grundlagen</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_004.htm#mj51e1b9cffbd404bfb0182da61a0b480e" class="navnav">4.4 Zahlen</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_005.htm#mj7892a65487c213be4867fc78123aafe4" class="navnav">4.5 Zeichenketten</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_006.htm#mj6541a8741cd6a87e1addb4115374a412" class="navnav">4.6 Symbole</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_007.htm#mjc1dd38c74d87db827b8a797d35e8acfe" class="navnav">4.7 Reguläre Ausdrücke</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="#mj13114bded859919c971174be56519b8d" class="navh">4.8 Arrays</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_009.htm#mja4292034ed129feb9de782e8726a3895" class="navnav">4.9 Hashes</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_010.htm#mjc8db57a5b82f2853d33b716b28eddb8d" class="navnav">4.10 Datum und Zeit</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_011.htm#mj26483115e681cb389da8befbf78c0487" class="navnav">4.11 Module</a></strong></td>
+</tr>
+</table><br></td>
+</tr>
+</table>
+<table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+<tr>
+<td><div class="main"><a id="mj13114bded859919c971174be56519b8d" name="mj13114bded859919c971174be56519b8d"></a><a name="t21"></a><a name="t2t31"></a><br><div align="center"><a href="#top"><img src="common/top.gif" border="0" alt="Rheinwerk Computing - Zum Seitenanfang"></a></div>
+<h2 class="t2">4.8 Arrays  <a href="#t2t32"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><img src="common/15x15leer.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></h2>
+<p>Arrays in Ruby haben Indizes vom Typ Integer. Der Index beginnt standardmäßig bei 0. Wenn Sie ein neues Array erzeugen, können Sie seine Größe über einen Parameter angeben, müssen das aber nicht, denn Arrays passen ihre Grösse dynamisch der zu speichernden Datenmenge an.</p>
+<p>Ein Array kennt zu jedem Zeitpunkt seine aktuelle Größe, so dass wir uns nicht darum kümmern müssen, diesen Wert aufwendig zu ermitteln, sondern wir können ihn jederzeit ganz einfach abfragen. Die Klasse Array stellt eine Vielzahl von Methoden zur Verfügung, um auf Arrays zuzugreifen, sie zu durchsuchen, sie miteinander zu verknüpfen oder anderswie mit ihnen zu arbeiten.</p><a id="mj070e08a9b78784754d4fa655e42057fd" name="mj070e08a9b78784754d4fa655e42057fd"></a><a name="t31"></a><br><div align="center"><a href="#top"><img src="common/top.gif" border="0" alt="Rheinwerk Computing - Zum Seitenanfang"></a></div><a name="t2t32"></a><h3 class="t3">Ein Array erzeugen  <a href="#t2t33"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#t2t31"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+<p><strong><em>[]</em></strong></p>
+<p>Die Klassenmethode [] erzeugt ein neues Array. Es gibt 3 Möglichkeiten, diese Methode zu nutzen und ihr die Werte des Arrays zu übergeben:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a1 = ["a","b","c","d"]
+=&gt; [a, b, c, d]
+&gt;&gt; a2 = Array.[]("a","b","c","d")
+=&gt; [a, b, c, d]
+&gt;&gt; a3 = Array["a","b","c","d"]
+=&gt; [a, b, c, d]</pre></div>
+<p><strong><em>new</em></strong></p>
+<p>Sie können auch über die Methode new ein neues Array erzeugen. Der Methode new können Sie keinen, einen oder zwei Parameter übergeben. Über den ersten Parameter können Sie die Größe des Arrays (Anzahl der Elemente) festlegen und über den zweiten den Wert dieser Elemente:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a4 = Array.new
+=&gt; []
+&gt;&gt; a5 = Array.new(2)
+=&gt; [nil, nil]
+&gt;&gt; a6 = Array.new(2, "test")
+=&gt; ["test", "test"]</pre></div>
+<p>Im letzten Beispiel sieht es so aus, als ob in dem Array a6 zwei verschiedene Objekte abgelegt wurden. Dem ist aber nicht so. Die beiden Werte verweisen auf das gleiche Objekt. Sprich, wenn Sie eines der Elemente verändern, wirkt sich das auf alle Elemente aus.</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a6[0].upcase!
+=&gt; "TEST"
+&gt;&gt; a6
+=&gt; ["TEST", "TEST"]</pre></div>
+<p><strong><em>Block verwenden</em></strong></p>
+<p>Um diese Situation zu vermeiden, können Sie beim Erzeugen des Arrays einen Block verwenden, denn der Block wird für jedes Element neu ausgeführt und erzeugt deshalb voneinander unabhängige Objekte:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a7 = Array.new(2) {"test"}
+=&gt; ["test", "test"]
+&gt;&gt; a7[0].upcase!
+=&gt; "TEST"
+&gt;&gt; a7
+=&gt; ["TEST", "test"]</pre></div><a id="mj451f8178a93655fd0753acf78d1b4f0a" name="mj451f8178a93655fd0753acf78d1b4f0a"></a><a name="t32"></a><br><div align="center"><a href="#top"><img src="common/top.gif" border="0" alt="Rheinwerk Computing - Zum Seitenanfang"></a></div><a name="t2t33"></a><h3 class="t3">Auf Arrayelemente zugreifen  <a href="#t2t34"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#t2t32"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+<p>Um ein Arrayelement anzulegen und um auf ein Arrayelement zuzugreifen, nutzen Sie die beiden Methoden [] und +[]=+. Beiden Methoden können Sie als Index einen Integer-Wert übergeben oder zwei Integer-Werte, die dann den Startpunkt und eine Länge repräsentieren, oder Sie können den Methoden einen Bereich übergeben. Ein negativer Index zählt vom Ende des Arrays. Auf das letzte Element eines Arrays kann z. B. mit  dem Index »-1« zugegriffen werden. </p>
+<p><strong><em>at</em></strong></p>
+<p>Die Instanzmethode at funktioniert genauso wie der Zugriff über [] mit einem Parameter, ist jedoch dadurch schneller in der Ausführung:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = ["Januar", "Februar", "Maerz", "April"]
+=&gt; ["Januar", "Februar", "Maerz", "April"]
+&gt;&gt; a[1]
+=&gt; "Februar"
+&gt;&gt; a.at(-1)
+=&gt; "April"
+&gt;&gt; a[4]
+=&gt; nil
+&gt;&gt; a[1,2]
+=&gt; ["Februar", "Maerz"]
+&gt;&gt; a[3] = "Mai"
+=&gt; "Mai"
+&gt;&gt; a[-1]
+=&gt; "Mai"
+&gt;&gt; a
+=&gt; ["Januar", "Februar", "Maerz", "Mai"]</pre></div>
+<p><strong><em>slice</em></strong></p>
+<p>Die Methode slice ist ein Alias für die Methode []:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a.slice(2)
+=&gt; "Maerz"
+&gt;&gt; a.slice(1,2,3)
+=&gt; ["Februar", "Maerz", "Mai"]</pre></div>
+<p>Wenn Sie ein Element an einer Position über die Länge des Arrays hinaus einfügen, passt das Array automatisch seine Größe an, sprich, es wird größer und setzt eventuelle nicht besetzte Positionen dazwischen auf »nil«. Gleiches passiert, wenn Sie für einen Bereich mehr Werte übergeben als eigentlich für den Bereich möglich wären:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = ["M", "HH", "B"]
+=&gt; ["M", "HH", "B"]
+&gt;&gt; a[1..2] = ["TR", "D"]
+=&gt; ["TR", "D"]
+&gt;&gt; a
+=&gt; ["M", "TR", "D"]
+&gt;&gt; a[1..2] = ["TR", "D", "K"]
+=&gt; ["TR", "D", "K"]
+&gt;&gt; a
+=&gt; ["M", "TR", "D", "K"]
+&gt;&gt; a[10] = "HB"
+=&gt; "HB"
+&gt;&gt; a
+=&gt; ["M", "TR", "D", "K", nil, nil, nil, nil, nil, nil, "HB"]</pre></div>
+<p>Wenn Sie einem Array-Element wiederum ein Array zuweisen, wird dieses in das vorhandene Array verschachtelt. Anders verhält es sich, wenn Sie einem Bereich in einem Array ein Array übergeben. Dann werden die Elemente des übergebenen Arrays an den Positionen des angegebenen Bereichs eingefügt:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = ["Birne", "Apfel", "Banane"]
+=&gt; ["Birne", "Apfel", "Banane"]
+&gt;&gt; a[0] = ["Paprika", "Blumenkohl"]
+=&gt; ["Paprika", "Blumenkohl"]
+&gt;&gt; a
+=&gt; [["Paprika", "Blumenkohl"], "Apfel", "Banane"]
+&gt;&gt; a[1..2] = ["Ananas", "Trauben", "Datteln"]
+=&gt; ["Ananas", "Trauben", "Datteln"]
+&gt;&gt; a
+=&gt; [["Paprika", "Blumenkohl"], "Ananas", "Trauben", "Datteln"]</pre></div>
+<p><strong><em>first, last</em></strong></p>
+<p>Die Methoden first und last liefern das erste bzw. letzte Element eines Arrays. Wenn das Array leer ist, geben sie nil zurück:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = ["Birne", "Apfel", "Banane"]
+=&gt; ["Birne", "Apfel", "Banane"]
+&gt;&gt; a.first
+=&gt; "Birne"
+&gt;&gt; a.last
+=&gt; "Banane"</pre></div>
+<p>Ruby kennt eine Kurzschreibweise, um ein Array mit Zeichenketten aufzubauen:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; %w[Birne Apfel Banane]
+=&gt; ["Birne", "Apfel", "Banane"]</pre></div>
+<p>Durch das vorangestellte %w sparen Sie die Eingabe der Hochkommata und der Kommata als Trennzeichen zwischen den einzelnen Werten.</p>
+<p><strong><em>Mehrere Elemente auslesen</em></strong></p>
+<p>Wir haben eben gesehen, dass es möglich ist, durch Übergabe eines Bereichs oder durch die Definition eines Startpunktes und einer bestimmten Länge an die Methode [] mehrere Elemente eines Arrays gleichzeitig auszulesen. Die Methode values_at bietet uns noch weitere Möglichkeiten, mehrere Elemente gleichzeitig auszulesen. Als Parameter empfängt sie eine Liste von Indizes. Die Methode values_at kommt immer dann zum Einsatz, wenn die auszulesenden Elemente nicht zusammenstehen, also immer dann, wenn die Angabe eines Bereichs nicht mehr ausreicht:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = [1,2,3,4,5,6,7,8,9]
+=&gt; [1, 2, 3, 4, 5, 6, 7, 8, 9]
+&gt;&gt; a.values_at(2,5,8)
+=&gt; [3, 6, 9]
+&gt;&gt; a.values_at(0,2..5,8)
+=&gt; [1, 3, 4, 5, 6, 9]</pre></div>
+<p>Die Methode values_at hieß in älteren Versionen von Ruby indices (Alias indexes). Von der aktuellen Ruby-Version werden diese beiden Methoden nicht mehr unterstützt.</p><a id="mj1faf09834f901b4ef37b6a0f6182cec5" name="mj1faf09834f901b4ef37b6a0f6182cec5"></a><a name="t33"></a><br><div align="center"><a href="#top"><img src="common/top.gif" border="0" alt="Rheinwerk Computing - Zum Seitenanfang"></a></div><a name="t2t34"></a><h3 class="t3">Auf die Länge eines Arrays zugreifen  <a href="#t2t35"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#t2t33"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+<p><strong><em>length, size</em></strong></p>
+<p>Die Methode length und ihr Alias size liefern die Anzahl der Elemente in einem Array zurück. Wie wir das von ähnlichen Methoden anderer Programmiersprachen kennen, ist die Anzahl um einen Wert höher als der letzte Index in dem Array:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = %w[rot gelb gruen]
+=&gt; ["rot", "gelb", "gruen"]
+&gt;&gt; a.length
+=&gt; 3
+&gt;&gt; a.size
+=&gt; 3</pre></div>
+<p><strong><em>nitems</em></strong></p>
+<p>Die Methode nitems zählt auch die Elemente eines Arrays, mit Ausnahme der nil-Elemente:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = ["rot", nil, nil, "gelb", nil, "gruen"]
+=&gt; ["rot", nil, nil, "gelb", nil, "gruen"]
+&gt;&gt; a.length
+=&gt; 6
+&gt;&gt; a.nitems
+=&gt; 3</pre></div><a id="mje777ae1e57a8101b4843344b580376ce" name="mje777ae1e57a8101b4843344b580376ce"></a><a name="t34"></a><br><div align="center"><a href="#top"><img src="common/top.gif" border="0" alt="Rheinwerk Computing - Zum Seitenanfang"></a></div><a name="t2t35"></a><h3 class="t3">Arrays vergleichen  <a href="#t2t36"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#t2t34"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+<p><strong><em>Modul Comparable</em></strong></p>
+<p>Arrays miteinander zu vergleichen, ist eine knifflige Angelegenheit. Nicht so, wenn man das Modul Comparable dazu nutzt. Die Methoden eines Moduls kann man in anderen Klassen nutzen, indem man das Modul inkludiert (Mehr Informationen zu Module siehe Abschnitt 4.11):</p>
+<div class="listing"><pre class="prettyprint">class Array
+  include Comparable
+end
+
+a = [5, 6, 7]
+b = [5, 6, 7, 8]
+c = [5, 6, 7]
+if a &lt; b
+  puts "a &lt; b"
+end
+if a == c
+  puts "a == c"
+end
+
+# =&gt; a &lt; b
+# =&gt; a == c</pre></div><a id="mj64a912c974fcf601bc164ff135dea11b" name="mj64a912c974fcf601bc164ff135dea11b"></a><a name="t35"></a><br><div align="center"><a href="#top"><img src="common/top.gif" border="0" alt="Rheinwerk Computing - Zum Seitenanfang"></a></div><a name="t2t36"></a><h3 class="t3">Ein Array sortieren  <a href="#t2t37"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#t2t35"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+<p><strong><em>sort</em></strong></p>
+<p>Die einfachste Art und Weise, ein Array zu sortieren, ist, die Methode sort wie folgt zu benutzen:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; woerter = %w(RailsAir ist eine erfolgreiche Airline)
+=&gt; ["RailsAir", "ist", "eine", "erfolgreiche", "Airline"]
+&gt;&gt; woerter.sort
+=&gt; ["Airline", "RailsAir", "eine", "erfolgreiche", "ist"]
+&gt;&gt; woerter
+=&gt; ["RailsAir", "ist", "eine", "erfolgreiche", "Airline"]
+&gt;&gt; woerter.sort!
+=&gt; ["Airline", "RailsAir", "eine", "erfolgreiche", "ist"]
+&gt;&gt; woerter
+=&gt; ["Airline", "RailsAir", "eine", "erfolgreiche", "ist"]</pre></div>
+<p>Auch für Methoden der Klasse Array gilt: Methoden, die mit einem Ausrufezeichen enden, verändern das Ausgangsobjekt.</p>
+<p>Die Methode sort ist nur dann fehlerfrei einsetzbar, wenn alle Elemente innerhalb des Arrays vom gleichen Datentyp sind. Anderenfalls liefert sie einen TypeError zurück:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = ["zeichen", "zahl", 3]
+=&gt; ["zeichen", "zahl", 3]
+&gt;&gt; a.sort
+ArgumentError: comparison of String with 3 failed
+	from (irb):2:in 'sort'
+	from (irb):2</pre></div>
+<p><strong><em>Mit einem Block aufrufen</em></strong></p>
+<p>Das können Sie verhindern, indem Sie in einem solchen Fall die Methode sort mit einem Block aufrufen und in diesem Block jedes Element in den gleichen Datentyp umwandeln (z. B. mit der Methode to_s in einen String):</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a.sort {|x,y| x.to_s &lt;=&gt; y.to_s}
+=&gt; [3, "zahl", "zeichen"]</pre></div>
+<p>Die Sortierung erfolgt nach der Umwandlung in einen String auf ASCII-Basis.</p>
+<p>Natürlich haben Sie Recht: Bei diesem Beispiel handelt es sich um ein rein theoretisches Beispiel, da es nicht viel Sinn macht, ein Array, das Elemente unterschiedlicher Datentypen enthält, zu sortieren. Trotzdem möchten wir Ihnen noch kurz erläutern, was da genau passiert:</p>
+<p>Der Block liefert bei jedem Aufruf -1, 0 oder 1 zurück. Im Falle von -1, was bedeutet, dass x kleiner y ist, werden die beiden Elemente vertauscht. Das bedeutet wiederum, dass wenn wir ein Array in absteigender Reihenfolge sortieren möchten, wir einfach nur die Variablen innerhalb des Vergleichs vertauschen müssen:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a.sort {|x,y| y.to_s &lt;=&gt; x.to_s}
+=&gt; ["zeichen", "zahl", 3]</pre></div>
+<p><strong><em>sort_by</em></strong></p>
+<p>In den neueren Versionen von Ruby enthält das Modul Enumerable die Methode sort_by . Dieses Modul ist standardmäßig in der Klasse Array inkludiert.</p>
+<p>Die Methode sort_by setzt das ein, was Perl-Programmierer unter dem Begriff »Schwartzian Transformation« kennen (nach Randal Schwartz). Die Sortierung beruht nicht auf den zu sortierenden Elementen selbst, sondern es wird eine Art Funktion zum Sortieren angewendet. Dieser Lösungsansatz birgt zwei Probleme: Zum einen wirkt der Code umständlich, und zum anderen ergeben sich aus jedem Aufruf mehrere Plattenzugriffe, von denen jeder eine aufwendige Aktion darstellt, und der Block wird öfter als einmal aufgerufen.</p>
+<p>Mit der sort_by -Methode kann man beide Probleme lösen. Jeder Schlüssel wird nur noch einmal berechnet und dann intern in einem Schlüssel-Daten-Paar abgespeichert. Bei kleineren Arrays könnte das die Leistungsfähigkeit verringern, aber der Code ist allemal viel schöner, und das sollte es uns wert sein.</p>
+<p>Es gibt standardmäßig keine Methode sort_by!, aber Sie können natürlich jederzeit eine solche Methode definieren.</p>
+<p><strong><em>Nach mehreren Attributen sortieren</em></strong></p>
+<p>Aber was ist, wenn wir ein Array über mehr als ein Attribut sortieren müssen, wie z. B. Name, Alter und Größe? Sie können selbstverständlich nach mehreren Attributen, egal nach welchen, sortieren:</p>
+<div class="listing"><pre class="prettyprint">list = list.sort_by {|x| [x.name, x.age, x.height] }</pre></div><a id="mj9acde8de9c0b80191f3739994355882b" name="mj9acde8de9c0b80191f3739994355882b"></a><a name="t36"></a><br><div align="center"><a href="#top"><img src="common/top.gif" border="0" alt="Rheinwerk Computing - Zum Seitenanfang"></a></div><a name="t2t37"></a><h3 class="t3">Ein Array zufällig sortieren  <a href="#t2t38"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#t2t36"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+<p>Manchmal möchten wir die Elemente in einem Array in eine zufällige Reihenfolge bringen. Sei es z. B. für ein Online-Kartenspiel oder um in einem Gewinnspiel den Usern die Fragen in einer zufälligen Reihenfolge anzuzeigen.</p>
+<p><strong><em>rand</em></strong></p>
+<p>Um das Problem zu lösen, steht uns die Methode rand aus dem Modul Kernel zur Verfügung, die uns eine zufällige Zahl liefert:</p>
+<div class="listing"><pre class="prettyprint">class Array
+  def randomize
+    self.sort_by { rand }
+  end
+end
+
+x = [1, 2, 3, 4, 5]
+puts x.randomize
+# =&gt; [3, 4, 1, 5, 2]</pre></div>
+<p>Wenn wir ein Array-Element zufällig auswählen wollen, können wir das wie folgt lösen:</p>
+<div class="listing"><pre class="prettyprint">class Array
+  def pick_random
+    self[rand(self.length)]
+  end
+end
+
+x = [1, 2, 3, 4, 5]
+puts x.pick_random
+# =&gt; 4</pre></div><a id="mj3493e5417cead7e87b952d0028e6edce" name="mj3493e5417cead7e87b952d0028e6edce"></a><a name="t37"></a><br><div align="center"><a href="#top"><img src="common/top.gif" border="0" alt="Rheinwerk Computing - Zum Seitenanfang"></a></div><a name="t2t38"></a><h3 class="t3">Nach Elementen in einem Array suchen  <a href="#t2t39"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#t2t37"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+<p>Manchmal wollen wir auf ein bestimmtes Element innerhalb eines Arrays genauso zugreifen wie auf ein Element innerhalb einer Datenbank. Die gute Nachricht: Es gibt mehrere Möglichkeiten, das zu tun. Alle die, die wir Ihnen hier vorstellen, sind im Modul Enumerable definiert, das von der Klasse Array inkludiert wird.</p>
+<p><strong><em>detect</em></strong></p>
+<p>Die Methode detect findet höchstens ein Element. Sie führt einen Block aus, an den die einzelnen Elemente der Reihe nach übergeben werden, und liefert den ersten Wert, auf den die Bedingung zutrifft, als Ergebnis zurück.</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = [5, 21, 9, 4, 1, 8]
+=&gt; [5, 21, 9, 4, 1, 8]
+&gt;&gt; a.detect {|e| e % 2 == 0 }
+=&gt; 4
+&gt;&gt; a.detect {|e| e % 7 == 0 }
+=&gt; 21</pre></div>
+<p><strong><em>find, find_all, select</em></strong></p>
+<p>Die Methode find ist ein Alias der Methode detect . Die Methode find_all ist eine Variante der Methode find, die alle passenden Ergebnisse in einem Ergebnisarray zurückliefert. Die Methode select ist wiederum ein Alias der Methode find_all:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a.find {|e| e % 2 == 0}
+=&gt; 4
+&gt;&gt; a.find_all {|e| e % 2 == 0}
+=&gt; [4, 8]
+&gt;&gt; a.select {|e| e % 2 == 0}
+=&gt; [4, 8]</pre></div>
+<p><strong><em>reject</em></strong></p>
+<p>Die Methode reject ist die Komplementärmethode zu select . Sie schließt alle Elemente aus, auf die die Bedingung im Block zutrifft. Die Methode reject!, die das Originalobjekt verändert, ist auch definiert:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a.reject {|e| e % 2 == 0 }
+=&gt; [5, 21, 9, 1]</pre></div>
+<p><strong><em>grep</em></strong></p>
+<p>Die Methode grep setzt den Operator === ein, um jedes Element mit einem vorgegebenen Muster zu vergleichen. In ihrer einfachsten Form angewendet, liefert sie ein Array mit den übereinstimmenden Ergebnissen zurück. Das Muster kann außer einem regulären Ausdruck auch z. B. ein Bereich sein. Der Name grep kommt aus der Unix-Welt und steht in Bezug zu dem alten Editorbefehl g\/re\/p.</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = %w[taschenbuch buchhandlung buecherei buecher]
+=&gt; ["taschenbuch", "buchhandlung", "buecherei", "buecher"]
+&gt;&gt; a.grep(/buch/)
+=&gt; ["taschenbuch", "buchhandlung"]</pre></div>
+<p><strong><em>min, max</em></strong></p>
+<p>Die beiden Methoden min und max, die im Modul Enumerable definiert sind, können verwendet werden, um den Minimal- und Maximalwert innerhalb eines Arrays zu ermitteln. Den beiden Methoden können entweder keine Parameter oder ein Block übergeben werden. Übergibt man ihnen keinen Parameter, ermitteln sie den Minimal- bzw. Maximalwert der gegebenen Werte innerhalb des Arrays. Durch Übergabe eines Blocks können wir definieren, von welchem Attribut der Elemente im Array wir den Minimal- oder Maximalwert erhalten möchten:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = %w[Schottland Deutschland Luxemburg Spanien]
+=&gt; ["Schottland", "Deutschland", "Luxemburg", "Spanien"]
+&gt;&gt; a. min
+=&gt; "Deutschland"
+&gt;&gt; a.max
+=&gt; "Spanien"
+&gt;&gt; a.min {|x,y| x.length &lt;=&gt; y.length}
+=&gt; "Spanien"
+&gt;&gt; a.max {|x,y| x.length &lt;=&gt; y.length}
+=&gt; "Deutschland"</pre></div>
+<p>Angenommen, wir wollten den Index des Minimal- oder Maximalwertes ermitteln, würden wir der Methode index das Ergebnis der Methoden min oder max als Parameter übergeben. Bezugnehmend auf obiges Beispiel bedeutet das konkret:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a.index(a.min)
+=&gt; 1
+&gt;&gt; a.index(a.max)
+=&gt; 3</pre></div>
+<p>Die Methode index kann natürlich auf jedes beliebige Element eines Arrays angewendet werden. Sollte das übergebene Element innerhalb des Arrays nicht eindeutig sein, liefert die Methode den Index des ersten Vorkommens des Elementes zurück:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a.index("Schottland")
+=&gt; 0
+&gt;&gt; a.index("Luxemburg")
+=&gt; 2</pre></div><a id="mj82add9354372f6a131bc130116c0e21c" name="mj82add9354372f6a131bc130116c0e21c"></a><a name="t38"></a><br><div align="center"><a href="#top"><img src="common/top.gif" border="0" alt="Rheinwerk Computing - Zum Seitenanfang"></a></div><a name="t2t39"></a><h3 class="t3">Differenz zwischen zwei Arrays bestimmen  <a href="#t2t310"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#t2t38"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+<p>Dieses Problem lässt sich in Ruby sehr viel einfacher lösen als in den meisten anderen Programmiersprachen:</p>
+<div class="listing"><pre class="prettyprint">text = %w[hier sind die gesuchten Wörter Schottland Luxemburg]
+vergleich = %w[die gesuchten Wörter sind hier nicht enthalten]
+unbekannt = text - vergleich  # ["Schottland", "Luxemburg"]</pre></div><a id="mja1e41bd32f57f17bf56e518bd09f6b06" name="mja1e41bd32f57f17bf56e518bd09f6b06"></a><a name="t39"></a><br><div align="center"><a href="#top"><img src="common/top.gif" border="0" alt="Rheinwerk Computing - Zum Seitenanfang"></a></div><a name="t2t310"></a><h3 class="t3">nil-Werte aus einem Array entfernen  <a href="#t2t311"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#t2t39"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+<p><strong><em>compact</em></strong></p>
+<p>Die Methode compact oder compact! entfernt nil -Elemente aus einem Array:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = [7, 9, nil, 5, nil, 3, 1]
+=&gt; [7, 9, nil, 5, nil, 3, 1]
+&gt;&gt; a.compact
+=&gt; [7, 9, 5, 3, 1]</pre></div><a id="mj2ac4c4953a682e953e97de264a1ad400" name="mj2ac4c4953a682e953e97de264a1ad400"></a><a name="t310"></a><br><div align="center"><a href="#top"><img src="common/top.gif" border="0" alt="Rheinwerk Computing - Zum Seitenanfang"></a></div><a name="t2t311"></a><h3 class="t3">Bestimmte Array-Elemente entfernen  <a href="#t2t312"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#t2t310"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+<p><strong><em>delete_at</em></strong></p>
+<p>Es gibt viele Möglichkeiten, bestimmte Elemente aus einem Ruby-Array zu entfernen. Wenn Sie ein Element an einer bestimmten Position entfernen möchten, ist die Methode delete_at eine gute Wahl. Die Methode erwartet eine Index-Position als Parameter. Ist die übergebene Position außerhalb des Bereichs des Arrays, liefert die Methode nil zurück:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a =  [7, 9, 5, 3, 1]
+=&gt;  [7, 9, 5, 3, 1]
+&gt;&gt; a.delete_at(3)
+=&gt; 3
+&gt;&gt; a
+=&gt;  [7, 9, 5, 1]
+&gt;&gt; a.delete_at(10)
+=&gt; nil</pre></div>
+<p><strong><em>delete</em></strong></p>
+<p>Wenn wir alle Elemente mit einem bestimmten Wert aus einem Array entfernen möchten, kommt die Methode delete zum Einsatz. Sie liefert den Wert der gelöschten Elemente oder, sollte der übergebene Wert nicht existieren, nil zurück.</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = %w(Januar Februar Januar April Mai April Januar)
+=&gt; ["Januar", "Februar", "Januar", "April", "Mai", "April",
+"Januar"]
+&gt;&gt; a.delete("Januar")
+=&gt; "Januar"
+&gt;&gt; a
+=&gt; ["Februar", "April", "Mai", "April"]</pre></div>
+<p>Der Methode delete können Sie auch einen Block übergeben. Das Besondere dabei ist, dass der Block nur dann ausgeführt wird, wenn der zu löschende Wert nicht innerhalb des Arrays gefunden wird:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a.delete("April") { "existiert nicht" }
+=&gt; "April"
+&gt;&gt; a.delete("September") { "existiert nicht" }
+=&gt; "existiert nicht"</pre></div>
+<p><strong><em>delete_if</em></strong></p>
+<p>Die Methode delete_if führt den Block für jedes Array-Element aus und löscht die Elemente, die die Bedingung im Block erfüllen. Da die Elemente aus dem Originalobjekt gelöscht werden, verhält sich delete_if ähnlich wie die Methode reject! . Trifft die Bedingung im Block auf keines der Elemente zu, liefert die Methode nil zurück:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; texte = %w[newsletter spam gruesse angebote]
+=&gt; ["newsletter", "spam", "gruesse", "angebote"]
+&gt;&gt; texte.delete_if {|x| x.length == 4 }
+=&gt; ["newsletter", "gruesse", "angebote"]</pre></div>
+<p><strong><em>shift, pop</em></strong></p>
+<p>Die Methoden shift und pop löschen das erste bzw. letzte Element eines Arrays:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = [1, 2, 3, 4, 5]
+=&gt; [1, 2, 3, 4, 5]
+&gt;&gt; a.shift
+=&gt; 1
+&gt;&gt; a
+=&gt; [2, 3, 4, 5]
+&gt;&gt; a.pop
+=&gt; 5
+&gt;&gt; a
+=&gt; [2, 3, 4]</pre></div>
+<p><strong><em>clear</em></strong></p>
+<p>Schließlich können Sie mit der Methode clear alle Elemente aus einem Array löschen. Das können Sie auch erreichen, indem Sie der Arrayvariablen ein leeres Array zuweisen, aber die Methode clear ist effizienter:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a.clear
+=&gt; []</pre></div><a id="mjae7c17b1df470f72a170b481e758d762" name="mjae7c17b1df470f72a170b481e758d762"></a><a name="t311"></a><br><div align="center"><a href="#top"><img src="common/top.gif" border="0" alt="Rheinwerk Computing - Zum Seitenanfang"></a></div><a name="t2t312"></a><h3 class="t3">Ein Array umkehren  <a href="#t2t313"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#t2t311"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+<p><strong><em>reverse</em></strong></p>
+<p>Nicht nur der Klasse String steht eine Methode reverse zur Verfügung, um eine Zeichenkette umzukehren, sondern auch die Klasse Array hat eine Methode reverse, um ein Array umzukehren:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; tiere = %w[hund katze maus]
+=&gt; ["hund", "katze", "maus"]
+&gt;&gt; tiere.reverse
+=&gt; ["maus", "katze", "hund"]</pre></div><a id="mj7cd7f667fc84bc8b6f609787812a207a" name="mj7cd7f667fc84bc8b6f609787812a207a"></a><a name="t312"></a><br><div align="center"><a href="#top"><img src="common/top.gif" border="0" alt="Rheinwerk Computing - Zum Seitenanfang"></a></div><a name="t2t313"></a><h3 class="t3">Doppelte Einträge aus einem Array löschen  <a href="#t2t314"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#t2t312"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+<p><strong><em>uniq</em></strong></p>
+<p>Wenn Sie doppelte Einträge aus einem Array löschen möchten, können Sie das mit Hilfe der Methode uniq oder uniq! tun. Die Methode liefert ein Array ohne doppelte Einträge zurück. Befindet sich kein doppelter Eintrag in dem Array, liefert uniq nil zurück:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = ["a", "b", "a", "c", "c", "d"]
+=&gt; ["a", "b", "a", "c", "c", "d"]
+&gt;&gt; a.uniq
+=&gt; ["a", "b", "c", "d"]</pre></div><a id="mj9d27a669a78685d0856cb96680150a0d" name="mj9d27a669a78685d0856cb96680150a0d"></a><a name="t313"></a><br><div align="center"><a href="#top"><img src="common/top.gif" border="0" alt="Rheinwerk Computing - Zum Seitenanfang"></a></div><a name="t2t314"></a><h3 class="t3">Iteratoren  <img src="common/15x15leer.gif" width="15" height="15" border="0" alt="top"><a href="#t2t313"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+<p>Ruby stellt uns eine Reihe von Methoden zur Verfügung, mit denen wir über ein Array iterieren können (Iteratoren).</p>
+<h4 class="t4">each</h4>
+<p>Der Standard-Iterator der Klasse Array ist die Methode each . Die Methode erwartet einen Block als Übergabeparameter, den sie für jedes Element ausführt und dem sie das Element selbst als Parameter übergibt:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = [ "a", "b", "c" ]
+=&gt; ["a", "b", "c"]
+&gt;&gt; a.each {|x| print x, " ++ " }
+a ++ b ++ c ++ =&gt; ["a", "b", "c"]</pre></div>
+<h4 class="t4">reverse_each</h4>
+<p><strong><em>Schneller als reverse.each</em></strong></p>
+<p>Ein anderer nützlicher Iterator ist die Methode reverse_each, die in umgekehrter Reihenfolge als die Methode each über ein Array iteriert. Um das gleiche Ziel zu erreichen, könnten Sie auch zuerst die Methode reverse und dann die Methode each anwenden, die Methode reverse_each ist aber wesentlich schneller:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; aussage = %w(Die ist ein Beispiel)
+=&gt; ["Dies", "ist", "ein", "Beispiel"]
+&gt;&gt; str = ""
+=&gt; ""
+&gt;&gt; aussage.reverse_each { |w| str += "#{w} "}
+=&gt; ["Dies", "ist", "ein", "Beispiel"]
+&gt;&gt; str
+=&gt; "Beispiel ein ist Dies"</pre></div>
+<h4 class="t4">each_index</h4>
+<p>Um nur über die Indizes eines Arrays zu iterieren, steht die Methode each_index zur Verfügung, die dem Block den aktuellen Index als Parameter übergibt:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = [ "a", "b", "c" ]
+=&gt; ["a", "b", "c"]
+&gt;&gt; a.each_index {|x| print x, " ++ " }
+0 ++ 1 ++ 2 ++ =&gt; ["a", "b", "c"]</pre></div>
+<p><strong><em>each_with_index</em></strong></p>
+<p>Der Iterator each_with_index ist eine Kombination aus der Methode each und der Methode each_index . Dem Block werden zwei Parameter, das Element selbst und sein Index, übergeben:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; a = ["a", "b", "c"]
+=&gt; ["a", "c", "c"]
+&gt;&gt; a.each_with_index do |x,i|
+&gt;&gt; puts "Element #{x} ist #{i}"
+&gt;&gt; end
+Element 0 ist a
+Element 1 ist b
+Element 2 ist c
+=&gt; ["a", "b", "c"]</pre></div>
+<h4 class="t4">map</h4>
+<p>Wir können aber auch mit der Methode map oder ihrem Synonym collect über ein Array iterieren. Den Methoden können wir einen Block übergeben, der für jedes Element aus dem Array ausgeführt wird. Als Ergebnis wird wieder ein Array zurückgeliefert. In unserem Beispiel möchten wir die in einem Array gespeicherten Preise um 10 % erhöhen:</p>
+<div class="listing"><pre class="prettyprint">preise = [2.5, 5.6, 12.10]
+preise.map {|preis| preis *1.1}
+# =&gt; [2.75, 6.16, 13.31]</pre></div>
+<p>Mit der Methode map oder collect können Sie auch nur bestimmte Attribute von Objekten aus einem Array ausgeben:</p>
+<div class="listing"><pre class="prettyprint">class Product
+  attr_accessor :name
+  attr_accessor :price
+
+  def initialize(params)
+    @name = params[:name]
+    @price = params[:price]
+  end
+end
+
+product1 = Product.new(:name =&gt; 'iMac', :price=&gt;1400)
+product2 = Product.new(:name =&gt; 'MacBook', :price=&gt;999)
+product3 = Product.new(:name =&gt; 'iPhone', :price=&gt;499)
+products = [product1, product2, product3]
+
+p products.map{|product| product.name}
+# =&gt; ["iMac", "MacBook", "iPhone"]</pre></div>
+<h4 class="t4">any?</h4>
+<p>Mit der Methode any?, die true oder false zurückliefert, können wir abfragen, ob es ein oder mehrere Elemente in einem Array gibt, die eine bestimmte Bedingung erfüllen:</p>
+<div class="listing"><pre class="prettyprint">p products.any?{|product| product.price &lt; 1000}
+# =&gt; true</pre></div>
+<h4 class="t4">all?</h4>
+<p>Mit der Methode all?, die ebenfalls true oder false zurückliefert, können wir abfragen, ob alle Elemente eine bestimmte Bedingung erfüllen:</p>
+<div class="listing"><pre class="prettyprint">p products.all?{|product| product.price &lt; 1000}
+# =&gt; false</pre></div><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen und kritischen Rückmeldungen.
+<!--<form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="https://www.galileo-press.de/openbook/ruby_on_rails/ruby_on_rails_04_006.htm"><input type="hidden" name="buchtitel" value="Ruby on Rails 2"><input type="hidden" name="Kapitel" value="Arrays"><table border="0">
+<tr>
+<td><label for="name">Name</label><br></td>
+<td><input type="text" name="name" id="name" size="40"><br></td>
+</tr>
+<tr>
+<td><label for="email">E-Mail</label><br></td>
+<td><input type="text" name="email" id="email" size="40"><br></td>
+</tr>
+<tr>
+<td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+<td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+</tr>
+<tr>
+<td>
+</td>
+<td><input type="submit" value="Kommentar absenden"></td>
+</tr>
+</table>
+</form>--><a href="https://www.rheinwerk-verlag.de/feedback/produkt/1204/">>> Zum Feedback-Formular</a>
+</div></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td width="100%" class="start" colspan="1" height="22" align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="25%"><a href="ruby_on_rails_04_007.htm" class="navnav"> &lt;&lt;   zurück</a></td>
+<td width="49%"><div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div></td>
+<td align="right" width="25%"><div align="right"><a href="ruby_on_rails_04_009.htm" class="navnav">vor   &gt;&gt; </a></div></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</div></td>
+<td width="10" valign="top">  </td>
+<td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="https://www.rheinwerk-verlag.de/?GPP=opror" class="autor">
+<strong>Zum Katalog</strong></a>
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+
+<td valign="top"><table cellspacing="3">
+<tr>
+<td><a href="https://www.rheinwerk-verlag.de/ruby-on-rails-2_1204/?GPP=opror">
+<img src="common/779.gif" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Ruby on Rails 2" title="Zum Katalog: Ruby on Rails 2">
+<br /><strong>Ruby on Rails 2</strong><br /><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br /><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br /><br /></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="https://www.rheinwerk-verlag.de/?GPP=opror" class="autor"><strong>Buchtipps</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="https://www.rheinwerk-verlag.de/ruby-on-rails-31_2231/?GPP=opror">
+<img src="common/1490.gif" width="69" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Ruby on Rails 3.1" title="Zum Katalog: Ruby on Rails 3.1"><br /><br /><br /><br /><br /><br /><br />&nbsp;Ruby on Rails 3.1</a><br /><br /></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="https://www.rheinwerk-verlag.de/responsive-webdesign_3429/?GPP=opror">
+<img src="common/3200.gif" width="70" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Responsive Webdesign" title="Zum Katalog: Responsive Webdesign"><br /><br /><br /><br /><br /><br /><br />&nbsp;Responsive Webdesign</a><br /><br /></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="https://www.rheinwerk-verlag.de/suchmaschinen-optimierung_3611/?GPP=opror">
+<img src="common/2882.gif" width="70" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Suchmaschinen-Optimierung" title="Zum Katalog: Suchmaschinen-Optimierung"><br /><br /><br /><br /><br /><br /><br />&nbsp;Suchmaschinen-<br />&nbsp;Optimierung</a><br /><br /></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="https://www.rheinwerk-verlag.de/javascript_3209/?GPP=opror">
+<img src="common/1979.gif" width="70" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: JavaScript" title="Zum Katalog: JavaScript"><br /><br /><br /><br /><br /><br /><br>&nbsp;JavaScript</a><br /><br /></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="https://www.rheinwerk-verlag.de/schrodinger-lernt-html5-css3-und-javascript_3277/?GPP=opror">
+<img src="common/2020.gif" width="85" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Schrödinger lernt HTML5, CSS3 und JavaScript" title="Zum Katalog: Schrödinger lernt HTML5, CSS3 und JavaScript"><br /><br /><br /><br /><br /><br /><br />&nbsp;Schrödinger lernt<br />&nbsp;HTML5, CSS3<br />&nbsp;und JavaScript</a><br /><br /></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br /><a href="https://www.rheinwerk-verlag.de/hilfe/bestellung_6?GPP=opror"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br /><br /></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Rheinwerk Verlag GmbH 2008</strong><br>
+Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="https://www.rheinwerk-verlag.de/">[Rheinwerk Computing]</a><br><br>
+Rheinwerk Verlag GmbH, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:service@rheinwerk-verlag.de">service@rheinwerk-verlag.de</a></div><br><br></body>
+</html>„zqüô½      Wó|¡Wó|¢<ö‹ÕWü·    K    :http://openbook.rheinwerk-verlag.de/ruby_on_rails/ruby_on_rails_04_008.htm necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Via: 1.1 ISA01TMG
+Content-Length: 52270
+Date: Tue, 04 Oct 2016 09:55:44 GMT
+Content-Type: text/html
+Etag: "-1962864309"
+Server: lighttpd/1.4.13
+Accept-Ranges: bytes
+Last-Modified: Fri, 09 Jan 2015 14:41:18 GMT
+ original-response-headers Via: 1.1 ISA01TMG
+Connection: Keep-Alive
+Proxy-Connection: Keep-Alive
+Content-Length: 52270
+Date: Tue, 04 Oct 2016 09:55:44 GMT
+Content-Type: text/html
+Etag: "-1962864309"
+Server: lighttpd/1.4.13
+Accept-Ranges: bytes
+Last-Modified: Fri, 09 Jan 2015 14:41:18 GMT
+ charset windows-1252 uncompressed-len 0 predictor::resource-count 20 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/rw_open.css 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/prettify.css 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/prettify.js 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/rw_openbook.gif 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/rw_computing.gif 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/spacer10.gif 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/9783898427791.gif 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/pfeil_rechts5.gif 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/pfeil_u.gif 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/top.gif 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/down.gif 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/15x15leer.gif 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/leer.gif 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/779.gif 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/1490.gif 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/3200.gif 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/2882.gif 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/1979.gif 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/2020.gif 1,1,1475574945,4097 predictor::http://openbook.rheinwerk-verlag.de/ruby_on_rails/common/back_blau_weiss.gif 1,1,1475574945,4097   Ì.

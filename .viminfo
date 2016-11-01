@@ -79,13 +79,56 @@
 	 
 
 # Datei-Marken:
-'0  15  25  ~/KuA/doku/get
-'1  118  68  ~/.bashrc
-'2  119  65  ~/.bashrc
-'3  1  0  ~/.bash_profile
-'4  2  0  ~/.bash_profile
+'0  5  14  ~/.gitconfig
+'1  15  25  ~/KuA/doku/get
+'2  118  68  ~/.bashrc
+'3  119  65  ~/.bashrc
+'4  1  0  ~/.bash_profile
+'5  2  0  ~/.bash_profile
 
 # Geschichte (neueste zuerst):
+-'  5  14  ~/.gitconfig
+-'  1  0  ~/.gitconfig
+-'  15  25  ~/KuA/doku/get
+-'  1  0  ~/KuA/doku/get
+-'  118  68  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  119  65  ~/.bashrc
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
+-'  118  68  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  119  65  ~/.bashrc
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
 -'  15  25  ~/KuA/doku/get
 -'  1  0  ~/KuA/doku/get
 -'  118  68  ~/.bashrc
@@ -128,6 +171,13 @@
 -'  2  0  ~/.bash_profile
 
 # Geschichte der Markierungen innerhalb von Dateien (neueste zuerst):
+
+> ~/.gitconfig
+	"	5	14
+	^	5	15
+	.	5	15
+	+	1	5
+	+	5	15
 
 > ~/KuA/doku/get
 	"	15	25

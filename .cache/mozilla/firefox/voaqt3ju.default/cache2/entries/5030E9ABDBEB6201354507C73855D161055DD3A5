@@ -1,0 +1,511 @@
+// Identifier
+// http://www.sport1.de
+// Separate identifier for fm required for idf parameter (but identical layout)
+if (String(window.SOI_SITE).match(/^sport1fm/)) {
+  window.SOI_IDENTIFIER = 'sport1fm';
+}
+else if (String(window.SOI_SITE).match(/^sport1bundesligamanager/)) {
+  window.SOI_IDENTIFIER = 'sport1bundesligamanager';
+}
+else {
+  window.SOI_IDENTIFIER = 'sport1';
+}
+
+if (!window.SOI_SITE) window.SOI_SITE = '';
+
+/*
+  possible SOI_SITE values
+  sport1
+  sport1-video
+  sport1-mew
+  sport1-mew-video
+  sport1fm
+  sport1fm-mew
+  sport1games
+  sport1games-mew
+*/
+
+// DFPSite, DFPZone
+window.DFPSite = 'DE_SPORT1';
+window.DFPZone = '';
+
+if (window.SOI_IDENTIFIER == 'sport1fm') {
+  window.DFPSite = 'DE_SPORT1FM';
+  if (window.SOI_SITE.match(/-mew/)) window.DFPSite += '.MEW';
+
+  switch (window.SOI_SUBSITE) {
+    case 'home':
+    case 'basketball':
+    case 'handball':
+      window.DFPZone = window.SOI_SUBSITE;
+      break;
+    case 'fussball':
+      window.DFPZone = window.SOI_SUBSITE;
+      switch (window.SOI_SUB2SITE) {
+        case 'bundesliga':
+        case 'championsleague':
+        case 'dfbpokal':
+        case 'dfbteam':
+        case 'uefacup':
+          window.DFPZone += '.' + window.SOI_SUB2SITE;
+          break;
+        case '2bundesliga':
+          window.DFPZone += '.bundesliga2';
+          break;
+      }
+      if (window.SOI_CONTENT == 'radio') {
+        switch (window.SOI_SUB2SITE) {
+          case 'bundesliga':
+          case '2bundesliga':
+            window.DFPZone += '.live';
+            break;
+        }
+      }
+      break;
+  }
+  if (!window.DFPZone) window.DFPZone = 'other';
+
+  if (window.SOI_SUBSITE != 'home') {
+    switch (window.SOI_CONTENT) {
+      case 'video':
+        if (window.SOI_VP) {
+          if (window.DFPZone == 'home') {
+            window.DFPZone = 'other';
+          }
+          else if (window.DFPZone.match(/\.home$/)) {
+            window.DFPZone = window.DFPZone.replace(/\.home$/, '');
+          }
+          if (!window.DFPSite.match(/\.video$/))
+            window.DFPSite += '.video';
+        }
+        break;
+    }
+  }
+}
+else if (window.SOI_IDENTIFIER == 'sport1bundesligamanager') {
+  window.DFP_SITE = 'DE_SPORT1.fussball';
+  switch (window.SOI_SUBSITE) {
+    case 'bundesligamanager':
+    case '2bundesligamanager':
+      window.DFPZone = window.SOI_SUBSITE;
+      break
+  }
+  // no .video site
+}
+else {
+  window.DFPSite = 'DE_SPORT1';
+  if (window.SOI_SITE.match(/-mew/)) window.DFPSite += '.MEW';
+
+  switch (window.SOI_SUBSITE) {
+    // DE_SPORT1
+    case 'home':
+      window.DFPZone = window.SOI_SUBSITE;
+      break;
+    case 'startalk':
+    case 'diashows': // FIXME: pre-relaunch only
+    case 'lifestyle':
+    case 'mobile':
+    case 'news':
+    case 'bmw': // only bmw ads
+      if (!window.SOI_SITE.match(/-(?:mew|video)/))
+        window.DFPZone = window.SOI_SUBSITE;
+      break;
+    case 'community':
+      window.DFPZone = window.SOI_SUBSITE;
+      if (window.SOI_SUB2SITE == 'home') window.DFPZone += '.' + window.SOI_SUB2SITE;
+      break;
+    // DE_SPORT1.*
+    case 'games':
+      window.DFPSite += '.' + window.SOI_SUBSITE;
+      switch (window.SOI_SUB2SITE) {
+        case 'home':
+          window.DFPZone = window.SOI_SUB2SITE;
+          break;
+      }
+      break;
+    case 'basketball':
+    case 'eishockey':
+    case 'esports':
+    case 'handball':
+    case 'mehrsport':
+    case 'wintersport':
+      window.DFPSite += '.' + window.SOI_SUBSITE;
+      if (window.SOI_SUB2SITE == 'home') window.DFPZone = window.SOI_SUB2SITE;
+      break;
+    case 'fussball':
+      window.DFPSite += '.' + window.SOI_SUBSITE;
+      switch (window.SOI_SUB2SITE) {
+        case 'home':
+          window.DFPZone = window.SOI_SUB2SITE;
+          break;
+        case 'dfbpokal':
+        case 'em':
+        case 'frauen':
+        case 'uefacup':
+        case 'wm':
+          window.DFPZone = window.SOI_SUB2SITE;
+          if (window.SOI_SUB3SITE == 'home') window.DFPZone += '.' + window.SOI_SUB3SITE;
+          break;
+        case 'bundesliga':
+          window.DFPZone = window.SOI_SUB2SITE;
+          if (window.SOI_SUB3SITE == 'home') {
+            window.DFPZone += '.' + window.SOI_SUB3SITE;
+          }
+          else if (window.SOI_CONTENT == 'gallery') {
+            switch (window.SOI_SUB3SITE) {
+              case 'weisse-weste':
+              case 'bilder-des-tages':
+              case 'tops-und-flops':
+              case 'transfermarkt':
+                window.DFPZone += '.' + window.SOI_SUB3SITE;
+                break;
+            }
+          }
+          break;
+        case 'championsleague':
+        case 'cl': // FIXME: sport1 should adjust value
+          window.DFPZone = 'championsleague';
+          if (window.SOI_SUB3SITE == 'home') window.DFPZone += '.' + window.SOI_SUB3SITE;
+          break;
+        case 'dfbteam':
+        case 'doppelpass':
+        case 'international':
+        case 'ligafan':
+        case 'ligaspieltaganalyse':
+        case 'liveblog':
+        case 'regionalliga':
+          window.DFPZone = window.SOI_SUB2SITE;
+          break;
+        case '2bundesliga':
+          window.DFPZone = 'bundesliga2';
+          break;
+        case '3bundesliga':
+          window.DFPZone = 'bundesliga3';
+          break;
+      }
+      break;
+    case 'ussport':
+      window.DFPSite += '.' + window.SOI_SUBSITE;
+      switch (window.SOI_SUB2SITE) {
+        case 'home':
+        case 'nba': // FIXME: no separate zone for tv.sport1.de
+          window.DFPZone = window.SOI_SUB2SITE;
+          break;
+      }
+      break;
+    case 'motorsport':
+      window.DFPSite += '.' + window.SOI_SUBSITE;
+      switch (window.SOI_SUB2SITE) {
+        case 'home':
+        case 'dtm':
+        case 'wrc':
+        case 'formel-e':
+          window.DFPZone = window.SOI_SUB2SITE;
+          break;
+        case 'motogp':
+          window.DFPZone = window.SOI_SUB2SITE;
+          if (window.SOI_SUB3SITE == 'home') window.DFPZone += '.' + window.SOI_SUB3SITE;
+          break;
+      }
+      break;
+    case 'livescore':
+      window.DFPSite += '.' + window.SOI_SUBSITE;
+      switch (window.SOI_SUB2SITE) {
+        case 'home':
+        case 'live':
+          window.DFPZone = 'live';
+          break;
+        case 'fussball':
+        case 'tennis':
+        case 'eishockey':
+        case 'handball':
+        case 'basketball':
+        case 'american-football':
+        case 'baseball':
+        case 'rugby':
+          // FIXME: probably pre-relaunch only
+          // window.DFPZone = window.SOI_SUB2SITE;
+          break;
+      }
+      break;
+    // FIXME: remove?
+    case 'handballmanager':
+      window.DFPSite += '.handball';
+      window.DFPZone = window.SOI_SUBSITE;
+      break;
+    case 'tippspiel':
+    case 'tippkoenig':
+      window.DFPSite += '.fussball';
+      window.DFPZone = window.SOI_SUBSITE;
+      break;
+    case 'em.tippspiel':
+      window.DFPSite += '.fussball';
+      window.DFPZone = 'tippspiel.em';
+      break;
+    // /FIXME: remove?
+    case 'automotor':
+      window.DFPSite += '.motorsport';
+      window.DFPZone = window.SOI_SUBSITE;
+      switch (window.SOI_SUB2SITE) {
+        case 'ps-profis':
+          window.DFPZone += '.' + window.SOI_SUB2SITE;
+          break;
+      }
+      break;
+    case 'formel1':
+    case 'f1': // FIXME: sport1 should adjust value
+      window.DFPSite += '.motorsport';
+      window.DFPZone = 'formel1';
+      if (window.SOI_SUB2SITE == 'home') window.DFPZone += '.' + window.SOI_SUB2SITE;
+      break
+    case 'boxen':
+    case 'golf':
+    case 'hockey':
+    case 'leichtathletik':
+    case 'poker':
+    case 'radsport':
+    case 'schwimmen':
+    case 'segeln':
+    case 'tischtennis':
+    case 'tennis':
+    case 'triathlon':
+    case 'volleyball':
+    case 'wrestling':
+      window.DFPSite += '.mehrsport';
+      window.DFPZone = window.SOI_SUBSITE;
+      break;
+    case 'dart':
+    case 'darts':
+      window.DFPSite += '.mehrsport';
+      window.DFPZone = 'dart';
+      break;
+    case 'olympia':
+      window.DFPSite += '.mehrsport';
+      window.DFPZone = window.SOI_SUBSITE;
+      switch (window.SOI_SUB2SITE) {
+        case 'home':
+          window.DFPZone += '.' + window.SOI_SUB2SITE;
+          break;
+      }
+      break;
+    case 'extremsport':
+    case 'kampfsport':
+    case 'kitesurf':
+    case 'rugby':
+    case 'streetskills':
+      window.DFPSite += '.mehrsport';
+      window.DFPZone = 'other';
+      break;
+    case 'partner':
+      // CAVEAT: DE_SPORT1.partner ONLY for SELECTED SOI_SUB2SITE
+      switch (window.SOI_SUB2SITE) {
+        case 'bitburger':
+        case 'brillux':
+        case 'clash-of-kings':
+        case 'fitbit':
+        case 'drutex':
+        case 'laureus':
+        case 'lieferando':
+        case 'paulaner':
+        case 'puma':
+        case 'saucony':
+        case 'sony-playstation':
+        case 'suicide-squad':
+        case 'telekom':
+          window.DFPSite += '.' + window.SOI_SUBSITE;
+          window.DFPZone = window.SOI_SUB2SITE;
+          break;
+        case 'volkswagen':
+          window.DFPSite += '.' + window.SOI_SUBSITE;
+          window.DFPZone = window.SOI_SUB2SITE;
+          switch (window.SOI_SUB3SITE) {
+            case 'probefahrt':
+              window.DFPZone += '.' + window.SOI_SUB3SITE;
+              break;
+          }
+          break;
+      }
+      break;
+  }
+  if (!window.DFPZone) window.DFPZone = 'other';
+
+  // No home on video.sport1.de and m.video.sport1.de
+  if (window.SOI_SITE.match(/-video$/)) {
+    window.DFPZone = window.DFPZone.replace(/(?:\.|^)home$/, '') || 'other';
+  }
+
+  if (window.SOI_SUBSITE != 'home') {
+    switch (window.SOI_CONTENT) {
+      case 'video':
+        if (window.SOI_VP) {
+          if (window.DFPZone == 'home') {
+            window.DFPZone = 'other';
+          }
+          else if (window.DFPZone.match(/\.home$/)) {
+            window.DFPZone = window.DFPZone.replace(/\.home$/, '');
+          }
+          if (!window.DFPSite.match(/\.video$/))
+            window.DFPSite += '.video';
+        }
+        break;
+      case 'liveticker':
+        if (!window.DFPSite.match(/\.liveticker$/))
+          window.DFPSite += '.liveticker'; // FIXME: NO suffix for main DFPSite???
+        break;
+    }
+  }
+}
+
+// Rogator
+window.SOI_ROGATOR = window.SOI_FRA ? false : true;
+
+// AdAudience
+switch (window.SOI_IDENTIFIER){
+  case 'sport1fm':
+    window.SOI_ADA = 'sport1fm_1481266';
+    break;
+  default:
+    window.SOI_ADA = window.SOI_SUBSITE == 'games' ? 'sport1games_1184410' : 'sport1_1178018';
+    break;
+}
+
+// Nuggad
+switch (window.SOI_IDENTIFIER) {
+  case 'sport1fm':
+    window.SOI_NUGGSID = 1517991727;
+    break;
+  default:
+    window.SOI_NUGGSID = 735678085;
+}
+
+// AdProbe
+window.SOI_AP = {
+  procter: {
+    disabled: window.SOI_FRA || window.DFPSite == 'DE_SPORT1.partner' ?
+        true : false,
+    units: {
+      fb2:    'F2BbDp', // 728x90
+      fb2pb:  'TwNu3r', // 728x180
+      fb2bb:  'Nfd3qw', // 800x250
+      sc1:    'PqlbEa', // 160x600
+      sc1exp: 'bTL52u', // 160x600 => 400x600
+      sc1sb:  'fDmbiW', // 300x600
+      rt1:    'N4gZfl', // 300x250
+      rt1hp:  '1uENYy', // 300x600
+      mb1:    '1xfa9v'  // 320x50
+    }
+  }
+};
+
+// Amazon
+window.SOI_AZ = true;
+
+// YieldProbe
+window.SOI_YP = {
+  disabled: window.SOI_SUBSITE == 'DE_SPORT1.partner' ?
+      true : false,
+  units: {
+    fb2:   8154,
+    fb2bb: 82982,
+    sc1:   8158,
+    sc1sb: 157489,
+    rt1:   8156,  // window.SOI_SITE.match(/-mew/) ? 41742 : 8156,
+    rt1hp: 82981,
+    ml1pl: 41740,
+    mb1:   41743, // 320x75: 41744, 300x150: 41741
+    nn1:   24829,
+    ir1:   343040,
+    mir1:  343628
+  },
+  adaudience: {
+    disabled: false,
+    formats: {
+      pu1pl:    104,
+      pu1plfs:  114,
+      pu1br:    105,
+      pu1fa:    115,
+      pu1faexp: 118,
+      fb2exp:   112,
+      fb2wp:    101, // bgcolor 102, bgcolor clickable 103
+      fb2wpexp: 110,
+      rt1exp:   116,
+      rt1hppl:  113,
+      sc1pl:    106,
+      sc1exp:   111,
+      sc1fix:   117, // sticky sky
+      sc1sb:    119,
+      ma1:      108 // ma1, ts1
+    }
+  }
+};
+if (window.SOI_IDENTIFIER === 'sport1') {
+  window.SOI_YP.units.va1 = 145982;
+  window.SOI_YP.units.va2 = 259955;
+  window.SOI_YP.units.va3 = 259931;
+}
+else if (window.SOI_IDENTIFIER === 'sport1fm') {
+  window.SOI_YP.units.va1 = 235633;
+  window.SOI_YP.units.va2 = 259956;
+  window.SOI_YP.units.va3 = 259932;
+}
+if (window.SOI_FRA) {
+  delete window.SOI_YP.units.fb2;
+  delete window.SOI_YP.units.sc1;
+  delete window.SOI_YP.units.nn1;
+}
+
+// Video Ads
+window.SoiSetSpon = 1;
+if (window.SOI_LPY) {
+  window.SoiSetPre = 2;
+}
+
+
+// Exclusion
+if (!window.SOI_EXCL) window.SOI_EXCL = '';
+window.SOI_EXCL += ',bet';
+window.SOI_EXCL = window.SOI_EXCL.replace(/^,/, '');
+
+// wallpaper and fireplace
+window.SOI_WP_LEFT     =    0;
+window.SOI_WP_TOP      =    0;
+window.SOI_FP_DISTANCE = 1040; // fb2 width 1330
+window.SOI_FP_LEFT     =    0;
+window.SOI_FP_TOP      =    0;
+window.SOI_BB_WIDTH    = 1040;
+
+// disable some ad slots and sowefos for old layout
+!function() {
+  if (window.location.hostname != 'community.sport1.de') return;
+  var x = ['PF1', 'PF2', 'PF3', 'PB1', 'PB2', 'PB3', 'TSA', 'WP', 'FP', 'SB'];
+  for (var i = 0; i < x.length; i++) {
+    window['SOI_' + x[i]] = false;
+  }
+}();
+œÀ´      Wû{ÔWû{Ô<ü™±Wû‚¼   +    :http://ad.71i.de/global_js/Sites/sport1.js necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Content-Type: application/x-javascript
+Etag: "356a-5370d083986fd"
+Server: Apache
+Accept-Ranges: bytes
+p3p: policyref="http://ad.71i.de/w3c/p3p.xml", CP="NOI DSP CURa ADMa DEVa TAIa OUR BUS IND UNI COM NAV"
+Expires: Mon, 10 Oct 2016 11:59:56 GMT
+Date: Mon, 10 Oct 2016 11:29:37 GMT
+Cache-Control: max-age=1819
+Via: 1.1 ISA01TMG
+Last-Modified: Thu, 07 Jul 2016 15:06:35 GMT
+Access-Control-Allow-Origin: *
+ original-response-headers Via: 1.1 ISA01TMG
+Connection: Keep-Alive
+Proxy-Connection: Keep-Alive
+Transfer-Encoding: chunked
+Expires: Tue, 27 Sep 2016 06:22:28 GMT
+Date: Tue, 27 Sep 2016 06:10:57 GMT
+Content-Type: application/x-javascript
+Etag: "356a-5370d083986fd"
+Server: Apache
+Accept-Ranges: bytes
+Last-Modified: Thu, 07 Jul 2016 15:06:35 GMT
+p3p: policyref="http://ad.71i.de/w3c/p3p.xml", CP="NOI DSP CURa ADMa DEVa TAIa OUR BUS IND UNI COM NAV"
+Cache-Control: max-age=691
+Access-Control-Allow-Origin: *
+ uncompressed-len 0   5j

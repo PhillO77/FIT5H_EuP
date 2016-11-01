@@ -1,19 +1,37 @@
-WARN  2016-09-19 11:50:02 unity.iconloader IconLoader.cpp:756 Unable to load icon file:/// at size -1x22: Ordner kann nicht geöffnet werden
-WARN  2016-09-19 11:50:04 unityct(io) <unknown>:0 Desktop file '/usr/share/applications/terminator.desktop' is using a deprecated format for its actions that will be dropped soon.
-ConfigBase::load: Unable to open /home/philippe/.config/terminator/config ([Errno 2] Datei oder Verzeichnis nicht gefunden: '/home/philippe/.config/terminator/config')
-PluginRegistry::load_plugins: Importing plugin __init__.py failed: 'module' object has no attribute 'AVAILABLE'
-javaldx: Could not find a Java Runtime Environment!
-Warning: failed to read path from javaldx
-
-(soffice:5892): Gdk-WARNING **: gdk_window_set_icon_list: icons too large
-
-(soffice:5892): Gdk-WARNING **: gdk_window_set_icon_list: icons too large
-ERROR 2016-09-19 11:52:24 unity.settings UnitySettings.cpp:318 Invalid monitor index: -1. Returning index 0 monitor instead.
 failed to create drawable
 compiz (core) - Warn: glXCreatePixmap failed
-
-(process:6059): GLib-CRITICAL **: g_path_get_basename: assertion 'file_name != NULL' failed
-1474280155254	addons.update-checker	WARN	Update manifest for ubufox@ubuntu.com did not contain an updates property
-1474280155826	addons.update-checker	WARN	Update manifest for e10srollout@mozilla.org did not contain an updates property
-1474280156176	addons.update-checker	WARN	Update manifest for {972ce4c6-7e08-4474-a285-3208198ce6fd} did not contain an updates property
-1474280156190	addons.update-checker	WARN	Update manifest for firefox@getpocket.com did not contain an updates property
+ConfigBase::load: Unable to open /home/philippe/.config/terminator/config ([Errno 2] Datei oder Verzeichnis nicht gefunden: '/home/philippe/.config/terminator/config')
+PluginRegistry::load_plugins: Importing plugin __init__.py failed: 'module' object has no attribute 'AVAILABLE'
+WARN  2016-10-31 11:58:30 unity.iconloader IconLoader.cpp:756 Unable to load icon file:/// at size -1x22: Ordner kann nicht geöffnet werden
+failed to create drawable
+compiz (core) - Warn: glXCreatePixmap failed
+failed to create drawable
+compiz (core) - Warn: glXCreatePixmap failed
+failed to create drawable
+compiz (core) - Warn: glXCreatePixmap failed
+failed to create drawable
+compiz (core) - Warn: glXCreatePixmap failed
+1477911529590	addons.update-checker	WARN	Update manifest for ubufox@ubuntu.com did not contain an updates property
+1477911529664	addons.update-checker	WARN	Update manifest for e10srollout@mozilla.org did not contain an updates property
+1477911529742	addons.update-checker	WARN	Update manifest for firefox@getpocket.com did not contain an updates property
+1477911529882	addons.update-checker	WARN	Update manifest for webcompat@mozilla.org did not contain an updates property
+1477911530098	addons.update-checker	WARN	Update manifest for {972ce4c6-7e08-4474-a285-3208198ce6fd} did not contain an updates property
+failed to create drawable
+compiz (core) - Warn: glXCreatePixmap failed
+console.warn: nsLoginManager: searchLogins: `formSubmitURL` or `httpRealm` is recommended
+<Window object at 0xb0d7834c (terminatorlib+window+Window at 0x8828278)> is not in registered window list
+failed to create drawable
+compiz (core) - Warn: glXCreatePixmap failed
+failed to create drawable
+compiz (core) - Warn: glXCreatePixmap failed
+failed to create drawable
+compiz (core) - Warn: glXCreatePixmap failed
+failed to create drawable
+compiz (core) - Warn: glXCreatePixmap failed
+failed to create drawable
+compiz (core) - Warn: glXCreatePixmap failed
+ConfigBase::load: Unable to open /home/philippe/.config/terminator/config ([Errno 2] Datei oder Verzeichnis nicht gefunden: '/home/philippe/.config/terminator/config')
+PluginRegistry::load_plugins: Importing plugin __init__.py failed: 'module' object has no attribute 'AVAILABLE'
+<Window object at 0xb0e2a34c (terminatorlib+window+Window at 0x8ab8a78)> is not in registered window list
+ConfigBase::load: Unable to open /home/philippe/.config/terminator/config ([Errno 2] Datei oder Verzeichnis nicht gefunden: '/home/philippe/.config/terminator/config')
+PluginRegistry::load_plugins: Importing plugin __init__.py failed: 'module' object has no attribute 'AVAILABLE'

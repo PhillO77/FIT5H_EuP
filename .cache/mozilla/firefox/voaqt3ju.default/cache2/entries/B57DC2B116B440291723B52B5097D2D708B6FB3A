@@ -1,0 +1,1266 @@
+
+    /*partner:44144570.9*/
+    
+.vh {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+#pm-132-ah24-1 .pm-branding img{
+width: 100%;
+}
+    /*c-partnermodule:47780104.5*/
+    
+.pm-wrapper {
+  box-sizing: border-box;
+}
+.pm-wrapper header {
+  height: 108px;
+  margin: 0 0 6px 0;
+  text-align: left;
+  background-color: #454545;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.pm-wrapper header:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 109px;
+  background-color: rgba(51, 51, 51, 0.4);
+  margin-top: -103px;
+}
+.pm-wrapper header h2,
+.pm-wrapper header .pm-h2 {
+  width: 100%;
+  padding-top: 32px;
+  margin-bottom: -4px;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-family: Arial, Helvetica, Tahoma, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-indent: 6px;
+  text-indent: 0.375rem;
+  color: white;
+  height: auto;
+}
+.fonts-loaded .pm-wrapper header h2, .fonts-loaded
+.pm-wrapper header .pm-h2 {
+  font-family: "Gotham Cond", Arial, Helvetica, Tahoma, sans-serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 34px;
+  line-height: 2.125rem;
+  padding-top: 28px;
+}
+.pm-wrapper header h3,
+.pm-wrapper header .pm-h3 {
+  width: 100%;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: Arial, Helvetica, Tahoma, sans-serif;
+  font-weight: normal;
+  line-height: 120%;
+  text-indent: 6px;
+  text-indent: 0.375rem;
+  color: white;
+}
+.fonts-loaded .pm-wrapper header h3, .fonts-loaded
+.pm-wrapper header .pm-h3 {
+  font-family: "Gotham XNarrow", Arial, Helvetica, Tahoma, sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 15px;
+  line-height: 0.9375rem;
+}
+.pm-wrapper header .pm-branding {
+  width: 95px;
+  width: 5.9375rem;
+  height: 19px;
+  height: 1.1875rem;
+  margin: 5px 6px 6px 6px;
+  box-sizing: border-box;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  position: relative;
+  border-bottom: 0px;
+}
+.pm-wrapper header .pm-branding img {
+  width: auto;
+  height: auto;
+  border: 0px solid white;
+  background-color: white;
+  max-height: 19px;
+}
+.pm-content fieldset {
+  border: none;
+}
+.pm-content .pm-row {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: nowrap;
+}
+.pm-content .pm-row input,
+.pm-content .pm-row select,
+.pm-content .pm-row a {
+  margin-right: 6px;
+}
+.pm-content .pm-row input:last-child,
+.pm-content .pm-row select:last-child,
+.pm-content .pm-row a:last-child {
+  margin-right: 0px;
+}
+.pm-content input {
+  height: 48px;
+  height: 3rem;
+  width: 100%;
+  border: 1px solid #b5b5b5;
+  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-family: Arial, Helvetica, Tahoma, sans-serif;
+  text-indent: 6px;
+  text-indent: 0.375rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: black;
+}
+.fonts-loaded .pm-content input {
+  font-family: "Gotham XNarrow", Arial, Helvetica, Tahoma, sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.pm-content input::-webkit-input-placeholder {
+  color: black;
+}
+.pm-content a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  height: 3rem;
+  width: 100%;
+  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
+  box-sizing: border-box;
+  border: 1px solid #b5b5b5;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: Arial, Helvetica, Tahoma, sans-serif;
+  line-height: 40px;
+  line-height: 2.5rem;
+  text-indent: 6px;
+  text-indent: 0.375rem;
+  text-decoration: none;
+  color: black;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.fonts-loaded .pm-content a {
+  font-family: "Gotham XNarrow", Arial, Helvetica, Tahoma, sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.pm-content .pm-link {
+  border: 0px;
+  border-bottom: 1px solid #b5b5b5;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  line-height: 100%;
+}
+.pm-content .pm-link:hover {
+  background: #ededed;
+}
+.pm-content .pm-link:before {
+  content: '';
+  width: 24px;
+  height: 16px;
+  margin-right: 6px;
+  background-image: url(http://bilder.bild.de/fotos/externer-link-47798048/Bild/1.bild.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+}
+.pm-content p {
+  display: block;
+  height: 48px;
+  height: 3rem;
+  width: 100%;
+  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
+  box-sizing: border-box;
+  border: 1px solid #b5b5b5;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: Arial, Helvetica, Tahoma, sans-serif;
+  line-height: 40px;
+  line-height: 2.5rem;
+  text-indent: 6px;
+  text-indent: 0.375rem;
+  text-align: left;
+  color: black;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.fonts-loaded .pm-content p {
+  font-family: "Gotham XNarrow", Arial, Helvetica, Tahoma, sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.pm-content .pm-indie {
+  display: block;
+  height: 48px;
+  height: 3rem;
+  width: 100%;
+  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
+  box-sizing: border-box;
+  border: 1px solid #b5b5b5;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: Arial, Helvetica, Tahoma, sans-serif;
+  line-height: 40px;
+  line-height: 2.5rem;
+  text-indent: 6px;
+  text-indent: 0.375rem;
+  text-align: left;
+  color: black;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.fonts-loaded .pm-content .pm-indie {
+  font-family: "Gotham XNarrow", Arial, Helvetica, Tahoma, sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.pm-content button {
+  width: 100%;
+  height: 48px;
+  height: 3rem;
+  font-size: 16px;
+  font-size: 1rem;
+  border: 0px solid #b5b5b5;
+  font-family: Arial, Helvetica, Tahoma, sans-serif;
+  background-color: #dd0000;
+  color: white;
+}
+.pm-content button:hover, .pm-content button:active, .pm-content button:focus {
+  background-color: #a80000;
+}
+.fonts-loaded .pm-content button {
+  font-family: "Gotham", Arial, Helvetica, Tahoma, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 900;
+}
+.pm-content select {
+  width: 100%;
+  height: 48px;
+  height: 3rem;
+  border: 1px solid #b5b5b5;
+  border-radius: 0px;
+  box-sizing: border-box;
+  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-family: Arial, Helvetica, Tahoma, sans-serif;
+  padding-left: 6px;
+  padding-left: 0.375rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: white;
+  color: black;
+}
+.fonts-loaded .pm-content select {
+  font-family: "Gotham XNarrow", Arial, Helvetica, Tahoma, sans-serif;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+.pm-content select option:first-child {
+  display: none;
+}
+.pm-content .pm-location {
+  background-image: url(http://bilder.bild.de/fotos/pin-nadel-44144672/Bild/1.bild.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 30px 24px;
+  background-size: 1.875rem 1.5rem;
+}
+.pm-content .pm-arrowdown {
+  background-image: url(http://bilder.bild.de/fotos/pfeil-unten-44144698/Bild/1.bild.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 30px 24px;
+  background-size: 1.875rem 1.5rem;
+}
+.pm-content .pm-search {
+  background-image: url(http://bilder.bild.de/fotos/lupe-45977928/Bild/1.bild.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 30px 20px;
+  background-size: 1.875rem 1.25rem;
+}
+.pm-content .pm-tab-btn {
+  font-size: 14px;
+  border: 0px;
+  border-bottom: 3px solid #b5b5b5;
+  font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+  color: #b5b5b5;
+}
+.pm-content .pm-tab-btn:hover, .pm-content .pm-tab-btn:focus, .pm-content .pm-tab-btn:active {
+  color: black;
+  border-bottom: 3px solid #dd0000;
+}
+.pm-content .pm-tab-btn:after {
+  content: '';
+  border-right: 1px solid #ededed;
+  display: block;
+  height: 44px;
+  margin-top: -40px;
+  margin-right: -3px;
+}
+.pm-content .pm-tab-btn:last-child:after {
+  content: '';
+  border-right: 0px;
+}
+    /*c-pmbranding:47780110.5*/
+    
+#pm-000-test header {
+  background-image: url(http://bilder.bild.de/fotos/standard-45976564/Bild/1.bild.jpg);
+}
+#pm-112-immo-geld header {
+  background-image: url(http://bilder.bild.de/fotos/immonet-immobiliensuche-45976424/Bild/1.bild.jpg);
+}
+#pm-120-veri-rate header {
+  background-position: top;
+  background-image: url(http://bilder.bild.de/fotos/verivox-ratenkredit-45976678/Bild/1.bild.jpg);
+}
+#pm-121-veristrom header {
+  background-position: top;
+  background-image: url(http://bilder.bild.de/fotos/verivox-stromvergleich-45976688/Bild/1.bild.jpg);
+}
+#pm-122-veri-dslv header {
+  background-position: top;
+  background-image: url(http://bilder.bild.de/fotos/verivox-dsl-vergleich-45976620/Bild/1.bild.jpg);
+}
+#pm-123-verigas header {
+  background-position: top;
+  background-image: url(http://bilder.bild.de/fotos/verivox-gasvergleich-45976634/Bild/1.bild.jpg);
+}
+#pm-124-verikfz header {
+  background-position: top;
+  background-image: url(http://bilder.bild.de/fotos/verivox-kfz-vergleich-45976666/Bild/1.bild.jpg);
+}
+#pm-125-veri-oeko header {
+  background-position: top;
+  background-image: url(http://bilder.bild.de/fotos/verivox-oekostrom-45976668/Bild/1.bild.jpg);
+}
+#pm-126-veri-mobi header {
+  background-position: top;
+  background-image: url(http://bilder.bild.de/fotos/verivox-handyvergleich-45976642/Bild/1.bild.jpg);
+}
+#pm-127-veri-inte header {
+  background-position: top;
+  background-image: url(http://bilder.bild.de/fotos/verivox-internet-45976660/Bild/1.bild.jpg);
+}
+#pm-130-wisogehalt header {
+  background-image: url(http://bilder.bild.de/fotos/wiso-gehalt-45976706/Bild/1.bild.jpg);
+}
+#pm-131-mobi header{
+  background-image: url(http://bilder.bild.de/fotos/mobile-de-48232612/Bild/1.bild.jpg);
+}
+#pm-132-ah24-1 header {
+  background-image: url(http://bilder.bild.de/fotos/autohaus-24-neuwagen-45976404/Bild/1.bild.jpg);
+}
+#pm-132-ah24-2 header {
+  background-image: url(http://bilder.bild.de/fotos/autohaus-24-gebrauchtwagen-45976376/Bild/1.bild.jpg);
+}
+#pm-133-tv-tipp header {
+  background-image: url(http://bilder.bild.de/fotos/tv-tipps-45976614/Bild/1.bild.jpg);
+}
+#pm-134-kino-tipp header {
+  background-image: url(http://bilder.bild.de/fotos/kino-tipp-45976454/Bild/1.bild.jpg);
+}
+#pm-136-live-tv header {
+  background-image: url(http://bilder.bild.de/fotos/live-tv-45976458/Bild/1.bild.jpg);
+}
+#pm-137-mova-umzu header {
+  background-image: url(http://bilder.bild.de/fotos/movago-umzuege-45976550/Bild/1.bild.jpg);
+}
+#pm-138-step-jobs header {
+  background-image: url(http://bilder.bild.de/fotos/stepstone-jobsuche-45976574/Bild/1.bild.jpg);
+}
+#pm-139-boer-aktu header {
+  background-image: url(http://bilder.bild.de/fotos/boerse-45976408/Bild/1.bild.jpg);
+}
+#pm-140-boer-geve header {
+  background-image: url(http://bilder.bild.de/fotos/boerse-45976408/Bild/1.bild.jpg);
+}
+#pm-135-bild-guts header {
+  background-image: url(http://bilder.bild.de/fotos/gutschein-46003496/Bild/1.bild.jpg);
+}
+#pm-141-bild-spiel header {
+  background-image: url(http://bilder.bild.de/fotos/bild-spielt-46153288/Bild/2.bild.jpg);
+}
+#pm-142-bild-serv header {
+  background-image: url(http://bilder.bild.de/fotos/bild-services-46160172/Bild/2.bild.jpg);
+}
+#pm-143-sport-wett header {
+  background-image: url(http://bilder.bild.de/fotos/gutschein-46003496/Bild/1.bild.jpg);
+}
+#pm-145-ehfk-spen header {
+  background-image: url(http://bilder.bild.de/fotos/ein-herz-fuer-kinder-47943326/Bild/1.bild.jpg);
+}
+#pm-145-ehfk-spen header {
+  height: 167px;
+}
+#pm-145-ehfk-spen header img{
+  height: 13px;
+}
+#pm-145-ehfk-spen header:after {
+  height: 168px;
+  margin-top: -160px;
+}
+#pm-145-ehfk-spen h2,
+#pm-145-ehfk-spen .pm-h2 {
+  padding-top: 84px;
+}
+    /*c-regiobar:47780118.1*/
+    
+.regio-bar-2015 {
+  width: 993px;
+  height: 67px;
+  font-family: "Gotham XNarrow", Arial, Helvetica, Tahoma, sans-serif;
+  font-size: 15px;
+  line-height: 17px;
+}
+.regio-bar-2015 li {
+  float: left;
+  width: 7.1%;
+  list-style: none;
+}
+.regio-bar-2015 li:after {
+  content: ' ';
+  height: 38px;
+  display: block;
+  position: absolute;
+  top: 5px;
+  border-right: 1px solid #ddd;
+}
+.regio-bar-2015 li:first-child:after {
+  border-right: 0px;
+}
+.regio-bar-2015 li a {
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+  padding: 45px 0px 0px 0px;
+  background-image: url(http://bilder.bild.de/fotos/regio-2015-44144658/Bild/1.bild.png);
+  background-repeat: no-repeat;
+  display: block;
+}
+.regio-bar-2015 li a:hover {
+  color: #d00;
+}
+.regio-bar-2015 li .rb15-b {
+  background-position: -3px 0px;
+}
+.regio-bar-2015 li .rb15-hb {
+  background-position: -72px 0px;
+}
+.regio-bar-2015 li .rb15-ch {
+  background-position: -140px 0px;
+}
+.regio-bar-2015 li .rb15-dd {
+  background-position: -208px 0px;
+}
+.regio-bar-2015 li .rb15-dues {
+  background-position: -277px 0px;
+}
+.regio-bar-2015 li .rb15-f {
+  background-position: -346px 0px;
+}
+.regio-bar-2015 li .rb15-hh {
+  background-position: -413px 0px;
+}
+.regio-bar-2015 li .rb15-h {
+  background-position: -481px 0px;
+}
+.regio-bar-2015 li .rb15-k {
+  background-position: -549px 0px;
+}
+.regio-bar-2015 li .rb15-l {
+  background-position: -617px 0px;
+}
+.regio-bar-2015 li .rb15-m {
+  background-position: -684px 0px;
+}
+.regio-bar-2015 li .rb15-rg {
+  background-position: -751px 0px;
+}
+.regio-bar-2015 li .rb15-sa {
+  background-position: -818px 0px;
+}
+.regio-bar-2015 li .rb15-st {
+  background-position: -887px 0px;
+}
+    /*c-legacy:47780088.2*/
+    
+@charset "UTF-8";
+
+.affiliate > div {
+  padding: 0 12px 12px;
+}
+.affiliate > div > h4 {
+  position: relative;
+  margin: 0 0 9px;
+  height: 27px;
+  line-height: 27px;
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  border-bottom: 1px solid #dadada;
+  text-transform: uppercase;
+}
+.affiliate-icon {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  font-size: 9px;
+  color: #777;
+  text-align: right;
+}
+.affiliate-icon a {
+  display: inline;
+  font-size: 11px;
+  font-weight: 700;
+  color: #444;
+  text-decoration: underline;
+  text-transform: none;
+  outline: none;
+}
+.affiliate-icon a:hover,
+.affiliate-icon a:focus,
+.affiliate-icon a:active {
+  color: #d00;
+}
+.affiliate-icon img {
+  display: inline;
+  vertical-align: top;
+  margin: 0 0 0 4px;
+}
+.affiliate > div > p {
+  margin: 0 0 7px 0;
+  line-height: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+}
+
+
+.pmform {
+  position: relative;
+  float: left;
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  color: #444;
+  width: 100%;
+}
+.pmform fieldset {
+  border: 0;
+  position: absolute;
+  width: 55.869%;
+  min-width: 200px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.pmform legend {
+  position: relative;
+  left: 0;
+  font-weight: 700;
+  color: #000;
+}
+.pmform p {
+  margin: 0 0 4px 0;
+  height: 20px;
+  line-height: 20px;
+  font-weight: normal;
+  color: #777;
+}
+.pmform .pmtext,
+.pmform .pmselect,
+.pmform .column {
+  margin: 0 0 4px;
+}
+.pmform .column div {
+  float: left;
+}
+.pmform .column .pmcheck,
+.pmform .column .pmradio {
+  margin: 0;
+}
+.pmform .pmcheck input {
+  vertical-align: baseline;
+}
+
+.pmform label,
+.pmform .column span {
+  float: left;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  vertical-align: top;
+  color: #000;
+  line-height: 18px;
+  height: 1%;
+}
+.pmtext label,
+.pmselect label,
+.pmform .column span {
+  height: 20px;
+  font-weight: 700;
+}
+.pmtext input {
+  height: 18px;
+  border: 1px solid #dadada;
+  background-color: #fff;
+}
+.pmtext input:hover,
+.pmtext input:focus,
+.pmtext input:active {
+  background-color: #fff;
+}
+.pmradio input,
+.pmcheck input {
+  display: inline-block;
+}
+.pmform .pmbutton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.affiliate .btn-def,
+.affiliate .btn-reset {
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  border: 1px solid #dadada;
+  height: 20px;
+  width: 88px;
+  display: inline-block;
+  padding: 0 10px;
+  color: #444;
+  background-color: #fff;
+  overflow: visible;
+}
+
+.affiliate .btn-def:hover,
+.affiliate .btn-def:focus,
+.affiliate .btn-def:active {
+  background: #d00;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+.affiliate .small .pmtext label,
+.affiliate .small .pmselect label,
+.affiliate .small .column span {
+  width: 40%;
+}
+.affiliate .small .pmtext input {
+  width: 59.008%;
+}
+.affiliate .small .pmselect select {
+  width: 60%;
+}
+.affiliate .small .column .pmradio {
+  width: 29%;
+}
+.affiliate .medium .pmtext label,
+.affiliate .medium .pmselect label,
+.affiliate .medium .column span {
+  width: 55%;
+}
+.affiliate .medium .pmtext input {
+  width: 44%;
+}
+.affiliate .medium .pmselect select {
+  width: 45%;
+}
+.affiliate .medium .column .pmradio {
+  width: 22.5%;
+}
+.affiliate .large .pmtext label,
+.affiliate .large .pmselect label,
+.affiliate .large .column span {
+  width: 100%;
+  margin: 0 0 4px 0;
+}
+.affiliate .large .pmtext input {
+  width: 99%;
+}
+.affiliate .large .pmselect select {
+  width: 100%;
+}
+.affiliate .large .column .pmradio {
+  width: 50%;
+}
+
+.affiliate figure {
+  float: right;
+  max-width: 40.782%;
+}
+.affiliate figure img {
+  max-width: 100%;
+}
+
+.s5 .affiliate figure {
+  max-width: 27.145%;
+}
+
+
+.servicelinks > div {
+  padding: 0 12px;
+}
+.servicelinks h4 {
+  font-size: 14px;
+  line-height: 27px;
+  color: #333;
+  text-transform: uppercase;
+}
+.servicelinks .affiliate-icon {
+  line-height: 28px;
+  text-transform: uppercase;
+  vertical-align: text-bottom;
+}
+.servicelinks .affiliate-icon img {
+  vertical-align: baseline;
+}
+.servicelinks ul {
+  overflow: hidden;
+  width: 100%;
+}
+.servicelinks ul li {
+  border-top: 1px solid #dadada;
+  float: left;
+  text-transform: none;
+  width: 50%;
+  padding: 4px 0;
+  position: relative;
+}
+.onerow ul li {
+  width: 100%;
+}
+.servicelinks a {
+  color: #000;
+  display: block;
+  line-height: 27px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.servicelinks .sep [data-icon]:before {
+  padding: 0 6px 0 10px;
+}
+.servicelinks a:hover,
+.servicelinks a:active,
+.servicelinks a:focus {
+  color: #d00;
+}
+.servicelinks .sep a {
+  border-left: 1px solid #dadada;
+}
+.servicelinks li.sep:after {
+  background: none;
+}
+.servicelinks li.sep {
+  margin: 0;
+}
+
+.servicelinks ol {
+  border-top: 1px solid #dadada;
+  padding: 9px 0;
+  overflow: hidden;
+}
+.servicelinks ol li {
+  float: left;
+  margin: 0 0 0 4px;
+  border: none;
+  width: 49.314%;
+}
+.s6 .servicelinks ol li {
+  width: 24.16%;
+}
+.servicelinks ol li:first-child {
+  margin: 0;
+}
+.servicelinks ol li a {
+  display: block;
+  background: none #fff;
+  border: 1px solid #dadada;
+  line-height: 18px;
+  font-size: 10px;
+  font-weight: 400;
+  color: #444;
+  text-align: center;
+  text-transform: uppercase;
+}
+.servicelinks ol li a:hover,
+.servicelinks ol li a:active,
+.servicelinks ol li a:focus {
+  background: none #d00;
+  color: #fff;
+}
+
+
+.regio-service-bar {
+  width: 993px;
+}
+.regio-service-bar li {
+  float: left;
+  width: 23.967%;
+  height: 62px;
+  border: 1px solid #dadada;
+  margin: 0 0 0 11px;
+  background-color: #fff;
+}
+.regio-service-bar.alt2 li {
+  width: 32.326%;
+  margin: 0 0 0 12px;
+}
+.regio-service-bar li:first-child {
+  margin: 0;
+}
+.regio-service-bar li a {
+  display: block;
+  color: #000;
+  font-family: Arial, Helvetica, Tahoma, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+.regio-service-bar.alt2 li a {
+  color: #d00;
+  text-transform: uppercase;
+}
+.regio-service-bar li a img {
+  float: left;
+  margin: 4px 12px 4px 0;
+  border-right: 1px solid #dadada;
+  padding: 11px 15px;
+}
+.regio-service-bar li a span {
+  display: table-cell;
+  height: 62px;
+  vertical-align: middle;
+}
+.fonts-loaded .regio-service-bar li a span {
+  font-family: "Gotham XNarrow", Arial, Helvetica, Tahoma, sans-serif;
+  font-weight: 200;
+  font-size: 17px;
+  line-height: 24px;
+}
+.regio-service-bar li a span em {
+  display: block;
+  font-size: 16px;
+  font-style: normal;
+}
+.regio-service-bar.alt2 li a span em {
+  color: #000;
+}
+.fonts-loaded .regio-service-bar a span em {
+  font-weight: 700;
+  font-size: 24px;
+}
+.regio-service-bar li a:hover,
+.regio-service-bar li a:active,
+.regio-service-bar li a:focus {
+  color: #d00;
+}
+.regio-service-bar.alt2 li a:hover span em,
+.regio-service-bar.alt2 li a:active span em,
+.regio-service-bar.alt2 li a:focus span em {
+  color: #d00;
+}
+
+
+.sports-bar {
+  width: 993px;
+  height: 21px;
+  text-transform: uppercase;
+}
+.sports-bar li {
+  float: left;
+  border-left: 1px solid #dadada;
+  width: 19.5%;
+}
+.sports-bar li:first-child {
+  border-left: none;
+}
+.sports-bar li a {
+  display: block;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+}
+.sports-bar li a:hover span,
+.sports-bar li a:active span,
+.sports-bar li a:focus span {
+  color: #d00;
+}
+.sports-bar img {
+  display: inline;
+  margin: 2px 5px 0 0;
+  vertical-align: text-bottom;
+}
+.sports-bar span {
+  display: inline-block;
+  padding: 0 0 0 24px;
+  color: #000;
+  background: transparent url(http://bilder.bild.de/fotos/sport-icons-sprite-44144716/Bild/1.bild.png) no-repeat 0 0;
+}
+.fonts-loaded .sports-bar span {
+  font-size: 15px;
+}
+.sports-bar li.secondleague {
+  width: 8.36%;
+}
+.sports-bar li.thirdleague {
+  width: 8.36%;
+}
+.sports-bar li.cl {
+  width: 15.51%;
+}
+.sports-bar li.el {
+  width: 13.09%;
+}
+.sports-bar li.dfbcup {
+  width: 10.07%;
+}
+.sports-bar li.nationalteam {
+  width: 17.93%;
+}
+.sports-bar li.international {
+  width: 13.19%;
+}
+.sports-bar li.realmadrid {
+  width: 12.29%;
+}
+.sports-bar li.f1 span {
+  background-position: 0 0;
+}
+.sports-bar li.boxing span {
+  background-position: 0 -25px;
+}
+.sports-bar li.wintergames span {
+  background-position: 0 -50px;
+}
+.sports-bar li.poker span {
+  background-position: 0 -74px;
+}
+.sports-bar li.basketball span {
+  background-position: 0 -99px;
+}
+.sports-bar li.tennis span {
+  background-position: 0 -124px;
+}
+.sports-bar li.eishockey span {
+  background-position: 0 -374px;
+}
+.sports-bar li.secondleague span {
+  background-position: 0 -174px;
+}
+.sports-bar li.thirdleague span {
+  background-position: 0 -201px;
+}
+.sports-bar li.cl span {
+  background-position: 0 -253px;
+}
+.sports-bar li.el span {
+  background-position: 0 -278px;
+}
+.sports-bar li.dfbcup span {
+  background-position: 0 -227px;
+}
+.sports-bar li.nationalteam span {
+  background-position: 0 -327px;
+}
+.sports-bar li.international span {
+  background-position: 0 -304px;
+}
+.sports-bar li.realmadrid span {
+  background-position: 0 -351px;
+}
+.sports-bar li.handball span {
+  background-position: 0 -174px;
+}
+
+
+.regio-bar {
+  height: 47px;
+  width: 993px;
+}
+.regio-bar li {
+  float: left;
+  width: 7.05%;
+}
+.regio-bar li a {
+  height: 17px;
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-size: 10px;
+  text-align: center;
+  padding: 30px 0 0;
+  background: url(../../../System/assets/img/partner/wappen-sprite.png) no-repeat;
+}
+.regio-bar li a:hover,
+.regio-bar li a:active,
+.regio-bar li a:focus {
+  color: #d00;
+}
+.regio-bar li a.rb-b {
+  background-position: 30px 8px;
+}
+.regio-bar li a.rb-hb {
+  background-position: -26px 8px;
+}
+.regio-bar li a.rb-dd {
+  background-position: -91px 8px;
+}
+.regio-bar li a.rb-dues {
+  background-position: -147px 8px;
+}
+.regio-bar li a.rb-f {
+  background-position: -206px 8px;
+}
+.regio-bar li a.rb-hh {
+  background-position: -262px 8px;
+}
+.regio-bar li a.rb-h {
+  background-position: -321px 8px;
+}
+.regio-bar li a.rb-k {
+  background-position: -379px 8px;
+}
+.regio-bar li a.rb-l {
+  background-position: -438px 8px;
+}
+.regio-bar li a.rb-m {
+  background-position: -495px 8px;
+}
+.regio-bar li a.rb-rg {
+  background-position: -557px 8px;
+}
+.regio-bar li a.rb-st {
+  background-position: -612px 8px;
+}
+.regio-bar li a.rb-ch {
+  background-position: -666px 8px;
+}
+.regio-bar li a.rb-sa {
+  background-position: -726px 8px;
+}
+
+
+.socialBlock.alt {
+  position: relative;
+  padding: 0 10px;
+  overflow: hidden;
+}
+.socialBlock.alt li {
+  float: left;
+  padding: 12px 0 8px;
+  width: 100%;
+  border-bottom: 1px dotted #bfbfbf;
+}
+.socialBlock.alt li span {
+  float: left;
+  width: 65px;
+  line-height: 21px;
+  color: #444;
+  font-weight: bold;
+  font-size: 11px;
+}
+.socialBlock.alt .nl-abo {
+  background: url(http://bilder.bild.de/fotos/bg-newsletter-44144738/Bild/1.bild.jpg) 190px 6px no-repeat;
+  border-bottom: none;
+}
+.socialBlock.alt .nl-abo a {
+  background: url(http://bilder.bild.de/fotos/bg-btn-smb-44144760/Bild/1.bild.png) 0 -42px repeat-x;
+  float: left;
+  height: 21px;
+  width: 83px;
+  line-height: 21px;
+  font-size: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+.socialBlock.alt li a:hover,
+.socialBlock.alt li a:active,
+.socialBlock.alt li a:focus {
+  background-position: 0 -21px;
+  color: #444;
+}
+.socialBlock.alt .facebookFanbox {
+  border-left: 1px solid #b4b4b4;
+  border-bottom: 1px solid #b4b4b4;
+}
+.socialBlock.alt .fb-like-small {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 23px;
+}
+#smbChannelGpCont a {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: bold;
+  color: #777;
+  vertical-align: middle;
+}
+#smbChannelGpCont a:hover,
+#smbChannelGpCont a:active,
+#smbChannelGpCont a:focus {
+  text-decoration: none;
+  color: #d00;
+}
+#smbChannelGpCont img {
+  float: left;
+  display: inline-block;
+  margin: 2px 10px 4px 0;
+  width: 16px;
+  height: 16px;
+}
+
+
+.s10 .tr .yield {
+  margin: 0 auto 20px;
+  width: 585px;
+}
+.s10 .tr .yield > div {
+  padding: 4px 8px;
+  background-color: #fff;
+}
+.s10 .tr .yield {
+  margin-top: 10px;
+}
+
+
+.pm192 {
+  margin: 20px 0 0;
+  text-align: left;
+}
+.pm192 p,
+.pm192 h4 {
+  margin: 0 0 10px;
+  padding: 0 10px;
+  line-height: 20px;
+  position: relative;
+}
+.pm192 .mark {
+  font-size: 10px;
+  color: #444;
+  text-align: right;
+  text-transform: uppercase;
+  border-bottom: 1px solid #dadada;
+}
+.pm192 a {
+  display: inline-block;
+  width: 191px;
+  height: 29px;
+  background-color: #d00;
+  border: 1px solid #ccc;
+  color: #fff;
+  line-height: 29px;
+  font-size: 13px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(top, #ee6666 0%, #dd0303 100%);
+  background: linear-gradient(to bottom, #ee6666 0%, #dd0303 100%);
+}
+.pm192 a:hover,
+.pm192 a:active,
+.pm192 a:focus {
+  color: #444;
+  background: #fff none;
+  border-color: #000;
+}
+.qgtv-dialog .qgtv-success .pm192 h4 {
+  padding: 30px 10px 0;
+  border-top: 1px solid #dadada;
+}
+.pm192 p a {
+  position: absolute;
+  right: 10px;
+  width: 116px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 10px;
+}
+.pm192 div {
+  padding: 0 10px;
+  text-align: right;
+}
+ÖÑßŽ÷      XI1XHï=¬XMÖ   `    :http://www.bild.de/code/partner,44144570.9-47780104.5-47780110.5-47780118.1-47780088.2.bild.css strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Via: 1.1 ISA01TMG
+Expires: Mon, 31 Oct 2016 13:57:42 GMT
+Date: Mon, 31 Oct 2016 13:26:33 GMT
+Content-Type: text/css;charset=utf-8
+Server: Apache
+Content-Language: de-DE
+X-UA-Compatible: IE=Edge
+Last-Modified: Mon, 31 Oct 2016 12:06:57 GMT
+X-Refresh: h=252|g=103975.000|c=(null)|rd=Mon, 31 Oct 2016 12:06:57 GMT|dd=Mon, 31 Oct 2016 12:47:19 GMT
+Cache-Control: public, max-age=1869
+Vary: Origin
+ original-response-headers Via: 1.1 ISA01TMG
+Connection: Keep-Alive
+Proxy-Connection: Keep-Alive
+Transfer-Encoding: chunked
+Expires: Mon, 31 Oct 2016 13:57:42 GMT
+Date: Mon, 31 Oct 2016 13:26:33 GMT
+Content-Type: text/css;charset=utf-8
+Server: Apache
+Content-Language: de-DE
+X-UA-Compatible: IE=Edge
+Last-Modified: Mon, 31 Oct 2016 12:06:57 GMT
+X-Refresh: h=252|g=103975.000|c=(null)|rd=Mon, 31 Oct 2016 12:06:57 GMT|dd=Mon, 31 Oct 2016 12:47:19 GMT
+Cache-Control: public, max-age=1869
+Vary: Origin
+ uncompressed-len 0 necko:classified 1   h&

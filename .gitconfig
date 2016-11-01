@@ -1,3 +1,5 @@
 [user]
 	email = Phillo77@hotmail.de
 	name = PhillO77
+[credential]
+	helper = cache

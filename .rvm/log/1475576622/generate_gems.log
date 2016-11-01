@@ -1,0 +1,32 @@
+[2016-10-04 12:23:42] command
+current path: /home/philippe/EuP/Ruby/Unterricht
+GEM_HOME=/home/philippe/.rvm/gems/ruby-2.3.1
+PATH=/home/philippe/.rvm/gems/ruby-2.3.1/bin:/home/philippe/.rvm/gems/ruby-2.3.1@global/bin:/home/philippe/.rvm/rubies/ruby-2.3.1/bin:/home/philippe/bin:/home/philippe/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/philippe/.rvm/bin:/home/philippe/.rvm/bin
+GEM_PATH=/home/philippe/.rvm/gems/ruby-2.3.1:/home/philippe/.rvm/gems/ruby-2.3.1@global
+command(5): command gem rdoc --all --ri
++ gem rdoc --all --ri
+Parsing documentation for bundler-1.12.5
+Parsing documentation for bundler-unload-1.0.2
+Installing ri documentation for bundler-unload-1.0.2
+Parsing documentation for did_you_mean-1.0.0
+Installing ri documentation for did_you_mean-1.0.0
+Parsing documentation for executable-hooks-1.3.2
+Installing ri documentation for executable-hooks-1.3.2
+Parsing documentation for gem-wrappers-1.2.7
+Installing ri documentation for gem-wrappers-1.2.7
+Parsing documentation for minitest-5.8.3
+Installing ri documentation for minitest-5.8.3
+Parsing documentation for net-telnet-0.1.1
+Installing ri documentation for net-telnet-0.1.1
+Parsing documentation for power_assert-0.2.6
+Installing ri documentation for power_assert-0.2.6
+Parsing documentation for rake-10.4.2
+Installing ri documentation for rake-10.4.2
+Parsing documentation for rdoc-4.2.2
+Installing ri documentation for rdoc-4.2.2
+Parsing documentation for rubygems-bundler-1.4.4
+Installing ri documentation for rubygems-bundler-1.4.4
+Parsing documentation for rvm-1.11.3.9
+Installing ri documentation for rvm-1.11.3.9
+Parsing documentation for test-unit-3.1.5
+Installing ri documentation for test-unit-3.1.5

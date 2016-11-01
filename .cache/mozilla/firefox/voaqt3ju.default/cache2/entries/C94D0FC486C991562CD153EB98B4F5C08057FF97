@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<!-- omlement:vorkopf.htm -->
+<html lang="de" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- /omlement:vorkopf.htm -->
+<!-- metaelement:metaelement.htm -->
+<title>Sublime Text: Vorstellung Text Editor mit Tastaturkürzel</title>
+<meta name="description" content="Der extrem effiziente Sublime Text wird vorgestellt. Wer bisher mit Editoren gearbeitet hat, sieht an den Shortcuts, welches Potential der Editor hat!" />
+<!-- /metaelement:metaelement.htm -->
+<!-- omlement:metaelement.htm -->
+<meta name="robots" content="index,follow" />
+<!-- /omlement:metaelement.htm -->
+
+<!-- omlement:kopf.htm -->
+  <link rel="stylesheet" href="css/design.css">
+  <link rel="stylesheet" href="js/slicknav.css">
+  <script src="js/modernizr.js"></script>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+</head>
+<body>
+
+<div id="wrapper">
+
+<div id="insertfb1"></div>
+
+<div id="kopfoben" role="banner">
+  <div id="kopflinks">
+    <a href="/"><img id="logo" src="bilder/html-seminar.jpg" width="474" height="66" alt="HTML lernen und eigene Website erstellen" title="HTML lernen und eigene Website erstellen" /></a>
+
+    <p><span id="logourl"><a href="http://www.html-seminar.de/">HTML-Seminar.de</a><br></span>Schritt für Schritt HTML lernen um die eigene Website zu erstellen</p>
+  </div>
+
+  <div id="kopfrechts">
+    <a href="video-kurs-html-tutorial.htm"><img src="bilder/html-video-tutorial-dvd-1-3-150h.png" width="127" height="110" alt="Videokurs HTML + CSS + Webdesign erstellen" title="Videokurs HTML + CSS + Webdesign erstellen" /></a>
+    <p>Jetzt das HTML-Seminar als <br />
+    <strong>Video-Tutorial</strong>
+    mit über 210 Videos, <br />
+    Gesamtspielzeit über 24 Stunden<br />
+     <a href="video-kurs-html-tutorial.htm">Video-Kurs HTML5+CSS+Webdesign</a>
+    </p>
+  </div>
+
+</div>
+
+<div id="breadcrumb">
+<!-- /omlement:kopf.htm -->
+<!-- hereiam:hereiam -->
+<span>Sie befinden sich:</span> <a href="/">Startseite</a>
+ &raquo; <a href="/einsteiger.htm">HTML Tutorial für Anfänger</a>
+ &raquo; <a href="/html-editoren-zur-fehlerreduktion.htm">HTML-Editor</a>
+ &raquo; <a class="brelast" href="/text-editor-sublime-text.htm">Sublime Text</a>
+<!-- /hereiam:hereiam -->
+<!-- omlement:vinhalt.htm -->
+
+<!--
+    <form id="sucheoben" role="search" action="suche.php" method="post" style="margin:0px;">
+      <input id="suchen_nach" name="suchen_nach" value="" placeholder="suchen nach ..." type="text">
+      <input name="url" value="html-seminar-de" type="hidden">
+      <input src="bilder/button-suche.png" id="suchestarten" alt="suchen" title="Suche starten" type="image">
+    </form>
+-->
+</div>
+
+<div id="gesamtbereich">
+  <div id="inhalsbereiche">
+    <div id="inhalt" role="main">
+
+<article>
+
+<!-- /omlement:vinhalt.htm -->
+<!-- edit:inhalt -->
+<h1>Sublime Text - Kurzvorstellung und Tastaturkürzel</h1>
+
+<p>Sublime Text ist ein absoluter Profi-Editor. Auf die Gefahr hin, dass viele Einsteiger vom ersten spartanischen Anblick abgeschreckt werden - Sublime Text bringt einem sehr großen Komfort und Tippersparnis. Allerdings muss man sich erst mit dem Editor beschäftigen und sich am besten die Tastaturkürzel merken, die man oft benötigt. Dann macht der Editor richtig Spaß.</p>
+
+<p>Neben dem schnellen Erfassen von Code und vor allem dem komfortablen Ändern (z.B. alle Stellen auf einen Schlag ändern) gibt es noch zig Plug-Ins, um den Editor extrem auf die eigenen Bedürfnisse anzupassen.</p>
+
+<div class="videobereich">	
+<iframe class="videoExtern"width="679" height="382" src="//www.youtube.com/embed/StJ-4w7VMzA?list=UU53VvZZkkmjmr6AMBM_zO7A" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<p>Über Snippets kann oft benötigter Code hinterlegt und durch Schlüsselwörter und die Tab-Taste sofort aufgerufen werden.</p>
+
+
+
+<h2>Inhalte kopieren, markieren, verschieben, duplizieren</h2>
+
+<p class="bg_hell">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>Shift</kbd> + <kbd>d</kbd></span>
+	<span class="hinten">Zeile duplizieren, ohne dass die Zwischenablage geändert wird</span>
+</p>
+
+<p class="bg_dunkel">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>c</kbd></span>
+	<span class="hinten">kopiert komplette Zeile in Zwischenablage, auch wenn nichts markiert ist</span>
+</p>
+
+<p class="bg_hell">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>Return</kbd></span>
+	<span class="hinten">leere Zeile unter der aktuellen Zeile einfügen</span>
+</p>
+
+<p class="bg_dunkel">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>Shift</kbd> + <kbd>Return</kbd></span>
+	<span class="hinten">leere Zeile <b>über</b> der aktuellen Zeile einfügen</span>
+</p>
+
+<p class="bg_hell">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>Shift</kbd> + <kbd>Pfeil hoch</kbd></span>
+	<span class="hinten">Zeile tauschen nach oben</span>
+</p>
+
+<p class="bg_dunkel">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>Shift</kbd> + <kbd>Pfeil runter</kbd></span>
+	<span class="hinten">Zeile tauschen nach unten</span>
+</p>
+
+
+<p class="bg_hell">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>x</kbd></span>
+	<span class="hinten">komplette Zeile löschen, in der der Cursor sich befindet</span>
+</p>
+
+
+<h2>markieren / Mehrfachmarkierungen!</h2>
+
+<p class="bg_hell">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>d</kbd></span>
+	<span class="hinten">ganzes Wort markieren (wird durch weitere Möglichkeiten EXTREM nützlich!)</span>
+</p>
+
+<p class="bg_dunkel">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>d</kbd> + <kbd>d</kbd></span>
+	<span class="hinten">mehrmalige Eingabe der Kombination markiert folgende identische Einträge (alle markierten können dann auf einen Schlag geändert werden!)</span>
+</p>
+
+<p class="bg_hell">
+	<span class="vorne"><kbd>Alt</kbd> + <kbd>F3</kbd></span>
+	<span class="hinten">markiert alle gleichen Einträge im Text (alle markierten können dann auf einen Schlag geändert werden!)</span>
+</p>
+
+<p class="bg_dunkel">
+	<span class="vorne"><kbd>Esc</kbd></span>
+	<span class="hinten">Aufhebung einer Mehrfachmarkierung</span>
+</p>
+
+
+<h2>an mehreren Stellen dasselbe schreiben</h2>
+
+<p class="bg_hell">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>Mausklick</kbd></span>
+	<span class="hinten">mehrere Stellen markieren, an denen man schreiben möchte (bei gedrückter STRG-Taste!) und dann losschreiben</span>
+</p>
+
+
+<h2>TAG schließen</h2>
+
+<p class="bg_hell">
+	<span class="vorne"><kbd>Alt</kbd> + <kbd>.</kbd></span>
+	<span class="hinten">schließt einen noch offenen HTML-TAG (geht auch mehrfach!)</span>
+</p>
+
+
+<h2>Suchen & Ersetzen</h2>
+
+<p class="bg_hell">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>f</kbd></span>
+	<span class="hinten">Suche aufrufen</span>
+</p>
+
+<p class="bg_dunkel">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>Shift</kbd> + <kbd>f</kbd></span>
+	<span class="hinten">Suchen und Ersetzen aktivieren</span>
+</p>
+
+
+<h2>Bookmarks setzen, sich "bewegen"</h2>
+
+<p class="bg_hell">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>F2</kbd></span>
+	<span class="hinten">Bookmark setzen exakt an Cursorposition (bzw. gesetzten wieder aufheben)</span>
+</p>
+
+<p class="bg_dunkel">
+	<span class="vorne"><kbd>F2</kbd></span>
+	<span class="hinten">zum nächsten Bookmark springen</span>
+</p>
+
+<p class="bg_hell">
+	<span class="vorne"><kbd>Shift</kbd> + <kbd>F2</kbd></span>
+	<span class="hinten">zum vorherigen Bookmark springen</span>
+</p>
+
+<p class="bg_dunkel">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>Shift</kbd> + <kbd>F2</kbd></span>
+	<span class="hinten">alle Bookmarks aufheben</span>
+</p>
+
+<p class="bg_hell">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>m</kbd></span>
+	<span class="hinten">zwischen Anfang und Ende von Klammern (sowohl runde wie geschweifte Klammern) </span>
+</p>
+
+
+<h2>Zeilen auskommentieren / wieder "ein-"kommentieren</h2>
+
+<p class="bg_hell">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>#</kbd></span>
+	<span class="hinten">auskommentieren einer Zeile (nochmals drücken macht es rückgängig)</span>
+</p>
+
+<p class="bg_dunkel">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>Shift</kbd> + <kbd>#</kbd></span>
+	<span class="hinten">auskommentieren über mehrere Zeilen hinweg (nochmals drücken macht es rückgängig)</span>
+</p>
+
+
+<h2>Reiter und Layout (Fenster nebeneinander)</h2>
+
+<p class="bg_hell">
+	<span class="vorne"><kbd>Alt</kbd> + <kbd>1 ... 9</kbd></span>
+	<span class="hinten">Reiter anwählen anhand Nummer</span>
+</p>
+
+<p class="bg_dunkel">
+	<span class="vorne"><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>2</kbd></span>
+	<span class="hinten">2 "Fenster" nebeneinander (bzw. 3 oder 4, wenn man soviel Platz hat und es braucht) - in die Bereiche kann man seine gewünschten Reiter ziehen, bzw. neue Dateien öffnen</span>
+</p>
+
+<p class="bg_hell">
+	<span class="vorne"><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>8</kbd></span>
+	<span class="hinten">2 "Fenster" untereinander</span>
+</p>
+
+<p class="bg_dunkel">
+	<span class="vorne"><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>1</kbd></span>
+	<span class="hinten">zurück zu einem großen "Fenster"</span>
+</p>
+
+
+
+<h2>Inhalte sortieren</h2>
+
+<p class="bg_hell">
+	<span class="vorne"><kbd>F9</kbd></span>
+	<span class="hinten">sortiert alles Markierte (und wenn nichts markiert ist, dann alles!!!). Also: Wenn man etwas sortiert benötigt, erst markieren und dann F9!</span>
+</p>
+
+<p class="bg_dunkel">
+	<span class="vorne"><kbd>Strg</kbd> + <kbd>z</kbd></span>
+	<span class="hinten">rückgängig machen der letzten Aktion (braucht man gerne beim versehentlichen sortieren :)</span>
+</p>
+
+
+<h2>Schriftgröße ändern</h2>
+
+<p class="bg_hell">
+	<span class="vorne"><kbd>STRG</kbd> + <kbd>+</kbd></span>
+	<span class="hinten">Schriftgröße erhöhen</span>
+</p>
+
+<p class="bg_dunkel">
+	<span class="vorne"><kbd>STRG</kbd> + <kbd>-</kbd></span>
+	<span class="hinten">Schriftgröße verringern</span>
+</p>
+
+
+
+
+<h3>Download von Sublime Text</h3>
+
+<p>Download unter <a href="http://www.sublimetext.com/" target="_blank">http://www.sublimetext.com/</a></p><!-- /edit:inhalt --><!-- omlement:vgw --><img src="http://vg03.met.vgwort.de/na/14c0912f27854d4c9166640e4bdccd77" width="1" height="1" alt="" /><!-- /omlement:vgw -->
+
+<!-- omlement:vsteuerung.htm -->
+<!-- vor:textzurueck -->
+<div id="nav_unten">
+
+<a id="nav_unten_zurueck" href="brackets-code-editor-fuer-alle-betriebssysteme.htm" title="Brackets"><span id="nav_unten_zurueck_pfeil"></span>
+<span>Brackets</span></a>
+
+<a id="nav_unten_weiter" href="html-editor-scriptly-webocton.htm" title="HTML-Editor Scriptly">
+<span id="nav_unten_weiter_pfeil"></span>
+<span>HTML-Editor Scriptly</span>
+</a>
+
+<a id="nav_unten_anfang" href="#top" title="zum Seitenanfang">
+<span id="nav_unten_anfang_pfeil"></span>
+</a>
+
+</div>
+
+<!-- /vor:textzurueck -->
+
+</article>
+</div>
+<!-- /omlement:vsteuerung.htm -->
+<!-- steuerelement:steuerelement -->
+<div id="steuerung">
+
+  
+  <ul>
+  <li class="dsteu1"><a href="/">Startseite</a>
+    
+    <ul>
+    <li class="dsteu_normal"><a href="video-kurs-html-tutorial.htm">Videokurs HTML5, CSS3 und Webdesign</a>
+  
+    </li>
+</ul>
+  </li>
+
+  <li class="dsteu2"><a href="einsteiger.htm">HTML Tutorial für Anfänger</a>
+    
+    <ul>
+    <li class="dsteu_normal"><a href="handarbeit.htm">benötigte Software</a> </li>
+    <li class="dsteu_normal"><a href="website-erstellen-vorgehensweise.htm">Vorgehensweise Website erstellen</a> </li>
+    <li class="dsteu_normal"><a href="erste-html-seite.htm">erste HTML-Seite</a> </li>
+    <li class="dsteu_normal"><a href="html-grundlagen.htm">Grundlagen - HTML-TAG</a> </li>
+    <li class="dsteu_normal"><a href="html-absatz-p-tag.htm">Absatz erstellen - p</a> </li>
+    <li class="dsteu_normal"><a href="html-ueberschriften.htm">Überschriften</a> </li>
+    <li class="dsteu_normal"><a href="html-editoren-zur-fehlerreduktion.htm">HTML-Editor</a>
+      
+      <ul>
+      <li class="dsteu_normal"><a href="brackets-code-editor-fuer-alle-betriebssysteme.htm">Brackets</a> </li>
+      <li class="dsteu_hight"><a href="text-editor-sublime-text.htm">Sublime Text</a> </li>
+      <li class="dsteu_normal"><a href="html-editor-scriptly-webocton.htm">HTML-Editor Scriptly</a> </li>
+      <li class="dsteu_normal"><a href="html-editor-superhtml-web-studio.htm">SuperHTML Web Studio</a> </li>
+      <li class="dsteu_normal"><a href="html-editor.htm">HTML-Editor Phase 5</a> </li>
+      <li class="dsteu_normal"><a href="html-editor-fuer-mac-os.htm">HTML-Editor für Mac</a> </li>
+      <li class="dsteu_normal"><a href="fonts-fuer-entwickler.htm">Fonts für Entwickler</a>
+    
+      </li>
+</ul>
+    </li>
+
+    <li class="dsteu_normal"><a href="html-seitenaufbau.htm">HTML-Grundgerüst</a> </li>
+    <li class="dsteu_normal"><a href="html-texte-formatieren.htm">Text fett b - strong</a> </li>
+    <li class="dsteu_normal"><a href="text-kursiv-html-tag-i-em.htm">Text kursiv i oder em</a> </li>
+    <li class="dsteu_normal"><a href="schachteln-von-html-tags.htm">Schachteln von HTML-TAGs</a> </li>
+    <li class="dsteu_normal"><a href="html-tag-u-unterstreichung.htm">unterstreichen</a> </li>
+    <li class="dsteu_normal"><a href="validieren-html-seite.htm">validieren HTML-Seite</a> </li>
+    <li class="dsteu_normal"><a href="sauberer-html-code.htm">Sauberer HTML-Code</a> </li>
+    <li class="dsteu_normal"><a href="html-listen.htm">Listen, Aufzählungen</a> </li>
+    <li class="dsteu_normal"><a href="html-definitionsliste-dl-dt-dd.htm">Definitionsliste</a> </li>
+    <li class="dsteu_normal"><a href="html-umbruch.htm">erzwungener Umbruch</a> </li>
+    <li class="dsteu_normal"><a href="html-trennlinie.htm">Trennlinie, Attribute</a> </li>
+    <li class="dsteu_normal"><a href="grafiken.htm">Bilder, Fotos u. Grafiken integrieren</a> </li>
+    <li class="dsteu_normal"><a href="attribute-bei-html-tags.htm">Attribute bei HTML-TAGs</a> </li>
+    <li class="dsteu_normal"><a href="html-tabellen.htm">Tabellen</a> </li>
+    <li class="dsteu_normal"><a href="html-links.htm">Links, Hyperlinks</a> </li>
+    <li class="dsteu_normal"><a href="div-span-bereiche-definieren.htm">Bereiche mit DIV und SPAN</a> </li>
+    <li class="dsteu_normal"><a href="farben.htm">HTML Farben</a> </li>
+    <li class="dsteu_normal"><a href="online-stellen.htm">Online stellen per FTP</a> </li>
+    <li class="dsteu_normal"><a href="befehlsuebersicht.htm">HTML Befehle Übersicht</a>
+  
+    </li>
+</ul>
+  </li>
+
+  <li class="dsteu3"><a href="css-lernen.htm">CSS lernen - Webdesign erstellen</a> </li>
+  <li class="dsteu4"><a href="css3.htm">CSS3</a> </li>
+  <li class="dsteu5"><a href="responsive-webdesign.htm">Responsive Webdesign</a> </li>
+  <li class="dsteu6"><a href="komplette-website-erstellen.htm">Projekt Beispielwebsites</a> </li>
+  <li class="dsteu7"><a href="tutorial-bildbearbeitung-fuer-websites.htm">Bildbearbeitung für Websites</a> </li>
+  <li class="dsteu8"><a href="javascript.htm">JavaScript, Ajax und jQuery</a> </li>
+  <li class="dsteu9"><a href="fortgeschrittene.htm">Fortgeschrittene</a> </li>
+  <li class="dsteu10"><a href="web-apps-erstellen.htm">Web Apps erstellen</a> </li>
+  <li class="dsteu11"><a href="forum.htm">Forum</a> </li>
+  <li class="dsteu12"><a href="diverses.htm">Diverses</a> </li>
+  <li class="dsteu13"><a href="impressum.htm">Impressum</a>
+    
+    <ul>
+    <li class="dsteu_normal"><a href="kontakt.php">Kontakt</a> </li>
+    <li class="dsteu_normal"><a href="sitemap.htm">Sitemap</a>
+</li></ul></li></ul>
+</div><!-- /steuerelement:steuerelement -->
+
+<!-- omlement:fuss.htm -->
+</div>
+</div>
+
+<div id="fehlermeldung"><a href="javascript:toggle('fehlermelderbereich')" id="fehlermbereich"></a></div>
+
+<div id="fehlermelderbereich"> <p style="text-align: right; margin-right: 5px; "><a href="javascript:toggle('fehlermelderbereich')" class="closebutton">X</a></p>
+
+<p  class="schrift_fm" style="font-size: 12px;"><b>Wenn Sie einen Fehler finden, bitte mitteilen</b> <br />
+<span style="font-size: 10px; color: white;">
+  (egal ob Schreibfehler oder inhaltlicher Fehler). </span></p>
+
+
+<p class="schrift_fm">Mit Maus fehlerhafte Stelle markieren und übernehmen mit folgendem Button: 
+
+<input type="button" id="fehleruebertragbutton" value="markierten Text übertragen" onclick="sel_txt();">
+
+<form action="kontakt.php" method="post" id="fehlermelder">
+
+<p class="schrift_fm">Fehler:<br />
+<textarea id="fehlerarea" name="fehlerarea" style="width:100%"  rows="5" ></textarea>
+
+<p class="schrift_fm">Verbesserung:<br />
+<textarea id="verbesserungsvorschlag" name="verbesserungsvorschlag" style="width:100%" rows="5"></textarea>
+
+<p class="schrift_fm">Name/E-Mail (damit ich auch Danke sagen kann)<br />
+<input id="name" name="name" type="text" size="40">
+
+
+<input id="seitenurl" name="seitenurl" type="hidden" value="" />
+<input id="art_der_meldung" name="art_der_meldung" type="hidden" value="fehler_von_einzelseite" />
+<input id="aktion" name="aktion" type="hidden" value="senden" />
+
+<script type="text/javascript">
+document.getElementById('seitenurl').value = window.location.pathname;
+</script>
+
+<p><input type="submit" id="fehleruebertragbutton2" value="absenden"></p>
+
+</form>
+
+</div>
+	
+	
+	
+	
+<div id="fussbereich" role="contentinfo">
+     <a href="site_als_pdf.htm"><img class="bildlinks" src="bilder/buch-html-seminar-de.gif" width="107" height="150" alt="eBook HTML-Seminar.de" /></a>
+
+  <a href="video-kurs-html-tutorial.htm"><img class="bildrechts" src="bilder/html-video-tutorial-dvd-1-3-150h.png" alt="Videokurs HTML + CSS + Webdesign erstellen" title="Videokurs HTML + CSS + Webdesign erstellen" height="150" width="173" /></a>
+
+  <div id="fusslinks">
+    das <strong>eBook zum HTML-Seminar.de</strong><br />
+    komplette Website als eBook mit über 600 Seiten<br />
+    zum Downloaden und <a href="site_als_pdf.htm">Ausdrucken</a>
+  </div>
+
+  <div id="fussrechts">
+    <p><strong>Video-Tutorial</strong>:
+    über 210 Videos, <br />
+    Gesamtspielzeit über 24 Stunden<br />
+     <a href="video-kurs-html-tutorial.htm">Video-Kurs HTML5+CSS+Webdesign</a>
+    </p>
+  </div>
+
+  <div id="fussmitte">
+© 2000-2016 Axel Pratzner • <a href="http://www.html-seminar.de/">www.html-seminar.de</a> • Stand 12.9.2016<br />
+Wir freuen uns über Weiterempfehlungen und Links zu <a href="http://www.html-seminar.de/">www.html-seminar.de</a>
+  </div>
+</div>
+
+</div>  <!-- wrapper -->
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#steuerung').slicknav({
+		allowParentLinks: true,
+		label: "MENÜ"
+	}
+	);
+});
+</script>
+	
+<script>window.cookieconsent_options = {link: 'datenschutzerklaerung.htm'}</script>
+<script type="text/javascript" src="js/cookie-nachfrage.js"></script>		
+</body>
+</html>
+<!-- /omlement:fuss.htm -->��hM��      W�c�W�c�<�zpW�M�   8    :http://www.html-seminar.de/text-editor-sublime-text.htm necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Via: 1.1 ISA01TMG
+Content-Length: 18929
+Date: Tue, 04 Oct 2016 08:08:42 GMT
+Content-Type: text/html; charset=UTF-8
+Etag: "49f1-53d79d89f947a"
+Server: Apache
+Accept-Ranges: bytes
+Last-Modified: Tue, 27 Sep 2016 09:26:58 GMT
+ original-response-headers Via: 1.1 ISA01TMG
+Connection: Keep-Alive
+Proxy-Connection: Keep-Alive
+Content-Length: 18929
+Date: Tue, 04 Oct 2016 08:08:42 GMT
+Content-Type: text/html; charset=UTF-8
+Etag: "49f1-53d79d89f947a"
+Server: Apache
+Accept-Ranges: bytes
+Last-Modified: Tue, 27 Sep 2016 09:26:58 GMT
+ charset UTF-8 uncompressed-len 0 predictor::resource-count 15 predictor::http://www.html-seminar.de/css/design.css 1,1,1475568521,4097 predictor::http://www.html-seminar.de/js/slicknav.css 1,1,1475568521,4097 predictor::http://www.html-seminar.de/js/modernizr.js 1,1,1475568521,4097 predictor::http://www.html-seminar.de/bilder/html-seminar.jpg 1,1,1475568521,4097 predictor::http://www.html-seminar.de/bilder/html-video-tutorial-dvd-1-3-150h.png 1,1,1475568521,4097 predictor::http://vg03.met.vgwort.de/na/14c0912f27854d4c9166640e4bdccd77 1,1,1475568521,4096 predictor::http://www.html-seminar.de/bilder/buch-html-seminar-de.gif 1,1,1475568521,4097 predictor::http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js 1,1,1475568521,4097 predictor::http://www.html-seminar.de/js/jquery.slicknav.js 1,1,1475568521,4097 predictor::http://www.html-seminar.de/js/cookie-nachfrage.js 1,1,1475568521,4097 predictor::http://www.html-seminar.de/bilder/extern-link.gif 1,1,1475568521,4097 predictor::http://www.html-seminar.de/bilder/icons-links-hoch-rechts.gif 1,1,1475568521,4097 predictor::http://www.html-seminar.de/bilder/icon-aufzaehlung.gif 1,1,1475568521,4097 predictor::http://www.html-seminar.de/bilder/fehler-gefunden.png 1,1,1475568521,4097 predictor::http://www.html-seminar.de/bilder/pixel.png 1,1,1475568521,4097   I�

@@ -66,7 +66,7 @@ cf=function(a,b){ia=(new Date).getTime();if(p.google_q&&p.google_q.tags)Ie(a),p.
 if(!("innerHTML"in c))throw new T("adsbygoogle.push() error: 'element' is not a good DOM element.");}else if(c=Ue(),!c)throw new T("adsbygoogle.push() error: All ins elements in the DOM with class=adsbygoogle already have ads in them.");Re(c,b)}}},Ye=function(){kc();mc("aa::main",bf,df)},df=function(){var a=B.google_ad_modifications=B.google_ad_modifications||{};if(!a.plle){a.plle=!0;var b=a.eids=a.eids||[],a=a.loeids=a.loeids||[],c,d,e,f;c=R.D;d=c.s;if(!B.location||B.location.hash!="#google_plle_"+
 d){d=[c.u,d];e=new fd(na,na+oa-1);var g;(g=0>=oa||oa%d.length)||(g=Ke.j,g=!(g.start<=e.start&&g.j>=e.j));g?d=null:(g=vd(),d=null!==g&&e.start<=g&&e.j>=g?d[(g-na)%d.length]:null)}(e=d)&&a.push(e);d=xd;e==c.u?f=d.u:e==c.s?f=d.s:f="";f&&b.push(f);c=yd;(c=Le(pa,c.u,c.s))&&b.push(c);c=zd;(c=Le(ta,c.u,c.s))&&b.push(c);c=R.G;(e=Le(Ca,c.u,c.s))&&a.push(e);d=wd;e==c.u?f=d.u:e==c.s?f=d.s:f="";f&&b.push(f);Na.body||(c=R.F,(b=Le(Ea,c.u,c.s))&&a.push(b))}b=window.adsbygoogle;De(b);if(!b||!b.loaded){window.adsbygoogle=
 {push:Xe,loaded:!0};b&&ef(b.onload);try{Object.defineProperty(window.adsbygoogle,"onload",{set:ef})}catch(k){}}},ef=function(a){Yb(a)&&window.setTimeout(a,0)};Ye();}).call(this);
-ı,üo-X      Wﬂ∏aWﬂ∏a<È5Wﬂ≈µ   >    :http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js necko:classified 1 request-method GET response-head HTTP/1.1 200 OK
+‹‡i-X      WÍ·WÍ‡<hsWﬂ≈µ   >    :http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js necko:classified 1 request-method GET response-head HTTP/1.1 200 OK
 Via: 1.1 ISA01TMG
 Age: 188
 Expires: Mon, 19 Sep 2016 11:02:13 GMT

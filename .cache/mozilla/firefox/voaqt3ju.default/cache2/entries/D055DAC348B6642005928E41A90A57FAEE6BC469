@@ -1,0 +1,3473 @@
+/*! bde-mediaplayer - v.1.12.3, 20161013-165855  */
+window.de.bild.mediaplayer = window.de.bild.mediaplayer || {}, window.de.bild.mediaplayer.defaults = {
+    basePath: "http://code.bildstatic.de/2.21.1-cats-release--16.21/min/core/components/mediaplayer/",
+    themes: {
+        widget: {
+            css: "themes/widget/mediaplayer-widget.css",
+            controls: '{{pausetoggle}}  <div class="media-timerange-container-wrapper">{{timerange}} {{timeremaining}} {{liveindicator}}</div> <div class="mediabutton-container"><div class="mediabutton-box">{{sharemenu}} {{fullscreentoggle}} {{volumecontrols}}</div></div>'
+        },
+        sportbild: {
+            css: "themes/sportbild/mediaplayer-sportbild.css",
+            controls: '{{pausetoggle}}  <div class="media-timerange-container-wrapper">{{timerange}} {{timeremaining}} {{liveindicator}}</div> <div class="mediabutton-container"><div class="mediabutton-box">{{sharemenu}} {{fullscreentoggle}} {{volumecontrols}}</div></div>'
+        },
+        bundesliga: {
+            css: "themes/bundesliga/mediaplayer-bundesliga.css",
+            controls: '{{pausetoggle}} <span class="time-display">{{timedisplay}}{{durationdisplay}}</span>  <div class="media-timerange-container-wrapper">{{timerange}} {{timeremaining}} {{liveindicator}}</div> <div class="mediabutton-container"><div class="mediabutton-box"> {{sharemenu}} {{quality}} {{volumecontrols}} {{fullscreentoggle}} </div></div>'
+        }
+    },
+    apiPriority: [],
+    knownPlugins: {},
+    flashProvider: {
+        path: "assets/swf/Flex_video.swf"
+    },
+    vpaidProvider: {
+        wrapper: {
+            swfVPAIDProxy: "assets/swf/VPAIDPlayer.swf"
+        }
+    },
+    volume: 1,
+    muted: !1,
+    vast: {
+        prerollID: "9446",
+        postrollID: "9448",
+        timeout: 3e3,
+        siteId: 10045,
+        src: "http://ww251.smartadserver.com/gcall?siteid=[siteId]&pgname=[pagename]&fmtid=[format]&tmstp=[timestamp]&visit=M",
+        midrollStartFallback: 60
+    },
+    trackingPlugin: {
+        pixelURL: "pixel.bild.de",
+        pixelID: "850416555242498",
+        ivwImgURL: "http://bild.ivwbox.de/cgi-bin/ivw/FP/%IVWCODE%?zeit=",
+        trackIntervalInSec: 10
+    },
+    pluginsPath: {
+        controls: "js/mediaplayer-ui.min.js"
+    },
+    mediaprovidersLib: {
+        hls: "lib/js/hls.min.js",
+        dash: "",
+        threeJS: "lib/js/three.min.js",
+        threeSixty: "lib/js/jquery.valiant360.js"
+    },
+    endpoints: {
+        errorLog: de.bild.settings && de.bild.settings.urls && de.bild.settings.urls.modular1723 || "http://www.bild.de/modular1723.html"
+    },
+    pluginOpts: {},
+    qualities: [ {
+        name: "hoch",
+        val: 2500,
+        qlabel: "720p"
+    }, {
+        name: "mittel",
+        val: 1500,
+        qlabel: "480p"
+    }, {
+        name: "niedrig",
+        val: 800,
+        qlabel: "360p"
+    } ]
+};
+
+var swfobject = function() {
+    function f() {
+        if (!J) {
+            try {
+                var Z = j.getElementsByTagName("body")[0].appendChild(C("span"));
+                Z.parentNode.removeChild(Z);
+            } catch (aa) {
+                return;
+            }
+            J = !0;
+            for (var X = U.length, Y = 0; Y < X; Y++) U[Y]();
+        }
+    }
+    function K(X) {
+        J ? X() : U[U.length] = X;
+    }
+    function s(Y) {
+        if (typeof O.addEventListener != D) O.addEventListener("load", Y, !1); else if (typeof j.addEventListener != D) j.addEventListener("load", Y, !1); else if (typeof O.attachEvent != D) i(O, "onload", Y); else if ("function" == typeof O.onload) {
+            var X = O.onload;
+            O.onload = function() {
+                X(), Y();
+            };
+        } else O.onload = Y;
+    }
+    function h() {
+        T ? V() : H();
+    }
+    function V() {
+        var X = j.getElementsByTagName("body")[0], aa = C(r);
+        aa.setAttribute("type", q);
+        var Z = X.appendChild(aa);
+        if (Z) {
+            var Y = 0;
+            !function() {
+                if (typeof Z.GetVariable != D) {
+                    var ab = Z.GetVariable("$version");
+                    ab && (ab = ab.split(" ")[1].split(","), M.pv = [ parseInt(ab[0], 10), parseInt(ab[1], 10), parseInt(ab[2], 10) ]);
+                } else if (Y < 10) return Y++, void setTimeout(arguments.callee, 10);
+                X.removeChild(aa), Z = null, H();
+            }();
+        } else H();
+    }
+    function H() {
+        var ag = o.length;
+        if (ag > 0) for (var af = 0; af < ag; af++) {
+            var Y = o[af].id, ab = o[af].callbackFn, aa = {
+                success: !1,
+                id: Y
+            };
+            if (M.pv[0] > 0) {
+                var ae = c(Y);
+                if (ae) if (!F(o[af].swfVersion) || M.wk && M.wk < 312) if (o[af].expressInstall && A()) {
+                    var ai = {};
+                    ai.data = o[af].expressInstall, ai.width = ae.getAttribute("width") || "0", ai.height = ae.getAttribute("height") || "0", 
+                    ae.getAttribute("class") && (ai.styleclass = ae.getAttribute("class")), ae.getAttribute("align") && (ai.align = ae.getAttribute("align"));
+                    for (var ah = {}, X = ae.getElementsByTagName("param"), ac = X.length, ad = 0; ad < ac; ad++) "movie" != X[ad].getAttribute("name").toLowerCase() && (ah[X[ad].getAttribute("name")] = X[ad].getAttribute("value"));
+                    P(ai, ah, Y, ab);
+                } else p(ae), ab && ab(aa); else w(Y, !0), ab && (aa.success = !0, aa.ref = z(Y), 
+                ab(aa));
+            } else if (w(Y, !0), ab) {
+                var Z = z(Y);
+                Z && typeof Z.SetVariable != D && (aa.success = !0, aa.ref = Z), ab(aa);
+            }
+        }
+    }
+    function z(aa) {
+        var X = null, Y = c(aa);
+        if (Y && "OBJECT" == Y.nodeName) if (typeof Y.SetVariable != D) X = Y; else {
+            var Z = Y.getElementsByTagName(r)[0];
+            Z && (X = Z);
+        }
+        return X;
+    }
+    function A() {
+        return !a && F("6.0.65") && (M.win || M.mac) && !(M.wk && M.wk < 312);
+    }
+    function P(aa, ab, X, Z) {
+        a = !0, E = Z || null, B = {
+            success: !1,
+            id: X
+        };
+        var ae = c(X);
+        if (ae) {
+            "OBJECT" == ae.nodeName ? (l = g(ae), Q = null) : (l = ae, Q = X), aa.id = R, (typeof aa.width == D || !/%$/.test(aa.width) && parseInt(aa.width, 10) < 310) && (aa.width = "310"), 
+            (typeof aa.height == D || !/%$/.test(aa.height) && parseInt(aa.height, 10) < 137) && (aa.height = "137"), 
+            j.title = j.title.slice(0, 47) + " - Flash Player Installation";
+            var ad = M.ie && M.win ? "ActiveX" : "PlugIn", ac = "MMredirectURL=" + O.location.toString().replace(/&/g, "%26") + "&MMplayerType=" + ad + "&MMdoctitle=" + j.title;
+            if (typeof ab.flashvars != D ? ab.flashvars += "&" + ac : ab.flashvars = ac, M.ie && M.win && 4 != ae.readyState) {
+                var Y = C("div");
+                X += "SWFObjectNew", Y.setAttribute("id", X), ae.parentNode.insertBefore(Y, ae), 
+                ae.style.display = "none", function() {
+                    4 == ae.readyState ? ae.parentNode.removeChild(ae) : setTimeout(arguments.callee, 10);
+                }();
+            }
+            u(aa, ab, X);
+        }
+    }
+    function p(Y) {
+        if (M.ie && M.win && 4 != Y.readyState) {
+            var X = C("div");
+            Y.parentNode.insertBefore(X, Y), X.parentNode.replaceChild(g(Y), X), Y.style.display = "none", 
+            function() {
+                4 == Y.readyState ? Y.parentNode.removeChild(Y) : setTimeout(arguments.callee, 10);
+            }();
+        } else Y.parentNode.replaceChild(g(Y), Y);
+    }
+    function g(ab) {
+        var aa = C("div");
+        if (M.win && M.ie) aa.innerHTML = ab.innerHTML; else {
+            var Y = ab.getElementsByTagName(r)[0];
+            if (Y) {
+                var ad = Y.childNodes;
+                if (ad) for (var X = ad.length, Z = 0; Z < X; Z++) 1 == ad[Z].nodeType && "PARAM" == ad[Z].nodeName || 8 == ad[Z].nodeType || aa.appendChild(ad[Z].cloneNode(!0));
+            }
+        }
+        return aa;
+    }
+    function u(ai, ag, Y) {
+        var X, aa = c(Y);
+        if (M.wk && M.wk < 312) return X;
+        if (aa) if (typeof ai.id == D && (ai.id = Y), M.ie && M.win) {
+            var ah = "";
+            for (var ae in ai) ai[ae] != Object.prototype[ae] && ("data" == ae.toLowerCase() ? ag.movie = ai[ae] : "styleclass" == ae.toLowerCase() ? ah += ' class="' + ai[ae] + '"' : "classid" != ae.toLowerCase() && (ah += " " + ae + '="' + ai[ae] + '"'));
+            var af = "";
+            for (var ad in ag) ag[ad] != Object.prototype[ad] && (af += '<param name="' + ad + '" value="' + ag[ad] + '" />');
+            aa.outerHTML = '<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"' + ah + ">" + af + "</object>", 
+            N[N.length] = ai.id, X = c(ai.id);
+        } else {
+            var Z = C(r);
+            Z.setAttribute("type", q);
+            for (var ac in ai) ai[ac] != Object.prototype[ac] && ("styleclass" == ac.toLowerCase() ? Z.setAttribute("class", ai[ac]) : "classid" != ac.toLowerCase() && Z.setAttribute(ac, ai[ac]));
+            for (var ab in ag) ag[ab] != Object.prototype[ab] && "movie" != ab.toLowerCase() && e(Z, ab, ag[ab]);
+            aa.parentNode.replaceChild(Z, aa), X = Z;
+        }
+        return X;
+    }
+    function e(Z, X, Y) {
+        var aa = C("param");
+        aa.setAttribute("name", X), aa.setAttribute("value", Y), Z.appendChild(aa);
+    }
+    function y(Y) {
+        var X = c(Y);
+        X && "OBJECT" == X.nodeName && (M.ie && M.win ? (X.style.display = "none", function() {
+            4 == X.readyState ? b(Y) : setTimeout(arguments.callee, 10);
+        }()) : X.parentNode.removeChild(X));
+    }
+    function b(Z) {
+        var Y = c(Z);
+        if (Y) {
+            for (var X in Y) "function" == typeof Y[X] && (Y[X] = null);
+            Y.parentNode.removeChild(Y);
+        }
+    }
+    function c(Z) {
+        var X = null;
+        try {
+            X = j.getElementById(Z);
+        } catch (Y) {}
+        return X;
+    }
+    function C(X) {
+        return j.createElement(X);
+    }
+    function i(Z, X, Y) {
+        Z.attachEvent(X, Y), I[I.length] = [ Z, X, Y ];
+    }
+    function F(Z) {
+        var Y = M.pv, X = Z.split(".");
+        return X[0] = parseInt(X[0], 10), X[1] = parseInt(X[1], 10) || 0, X[2] = parseInt(X[2], 10) || 0, 
+        Y[0] > X[0] || Y[0] == X[0] && Y[1] > X[1] || Y[0] == X[0] && Y[1] == X[1] && Y[2] >= X[2];
+    }
+    function v(ac, Y, ad, ab) {
+        if (!M.ie || !M.mac) {
+            var aa = j.getElementsByTagName("head")[0];
+            if (aa) {
+                var X = ad && "string" == typeof ad ? ad : "screen";
+                if (ab && (n = null, G = null), !n || G != X) {
+                    var Z = C("style");
+                    Z.setAttribute("type", "text/css"), Z.setAttribute("media", X), n = aa.appendChild(Z), 
+                    M.ie && M.win && typeof j.styleSheets != D && j.styleSheets.length > 0 && (n = j.styleSheets[j.styleSheets.length - 1]), 
+                    G = X;
+                }
+                M.ie && M.win ? n && typeof n.addRule == r && n.addRule(ac, Y) : n && typeof j.createTextNode != D && n.appendChild(j.createTextNode(ac + " {" + Y + "}"));
+            }
+        }
+    }
+    function w(Z, X) {
+        if (m) {
+            var Y = X ? "visible" : "hidden";
+            J && c(Z) ? c(Z).style.visibility = Y : v("#" + Z, "visibility:" + Y);
+        }
+    }
+    function L(Y) {
+        var Z = /[\\\"<>\.;]/, X = null != Z.exec(Y);
+        return X && typeof encodeURIComponent != D ? encodeURIComponent(Y) : Y;
+    }
+    var l, Q, E, B, n, G, D = "undefined", r = "object", S = "Shockwave Flash", W = "ShockwaveFlash.ShockwaveFlash", q = "application/x-shockwave-flash", R = "SWFObjectExprInst", x = "onreadystatechange", O = window, j = document, t = navigator, T = !1, U = [ h ], o = [], N = [], I = [], J = !1, a = !1, m = !0, M = function() {
+        var aa = typeof j.getElementById != D && typeof j.getElementsByTagName != D && typeof j.createElement != D, ah = t.userAgent.toLowerCase(), Y = t.platform.toLowerCase(), ae = Y ? /win/.test(Y) : /win/.test(ah), ac = Y ? /mac/.test(Y) : /mac/.test(ah), af = !!/webkit/.test(ah) && parseFloat(ah.replace(/^.*webkit\/(\d+(\.\d+)?).*$/, "$1")), X = !1, ag = [ 0, 0, 0 ], ab = null;
+        if (typeof t.plugins != D && typeof t.plugins[S] == r) ab = t.plugins[S].description, 
+        !ab || typeof t.mimeTypes != D && t.mimeTypes[q] && !t.mimeTypes[q].enabledPlugin || (T = !0, 
+        X = !1, ab = ab.replace(/^.*\s+(\S+\s+\S+$)/, "$1"), ag[0] = parseInt(ab.replace(/^(.*)\..*$/, "$1"), 10), 
+        ag[1] = parseInt(ab.replace(/^.*\.(.*)\s.*$/, "$1"), 10), ag[2] = /[a-zA-Z]/.test(ab) ? parseInt(ab.replace(/^.*[a-zA-Z]+(.*)$/, "$1"), 10) : 0); else if (typeof O.ActiveXObject != D) try {
+            var ad = new ActiveXObject(W);
+            ad && (ab = ad.GetVariable("$version"), ab && (X = !0, ab = ab.split(" ")[1].split(","), 
+            ag = [ parseInt(ab[0], 10), parseInt(ab[1], 10), parseInt(ab[2], 10) ]));
+        } catch (Z) {}
+        return {
+            w3: aa,
+            pv: ag,
+            wk: af,
+            ie: X,
+            win: ae,
+            mac: ac
+        };
+    }();
+    (function() {
+        M.w3 && ((typeof j.readyState != D && "complete" == j.readyState || typeof j.readyState == D && (j.getElementsByTagName("body")[0] || j.body)) && f(), 
+        J || (typeof j.addEventListener != D && j.addEventListener("DOMContentLoaded", f, !1), 
+        M.ie && M.win && (j.attachEvent(x, function() {
+            "complete" == j.readyState && (j.detachEvent(x, arguments.callee), f());
+        }), O == top && !function() {
+            if (!J) {
+                try {
+                    j.documentElement.doScroll("left");
+                } catch (X) {
+                    return void setTimeout(arguments.callee, 0);
+                }
+                f();
+            }
+        }()), M.wk && !function() {
+            if (!J) return /loaded|complete/.test(j.readyState) ? void f() : void setTimeout(arguments.callee, 0);
+        }(), s(f)));
+    })(), function() {
+        M.ie && M.win && window.attachEvent("onunload", function() {
+            for (var ac = I.length, ab = 0; ab < ac; ab++) I[ab][0].detachEvent(I[ab][1], I[ab][2]);
+            for (var Z = N.length, aa = 0; aa < Z; aa++) y(N[aa]);
+            for (var Y in M) M[Y] = null;
+            M = null;
+            for (var X in swfobject) swfobject[X] = null;
+            swfobject = null;
+        });
+    }();
+    return {
+        registerObject: function(ab, X, aa, Z) {
+            if (M.w3 && ab && X) {
+                var Y = {};
+                Y.id = ab, Y.swfVersion = X, Y.expressInstall = aa, Y.callbackFn = Z, o[o.length] = Y, 
+                w(ab, !1);
+            } else Z && Z({
+                success: !1,
+                id: ab
+            });
+        },
+        getObjectById: function(X) {
+            if (M.w3) return z(X);
+        },
+        embedSWF: function(ab, ah, ae, ag, Y, aa, Z, ad, af, ac) {
+            var X = {
+                success: !1,
+                id: ah
+            };
+            M.w3 && !(M.wk && M.wk < 312) && ab && ah && ae && ag && Y ? (w(ah, !1), K(function() {
+                ae += "", ag += "";
+                var aj = {};
+                if (af && typeof af === r) for (var al in af) aj[al] = af[al];
+                aj.data = ab, aj.width = ae, aj.height = ag;
+                var am = {};
+                if (ad && typeof ad === r) for (var ak in ad) am[ak] = ad[ak];
+                if (Z && typeof Z === r) for (var ai in Z) typeof am.flashvars != D ? am.flashvars += "&" + ai + "=" + Z[ai] : am.flashvars = ai + "=" + Z[ai];
+                if (F(Y)) {
+                    var an = u(aj, am, ah);
+                    aj.id == ah && w(ah, !0), X.success = !0, X.ref = an;
+                } else {
+                    if (aa && A()) return aj.data = aa, void P(aj, am, ah, ac);
+                    w(ah, !0);
+                }
+                ac && ac(X);
+            })) : ac && ac(X);
+        },
+        switchOffAutoHideShow: function() {
+            m = !1;
+        },
+        ua: M,
+        getFlashPlayerVersion: function() {
+            return {
+                major: M.pv[0],
+                minor: M.pv[1],
+                release: M.pv[2]
+            };
+        },
+        hasFlashPlayerVersion: F,
+        createSWF: function(Z, Y, X) {
+            return M.w3 ? u(Z, Y, X) : void 0;
+        },
+        showExpressInstall: function(Z, aa, X, Y) {
+            M.w3 && A() && P(Z, aa, X, Y);
+        },
+        removeSWF: function(X) {
+            M.w3 && y(X);
+        },
+        createCSS: function(aa, Z, Y, X) {
+            M.w3 && v(aa, Z, Y, X);
+        },
+        addDomLoadEvent: K,
+        addLoadEvent: s,
+        getQueryParamValue: function(aa) {
+            var Z = j.location.search || j.location.hash;
+            if (Z) {
+                if (/\?/.test(Z) && (Z = Z.split("?")[1]), null == aa) return L(Z);
+                for (var Y = Z.split("&"), X = 0; X < Y.length; X++) if (Y[X].substring(0, Y[X].indexOf("=")) == aa) return L(Y[X].substring(Y[X].indexOf("=") + 1));
+            }
+            return "";
+        },
+        expressInstallCallback: function() {
+            if (a) {
+                var X = c(R);
+                X && l && (X.parentNode.replaceChild(l, X), Q && (w(Q, !0), M.ie && M.win && (l.style.display = "block")), 
+                E && E(B)), a = !1;
+            }
+        }
+    };
+}();
+
+!function(window, document, $, undefined) {
+    "use strict";
+    var console = window.console;
+    window.de = window.de || {}, window.de.bild = window.de.bild || {};
+    var mediaplayer = window.mediaplayer = window.de.bild.mediaplayer = window.de.bild.mediaplayer || {};
+    mediaplayer.version = "1.12.3 (20161013-165900)", mediaplayer.$ = window.jQuery, mediaplayer.createObj = function(proto) {
+        var F = function() {};
+        return F.prototype = proto, new F();
+    }, mediaplayer.mixin = function(base, ext) {
+        var prop;
+        for (prop in ext) ext.hasOwnProperty(prop) && (base[prop] = ext[prop]);
+        return base;
+    }, mediaplayer.extend = function() {
+        function _extend(r, s) {
+            var o = mediaplayer.createObj(s);
+            return mediaplayer.mixin(o, r), o.super = s, o;
+        }
+        function extend(r) {
+            var supers = slice.call(arguments, 1), o = supers.shift();
+            return r = _extend(r, o);
+        }
+        var slice = Array.prototype.slice;
+        return extend;
+    }(), mediaplayer.createEventTarget = function() {
+        return {
+            fire: function(evt, data) {
+                return $.event.trigger(evt, data, this, !0);
+            },
+            on: function(evt, fn) {
+                return $.event.add(this, evt, fn), this;
+            },
+            off: function(evt, fn) {
+                return $.event.remove(this, evt, fn), this;
+            }
+        };
+    }, mediaplayer.ERRORS = {
+        DATAERROR: "DATAERROR",
+        MEDIASUPPORT: "MEDIASUPPORT",
+        UNKNOW: "UNKNOW"
+    }, mediaplayer.settings = {
+        volumeKey: "mp.volume",
+        muteKey: "mp.mute"
+    }, mediaplayer.is = {
+        mobile: window.matchMedia && matchMedia("(max-device-width: 756px)").matches
+    }, mediaplayer.log = function() {
+        mediaplayer.debug && window.console && console.log.apply(console, arguments);
+    }, $.each([ "warn", "error" ], function(i, name) {
+        mediaplayer[name] = function() {
+            var fn = console[name in console ? name : "log"];
+            fn.apply && fn.apply(console, arguments);
+        };
+    }), mediaplayer.isMobile = /mobile|ipad|iphone|ipod|android/i.test(navigator.userAgent) && (!window.swfobject || !swfobject.hasFlashPlayerVersion("10.0.3")), 
+    mediaplayer.mediaapi = [ "play", "pause", "load", "muted", "volume", "currentTime", "controls", "getBuffered", "getDuration", "isEnded", "isPlay", "isPlaying", "isWaiting", "isLoadedmetadata", "isProgress" ], 
+    mediaplayer.controllerProto = mediaplayer.extend({
+        construct: function(dom, data, opts) {
+            this.$dom = $(dom).empty(), this.data = data, this.$mediaBox = $("<div />").prop({
+                className: "media-box"
+            }).appendTo(this.$dom), this.$mediaDisplay = $("<div />").prop({
+                className: "media-display"
+            }).appendTo(this.$mediaBox), this.$pluginDisplay = $("<div />").prop({
+                className: "media-pluginbox"
+            }).appendTo(this.$mediaBox), this.$posterWrapper = $([]), this.index = -1, this.currentItem = null, 
+            this._isVideoStarted = !1, this._isClipStarted = !1, this.plugins = {}, this.mediaprovider = null, 
+            this.providerName = "", this.sharedPlayerStates = {}, this.touchHTMLProvider(opts);
+        },
+        setup: function(data) {
+            var that = this;
+            this.data = data, "volume" in data && (this.sharedPlayerStates.volume = data.volume), 
+            "muted" in data && (this.sharedPlayerStates.muted = data.muted), this.setupEvents(), 
+            this._createClipLifeCycle(), this.data.autoplay && window.setTimeout(function() {
+                that.play();
+            }), this.$dom.on("remove", function() {
+                that.destroy();
+            }).addClass(data.addClass || "landscape"), this.fire("created"), mediaplayer.isMobile && this.index < 0 && this.loadIndex(0);
+        },
+        touchHTMLProvider: function(opts) {
+            mediaplayer.isMobile && (this.activateProvider("html5"), !opts || !opts.prepareProvider || this.data && this.data.sharedMedia || this.mediaprovider.media.load());
+        },
+        setupEvents: function() {
+            this.on("play", function() {
+                this._isVideoStarted = !0, this.$dom.trigger("updateplayersize"), this._isClipStarted || (this.play(), 
+                this.fire("_beforestarted"), this._isClipStarted = !0, this.fire("started"));
+            }), this.on("volumechange", function() {
+                try {
+                    window.sessionStorage.setItem(mediaplayer.settings.volumeKey, this.mediaprovider.volume()), 
+                    window.sessionStorage.setItem(mediaplayer.settings.muteKey, this.mediaprovider.muted());
+                } catch (e) {}
+            }), this._handleError();
+        },
+        on: function(evt, fn, ignoreCurrentState) {
+            var stateMethod, cleanEvt = evt.split(".")[0];
+            return ignoreCurrentState || (stateMethod = "is" + cleanEvt.charAt(0).toUpperCase() + cleanEvt.substring(1)), 
+            this.super.on.apply(this, arguments), this[stateMethod] && this[stateMethod]() && fn.call(this, $.Event(cleanEvt), {
+                onAdd: !0
+            }), this;
+        },
+        DOMEVENTS: {
+            play: !0,
+            pause: !0,
+            started: !0,
+            doom: !0,
+            created: !0,
+            volumechange: !0
+        },
+        fire: function(event) {
+            var ret = this.super.fire.apply(this, arguments);
+            return this.DOMEVENTS[event] && this.$dom.trigger("mediaplayer/" + event), ret;
+        },
+        destroyProvider: function() {
+            this.mediaprovider && ("vpaid" != this.providerName && (this.sharedPlayerStates.volume = this.volume(), 
+            this.sharedPlayerStates.muted = this.muted(), this.sharedPlayerStates.muted && !this.sharedPlayerStates.volume && (this.sharedPlayerStates.volume = 1)), 
+            this.mediaprovider.destroy(), this.mediaprovider = null, this.providerName = "", 
+            this.$mediaBox.removeAttr("data-provider"));
+        },
+        getPlayableSrcForProvider: function(srces, providerName) {
+            var i, provider = mediaplayer.mediaProviders[providerName], src = null;
+            if (provider) for (i = 0; i < srces.length; i++) if ((!srces[i].failed || !srces[i].failed[providerName]) && (srces[i].type || mediaplayer.warn("no type set for media source. Try to load it anyway.", srces[i], this), 
+            provider.canPlayType(srces[i].type, srces[i].src))) {
+                src = srces[i];
+                break;
+            }
+            return src;
+        },
+        togglePlay: function() {
+            this[this.isPlaying() ? "pause" : "play"]();
+        },
+        activateProvider: function(providerName, providerObject) {
+            var mediaProviders = mediaplayer.mediaProviders;
+            providerName != this.providerName && (this.mediaprovider = providerObject || mediaplayer.createObj(mediaProviders[providerName].proto), 
+            this.providerName = providerName, this.$mediaBox.attr({
+                "data-provider": providerName
+            }), providerObject ? this.sharedProvider && (this.releaseSharedMedia(), this.sharedProvider = null) : this.mediaprovider.construct(this));
+        },
+        isJSVpaid: function(srces) {
+            return srces && srces[0] && /vpaid.+script/i.test(srces[0].type || "");
+        },
+        shareProvider: function() {
+            this.sharedProvider = {
+                name: this.providerName,
+                provider: this.mediaprovider
+            };
+        },
+        activateProviderAndCurrentSrc: function(srces) {
+            var provider, i, src = this.getPlayableSrcForProvider(srces, this.providerName);
+            if (src || !this.sharedProvider || this.isJSVpaid(srces) || (src = this.getPlayableSrcForProvider(srces, this.sharedProvider.name), 
+            src ? (this.destroyProvider(), this.activateProvider(this.sharedProvider.name, this.sharedProvider.provider)) : (this.sharedProvider.provider.destroy(), 
+            this.sharedProvider = null)), !src) for (this.supportSharedMedia() && this.isJSVpaid(srces) ? this.shareProvider() : this.destroyProvider(), 
+            i = 0; i < this.data.apiPriority.length; i++) if (provider = this.data.apiPriority[i], 
+            src = this.getPlayableSrcForProvider(srces, provider)) {
+                this.activateProvider(provider);
+                break;
+            }
+            this.currentSrc = src;
+        },
+        sharePlayerState: function() {
+            var that = this;
+            "vpaid" != this.providerName && ($.each(this.sharedPlayerStates, function(name, value) {
+                that[name](value);
+            }), this.sharedPlayerStates = {});
+        },
+        load: function(clipItem, start) {
+            this.activateProviderAndCurrentSrc(clipItem.srces), this.$mediaBox.attr({
+                "data-mediatype": clipItem.type
+            }), this.currentItem = clipItem, this.index = $.inArray(clipItem, this.data.clipList), 
+            this._isClipStarted = !1, this.mediaprovider && this.currentSrc ? (this.fire("beforeload"), 
+            this.error(null), this.mediaprovider.load(this.currentSrc.src, this.data.poster), 
+            this.sharePlayerState(), this.fire("afterload"), start && this.play()) : (this.error({
+                code: mediaplayer.ERRORS.MEDIASUPPORT,
+                details: "canPlayType: false"
+            }), this.fire("error"));
+        },
+        loadNext: function() {
+            var nextIndex = this.index + 1;
+            return this.loadIndex(nextIndex);
+        },
+        getClipByType: function(type) {
+            var i, clip;
+            for (i = 0; i < this.data.clipList.length; i++) if (this.data.clipList[i].type == type) {
+                clip = this.data.clipList[i];
+                break;
+            }
+            return clip;
+        },
+        loadVideoByType: function(type) {
+            var clip = this.getClipByType(type);
+            clip && this.load(clip);
+        },
+        loadIndex: function(index) {
+            return index > -1 && index < this.data.clipList.length && (this.load(this.data.clipList[index]), 
+            !0);
+        },
+        play: function() {
+            if (this.index == -1 && this.loadNext(), "abort" != this.fire("beforecontrollerplay")) return this.mediaprovider ? this.mediaprovider.play.apply(this.mediaprovider, arguments) : void 0;
+        },
+        isStarted: function() {
+            return this._isClipStarted;
+        },
+        isCliperror: function() {
+            return this._error;
+        },
+        reset: function() {
+            this.index = -1, this.destroyProvider(), this.fire("reset");
+        },
+        destroy: function() {
+            this.fire("destroy"), this.off(), this.destroyProvider(), this.$mediaBox.remove(), 
+            this.$pluginDisplay.remove(), this.$dom.removeData("mediaplayer");
+        },
+        error: function(error) {
+            return arguments.length ? void (this._error = error) : this._error;
+        },
+        _handleError: function() {
+            var isPlay, that = this, load = function() {
+                that.load(that.currentItem, isPlay);
+            };
+            this.on("error", function(e) {
+                isPlay = !1, that.error() || that.error({
+                    code: mediaplayer.ERRORS.UNKNOW,
+                    details: e
+                }), mediaplayer.error("mediaplayer error:", that.error(), that.currentItem, that.currentSrc), 
+                that.currentItem && that.currentSrc ? (that.currentSrc.failed || (that.currentSrc.failed = {}), 
+                that.currentSrc.failed[that.providerName] = !0, isPlay = that.isPlay(), that.destroyProvider(), 
+                setTimeout(load)) : that.fire("cliperror");
+            });
+        },
+        _createClipLifeCycle: function() {
+            var timer, evt, that = this, isMainError = !1, playNext = function() {
+                that.loadNext() ? that._isVideoStarted && that.play() : (isMainError || "abort" == that.fire("beforedoom") || that.fire("doom"), 
+                that.data.loop && !isMainError && (that.loadIndex(0), that.play()));
+            };
+            this.on("ended cliperror", function(e) {
+                clearTimeout(timer), evt = e, "cliperror" == e.type && mediaplayer.error("mediaplayer cliperror:", that.error(), that.currentItem), 
+                "cliperror" == e.type && that.currentItem && "main" == that.currentItem.type ? ("cliperror" == e.type && !that.currentItem || "main" == that.currentItem.type) && (isMainError = !0, 
+                that.fire("maincliperror")) : ("cliperror" != e.type && (isMainError = !1), timer = setTimeout(playNext));
+            });
+        },
+        switchSource: function(newSrc) {
+            return this.mediaprovider._switchSource(newSrc);
+        }
+    }, mediaplayer.createEventTarget());
+    var proxyProvider = function(i, name) {
+        mediaplayer.controllerProto[name] || (mediaplayer.controllerProto[name] = function() {
+            if (this.mediaprovider && this.mediaprovider[name]) return this.mediaprovider[name].apply(this.mediaprovider, arguments);
+        });
+    };
+    $.each(mediaplayer.mediaapi, proxyProvider), $.each([ "supportSharedMedia", "requestSharedMedia", "releaseSharedMedia" ], proxyProvider), 
+    mediaplayer.mediaProviders = {}, mediaplayer.addMediaProvider = function(name, descriptor) {
+        mediaplayer.mediaProviders[name] = descriptor, $.inArray(name, mediaplayer.defaults.apiPriority) == -1 && mediaplayer.defaults.apiPriority.push(name), 
+        mediaplayer.mediaapi.forEach && mediaplayer.mediaapi.forEach(function(fn) {
+            descriptor.proto[fn] || mediaplayer.log(fn + " not implemented in " + name + " mediaprovider");
+        });
+    }, mediaplayer.themeManager = {
+        load: function(opts) {
+            var themeKey = opts.$dom.attr("data-theme"), theme = opts.themes[themeKey] || opts.themes.default;
+            return theme && theme.css && (theme.name = themeKey, mediaplayer.componentLoader.load(theme), 
+            opts.activeTheme = theme), theme;
+        }
+    }, mediaplayer.dataLoader = function() {
+        function transformPipe(transformators, data, opts, $dom) {
+            var deferred = $.Deferred(), index = -1, next = function(data) {
+                index++, transformators[index] ? transformators[index](data, next, opts, $dom) : deferred.resolve(data);
+            };
+            return next(data), deferred.promise();
+        }
+        function load(url, opts) {
+            var deferred = $.Deferred(), onComplete = function(data, status) {
+                if ("success" == status) {
+                    if ("string" == typeof data) try {
+                        data = JSON.parse(data);
+                    } catch (e) {
+                        mediaplayer.warn("MediaPlayer :: JSON Parse failed.");
+                    }
+                    if (data.initialData = $.extend(!0, {}, data), $.extend(!0, data, opts), data.dataUrl || (data.dataUrl = url), 
+                    data.errorCode) return void deferred.reject(opts, data.errorCode);
+                    $.when(transformPipe(transformators, data, opts)).then(function(data) {
+                        data.clipList ? deferred.resolve(data) : deferred.reject(opts, "noClipList");
+                    });
+                }
+            };
+            return "string" == typeof url ? $.ajax({
+                url: url
+            }).done(onComplete).fail(function(xhr) {
+                deferred.reject(opts, xhr);
+            }) : onComplete(url, "success"), deferred.promise();
+        }
+        function addTransformator(fn) {
+            transformators.push(fn);
+        }
+        var transformators = [];
+        return {
+            load: load,
+            addTransformator: addTransformator,
+            _getTransformators: function() {
+                return transformators;
+            },
+            _setTransformators: function(newTransformators) {
+                transformators = newTransformators;
+            }
+        };
+    }(), mediaplayer.core = {
+        create: function(dom, data, opts) {
+            var $dom = $(dom), deferred = $.Deferred(), promise = deferred.promise(), sessionOpts = {};
+            try {
+                window.sessionStorage.getItem(mediaplayer.settings.volumeKey) && (sessionOpts.volume = parseFloat(window.sessionStorage.getItem(mediaplayer.settings.volumeKey))), 
+                window.sessionStorage.getItem(mediaplayer.settings.muteKey) && (sessionOpts.muted = "true" == window.sessionStorage.getItem(mediaplayer.settings.muteKey));
+            } catch (e) {}
+            var mediaController = mediaplayer.createObj(mediaplayer.controllerProto);
+            return data || (data = $dom.data("media") || {}), opts = $.extend(!0, {}, mediaplayer.defaults, sessionOpts, opts, {
+                $dom: $dom
+            }), mediaplayer.themeManager.load(opts), this.destroy(dom), $dom.data("mediaplayer", promise), 
+            mediaController.construct(dom, data, opts), mediaplayer.dataLoader.load(data, opts).done(function(processedData) {
+                mediaController.setup(processedData), mediaplayer.pluginManager.registerController(mediaController), 
+                deferred.resolveWith(mediaController, [ mediaController ]);
+            }).fail(function(opts, error) {
+                opts.clipList || (opts.clipList = []), mediaController.setup(opts), mediaController.error({
+                    code: mediaplayer.ERRORS.DATAERROR,
+                    details: error,
+                    data: data
+                }), mediaplayer.pluginManager.registerController(mediaController), mediaController.fire("error"), 
+                deferred.rejectWith(mediaController, [ mediaController ]);
+            }), promise;
+        },
+        destroy: function(dom) {
+            var oldPromise = $(dom).data("mediaplayer");
+            oldPromise && oldPromise.then && oldPromise.done(function() {
+                this.destroy();
+            });
+        }
+    }, mediaplayer.componentLoader = function() {
+        function loadJs(src) {
+            return $.ajax({
+                url: src,
+                dataType: "script",
+                cache: !0,
+                global: !1,
+                crossDomain: !0
+            });
+        }
+        function loadCss(src) {
+            $('<link rel="stylesheet" />').appendTo("head").attr({
+                href: src
+            });
+        }
+        function load(component) {
+            var pseudoPromise, id = component.js || component.css, basePath = mediaplayer.defaults.basePath || "";
+            return id ? (component.css && !components[component.css] && (loadCss(basePath + component.css), 
+            pseudoPromise = $.Deferred(), components[component.css] = pseudoPromise.promise(), 
+            setTimeout(function() {
+                pseudoPromise.resolve();
+            })), component.js && !components[component.js] && (components[component.js] = loadJs(basePath + component.js)), 
+            components[id]) : (mediaplayer.warn("could not find id/path for component", component), 
+            rejectedPromise.promise());
+        }
+        var components = {}, rejectedPromise = $.Deferred();
+        return rejectedPromise.reject("Unknown Plugin"), {
+            load: load,
+            _getComponents: function() {
+                return components;
+            },
+            _clearComponents: function() {
+                components = {};
+            }
+        };
+    }();
+    var pluginId = 0;
+    mediaplayer.defaultPlugin = {
+        on: function(evt, fn, ignoreCurrentState) {
+            return this.controller.on(evt + "." + this.id, $.proxy(fn, this), ignoreCurrentState), 
+            this;
+        },
+        off: function(evt, fn) {
+            return this.controller.off(evt + "." + this.id, fn), this;
+        },
+        fire: function(evt, data) {
+            return this.controller.fire(evt, data);
+        },
+        externalBridge: function(pluginMethodName, args) {
+            var ret;
+            return pluginMethodName = pluginMethodName.split("."), args || (args = []), ret = this.fire(pluginMethodName[0], [ {
+                fn: pluginMethodName[1],
+                args: args
+            } ]);
+        },
+        construct: function(controller, params, forClip, $container) {
+            function init() {
+                started || (started = !0, that.init());
+            }
+            function destroy() {
+                started && (started = !1, that.destroy());
+            }
+            var started = !1, that = this;
+            pluginId++, this.controller = controller, this.id = "id-" + pluginId, this.params = params, 
+            this._forClip = forClip, this.activeChildPlugins = [], this.foundChildPlugins = [], 
+            this.$container = $container || this.controller.$pluginDisplay, controller.plugins[this.name] = this, 
+            this.on(this.name, function(e, data) {
+                return this[data.fn] && this[data.fn].apply(this, data.args);
+            }), forClip ? (this.on("started", function() {
+                forClip == controller.currentItem && init();
+            }), this.on("_beforestarted", function() {
+                forClip != controller.currentItem && destroy();
+            })) : init(), this.on("destroy", destroy);
+        },
+        appendChildPlugins: function($container, template) {
+            var $dom, childPlugins = this._getChildPluginHTML(template);
+            return this.foundChildPlugins = childPlugins.foundChildPlugins, $dom = $(childPlugins.html).appendTo($container), 
+            this._activateChildPlugins($container), $dom;
+        },
+        _getChildPluginHTML: function() {
+            var cache = {}, regTemplate = /\{\{(.+?)\}\}/gim;
+            return function(template, invalidCache) {
+                var childPlugins = mediaplayer.pluginManager.installedPlugins, ret = {
+                    foundChildPlugins: [],
+                    html: ""
+                };
+                return template && (cache[template] && !invalidCache || (cache[template] = {
+                    foundChildPlugins: []
+                }, cache[template].html = template.replace(regTemplate, function(match, matchName) {
+                    return childPlugins[matchName] ? ($.inArray(matchName, cache[template].foundChildPlugins) == -1 && cache[template].foundChildPlugins.push(matchName), 
+                    '<div class="media-' + matchName + '-container " />') : match;
+                })), ret = cache[template]), ret;
+            };
+        }(),
+        _activateChildPlugins: function(container) {
+            var that = this, childPlugins = mediaplayer.pluginManager.installedPlugins;
+            container && $.each(this.foundChildPlugins, function(i, name) {
+                $(".media-" + name + "-container", container).each(function() {
+                    mediaplayer.pluginManager.loadPlugins([ childPlugins[name] ], that.controller, that._forClip, $(this));
+                });
+            });
+        },
+        destroy: function() {
+            this.controller.off("." + this.id), this.controller.plugins[this.name] == this && delete this.controller.plugins[this.name], 
+            this.controller = null;
+        }
+    }, mediaplayer.pluginManager = function() {
+        function add(pluginName, pluginProto, required) {
+            var registeredDefinitions = mediaplayer.defaults.knownPlugins;
+            return pluginProto.init ? (pluginProto.name = pluginName, pluginProto = mediaplayer.extend(pluginProto, mediaplayer.defaultPlugin), 
+            installedPlugins[pluginName] = pluginProto, required && requiredPlugins.push(pluginName)) : registeredDefinitions[pluginName] = pluginProto, 
+            pluginProto;
+        }
+        function addChildPlugin(pluginDesc) {
+            add(pluginDesc.name, $.extend(pluginDesc, {
+                init: function() {
+                    this.setup(this, this.$container, this.params);
+                }
+            }));
+        }
+        function loadPlugins(plugins, controller, forClip, $container) {
+            var registeredDefinitions = mediaplayer.defaults.knownPlugins;
+            plugins ? $.isArray(plugins) || (plugins = [ plugins ]) : plugins = [], $.each(plugins, function(i, plugin) {
+                var name = plugin.name;
+                if (!controller.data.disabledPlugins || $.inArray(name, controller.data.disabledPlugins) == -1) {
+                    plugin.params = $.extend(!0, {}, this.params, plugin.defaults, controller.data.pluginOpts && controller.data.pluginOpts[name]);
+                    var createFn = function() {
+                        mediaplayer.createObj(installedPlugins[name]).construct(controller, plugin.params, forClip, $container);
+                    };
+                    installedPlugins[name] ? createFn() : controller.data.plugins[name] || registeredDefinitions[name] ? mediaplayer.componentLoader.load(controller.data.knownPlugins[name] || registeredDefinitions[name]).done(createFn) : window.console && console.log("no plugin with name: " + plugins[i].name);
+                }
+            });
+        }
+        function hasPlugin(requiredPlugin, plugins) {
+            var found = !1;
+            return $.each(plugins, function(i, plugin) {
+                if (requiredPlugin == plugin.name) return found = !0, !1;
+            }), found;
+        }
+        function registerController(controller) {
+            var i;
+            for (controller.data.plugins || (controller.data.plugins = []), i = 0; i < requiredPlugins.length; i++) hasPlugin(requiredPlugins[i], controller.data.plugins) || controller.data.plugins.push({
+                name: requiredPlugins[i],
+                params: {}
+            });
+            loadPlugins(controller.data.plugins, controller), controller.on("started", function() {
+                loadPlugins(this.currentItem.plugins, controller, this.currentItem);
+            });
+        }
+        var installedPlugins = {}, requiredPlugins = [];
+        return {
+            add: add,
+            registerController: registerController,
+            addChildPlugin: addChildPlugin,
+            childPlugins: installedPlugins,
+            installedPlugins: installedPlugins,
+            hasPlugin: hasPlugin,
+            loadPlugins: loadPlugins
+        };
+    }();
+}(window, document, window.jQuery), function() {
+    "use strict";
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$;
+    mediaplayer.addMediaProvider("html5", {
+        canPlayType: function() {
+            var emptyVideo = document.createElement("video");
+            return function(type, src) {
+                return (!type || emptyVideo.canPlayType && emptyVideo.canPlayType(type)) && src.indexOf("rtmp:") ? "maybe" : "";
+            };
+        }(),
+        proto: {
+            construct: function(proxy) {
+                this.proxy = proxy, this.proxy.data && this.proxy.data.sharedMedia ? this.media = this.proxy.data.sharedMedia : (this.media = $("<video />").prop({
+                    controls: !0
+                }).css({
+                    width: "100%",
+                    height: "100%"
+                }).appendTo(proxy.$mediaDisplay).get(0), this.proxy.data.preload && (this.media.preload = this.proxy.data.preload)), 
+                this._stateBeforeMediaShared = {}, this.proxy.sharePlayerState(), this._fixDuration(), 
+                this.setupEvents();
+            },
+            setupEvents: function() {
+                var evts = [ "waiting", "playing", "play", "pause", "seeked", "seeking", "ended", "loadedmetadata", "emptied", "volumechange", "progress", "timeupdate" ], proxyErrors = {
+                    3: 1,
+                    4: 1
+                }, proxy = this.proxy;
+                $(this.media).on(evts.join(" "), function(e) {
+                    proxy.fire(e.type);
+                }).on("error", function(e) {
+                    var error = e.target.error;
+                    error && proxyErrors[error.code] && (proxy.error({
+                        code: mediaplayer.ERRORS.MEDIASUPPORT,
+                        details: {
+                            code: error.code
+                        }
+                    }), proxy.fire(e.type));
+                }), this._fixEndedEvent();
+            },
+            supportSharedMedia: function() {
+                return !!this.media;
+            },
+            requestSharedMedia: function() {
+                return $(this.media).off(), this._stateBeforeMediaShared = {
+                    currentTime: this.media.currentTime,
+                    src: this.media.src,
+                    paused: this.media.paused,
+                    poster: this.media.poster,
+                    controls: this.media.controls
+                }, this.media.controls = !1, this.media;
+            },
+            releaseSharedMedia: function() {
+                var timer, that = this, reSetup = function(e) {
+                    that.media.currentTime = that._stateBeforeMediaShared.currentTime, that._stateBeforeMediaShared.paused || that.media.play(), 
+                    e && "loadedmetadata" == e.type && ($(that.media).off("loadedmetadata", reSetup), 
+                    clearTimeout(timer)), that._stateBeforeMediaShared = {};
+                };
+                this.setupEvents(), $(this.media).on("loadedmetadata", reSetup), this._stateBeforeMediaShared.poster && (this.media.poster = this._stateBeforeMediaShared.poster), 
+                this._stateBeforeMediaShared.src && (this.media.src = this._stateBeforeMediaShared.src), 
+                this.media.controls = this._stateBeforeMediaShared.controls, this._stateBeforeMediaShared.paused || setTimeout(function() {
+                    that.media.play();
+                });
+            },
+            _switchSource: function(newSrc) {
+                var that = this, _currentTime = this.currentTime(), $media = $(this.media), reStart = function() {
+                    $media.off("loadedmetadata", reStart), that.play();
+                }, resumeCurrentTime = function() {
+                    $media.off("playing", resumeCurrentTime), that.currentTime(_currentTime);
+                };
+                $media.on("loadedmetadata", reStart), $media.on("playing", resumeCurrentTime), this.load(newSrc);
+            },
+            _fixEndedEvent: function() {
+                function triggerEvent() {
+                    $media.trigger("ended");
+                }
+                var timer, $media = $(this.media);
+                $(this.media).on("timeupdate", function() {
+                    var duration = this.duration, time = this.currentTime;
+                    duration && duration - time < .3 && (clearTimeout(timer), timer = setTimeout(triggerEvent, 500));
+                }).on("ended", function() {
+                    clearTimeout(timer);
+                });
+            },
+            _fixPlaydelay: function() {
+                var that;
+                void 0 === this.needsPlayDelay && (this.needsPlayDelay = 1 == this.media.readyState && !this.media.networkState, 
+                this.needsPlayDelay && (that = this, this.play = function() {
+                    setTimeout(function() {
+                        that.media.play();
+                    }, 99);
+                }));
+            },
+            _fixDuration: function() {
+                var that = this, needsPatch = !1, blocked = !1, patchMediaData = function() {
+                    needsPatch || (needsPatch = !0, that.getDuration = function() {
+                        var duration = that.media.duration;
+                        return duration && duration < 1.1 && (duration = window.NaN), duration;
+                    }, that.isLoadedmetadata = function() {
+                        return that.media.readyState > 0 && !!that.getDuration();
+                    }, $(that.media).on("progress timeupdate", function() {
+                        var duration;
+                        blocked && (duration = that.media.duration, duration && duration > 1 && ($(that.media).trigger("loadedmetadata"), 
+                        $(that.media).trigger("durationchange")));
+                    }));
+                }, blockLoadedMetaData = function(e) {
+                    needsPatch && this.duration <= 1 ? (e.stopImmediatePropagation(), blocked = !0) : blocked = !1;
+                }, testDurationBug = function() {
+                    var duration = this.duration;
+                    duration && duration < 1.1 ? (patchMediaData(), blocked = !1) : $(this).off("loadedmetadata", blockLoadedMetaData).off("emptied", testDurationBug);
+                };
+                $(this.media).on("loadedmetadata", blockLoadedMetaData).on("emptied", testDurationBug);
+            },
+            load: function(src, poster) {
+                this.hasNewSrc = !!this.media.src, this.media.src = src, poster && (this.media.poster = poster), 
+                this._fixPlaydelay();
+            },
+            play: function() {
+                this.hasNewSrc && (this.hasNewSrc = !1, this.media.load()), this.media.play();
+            },
+            destroy: function() {
+                this.proxy.data.sharedMedia || $(this.media).remove();
+            },
+            pause: function() {
+                this.media.pause();
+            },
+            muted: function(mute) {
+                return arguments.length ? (this.media.muted = mute, void this.proxy.fire("volumechange")) : this.media.muted;
+            },
+            volume: function(vol) {
+                return arguments.length ? (this.media.volume = vol, void this.proxy.fire("volumechange")) : this.media.volume;
+            },
+            currentTime: function(time) {
+                return arguments.length ? void (this.media.currentTime = time) : this.media.currentTime;
+            },
+            controls: function(controls) {
+                return arguments.length ? void (this.media.controls = controls) : this.media.controls;
+            },
+            isPlay: function() {
+                return !this.media.paused;
+            },
+            isPlaying: function() {
+                return !this.media.paused && !this.media.ended && this.media.readyState > 1;
+            },
+            isEnded: function() {
+                return this.media.ended;
+            },
+            isWaiting: function() {
+                return !this.media.paused && !this.media.ended && this.media.readyState <= 1;
+            },
+            isLoadedmetadata: function() {
+                return this.media.readyState > 0;
+            },
+            isProgress: function() {
+                var buffered = this.media.buffered;
+                return buffered.length > 0;
+            },
+            getBuffered: function() {
+                return this.media.buffered || {
+                    length: 0
+                };
+            },
+            getDuration: function() {
+                return this.media.duration;
+            }
+        }
+    });
+}(), function() {
+    "use strict";
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$, htmlProvider = mediaplayer.mediaProviders.html5, PATH_TO_HLS_LIB = mediaplayer.defaults.mediaprovidersLib.hls, hlsProvider = $.extend(!0, {}, htmlProvider, {
+        canPlayType: function(type, src) {
+            return "application/x-mpegURL" == type && window.MediaSource && (window.Hls || PATH_TO_HLS_LIB) ? "maybe" : "";
+        },
+        proto: {
+            construct: function(proxy) {
+                return this._playIsEnqueued = !1, window.Hls ? this.providerIsReady = $.Deferred().resolve() : this.providerIsReady = mediaplayer.componentLoader.load({
+                    js: PATH_TO_HLS_LIB
+                }), this.providerIsReady.fail(function() {
+                    proxy.fire("error");
+                }), htmlProvider.proto.construct.apply(this, arguments);
+            },
+            _setupCustomEvents: function() {
+                var self = this;
+                self.hlsInstance.on(Hls.Events.ERROR, function(evtName, evtData) {
+                    evtData && evtData.fatal && (self._playIsEnqueued && self.media.play(), self.proxy.error({
+                        code: mediaplayer.ERRORS.MEDIASUPPORT,
+                        details: evtData.details
+                    }), self.proxy.fire("error"));
+                });
+            },
+            load: function(src, poster) {
+                var self = this;
+                poster && (this.media.poster = poster), this.providerIsReady.then(function() {
+                    var video = self.media;
+                    if (video.crossOrigin = "use-credentials", self.hlsInstance) self.hlsInstance.detachMedia(); else {
+                        var config = {
+                            xhrSetup: function(xhr, url) {
+                                xhr.withCredentials = !0;
+                            }
+                        };
+                        self.hlsInstance = new Hls(config), self._setupCustomEvents();
+                    }
+                    self.hlsInstance.loadSource(src), self.hlsInstance.attachMedia(video);
+                });
+            },
+            play: function() {
+                var self = this, playAfterManifestParsed = function() {
+                    self.hlsInstance.on(Hls.Events.MANIFEST_PARSED, function() {
+                        self.hlsManifestLoaded = !0, self.media.play();
+                    });
+                };
+                self.hlsManifestLoaded ? self.media.play() : (this._playIsEnqueued = !0, this.providerIsReady.then(function() {
+                    playAfterManifestParsed();
+                }));
+            },
+            destroy: function() {
+                return this.hlsInstance.destroy(), htmlProvider.proto.destroy.apply(this, arguments);
+            }
+        }
+    });
+    mediaplayer.addMediaProvider("hls", hlsProvider);
+}(), function() {
+    "use strict";
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$, htmlProvider = mediaplayer.mediaProviders.html5, PATH_TO_360_PLUGIN = mediaplayer.defaults.mediaprovidersLib.threeSixty, PATH_TO_THREE_JS = mediaplayer.defaults.mediaprovidersLib.threeJS, threeSixtyProvider = $.extend(!0, {}, htmlProvider, {
+        canPlayType: function(type, src) {
+            return "video360/mp4" == type ? "maybe" : "";
+        },
+        proto: {
+            construct: function(proxy) {
+                return this.proxy = proxy, this._playIsEnqueued = !1, this.mediaProviderReady = $.Deferred(), 
+                htmlProvider.proto.construct.apply(this, arguments);
+            },
+            loadLibs: function() {
+                var promise = $.Deferred();
+                return mediaplayer.componentLoader.load({
+                    js: PATH_TO_THREE_JS
+                }).then(function() {
+                    mediaplayer.componentLoader.load({
+                        js: PATH_TO_360_PLUGIN
+                    }).then(function() {
+                        promise.resolve();
+                    }, function() {
+                        promise.reject();
+                    });
+                }, function() {
+                    promise.reject();
+                }), promise;
+            },
+            load: function(src, poster) {
+                var self = this;
+                poster && (this.media.poster = poster), self.loadLibs().then(function() {
+                    self.Valiant360 = $(self.proxy.$mediaDisplay[0]).Valiant360({
+                        muted: !1,
+                        video: self.media,
+                        controller: self.proxy
+                    }), self.media.src = src, self.mediaProviderReady.resolve();
+                }, function() {
+                    self.mediaProviderReady.reject(), self.proxy.fire("error");
+                });
+            },
+            play: function() {
+                var self = this;
+                self.mediaProviderReady.then(function() {
+                    self.media.src && self.media.play();
+                });
+            },
+            destroy: function() {
+                return this.Valiant360.trigger("destroy"), this.Valiant360 = void 0, htmlProvider.proto.destroy.apply(this, arguments);
+            }
+        }
+    });
+    mediaplayer.addMediaProvider("360", threeSixtyProvider);
+}(), function() {
+    "use strict";
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$;
+    mediaplayer.dataLoader.addTransformator(function(data, doneCallback, opts) {
+        data.clipList || (data.clipList = [], mediaplayer.warn("Mediaplayer: No clipList found"));
+        var fixedBookmarks = [ {
+            type: "Facebook",
+            href: "{DEEPLINK}&action=recommend&send=false&layout=button_count&width=450&show_faces=true&action=recommend&colorscheme=light&font&height=21"
+        }, {
+            type: "Googleplus",
+            href: "{DEEPLINK}"
+        }, {
+            type: "Twitter",
+            href: "{DEEPLINK}&lang=de"
+        }, {
+            type: "Mail",
+            href: "mailto:?subject=Artikel auf " + (de && de.bild && de.bild.env && de.bild.env.callingName || "Bild") + "&body=Artikel auf " + (de && de.bild && de.bild.env && de.bild.env.callingName || "Bild") + " {DEEPLINK}"
+        } ];
+        $.each(data.bookmarks || [], function() {
+            for (var i = 0; i < fixedBookmarks.length; i++) fixedBookmarks[i].type === this.type && (this.href = fixedBookmarks[i].href.replace("{DEEPLINK}", encodeURIComponent(data.canonicalUrl)));
+        }), opts && opts.activeTheme && "bundesliga" != opts.activeTheme.name && $.each(data.plugins || [], function(index, val) {
+            if ("Bulitimeline" == this.name) return data.plugins.splice(index, 1), !1;
+        }), doneCallback(data);
+    });
+}(), function() {
+    "use strict";
+    var mediaplayer = de.bild.mediaplayer;
+    mediaplayer.dataLoader.addTransformator(function(data, doneCallback) {
+        if (data["360video"] === !0 && data.clipList) for (var clip, i = 0; i < data.clipList.length; i++) if (clip = data.clipList[i], 
+        "main" === clip.type) for (var j = 0; j < clip.srces.length; j++) clip.srces[j].type = "video360/mp4";
+        doneCallback(data);
+    });
+}(), function(window, document) {
+    "use strict";
+    function VPAIDWrapper(dom, playerVersion, adSrc, type, options) {
+        this.$dom = $(dom), this.playerVersion = playerVersion, this.adSrc = adSrc, this.type = type || "", 
+        this.options = $.extend(!0, {
+            context: this
+        }, VPAIDWrapper.defaults, options), id++, this.events = {}, this.id = "vpaidwrapper" + id, 
+        this._creative = null, this._deferred = $.Deferred(), this.promise = this._deferred.promise(), 
+        this.failed = !1, this.parsedVersion = [ 1, 1, 0 ], this.adParams = options.context.proxy.currentItem.vastParams || "{}", 
+        this.detectType(), this.canPlayType() && this.load(), this.adStartedFired = !1, 
+        this.adImpressionDelay = null;
+    }
+    var $ = window.de && de.bild && de.bild.mediaplayer && de.bild.mediaplayer.$ || window.jQuery, id = new Date().getTime(), regSwf = /swf|flash|shockwave/i, regJs = /javascript|js|ecmascript/i, hasSwf = window.swfobject && swfobject.hasFlashPlayerVersion("11.1.0"), hasJs = document.createElement("video").canPlayType, hasAccessors = Object.create && Object.defineProperties, slice = Array.prototype.slice;
+    VPAIDWrapper.prototype = {
+        eventTypes: [ "AdLoaded", "AdStarted", "AdStopped", "AdSkipped", "AdSkippableStateChange", "AdSizeChange", "AdLinearChange", "AdDurationChange", "AdExpandedChange", "AdRemainingTimeChange", "AdVolumeChange", "AdImpression", "AdVideoStart", "AdVideoFirstQuartile", "AdVideoMidpoint", "AdVideoThirdQuartile", "AdVideoComplete", "AdClickThru", "AdInteraction", "AdUserAcceptInvitation", "AdUserMinimize", "AdUserClose", "AdPaused", "AdPlaying", "AdLog", "AdError" ],
+        detectType: function() {
+            regSwf.test(this.type) ? this.type = "flash" : regJs.test(this.type) ? this.type = "javascript" : this.type = "unknown";
+        },
+        canPlayType: function() {
+            return !!("flash" == this.type && hasSwf || "javascript" == this.type && hasJs) || (this.failed = !0, 
+            this._deferred.rejectWith(this, [ this ]), !1);
+        },
+        load: function() {
+            var that = this;
+            "javascript" == this.type ? this._loadJS() : "flash" == this.type && this._loadSWF(), 
+            clearTimeout(this.timeoutTimer), this.timeoutTimer = setTimeout(function() {
+                that._fail("load timeout");
+            }, this.options.loadTimeout);
+        },
+        _loadJS: function() {
+            var script, that = this, $iframe = $("<iframe />").prop({
+                src: "javascript:false",
+                allowTransparency: !0
+            }).addClass("vpaid-iframe vpaid-element media-fullsize").attr({
+                frameborder: "0",
+                allowfullscreen: "",
+                id: this.id
+            }).css({
+                width: "100%",
+                height: "100%"
+            }).appendTo(this.$dom), iframeDocument = $iframe.contents()[0], onload = function(e) {
+                var win = $iframe[0].contentWindow || $iframe[0].contentDocument;
+                win.getVPAIDAd ? (that._setCreative(win.getVPAIDAd()), $(script).off("load error readystatechange")) : e && "error" == e.type && (that._fail("loaderror"), 
+                $(script).off("load error readystatechange"));
+            };
+            iframeDocument.write(), iframeDocument.close(), script = iframeDocument.createElement("script"), 
+            this.iframeEnv = {
+                slot: iframeDocument.body
+            }, $(script).on("load error readystatechange", onload).prop("src", this.adSrc), 
+            this.$vpaid = $iframe, iframeDocument.body.appendChild(script);
+        },
+        _loadSWF: function() {
+            var o = this.options, $vpaid = $("<div />").addClass("vpaid-object vpaid-element media-fullsize").css({
+                width: "100%",
+                height: "100%"
+            }).attr({
+                id: this.id
+            }).appendTo(this.$dom);
+            this.addSWFEvents(), $.extend(o.swfVars, {
+                adSrc: encodeURIComponent(this.adSrc),
+                cb: "window.VPAIDWrapper.swfEvents." + this.id,
+                name: this.id,
+                id: this.id
+            }), $.extend(o.swfAttrs, {
+                name: this.id,
+                id: this.id,
+                className: "vpaid-object vpaid-element"
+            }), this.$vpaid = $vpaid, swfobject.embedSWF(o.context.proxy.data.basePath + o.swfVPAIDProxy, this.id, "100%", "100%", "11.1.0", !1, o.swfVars, o.swfParams, o.swfAttrs);
+        },
+        _setCreative: function(creative) {
+            clearTimeout(this.timeoutTimer);
+            var version;
+            this._creative = creative, this.vpaidVersion = this.handshakeVersion(this.playerVersion) || "", 
+            version = this.vpaidVersion.split("."), this.parsedVersion = [ parseInt(version[0] || "1", 10) || 1, parseInt(version[1] || "0", 10) || 0, parseInt(version[2] || "0", 10) || 0 ], 
+            "javascript" == this.type && this.addJSEvents(), this._deferred.notifyWith(this.options.context, [ this, this.parsedVersion ]);
+        },
+        _fail: function(message) {
+            clearTimeout(this.timeoutTimer), this.failed = !0, this._creative && this._addLoaded ? this.fire({
+                type: "adError",
+                data: message
+            }) : this._deferred.rejectWith(this.options.context, [ this, message ]);
+        },
+        fire: function(e) {
+            var boundEventHandlers, i;
+            if ("string" == typeof e && (e = {
+                type: e,
+                data: null
+            }), "detail" in e && !("data" in e) && (e.data = e.detail), "AdImpression" === e.type && !this.adStartedFired) return void (this.adImpressionDelay = e);
+            if ("AdLoaded" == e.type && (clearTimeout(this.timeoutTimer), this._addLoaded = !0, 
+            this._deferred.resolveWith(this.options.context, [ this, 2 ])), "AdStarted" == e.type && (this.adStartedFired = !0, 
+            clearTimeout(this.timeoutTimer)), "AdClickThru" == e.type && arguments.length > 2 && (e.data || (e.data = {}), 
+            e.data.url || (e.data.url = arguments[1]), e.data.id || (e.data.id = arguments[2]), 
+            null == e.data.playerHandles && (e.data.playerHandles = arguments[3])), boundEventHandlers = this.events[e.type]) for (i = 0; i < boundEventHandlers.length; i++) boundEventHandlers[i][0].call(boundEventHandlers[i][1] || window, $.Event(e));
+            "AdStarted" === e.type && this.adImpressionDelay && (this.fire(this.adImpressionDelay), 
+            this.adImpressionDelay = null);
+        },
+        subscribe: function(fn, name, thisArg) {
+            this.events[name] || (this.events[name] = []), this.events[name].push([ fn, thisArg ]);
+        },
+        unsubscribe: function(fn, name) {
+            var i;
+            if (this.events[name]) for (i = 0; i < this.events[name].length; i++) this.events[name][i][0] == fn && this.events[name].splice(i, 1);
+        },
+        addJSEvents: function() {
+            for (var type, that = this, i = 0; i < this.eventTypes.length; i++) type = this.eventTypes[i], 
+            this._creative.subscribe(function(type) {
+                return function(e) {
+                    var args = slice.call(arguments);
+                    e && e.type == type || args.unshift({
+                        type: type,
+                        data: null
+                    }), that.fire.apply(that, args);
+                };
+            }(type), type);
+        },
+        addSWFEvents: function() {
+            var that = this;
+            VPAIDWrapper.swfEvents[this.id] = function(e) {
+                return "wrapperready" == e.type ? (that.$vpaid = $(document.getElementById(that.id)), 
+                void that._setCreative(that.$vpaid[0])) : (that._addLoaded || "adError" != e.type || that._creative || that._fail(e.data), 
+                void that.fire.apply(that, arguments));
+            };
+        },
+        log: function(message) {
+            window.console && console.log && console.log(message);
+        },
+        initAd: function(width, height, viewMode, desiredBitrate, creativeData, environmentVars) {
+            var that = this;
+            viewMode || (viewMode = "normal"), void 0 === desiredBitrate && (desiredBitrate = 600), 
+            "javascript" == this.type ? ((!width || width < 2) && (width = this.$vpaid.width()), 
+            (!height || height < 2) && (height = this.$vpaid.height()), void 0 === creativeData && (creativeData = this.adParams), 
+            environmentVars = $.extend(this.iframeEnv, environmentVars || {}), this.options.videoSlot && (environmentVars.videoSlotCanAutoPlay = !0, 
+            environmentVars.videoSlot = this.options.videoSlot)) : "flash" == this.type && ((!width || width < 2) && (width = -1), 
+            (!height || height < 2) && (height = -1), creativeData || (creativeData = this.adParams)), 
+            clearTimeout(this.timeoutTimer), this.timeoutTimer = setTimeout(function() {
+                that._fail("init timeout");
+            }, this.options.loadTimeout), this._creative.initAd(width, height, viewMode, desiredBitrate, creativeData, environmentVars);
+        },
+        startAd: function() {
+            var that = this;
+            return clearTimeout(this.timeoutTimer), this.timeoutTimer = setTimeout(function() {
+                that._fail("startAd timeout");
+            }, this.options.methodTimeouts), this._creative.startAd.apply(this._creative, arguments);
+        }
+    }, $.each([ [ "handshakeVersion" ], [ "resizeAd" ], [ "stopAd" ], [ "pauseAd" ], [ "resumeAd" ], [ "expandAd" ], [ "collapseAd" ], [ "skipAd", 2 ] ], function(i, def) {
+        var name = def[0], version = def[1] || 1;
+        VPAIDWrapper.prototype[name] = function() {
+            return this._creative ? version > this.parsedVersion[0] ? void this.log("method/property " + name + " not implemented in VPAIDCreative version: " + this.vpaidVersion) : this._creative[name].apply(this._creative, arguments) : void this.log("creative not loaded yet");
+        };
+    }), $.each([ [ "adLinear" ], [ "adWidth", 2 ], [ "adHeight", 2 ], [ "adExpanded" ], [ "adSkippableState", 2 ], [ "adRemainingTime" ], [ "adDuration", 2 ], [ "adCompanions", 2 ], [ "adIcons", 2 ] ], function(i, def) {
+        var prop = def[0], version = def[1] || 1, name = "get" + prop.charAt(0).toUpperCase() + prop.substr(1);
+        VPAIDWrapper.prototype[name] = function() {
+            return this._creative ? version > this.parsedVersion[0] ? void this.log("method/property " + name + " not implemented in VPAIDCreative version: " + this.vpaidVersion) : this._creative[name]() : void this.log("creative not loaded yet");
+        }, hasAccessors && Object.defineProperty(VPAIDWrapper.prototype, prop, {
+            get: VPAIDWrapper.prototype[name],
+            enumerable: !0,
+            configurable: !0
+        });
+    }), $.each([ [ "adVolume" ] ], function(i, def) {
+        var prop = def[0], version = def[1] || 1, baseName = prop.charAt(0).toUpperCase() + prop.substr(1), getname = "get" + baseName, setname = "set" + baseName;
+        VPAIDWrapper.prototype[getname] = function() {
+            return this._creative ? version > this.parsedVersion[0] ? void this.log("method/property " + getname + " not implemented in VPAIDCreative version: " + this.vpaidVersion) : this._creative[getname]() : void this.log("creative not loaded yet");
+        }, VPAIDWrapper.prototype[setname] = function() {
+            return this._creative ? version > this.parsedVersion[0] ? void this.log("method/property " + setname + " not implemented in VPAIDCreative version: " + this.vpaidVersion) : this._creative[setname].apply(this._creative, arguments) : void this.log("creative not loaded yet");
+        }, hasAccessors && Object.defineProperty(VPAIDWrapper.prototype, prop, {
+            get: VPAIDWrapper.prototype[getname],
+            set: VPAIDWrapper.prototype[setname],
+            enumerable: !0,
+            configurable: !0
+        });
+    }), VPAIDWrapper.defaults = {
+        loadTimeout: 3e3,
+        methodTimeouts: 300,
+        swfParams: {
+            allowscriptaccess: "always",
+            allowfullscreen: "true",
+            wmode: "transparent",
+            allowNetworking: "all"
+        },
+        swfAttrs: {
+            bgcolor: "#000000"
+        },
+        swfVars: {},
+        swfVPAIDProxy: ""
+    }, VPAIDWrapper.swfEvents = {}, VPAIDWrapper.support = function(type) {
+        return regSwf.test(type) && hasSwf || regJs.test(type) && hasJs;
+    }, window.VPAIDWrapper = VPAIDWrapper;
+}(window, document), function() {
+    "use strict";
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$, TIME_NOT_CALCULATED = "UNKNOWN";
+    mediaplayer.addMediaProvider("vpaid", {
+        canPlayType: function() {
+            return function(type) {
+                return type.indexOf("vpaid") != -1 && VPAIDWrapper.support(type.replace("vpaid/", "")) ? "maybe" : "";
+            };
+        }(),
+        proto: {
+            construct: function(proxy) {
+                this.options = proxy.data.vpaidProvider || {
+                    wrapper: {}
+                }, this.$media = $('<div class="vpaid-wrapper media-fullsize" />').appendTo(proxy.$mediaDisplay), 
+                this.options.wrapper.context = this, this.proxy = proxy;
+            },
+            load: function(src) {
+                this.reset();
+                try {
+                    this.options.wrapper.videoSlot = this.proxy.sharedProvider.provider.requestSharedMedia();
+                } catch (e) {}
+                this.vpaidProxy = new VPAIDWrapper(this.$media, "2.0.0", this.proxy.currentSrc.src, this.proxy.currentSrc.type, this.options.wrapper), 
+                this.vpaidProxy.promise.progress(function(vpaidProxy) {
+                    vpaidProxy.initAd();
+                }).done(this.setup).fail(function(vpaidProxy, message) {
+                    this.proxy.error({
+                        code: mediaplayer.ERRORS.MEDIASUPPORT,
+                        details: message
+                    }), this.proxy.fire("error");
+                });
+            },
+            reset: function() {
+                if (this.fnQueue = [], this._adStarted = !1, this._stateWaiting = !1, this._statePaused = !1, 
+                this._stateEnded = !1, this.isReady = !1, this._duration = NaN, this._remainingTime = TIME_NOT_CALCULATED, 
+                this.vpaidProxy) {
+                    try {
+                        this.vpaidProxy.stopAd();
+                    } catch (e) {}
+                    this.$media.empty(), this.vpaidProxy = null;
+                }
+            },
+            calculateDuration: function() {
+                this._remainingTime = this.vpaidProxy.getAdRemainingTime(), this._duration = this._remainingTime, 
+                this._remainingTime && this._remainingTime > 0 && this._duration && this._duration > 0 || (this._duration = NaN);
+            },
+            setup: function() {
+                this.addEvents(), this.isReady = !0, this.processQueue();
+            },
+            _events: [ "AdLoaded", "AdStarted", "AdStopped", "AdSkipped", "AdSkippableStateChange", "AdSizeChange", "AdLinearChange", "AdDurationChange", "AdExpandedChange", "AdRemainingTimeChange", "AdVolumeChange", "AdImpression", "AdVideoStart", "AdVideoFirstQuartile", "AdVideoMidpoint", "AdVideoMidpoint", "AdVideoThirdQuartile", "AdVideoComplete", "AdClickThru", "AdInteraction", "AdUserAcceptInvitation", "AdUserMinimize", "AdUserClose", "AdPaused", "AdPlaying", "AdLog", "AdError" ],
+            eventNormalizer: function(e) {
+                "AdVideoStart" != e.type && "AdStarted" != e.type && "AdPlaying" != e.type || !this._statePaused && !this._stateWaiting || (this._stateWaiting = !1, 
+                this._statePaused = !1, this.proxy.fire("play"), this.proxy.fire("playing")), "AdVideoComplete" != e.type && "AdPaused" != e.type || this._statePaused || (this._statePaused = !0, 
+                this.proxy.fire("pause")), "AdStopped" != e.type && "AdSkipped" != e.type || (this._stateEnded = !0, 
+                this.proxy.fire("ended")), "AdDurationChange" != e.type || isNaN(this._duration) || (this.calculateDuration(), 
+                isNaN(this._duration) || (this.proxy.fire("durationchange"), this.proxy.fire("timeupdate"))), 
+                this._remainingTime != TIME_NOT_CALCULATED || "AdVideoStart" != e.type && "AdRemainingTimeChange" != e.type || (this.calculateDuration(), 
+                this.proxy.fire("loadedmetadata")), "AdRemainingTimeChange" != e.type || isNaN(this._duration) || (this._remainingTime = this.vpaidProxy.getAdRemainingTime(), 
+                this._remainingTime && this._remainingTime > -1 && !isNaN(this._remainingTime) && this.proxy.fire("timeupdate")), 
+                "AdError" == e.type && (this.proxy.error({
+                    code: mediaplayer.ERRORS.MEDIASUPPORT,
+                    details: e.data
+                }), this.proxy.fire("error")), this.proxy.fire(e), this._stateEnded && this.proxy.mediaprovider == this && this.proxy.destroyProvider();
+            },
+            addEvents: function() {
+                var that = this;
+                $.each(this._events, function(i, evt) {
+                    that.vpaidProxy.subscribe(that.eventNormalizer, evt, that);
+                });
+            },
+            destroy: function() {
+                if (this.vpaidProxy) try {
+                    this.vpaidProxy.stopAd();
+                } catch (e) {}
+                this.$media.remove();
+            },
+            processQueue: function() {
+                for (var fn; this.fnQueue.length; ) fn = this.fnQueue.shift(), this[fn[0]].apply(this, fn[1]);
+            },
+            addToQueue: function(fn, args) {
+                if (!this.isReady) return this.fnQueue.push([ fn, args || [] ]), !0;
+            },
+            play: function() {
+                this.addToQueue("play") ? (this._stateWaiting = !0, this.proxy.fire("waiting")) : this._adStarted ? this.vpaidProxy.resumeAd() : (this._adStarted = !0, 
+                this.vpaidProxy.startAd()), this._statePaused = !1;
+            },
+            pause: function() {
+                this.addToQueue("pause") ? this._stateWaiting = !1 : this.vpaidProxy.pauseAd(), 
+                this._statePaused = !0;
+            },
+            muted: function(mute) {
+                var isSetter = !!arguments.length;
+                return isSetter ? (this._stateMuted = mute, void (this.addToQueue("muted", [ mute ]) || this.vpaidProxy.setAdVolume(mute ? 0 : 1))) : this.vpaidProxy ? !this.vpaidProxy.getAdVolume() : this._stateMuted;
+            },
+            volume: function(vol) {
+                var isSetter = !!arguments.length;
+                return isSetter ? (this._stateVolume = vol, void (this.addToQueue("volume", [ vol ]) || this.vpaidProxy.setAdVolume(vol))) : this.isReady ? this.vpaidProxy.getAdVolume() : this._stateVolume;
+            },
+            currentTime: function(time) {
+                if (!arguments.length) return this._duration - this._remainingTime || 0;
+            },
+            controls: function() {},
+            getBuffered: function() {},
+            getDuration: function() {
+                return this._duration || NaN;
+            },
+            isPlay: function() {
+                return !this._statePaused;
+            },
+            isPlaying: function() {
+                return !this._statePaused && !this._stateWaiting;
+            },
+            isEnded: function() {
+                return this._stateEnded;
+            },
+            isWaiting: function() {
+                return this._stateWaiting;
+            },
+            isLoadedmetadata: function() {
+                return this.isReady;
+            },
+            isProgress: function() {
+                return this.isReady;
+            }
+        }
+    });
+}(), function() {
+    "use strict";
+    function optimizeOrder(src, src2) {
+        src.type || (src.type = ""), src2.type || (src2.type = "");
+        var a = srcorder[src.type] || 0, b = srcorder[src2.type] || 0;
+        return b - a;
+    }
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$, srcorder = {
+        "video/x-flv": 1,
+        "application/x-mpegURL": 2,
+        "": -1
+    };
+    de.bild.mediaplayer.dataLoader.addTransformator(function(data, doneCallback) {
+        $.each(data.clipList || [], function(i, clip) {
+            $.isArray(clip.srces) && clip.srces.sort(optimizeOrder);
+        }), doneCallback(data);
+    });
+}(), function() {
+    "use strict";
+    var mediaplayer = de.bild.mediaplayer;
+    mediaplayer.dataLoader.addTransformator(function(data, doneCallback, opts) {
+        var isBildSmart = !1;
+        if (de.bild.cmsKonfig && de.bild.cmsKonfig.clubs && de.bild.user) try {
+            isBildSmart = de.bild.user.userHasClub(de.bild.cmsKonfig.clubs.bildsmart);
+        } catch (err) {}
+        if (isBildSmart) if (opts.bildSmartAdWhitelist) try {
+            data.ads.vast.formats = opts.bildSmartAdWhitelist;
+        } catch (err) {} else data.ads && data.ads.vast && (data.ads.vast.formats = []);
+        doneCallback(data);
+    });
+}(), function() {
+    "use strict";
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$;
+    mediaplayer.parseVastURL = function() {
+        function construct(url, type, options) {
+            var vastConfig = $.Deferred();
+            return options = $.extend(!0, {}, defaults, options), vastConfig.type = type, vastConfig.adPromises = [], 
+            vastConfig.vastUrls = [], vastConfig.creatives = [], vastConfig.error = !1, construct.fetchVast(url, options, vastConfig), 
+            vastConfig;
+        }
+        var defaults = {
+            ajax: {
+                xhrFields: {
+                    withCredentials: !0
+                },
+                crossDomain: !0,
+                dataType: "xml"
+            },
+            eachVast: $.noop
+        }, vpaidType = /shockwave|swf|flash/i;
+        return construct.getEmptyVastEntries = function() {
+            return {
+                events: {},
+                ads: [],
+                clickTracking: [],
+                clickThrough: ""
+            };
+        }, construct.getUrl = function($node) {
+            var $url = $node.find("URL");
+            return $url.length || ($url = $node), $.trim($url.text());
+        }, construct.extendEvents = function(events, $node) {
+            $node.find("Tracking").each(function() {
+                var eventType = $.attr(this, "event").toLowerCase(), url = construct.getUrl($(this));
+                url && (events[eventType] || (events[eventType] = []), events[eventType].push(url));
+            });
+        }, construct.extendClickThrough = function(configPart, $node) {
+            $node.find("ClickTracking").each(function() {
+                var url = construct.getUrl($(this));
+                url && configPart.clickTracking.push(url);
+            }), configPart.clickThrough = construct.getUrl($node.find("ClickThrough"));
+        }, construct.extendAds = function(ads, $node) {
+            $node.find("MediaFile").each(function() {
+                var api, type, url = construct.getUrl($(this));
+                url && (type = $.attr(this, "type"), api = $.attr(this, "apiFramework") || "", !api && vpaidType.test(type || "") && (api = "vpaid"), 
+                api && (api = api.toLowerCase()), ads.push({
+                    src: url,
+                    type: (api ? api + "/" : "") + (type || ""),
+                    api: api,
+                    width: $.attr(this, "width") || NaN,
+                    height: $.attr(this, "height") || NaN
+                }));
+            }), $node.find("NonLinear").each(function() {
+                var api, $resource = $(this).find("StaticResource"), type = $resource.attr("creativeType");
+                api = $.attr(this, "apiFramework") || "", !api && vpaidType.test(type || "") && (api = "vpaid"), 
+                api && (api = api.toLowerCase());
+                var ad = {
+                    minDuration: $.attr(this, "minSuggestedDuration"),
+                    width: $.attr(this, "width"),
+                    height: $.attr(this, "height"),
+                    scalable: $.attr(this, "scalable"),
+                    aspectRatio: $.attr(this, "maintainAspectRatio"),
+                    apiFramework: $.attr(this, "apiFramework"),
+                    src: construct.getUrl($resource),
+                    api: api,
+                    type: (api ? api + "/" : "") + type,
+                    clickThrough: construct.getUrl($(this).find("NonLinearClickThrough"))
+                };
+                ad.src && ads.push(ad);
+            });
+        }, construct.extendImpressions = function(impressions, $node) {
+            $node.find("Impression").each(function() {
+                var url = construct.getUrl($(this));
+                url && impressions.push(url);
+            });
+        }, construct.fetchVast = function(url, options, vastConfig, podSequence) {
+            options.ajax.url = url, vastConfig.vastUrls.push(url), $.ajax(options.ajax).done(function(xml) {
+                var url, $AdPods = $(xml).find("Ad[sequence]"), $Ad = $AdPods.length > 1 ? $AdPods : $(xml).find("Ad:not([sequence])").eq(0);
+                return $Ad.length ? void $Ad.each(function(i) {
+                    var creative, $Ad = $(this), $linear = $Ad.find("Linear"), $nonlinear = $Ad.find("NonLinearAds"), $AdParameters = $Ad.find("AdParameters"), sequence = i, customAsmiPlugin = $Ad.find("Extension").find("ASMI").find("MediaplayerPlugin");
+                    vastConfig.ASMIPlugins = vastConfig.ASMIPlugins || [], customAsmiPlugin && customAsmiPlugin.length && 0 === options.requestRecursionCount && customAsmiPlugin.each(function() {
+                        vastConfig.ASMIPlugins.push({
+                            name: $(this).attr("name"),
+                            content: $(this).text()
+                        });
+                    }), url = construct.getUrl($Ad.find("VASTAdTagURI")), null != podSequence && (sequence = podSequence), 
+                    creative = vastConfig.creatives[sequence], creative ? creative && $AdParameters.text().length > 0 && (creative.adParameters = $AdParameters.text()) : (creative = {
+                        type: vastConfig.type
+                    }, creative.promise = $.Deferred(), vastConfig.adPromises.push(creative.promise), 
+                    creative.nonlinear = construct.getEmptyVastEntries(), creative.linear = construct.getEmptyVastEntries(), 
+                    creative.impressions = [], creative.linear.impressions = creative.impressions, creative.nonlinear.impressions = creative.impressions, 
+                    creative.adParameters = $AdParameters.text(), vastConfig.creatives.push(creative)), 
+                    construct.extendImpressions(creative.impressions, $Ad), construct.extendEvents(creative.linear.events, $linear), 
+                    construct.extendEvents(creative.nonlinear.events, $nonlinear), construct.extendAds(creative.linear.ads, $linear), 
+                    construct.extendAds(creative.nonlinear.ads, $nonlinear), construct.extendClickThrough(creative.linear, $linear), 
+                    construct.extendClickThrough(creative.nonlinear, $nonlinear), options.eachVast($Ad, creative, options), 
+                    creative.error = !creative.nonlinear.ads.length && !creative.linear.ads.length, 
+                    url ? (options.requestRecursionCount++, construct.fetchVast(url, options, vastConfig, sequence)) : (creative.promise.resolve(), 
+                    "resolved" == $.when.apply($, vastConfig.adPromises).state() && vastConfig.resolve());
+                }) : (vastConfig.error = !0, void vastConfig.resolve());
+            }).fail(function() {
+                vastConfig.error = !0, vastConfig.resolve();
+            });
+        }, construct;
+    }(), mediaplayer.pluginManager.add("vast", {
+        init: function() {
+            var data = this.controller.data;
+            data.ads && data.ads.vast && data.ads.vast.srces && (this.vastUrls = this.getActiveVastURls(data.ads.vast, data), 
+            this.prerollSetup(), this.postrollSetup(), this.midrollSetup(), this.overlaySetup());
+        },
+        prerollSetup: function() {
+            if (this.vastUrls.preroll) {
+                var adPromise, that = this, hasCalled = !1, isFinished = !1, $mediaBox = this.controller.$mediaBox, startVideo = function() {
+                    isFinished = !0, that.off(".preroll"), $mediaBox.find("video").off("click play", onVideoClick).off("mousedown touchstart", loadAds), 
+                    that.controller.loadIndex(0), that.controller.play();
+                }, loadAds = function() {
+                    adPromise || (adPromise = that.parseVast("preroll"));
+                }, initVideo = function() {
+                    var video = $("video", $mediaBox);
+                    video[0] && (video[0].pause(), video[0].load());
+                }, request = function() {
+                    hasCalled || (loadAds(), initVideo(), hasCalled = !0, adPromise.always(startVideo));
+                }, onVideoClick = function() {
+                    if (!hasCalled) return request(), !1;
+                }, addVideoClick = function() {
+                    $mediaBox.find("video").on("click play", onVideoClick).on("mousedown touchstart", loadAds), 
+                    this.off("afterload.preroll");
+                };
+                this.on("beforecontrollerplay.preroll", function() {
+                    return request(), "abort";
+                }), this.on("afterload.preroll", addVideoClick), $mediaBox.find("video").length && addVideoClick.call(this);
+            }
+        },
+        isMain: function() {
+            return "main" == this.controller.currentItem.type;
+        },
+        postrollSetup: function() {
+            if (this.vastUrls.postroll) {
+                var create = function() {
+                    if (this.isMain()) {
+                        var ad, that = this, doomAborted = !1, duration = this.controller.getDuration() - 15, runVast = function() {
+                            ad || (ad = that.parseVast("postroll"), ad.always(function() {
+                                that.off(".postroll"), doomAborted && (ad.error ? that.controller.fire("doom") : (that.controller.loadNext(), 
+                                that.controller.play()));
+                            }));
+                        };
+                        if (this.off("loadedmetadata.postroll", create), this.on("beforedoom.postroll", function() {
+                            return this.off(".postroll"), doomAborted = !0, runVast(), "abort";
+                        }), !duration) return;
+                        this.on("timeupdate.postroll", function() {
+                            this.isMain() && this.controller.currentTime() > duration && runVast();
+                        });
+                    }
+                };
+                this.on("loadedmetadata.postroll", create);
+            }
+        },
+        midrollSetup: function() {
+            if (this.vastUrls.midroll) {
+                var midrollPromise = $.Deferred(), create = function() {
+                    if (this.isMain()) {
+                        var stop, duration = this.controller.getDuration() / 2 - 15, endDuration = this.controller.getDuration() - 9;
+                        if (!duration) return;
+                        this.off("loadedmetadata.midroll", create), this.on("beforedoom.midroll", function() {
+                            stop = !0, this.off(".midroll");
+                        }), this.on("timeupdate.midroll", function() {
+                            var curTime = this.controller.currentTime();
+                            curTime > duration && this.isMain() && (this.off(".midroll"), !stop && endDuration > curTime && (stop = !0, 
+                            this.parseVast("midroll").done(function() {
+                                midrollPromise.resolve();
+                            })));
+                        });
+                    }
+                };
+                this.controller.data.midroll = midrollPromise, this.on("loadedmetadata.midroll", create);
+            }
+        },
+        overlaySetup: function() {
+            if (this.vastUrls.overlay) {
+                var overlayPromise = $.Deferred();
+                this.controller.data.overlayAd = overlayPromise, this.on("playing.overlay", function() {
+                    "main" == this.controller.currentItem.type && (this.off("playing.overlay"), this.parseVast("overlay").done(function() {
+                        overlayPromise.resolve();
+                    }));
+                });
+            }
+        },
+        parseVast: function(type) {
+            var that = this, options = {
+                eachVast: function($node, addConfig) {
+                    addConfig.isFallback || (addConfig.isFallback = "true" == $node.find("Extensions Fallback").text());
+                },
+                ajax: {
+                    timeout: this.controller.data.vast.timeout
+                },
+                requestRecursionCount: 0
+            }, ad = mediaplayer.parseVastURL(this.vastUrls[type], type, options);
+            return ad.always(function() {
+                that.addAd(ad, that.controller.data);
+            }), ad;
+        },
+        useAdType: function(type, data) {
+            var allow = {
+                midroll: 600,
+                preroll: 30,
+                postroll: 0,
+                overlay: 120
+            };
+            return type in allow ? ("undefined" == typeof data.durationSec ? mediaplayer.log("Mediaplayer: no duration for video available.") : 0 !== data.durationSec && data.durationSec !== -1 || (allow.preroll = 0), 
+            allow[type] <= Math.abs(data.durationSec || 1)) : (mediaplayer.warn("Mediaplayer: No rule for vast type: " + type + " defined."), 
+            !1);
+        },
+        getActiveVastURls: function() {
+            function getUserVastUrl(ad_srces) {
+                $.isArray(ad_srces) || (ad_srces = [ ad_srces ]);
+                var retSrc = "";
+                return $.each(ad_srces, function(i, src) {
+                    if (src.clubId) {
+                        if (de.bild.user && de.bild.user.userHasClub && de.bild.user.userHasClub(src.clubId)) return retSrc = src.src, 
+                        !1;
+                    } else retSrc = src.src;
+                }), retSrc;
+            }
+            function getTGT(data) {
+                var tgt = {};
+                return tgt.contentId = data.id, tgt.vpp = window.swfobject && swfobject.hasFlashPlayerVersion("10.0.3") ? "flash" : "html5;uag_html5", 
+                window.nuggprof && (tgt.nuggprof = window.nuggprof), data.$dom && (data.$dom.is(".mediacenter *") && (tgt.env = "lightbox"), 
+                tgt.widthPlayer = data.$dom.outerWidth()), data.ads && data.ads.keywords && (tgt.content = data.ads.keywords), 
+                "undefined" != typeof data.durationSec && (0 === data.durationSec || data.durationSec === -1 ? tgt.vlength = -1 : tgt.vlength = data.durationSec), 
+                $.param(tgt).replace(/\&/g, ";");
+            }
+            var usedGlobalTimeStamped = !1;
+            return function(vastSrcConfig, data) {
+                var tmstp, that = this, vast_urls = {}, ad_src = getUserVastUrl(vastSrcConfig.srces), params = {};
+                return ad_src && "string" == typeof ad_src && (window.sas_tmstp || (window.sas_tmstp = Math.round(1e10 * Math.random())), 
+                usedGlobalTimeStamped ? tmstp = Math.round(1e10 * Math.random()) : (usedGlobalTimeStamped = !0, 
+                tmstp = window.sas_tmstp), ad_src = ad_src.replace("[timestamp]", tmstp), window.sas_uuid && (params.uid = window.sas_uuid), 
+                params.tgt = getTGT(data), params = $.param(params), params && (ad_src += "-1" == ad_src.indexOf("?") ? "?" : "&", 
+                ad_src += params), $.each(vastSrcConfig.formats, function(i, cfg) {
+                    that.useAdType(cfg.name, data) && (vast_urls[cfg.name] = $.trim(ad_src.replace("[format]", cfg.id)));
+                })), vast_urls;
+            };
+        }(),
+        linearAds: {
+            preroll: !0,
+            postroll: !0,
+            midroll: !0
+        },
+        addAd: function(ad, config) {
+            var that = this, type = ad.type, mainAdType = this.linearAds[type] ? "linear" : "nonlinear";
+            "preroll" == type && ad.creatives.reverse(), $.each(ad.ASMIPlugins || [], function() {
+                try {
+                    eval(this.content), that.controller.data.plugins.push({
+                        name: this.name
+                    }), mediaplayer.pluginManager.loadPlugins({
+                        name: this.name
+                    }, that.controller);
+                } catch (e) {
+                    console.error("Mediaplayer::Invalid Plugin-Code. ", e.message);
+                }
+            }), $.each(ad.creatives, function(i, creative) {
+                var mainAds = creative[mainAdType];
+                if (mainAds && (mainAds.type = type), !creative.error && creative.isFallback) return config.plugins || (config.plugins = []), 
+                that.fire("vast/tracking/fallback", [ creative.linear ]), void (creative.error = !0);
+                if (creative.error || creative.error || !mainAds.ads.length) return ad.error = !0, 
+                void mediaplayer.warn("no ads found", ad, config);
+                var clipObject = {
+                    type: type,
+                    vastParams: creative.adParameters,
+                    srces: mainAds.ads,
+                    plugins: [ {
+                        name: "Vasttracking",
+                        params: mainAds
+                    } ]
+                };
+                "postroll" == type ? config.clipList.push(clipObject) : "preroll" == type ? config.clipList.unshift(clipObject) : "midroll" == type ? config[type] = clipObject : "overlay" == type && (config.overlayAd = mainAds);
+            });
+        }
+    }, !0);
+}(), function() {
+    "use strict";
+    var URL_POSTFIX = "&BildNoRedirect=json", defaults = {
+        messages: {
+            default: {
+                text: "<p><strong>Ein Fehler ist aufgetreten.</strong> Bitte laden Sie das Video neu. <small>Hinweis: Bundesliga-Videos sind außerhalb von Deutschland nicht abspielbar.</small></p>",
+                hasReplayButton: !0
+            },
+            DATAERROR: {
+                default: {
+                    text: "<p><strong>Ein Fehler ist aufgetreten.</strong> Die Daten zum Video haben einen Fehler.  <small>Hinweis: Bundesliga-Videos sind außerhalb von Deutschland nicht abspielbar.</small></p>",
+                    hasReplayButton: !0
+                },
+                expired: {
+                    text: "<p><strong>Ein Fehler ist aufgetreten.</strong> Dieses Video ist nicht mehr verfügbar.</p>"
+                }
+            },
+            MEDIASUPPORT: {
+                default: {
+                    text: "<p><strong>Ein Fehler ist aufgetreten.</strong> Bitte nutzen Sie einen alternativen Browser.</p>"
+                }
+            },
+            PREMIUM_REQUIRED: {
+                default: {
+                    text: '<p class="media-errorscreen-premium"><strong>Dieses Video ist ein Premiuminhalt!</strong>Erfahre <a href="##CANONICAL_URL##">hier</a>, wie du das Video anschauen kannst.</p>'
+                }
+            }
+        }
+    }, pluginTemplate = '<div class="media-errorscreen"><div class="media-errorscreen-message" /><button type="button" class="media-replay">Neu laden</button></div>', mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$;
+    mediaplayer.pluginManager.add("errorscreen", {
+        init: function() {
+            this.params = $.extend({}, defaults, this.params), this.replayData = null, this.on("cliperror", this.onError), 
+            this.on("started", this.switchError);
+        },
+        _getMessage: function(error) {
+            var message = this.params.messages[error.code];
+            return error.premiumRequired && (message = this.params.messages.PREMIUM_REQUIRED), 
+            "object" == typeof message && (message = message[error.details] || message.default), 
+            message = message || this.params.messages.default;
+        },
+        _isPremium: function(src) {
+            var def = $.Deferred(), self = this;
+            return $.ajax({
+                url: src + URL_POSTFIX,
+                xhrFields: {
+                    withCredentials: !0
+                }
+            }).always(function(xhr, textStatus) {
+                self._checkMissReason(xhr, textStatus, def);
+            }), def.promise();
+        },
+        _checkMissReason: function(xhr, textStatus, def) {
+            if ("error" === textStatus && void 0 !== xhr.getResponseHeader("X-Vauth-MissReason")) {
+                var missReason = xhr.getResponseHeader("X-Vauth-MissReason");
+                def.resolveWith(self, [ missReason ]);
+            } else "success" === textStatus && "object" != typeof xhr ? def.resolveWith(self, [ "not available" ]) : def.resolveWith(self, [ "unknown" ]);
+        },
+        _setReplayData: function(error) {
+            this._setup(), this.replayData = error.data || this.controller.data.dataUrl, this.$errorscreen.addClass("has-replay");
+        },
+        switchError: function() {
+            this.controller.error() ? this.onError() : this.hideError();
+        },
+        hasEndscreenPlugin: function() {
+            return mediaplayer.pluginManager.hasPlugin("Endscreen", this.controller.data.plugins);
+        },
+        onError: function() {
+            var error, self = this;
+            if (this.controller.currentItem && "main" == this.controller.currentItem.type) error = this.controller.error(), 
+            this._setup(), this.controller.data.premium ? this._isPremium(this.controller.currentItem.srces[0].src).then(function(premiumData) {
+                self._handleError(error, premiumData);
+            }) : this._handleError(error, !1); else if (!this.controller.currentItem) if (error = this.controller.error(), 
+            this._setup(), error && error.details) {
+                var def = $.Deferred();
+                this._checkMissReason(error.details, "error", def), def.then(function(missReason) {
+                    self._handleError(error, missReason);
+                });
+            } else this._handleError(error, !1);
+        },
+        _setEndscreenPremiumFailedFlag: function(premiumData) {
+            for (var _plugins = this.controller.data.plugins, i = 0; i < _plugins.length; i++) if ("Endscreen" === _plugins[i].name) {
+                _plugins[i].params.premiumPlaybackFailed = !0, _plugins[i].params.premiumPlaybackFailReason = premiumData;
+                break;
+            }
+        },
+        _handleError: function(error, premiumMissReason) {
+            if (error.premiumRequired = premiumMissReason, premiumMissReason && this.hasEndscreenPlugin()) this._setEndscreenPremiumFailedFlag(premiumMissReason), 
+            this.controller.fire("doom"); else {
+                var message = this._getMessage(error);
+                message.hasReplayButton && this._setReplayData(error), this.showError(message.text);
+            }
+        },
+        _setup: function() {
+            var that;
+            this.$errorscreen || (that = this, this.$errorscreen = $(pluginTemplate), this.$errorscreenMessage = $(".media-errorscreen-message", this.$errorscreen), 
+            $(".media-replay", this.$errorscreen).on("click", function() {
+                return that.replayData && mediaplayer.core.create(that.controller.$dom, that.replayData), 
+                !1;
+            }));
+        },
+        _replacePlaceholders: function(message) {
+            return message.replace("##CANONICAL_URL##", this.controller.data.canonicalUrl);
+        },
+        showError: function(message) {
+            message = this._replacePlaceholders(message), this.$errorscreenMessage.html(message), 
+            this.$errorscreen.appendTo(this.controller.$pluginDisplay);
+        },
+        hideError: function() {
+            this.$errorscreen && this.$errorscreen.detach();
+        },
+        destroy: function() {
+            this.$errorscreen && this.$errorscreen.remove(), this.super.destroy.apply(this, arguments);
+        }
+    }, !0);
+}(), function() {
+    "use strict";
+    var mediaplayer = de.bild.mediaplayer, trackingPlugin = (mediaplayer.$, {
+        init: function() {
+            this.pluginConfig = this.controller.data.trackingPlugin, this.timeUpdateInterval = this.pluginConfig.trackIntervalInSec || 10, 
+            this.initialInitTracked = !1, this.mainClipPlayed = !1, this.initialPlayCallTriggered = !1, 
+            this.trackingEnabled = !0, this.WEBTREKKPARAMS = {
+                AUTOPLAY_REVOLVER: "ck12=autoplay/revolverload",
+                AUTOPLAY: "ck12=autoplay",
+                RECOMMENDATIONS_ENDSCREEN: "ck12=recommendation/endscreen"
+            }, this.pixelId = window.de.bild.cmsKonfig && window.de.bild.cmsKonfig.system && window.de.bild.cmsKonfig.system.zaehlpixel_webtrekk_trackId || -1, 
+            this.pixelId === -1 && (this.trackingEnabled = !1), this.webtrekkParamsString = "", 
+            this.webtrekkStatic = {
+                url: window.location.pathname,
+                mediaDimension: this.controller.$dom.outerWidth() + "x" + this.controller.$dom.outerHeight()
+            }, this.lastUpdate = 0, this.adType = this.params.webtrekk.adType, this.adKeyword = this.params.webtrekk.adKeyword, 
+            this.webtrekkVideoDscription = this.params.webtrekk.description, this.clipDurationFromData = this.controller.data.durationSec === -1 || 0 === this.controller.data.durationSec ? 0 : this.controller.data.durationSec, 
+            this.currentTimeNormalized = 0, this.durationAberration = 1, this.on("beforecontrollerplay", this.bindEvents);
+        },
+        bindEvents: function() {
+            this.webtrekkParamsString = this._generateWebtrekkString(), this.off("beforecontrollerplay", this.bindEvents), 
+            this.params.webtrekk && (this.on("loadedmetadata", this._metaDataLoaded), this.on("doom", this._trackDoom)), 
+            this.on("started", this._trackStarted), this.on("playing", this._trackPlaying);
+        },
+        trackEvent: function(eventName, params) {
+            this._triggerWebtrekkTracking(eventName, params);
+        },
+        _metaDataLoaded: function() {
+            if ("main" == this.controller.currentItem.type && this.controller.isStarted()) {
+                var realClipDuration = Math.round(this.controller.getDuration()) || 0;
+                this.durationAberration = this.clipDurationFromData / realClipDuration, this.off("loadedmetadata", this._metaDataLoaded), 
+                this.on("timeupdate", this._trackPosChange), this.on("pause", this._trackPause), 
+                this.on("play", this._trackResume, !0), this.on("ended", this._trackEnded), this.on("360VidAction", this._track360Video);
+            }
+        },
+        _isUserInitiated: function() {
+            if (this.controller.data.initializedBy && this.controller.data.initializedBy.data && this.controller.data.initializedBy.data.revolver === !0) return !1;
+            if (this.controller.data.initializedBy && this.controller.data.initializedBy.teaserAutoplay) return !1;
+            try {
+                if ("BTOFlashVideo" === webtrekk.customParameter[4] && window.location.href.indexOf(",auto=true") > 0) return !1;
+            } catch (e) {}
+            return !0;
+        },
+        _generateWebtrekkString: function() {
+            var initializedBy = this.controller.data.initializedBy && this.controller.data.initializedBy.origin ? this.controller.data.initializedBy.origin : "";
+            return "ck1=" + this.adType + ";ck2=" + this.webtrekkStatic.mediaDimension + ";ck3=" + this.webtrekkStatic.url + ";ck4=" + this.webtrekkVideoDscription + ";ck8=" + this.adType + "/" + this.adKeyword + ";ck9=" + this.params.webtrekk.pubDate + ";ck32=" + (this.params.webtrekk.playInline ? "direkt" : "nicht direkt") + ";ck35=" + this.controller.data.id + ";ck36=" + this.controller.data.copyright + ";ck37=" + initializedBy + ";ck48=" + (this.controller.data["360video"] ? "360" : "") + ";ck13=" + this.params.webtrekk.premium + ";mg1=" + this.webtrekkVideoDscription;
+        },
+        _trackInit: function() {
+            if (this._isUserInitiated() && this._triggerIVWCalls(), this.controller.data.autoplay) {
+                var _isInitializedBy = this.controller.data.initializedBy;
+                _isInitializedBy && _isInitializedBy.origin && "endscreen" == _isInitializedBy.origin && _isInitializedBy.data ? _isInitializedBy.data.teaserIndex >= 0 ? this.webtrekkParamsString += ";" + this.WEBTREKKPARAMS.RECOMMENDATIONS_ENDSCREEN : _isInitializedBy.data.revolver && (this.webtrekkParamsString += ";" + this.WEBTREKKPARAMS.AUTOPLAY_REVOLVER) : this.controller.data.tracking && (this.webtrekkParamsString += ";" + this.WEBTREKKPARAMS.AUTOPLAY);
+            }
+            this.trackEvent("init", this.webtrekkParamsString);
+        },
+        _trackPlaying: function() {
+            "main" == this.controller.currentItem.type && this.controller.isStarted() && (this.trackEvent("play"), 
+            this.initialPlayCallTriggered = !0, this.off("playing", this._trackPlaying));
+        },
+        _trackStarted: function() {
+            this.initialInitTracked || (this.initialInitTracked = !0, this._trackInit()), this.off("started", this._trackStarted);
+        },
+        _triggerIVWCalls: function() {
+            var ivw2DatalayerExists = !1, trackingData = {};
+            if (this.params.ivw2) {
+                try {
+                    window.de.bild.cmsData.mappingConfig.ivw2.sendToIvw2On && (ivw2DatalayerExists = !0);
+                } catch (err) {}
+                if (ivw2DatalayerExists && de.bild.events) {
+                    trackingData = {
+                        cp: this.params.ivw2.ivw2Code,
+                        co: "",
+                        contentCode: this.params.ivw2.contentCode
+                    };
+                    try {
+                        de.bild.events.publish("dataLayer/ivw2/ready", [ trackingData, 2 ]);
+                    } catch (e) {
+                        console.warn("videoTrackingEvent:: Failed to call de.bild.events.publish");
+                    }
+                } else if (window.iom) {
+                    trackingData = {
+                        st: window.iam_data.st,
+                        cp: this.params.ivw2.ivw2Code,
+                        sv: window.iam_data.sv,
+                        co: "",
+                        contentCode: this.params.ivw2.contentCode
+                    };
+                    try {
+                        window.iom.c(trackingData, 2);
+                    } catch (e) {
+                        console.warn("videoTrackingEvent:: Failed to call IVW2 CountVideo Method.");
+                    }
+                }
+            }
+        },
+        _trackPause: function() {
+            this.trackEvent("pause");
+        },
+        _trackResume: function() {
+            this.initialPlayCallTriggered && this.trackEvent("resume");
+        },
+        _trackPosChange: function() {
+            this.mainClipPlayed = !0, this.currentTimeCached = Math.round(this.controller.currentTime()), 
+            this.currentTimeNormalized = Math.round(this.currentTimeCached * this.durationAberration) || 0, 
+            this.lastUpdate || (this.lastUpdate = this.currentTimeNormalized), this.currentTimeNormalized - this.lastUpdate >= this.timeUpdateInterval && (this.lastUpdate = this.currentTimeNormalized, 
+            this.currentTimeNormalized > this.clipDurationFromData && (this.currentTimeNormalized = this.clipDurationFromData), 
+            this.trackEvent("pos"));
+        },
+        _trackEnded: function() {
+            this.mainClipPlayed && (this.off("ended", this._trackEnded), this.off("timeupdate", this._trackPosChange), 
+            this.off("pause", this._trackPause), this.off("play", this._trackResume), this.currentTimeNormalized = this.clipDurationFromData, 
+            this.trackEvent("end"));
+        },
+        _trackDoom: function() {
+            this.trackEvent("eof");
+        },
+        _track360Video: function() {
+            arguments && arguments[1] && ("360winkel" === arguments[1].type ? this.trackEvent("360winkel", "ck48=" + arguments[1].angle) : "360interaktion" === arguments[1].type && this.trackEvent("360interaktion"));
+        },
+        _triggerWebtrekkTracking: function(eventName, parameterString) {
+            parameterString || (parameterString = ""), this.trackingEnabled && (window.wt_init_media && window.wt_sendinfo_media && (wt_init_media(this.pluginConfig.pixelURL, this.pixelId), 
+            wt_sendinfo_media(this.params.webtrekk.docPath, eventName, this.currentTimeNormalized, this.clipDurationFromData, parameterString, "", "", "")), 
+            this._trackTealium(eventName, parameterString));
+        },
+        _trackTealium: function(eventName, parameterString) {
+            if ("undefined" != typeof window.tealiumMediaTracking) {
+                var dataObj = {};
+                dataObj.eventName = eventName, dataObj.pixelURL = this.pluginConfig.pixelURL, dataObj.pixelId = this.pixelId, 
+                dataObj.docPath = this.params.webtrekk.docPath, dataObj.currentTime = this.currentTimeNormalized, 
+                dataObj.clipDuration = this.clipDurationFromData, dataObj.premium = this.controller.data.premium;
+                for (var splittedParam, splittedParamString = parameterString.split(";"), i = 0; i < splittedParamString.length; i++) splittedParam = splittedParamString[i].split("="), 
+                2 === splittedParam.length && (dataObj[splittedParam[0]] = splittedParam[1]);
+                try {
+                    window.tealiumMediaTracking(dataObj);
+                } catch (e) {}
+            }
+        },
+        destroy: function() {
+            this.super.destroy.apply(this, arguments);
+        }
+    });
+    de.bild.mediaplayer.pluginManager.add("Tracking", trackingPlugin);
+}(), function() {
+    "use strict";
+    function ping(url) {
+        var img = document.createElement("img");
+        img.src = url;
+    }
+    function VastEvents(trackingPlugin) {
+        this.tracker = trackingPlugin, this.addEvents(), this.addClickAd();
+    }
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$, trackingPlugin = {
+        init: function() {
+            return this.params || (this.params = {}), this.controller.currentItem && this.controller.currentSrc ? (this.addVastTracking(), 
+            void ((this.controller.currentSrc.type || "").indexOf("vpaid") == -1 && new VastEvents(this))) : void mediaplayer.warn("Vastplugin can be only a plugin associated with a clip. Not a global plugin");
+        },
+        destroy: function() {
+            this.$clickTarget && this.$clickTarget.remove(), this.super.destroy.apply(this, arguments);
+        },
+        eventTrack: {
+            AdImpression: "impression",
+            AdStarted: "creativeview",
+            AdVideoStart: "start",
+            AdVideoFirstQuartile: "firstquartile",
+            AdVideoMidpoint: "midpoint",
+            AdVideoThirdQuartile: "thirdquartile",
+            AdVideoComplete: "complete",
+            AdClickThru: "clickTracking",
+            AdUserAcceptInvitation: "acceptinvitation",
+            AdUserMinimize: "collapse",
+            AdPaused: "pause",
+            AdPlaying: "resume",
+            AdError: "error",
+            AdSkipped: "skip"
+        },
+        addVastTracking: function() {
+            var that = this;
+            $.each(this.eventTrack, function(evtName, vastTrack) {
+                that.on(evtName, function(e) {
+                    that.trackEvent(vastTrack, e);
+                });
+            });
+        },
+        __eachPing: function(i, url) {
+            ping(url);
+        },
+        trackEvent: function(type, e) {
+            var url;
+            mediaplayer.log("track: " + type), "impression" == type && this.params.impressions ? $.each(this.params.impressions, this.__eachPing) : "clickTracking" == type ? (e.originalEvent && (e = e.originalEvent), 
+            $.each(this.params.clickTracking || [], this.__eachPing), e.data || (e.data = {}, 
+            mediaplayer.error("no AdClickThru params")), e.data.playerHandles && (url = e.data.url || this.params.clickThrough, 
+            url && window.open(url, "_blank"))) : this.params.events && this.params.events[type] && $.each(this.params.events[type], this.__eachPing);
+        }
+    }, vastFallback = {
+        init: function() {
+            this.on("vast/tracking/fallback", this.triggerFallback);
+        },
+        triggerFallback: function(e, params) {
+            var triggered = !1;
+            this.params = params, mediaplayer.warn(this.params, "fallback"), this.params || (this.params = {}), 
+            "preroll" == this.params.type && this.params.impressions && this.on("playing", function() {
+                triggered || 0 !== this.controller.index || (triggered = !0, this.trackImpressions(this.params.impressions), 
+                this.off("playing"));
+            }), "postroll" == this.params.type && this.params.impressions && this.on("doom", function() {
+                this.trackImpressions(this.params.impressions);
+            });
+        },
+        trackImpressions: function(impressions) {
+            $.each(impressions, function(i, url) {
+                ping(url);
+            });
+        },
+        destroy: function() {
+            this.off("vast/tracking/fallback"), this.super.destroy.apply(this, arguments);
+        }
+    };
+    VastEvents.prototype = {
+        addEvents: function() {
+            var that = this, triggeredStarted = !1;
+            this.tracker.on("playing", function() {
+                triggeredStarted ? this.fire("AdPlaying") : (this.fire("AdStarted"), this.fire("AdImpression"), 
+                this.fire("AdVideoStart")), triggeredStarted = !0;
+            }).on("pause", function() {
+                this.controller.getDuration() - this.controller.currentTime() > 1 && this.fire("AdPaused");
+            }, !0).on("ended", function() {
+                this.fire("AdVideoComplete");
+            }).on("error", function() {
+                this.fire("AdError");
+            }).on("loadedmetadata", function() {
+                var duration = this.controller.getDuration(), segments = [];
+                isNaN(duration) || (duration /= 4, segments = [ {
+                    time: duration,
+                    name: "AdVideoFirstQuartile"
+                }, {
+                    time: 2 * duration,
+                    name: "AdVideoMidpoint"
+                }, {
+                    time: 3 * duration,
+                    name: "AdVideoThirdQuartile"
+                } ], that.addSegmentsPlayed(segments));
+            });
+        },
+        addSegmentsPlayed: function(segments) {
+            var trigger = function() {
+                var segment;
+                segments[0] ? segments[0].time <= this.controller.currentTime() && (segment = segments.shift(), 
+                this.fire(segment.name)) : this.off("timeupdate", trigger);
+            };
+            this.tracker.on("timeupdate", trigger);
+        },
+        addClickAd: function() {
+            var tracker = this.tracker, clickUrl = tracker.params.clickThrough;
+            tracker.params.clickThrough && (tracker.$clickTarget = $('<div class="vast-click" />').css({
+                position: "absolute",
+                top: 0,
+                left: 0,
+                bottom: 0,
+                right: 0,
+                visibility: "visible"
+            }).on("click", function() {
+                if (tracker.controller.isPlaying()) {
+                    var obj = {
+                        url: clickUrl,
+                        Id: null,
+                        playerHandles: !0
+                    };
+                    return tracker.fire($.Event({
+                        type: "AdClickThru",
+                        data: obj,
+                        details: obj
+                    })), !1;
+                }
+                tracker.controller.play();
+            }), tracker.on("timeupdate.vastclicktrough", function() {
+                tracker.controller.currentTime() > .2 && (tracker.off(".vastclicktrough"), tracker.$clickTarget.appendTo(this.controller.$pluginDisplay));
+            }));
+        }
+    }, de.bild.mediaplayer.pluginManager.add("Vastfallback", vastFallback, !0), de.bild.mediaplayer.pluginManager.add("Vasttracking", trackingPlugin);
+}(), function() {
+    "use strict";
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$, IOS_URL_POSTFIX = "&BildNoRedirect=json";
+    if (navigator.userAgent.indexOf("Safari") != -1 && navigator.userAgent.indexOf("Mobile") != -1) {
+        var tokenizr = {
+            init: function() {
+                var isPremium = !1;
+                if (this.controller.data.premium) try {
+                    isPremium = de.bild.user.isLoggedIn();
+                } catch (e) {}
+                isPremium && this.on("beforeload", function() {
+                    this.controller.currentItem && "main" == this.controller.currentItem.type && this.addToken();
+                });
+            },
+            addToken: function() {
+                var currentSrc = this.controller.currentSrc;
+                currentSrc.origSrc || (currentSrc.origSrc = currentSrc.src);
+                try {
+                    $.ajax({
+                        url: currentSrc.origSrc + IOS_URL_POSTFIX,
+                        async: !1,
+                        xhrFields: {
+                            withCredentials: !0
+                        },
+                        success: function(src) {
+                            currentSrc.src = src || currentSrc.src;
+                        }
+                    });
+                } catch (e) {}
+            }
+        };
+        mediaplayer.pluginManager.add("Iostokenizr", tokenizr, !0);
+    }
+}(), function() {
+    "use strict";
+    function prefixed(prop, obj) {
+        var i, testProp, ret = !1;
+        if (obj[prop] && (ret = prop), !ret) for (prop = prop.charAt(0).toUpperCase() + prop.slice(1), 
+        i = 0; i < domPrefixes.length; i++) if (testProp = domPrefixes[i] + prop, testProp in obj) {
+            ret = testProp;
+            break;
+        }
+        return ret;
+    }
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$, domPrefixes = [ "webkit", "moz", "o", "ms" ];
+    mediaplayer.fullscreenAPI = function() {
+        var parentData, frameData, doc = document.documentElement, fullScreenApi = {
+            supportsFullscreen: prefixed("fullscreenEnabled", document) || prefixed("fullScreenEnabled", document),
+            isFullscreen: function() {
+                return !1;
+            },
+            requestFullscreen: function(elem) {
+                var tmpData;
+                parentData = [], $(elem).parentsUntil("body").each(function() {
+                    var changed, pos = $.css(this, "position"), left = this.scrollLeft, top = this.scrollTop;
+                    tmpData = {
+                        elemStyle: this.style,
+                        elem: this
+                    }, "static" !== pos && (changed = !0, tmpData.pos = tmpData.elemStyle.position, 
+                    this.style.position = "static"), left && (changed = !0, tmpData.left = left), top && (changed = !0, 
+                    tmpData.top = top), changed && parentData.push(tmpData);
+                }), frameData = !1;
+                try {
+                    frameData = {
+                        elemStyle: frameElement.style,
+                        elem: frameElement,
+                        css: {}
+                    }, frameData.css.position = frameData.elemStyle.position, frameData.elemStyle.position = "fixed", 
+                    $.each([ "top", "left", "right", "bottom" ], function(i, name) {
+                        frameData.css[name] = frameData.elemStyle[name], frameData.elemStyle[name] = "0px";
+                    }), $.each([ "height", "width" ], function(i, name) {
+                        frameData.css[name] = frameData.elemStyle[name], frameData.elemStyle[name] = "100%";
+                    });
+                } catch (er) {
+                    frameData = !1;
+                }
+                tmpData = null;
+            },
+            cancelFullscreen: function() {
+                parentData && ($.each(parentData, function(i, data) {
+                    "pos" in data && (data.elemStyle.position = data.pos), data.left && (data.elem.scrollLeft = data.left), 
+                    data.top && (data.elem.scrollTop = data.top), data = null;
+                }), parentData = []), frameData && ($.each(frameData.css, function(name, value) {
+                    frameData.elemStyle[name] = value;
+                }), frameData = !1);
+            },
+            eventName: "fullscreenchange",
+            exitName: "exitFullscreen",
+            requestName: "requestFullscreen",
+            elementName: "fullscreenElement",
+            enabledName: ""
+        };
+        return fullScreenApi.cancelFullWindow = fullScreenApi.cancelFullscreen, fullScreenApi.requestFullWindow = fullScreenApi.requestFullscreen, 
+        fullScreenApi.supportsFullscreen && (fullScreenApi.enabledName = fullScreenApi.supportsFullscreen, 
+        fullScreenApi.exitName = prefixed("exitFullscreen", document) || prefixed("cancelFullScreen", document), 
+        fullScreenApi.elementName = prefixed("fullscreenElement", document) || prefixed("fullScreenElement", document), 
+        fullScreenApi.supportsFullScreen = !!fullScreenApi.supportsFullscreen, "fullscreenElement" == fullScreenApi.elementName && "exitFullscreen" == fullScreenApi.exitName && "fullscreenEnabled" == fullScreenApi.enabledName || $.each(domPrefixes, function(i, prefix) {
+            var requestName = prefix + "RequestFullscreen";
+            if (requestName in doc || (requestName = prefix + "RequestFullScreen") && requestName in doc) return fullScreenApi.eventName = prefix + "fullscreenchange", 
+            fullScreenApi.requestName = requestName, !1;
+        }), fullScreenApi.isFullscreen = function() {
+            return document[fullScreenApi.elementName];
+        }, fullScreenApi.getFullscreenElement = fullScreenApi.isFullscreen, fullScreenApi.requestFullscreen = function(el) {
+            return el[fullScreenApi.requestName]();
+        }, fullScreenApi.cancelFullscreen = function() {
+            return document[fullScreenApi.exitName]();
+        }), window.parent != window && !function() {
+            try {
+                var frame = window.frameElement;
+                fullScreenApi.supportsFullscreen && ("allowfullscreen" in frame && !frame.allowfullscreen ? frame.allowfullscreen = !0 : (null == frame.getAttribute("webkitallowfullscreen") && frame.setAttribute("webkitallowfullscreen", ""), 
+                null == frame.getAttribute("allowfullscreen") && frame.setAttribute("allowfullscreen", "allowfullscreen")));
+            } catch (er) {}
+        }(), fullScreenApi;
+    }(), $.extend(mediaplayer.controllerProto, {
+        requestFullscreen: function() {
+            var that;
+            if (!this.$dom.hasClass("media-fullscreen")) {
+                that = this, this.fullscreenscrollPos = {
+                    top: $(window).scrollTop(),
+                    left: $(window).scrollLeft()
+                };
+                try {
+                    mediaplayer.fullscreenAPI.requestFullscreen(this.$dom[0]);
+                } catch (e) {
+                    mediaplayer.error("could not go fullscreen", e);
+                }
+                $("html").addClass("cotains-fullscreenmedia"), this.$dom.addClass("media-fullscreen"), 
+                $("button.media-pausetoggle", this.$dom).trigger("focus"), $(document).off(".mediaplayerfullscreen").on("keydown.mediaplayerfullscreen", function(e) {
+                    if (!e.isDefaultPrevented()) return 27 == e.keyCode ? (that.cancelFullscreen(), 
+                    !1) : 32 !== e.keyCode || "form" in e.target ? void 0 : (that.togglePlay(), !1);
+                }).on(mediaplayer.fullscreenAPI.eventName + ".mediaplayerfullscreen", function(e) {
+                    var fullScreenElem = mediaplayer.fullscreenAPI.getFullscreenElement();
+                    fullScreenElem && that.$dom[0] == fullScreenElem || that.cancelFullscreen();
+                }), this.fire("fullscreenchange");
+            }
+        },
+        cancelFullscreen: function() {
+            if (this.$dom.hasClass("media-fullscreen")) {
+                $(document).off(".mediaplayerfullscreen"), $("html").removeClass("cotains-fullscreenmedia"), 
+                this.$dom.removeClass("media-fullscreen");
+                try {
+                    mediaplayer.fullscreenAPI.cancelFullscreen();
+                } catch (e) {}
+                this.fullscreenscrollPos && ($(window).scrollTop(this.fullscreenscrollPos.top).scrollLeft(this.fullscreenscrollPos.left), 
+                delete this.fullscreenscrollPos), this.fire("fullscreenchange");
+            }
+        },
+        isFullscreen: function() {
+            return !!this.$dom.hasClass("media-fullscreen") && (mediaplayer.fullscreenAPI.isFullscreen() || "fullwindow");
+        },
+        toggleFullscreen: function() {
+            this[this.isFullscreen() ? "cancelFullscreen" : "requestFullscreen"]();
+        }
+    }), mediaplayer.pluginManager.add("fullscreentoggle", {
+        defaults: {
+            label: "Vollbild"
+        },
+        init: function() {
+            function init() {
+                mainPlugin.on("fullscreenchange", stateChange), $element.on("click", toggleFullscreen);
+            }
+            function stateChange() {
+                var isFs = !!mainPlugin.controller.isFullscreen();
+                $element.attr("aria-checked", "" + isFs)[isFs ? "addClass" : "removeClass"]("is-fullscreen");
+            }
+            function toggleFullscreen() {
+                return mainPlugin.controller.toggleFullscreen(), !1;
+            }
+            var container = this.$container, mainPlugin = this, options = this.params || {}, $element = $('<button type="button" class="media-' + this.name + '" role="checkbox" aria-label="' + options.label + '" />').appendTo(container);
+            init();
+        }
+    }), mediaplayer.pluginManager.addChildPlugin({
+        name: "fullscreentoggle",
+        defaults: {
+            label: "Vollbild"
+        },
+        setup: function(mainPlugin, container, options) {
+            function init() {
+                mainPlugin.on("fullscreenchange", stateChange), $element.on("click", toggleFullscreen);
+            }
+            function stateChange() {
+                var isFs = !!mainPlugin.controller.isFullscreen();
+                $element.attr("aria-checked", "" + isFs)[isFs ? "addClass" : "removeClass"]("is-fullscreen");
+            }
+            function toggleFullscreen() {
+                return mainPlugin.controller.toggleFullscreen(), !1;
+            }
+            var $element = $('<button type="button" class="media-' + this.name + '" role="checkbox" aria-label="' + options.label + '" />').appendTo(container);
+            init();
+        }
+    });
+}(), function() {
+    "use strict";
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$;
+    location.hash.indexOf("devmedia") != -1 && (mediaplayer.debug = !0);
+    var debugConsole = {
+        init: function() {
+            if (location.hash.indexOf("devmedia") != -1) {
+                mediaplayer.debug = !0;
+                var that = this, controllerEventHandler = function(e) {
+                    this.render(e.type);
+                };
+                this.bar = $("<ul />").css({
+                    color: "#000",
+                    backgroundColor: "#fff",
+                    maxHeight: 360,
+                    overflow: "scroll"
+                }).insertAfter(this.controller.$dom), this.button = $('<button type="button">debug render</button>').insertBefore(this.bar).on("click", function() {
+                    that.render("click"), window.console && console.log(that.controller, "window.mediaController"), 
+                    window.mediaController = that.controller;
+                }), this.on("started", controllerEventHandler).on("cliperror", controllerEventHandler).on("doom", controllerEventHandler), 
+                this.addNativeEvents(), this.render("init");
+            }
+        },
+        addNativeEvents: function() {
+            var that = this, dom = this.controller.$dom[0], names = "play playing error loadstart suspend loadedmetadata stalled waiting ended emptied".split(" "), handle = function(e) {
+                that.render(e.type);
+            };
+            names.forEach(function(name) {
+                dom.addEventListener(name, handle, !0);
+            }), this.removeNativeEvents = function() {
+                names.forEach(function(name) {
+                    dom.removeEventListener(name, handle, !0);
+                });
+            };
+        },
+        render: function(event) {
+            var video = $("video", this.controller.$dom)[0], data = "<strong>" + event + ":</strong>";
+            video && (data += "<br />paused: " + video.paused, data += "<br />readyState: " + video.readyState, 
+            data += "<br />networkState: " + video.networkState, data += "<br />currentSource: " + video.currentSrc, 
+            data += "<br />duration: " + video.duration, data += "<br />time: " + video.currentTime, 
+            data += "<br />needsPlayDelay: " + this.controller.needsPlayDelay, data += "<br />error: " + (video.error && video.error.code)), 
+            data += "<br />", this.bar.prepend("<li>" + data + "</li>");
+        },
+        destroy: function() {
+            this.bar && this.button && (this.bar.remove(), this.button.remove()), this.removeNativeEvents && this.removeNativeEvents(), 
+            this.super.destroy.apply(this, arguments);
+        }
+    };
+    mediaplayer.pluginManager.add("debugger", debugConsole, !0), mediaplayer.pluginManager.add("debugTracker", {
+        init: function() {
+            var lastErrorItem, supportMp4 = !1;
+            if (!this.beaconEndPoint) try {
+                this.beaconEndPoint = mediaplayer.defaults.endpoints.errorLog;
+            } catch (e) {
+                return;
+            }
+            if (!(Math.random() > .2) && this.beaconEndPoint) {
+                try {
+                    supportMp4 = document.createElement("video").canPlayType("video/mp4");
+                } catch (e) {}
+                this.data = {
+                    ua: this.getUA(),
+                    swf: window.swfobject && swfobject.ua.pv.join("."),
+                    mp4: supportMp4,
+                    id: this.controller.data.id,
+                    pf: (navigator.platform || "").substr(0, 9),
+                    mediaplayererrors: []
+                }, this.on("error", function() {
+                    var curItem = this.controller.currentItem, error = this.controller.error();
+                    curItem = curItem && curItem.type || "unknown", curItem != lastErrorItem && (this.data.mediaplayererrors.push(curItem), 
+                    lastErrorItem = curItem), error && (this.data.mediaplayererrors[this.data.mediaplayererrors.length - 1] += "|" + (error.details.code || error.details.value || error.details || error.code));
+                }), this.on("maincliperror", function() {
+                    var that = this;
+                    setTimeout(function() {
+                        that.sendData();
+                    });
+                });
+            }
+        },
+        getUA: function() {
+            var ua = navigator.userAgent.toLowerCase(), match = /(chrome)[ \/]([\w.]+)/.exec(ua) || /(webkit)[ \/]([\w.]+)/.exec(ua) || /(opera)(?:.*version|)[ \/]([\w.]+)/.exec(ua) || /(msie) ([\w.]+)/.exec(ua) || ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(ua) || [];
+            return (match[1] || "") + "," + (match[2] || "0");
+        },
+        sendData: function() {
+            var img;
+            this.data && this.data.mediaplayererrors && this.data.mediaplayererrors.length && (img = document.createElement("img"), 
+            this.data.mediaplayererrors = this.data.mediaplayererrors.join(","), img.src = this.beaconEndPoint + "?" + $.param(this.data), 
+            this.data.errors = []);
+        },
+        destroy: function() {
+            this.sendData(), this.super.destroy.apply(this, arguments);
+        }
+    }, !0);
+}(), function() {
+    "use strict";
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$;
+    mediaplayer.inlinePlayerProto = {
+        isMobile: /mobi/i.test(navigator.userAgent),
+        preventPlay: function() {
+            this.controller.pause(), mediaplayer.warn("main controller was paused by inlinePlayer");
+        },
+        hideMainPlayer: function() {
+            this.controller.pause(), this.isMobile && this.controller.supportSharedMedia() ? (this.sharedMedia = this.controller.requestSharedMedia(), 
+            this.controller.$mediaBox.addClass("shared-mediabox")) : (this.sharedMedia = null, 
+            this.on("play", this.preventPlay), this.controller.$mediaBox.addClass("hide-mediabox"));
+        },
+        resumeMainplayer: function() {
+            this.destroyInlinePlayer(), this.controller.$mediaBox.removeClass("hide-mediabox shared-mediabox"), 
+            this.sharedMedia && (this.controller.releaseSharedMedia(), this.sharedMedia = null), 
+            this.controller.play();
+        },
+        setupInlinePlayer: function() {
+            this.$inlinePlayer || (this.$inlinePlayer = $('<div class="mediaplayer inline-player ' + this.name + '-player" />').on("mediaplayer/created mediaplayer/doom", function(e) {
+                e.stopPropagation();
+            }).appendTo(this.controller.$dom), this.sharedMedia && this.$inlinePlayer.addClass("shared-player"), 
+            this.$inlinePlayer.attr("data-theme", this.controller.$dom.attr("data-theme")));
+        },
+        load: function(data, inlinePlayerOpts, mainPlayerOpts) {
+            function onFail() {
+                that.onFail();
+            }
+            var that = this;
+            return mainPlayerOpts && mainPlayerOpts.nonLinear || this.hideMainPlayer(), this.setupInlinePlayer(), 
+            $.extend(data, {
+                sharedMedia: this.sharedMedia
+            }), this.inlinePlayerPromise = mediaplayer.core.create(this.$inlinePlayer, data, inlinePlayerOpts).done(function() {
+                var onDoom = function() {
+                    that.inlineController.off(".inlineplayer"), that.onDoom();
+                };
+                that.inlineController = this, that.inlineController.on("maincliperror.inlineplayer", onFail), 
+                that.inlineController.on("doom.inlineplayer", onDoom), that.onPlayerReady();
+            }).fail(onFail), this.inlinePlayerPromise;
+        },
+        onDoom: function() {},
+        onPlayerReady: function() {
+            this.inlineController.play();
+        },
+        onFail: function() {
+            this.destroyInlinePlayer();
+        },
+        destroyInlinePlayer: function() {
+            this.off("play", this.preventPlay), this.inlineController && (this.sharedMedia || (this.inlineController.pause(), 
+            this.inlineController.destroy()), this.inlineController = null), this.$inlinePlayer && (this.$inlinePlayer.remove(), 
+            this.$inlinePlayer = null), this.inlinePlayerPromise && (this.inlinePlayerPromise = null);
+        },
+        destroy: function() {
+            return this.destroyInlinePlayer(), this.super.destroy.apply(this, arguments);
+        }
+    };
+}(), function() {
+    "use strict";
+    var midroll, mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$;
+    mediaplayer.inlinePlayerProto || mediaplayer.error("no inline player available or supported."), 
+    midroll = $.extend({}, mediaplayer.inlinePlayerProto, {
+        init: function() {
+            var that = this, setup = function() {
+                that.setupMidroll();
+            };
+            this._played = !1, this.controller.data.midroll && ("function" == typeof this.controller.data.midroll.done ? this.controller.data.midroll.done(setup) : setup());
+        },
+        setupMidroll: function() {
+            this.controller.data.midroll && this.controller.data.midroll.srces && (this.on("loadedmetadata", function() {
+                "main" == this.controller.currentItem.type && (this.params.startMidroll || (this.params.startMidroll = this.controller.getDuration() / 2), 
+                this.params.startMidroll || (this.params.startMidroll = this.controller.data.vast.midrollStartFallback || 60));
+            }), this.on("timeupdate", function() {
+                var data;
+                !this._played && "main" == this.controller.currentItem.type && this.controller.currentTime() > this.params.startMidroll && this.controller.isPlay() && (this._played = !0, 
+                this.off("timeupdate"), data = {
+                    clipList: [ this.controller.data.midroll ],
+                    plugins: []
+                }, $.each(this.controller.data.plugins || [], function(i, plugin) {
+                    if ("Controls" == plugin.name || "controls-mobile" == plugin.name) return data.plugins.push(plugin), 
+                    !1;
+                }), this.load(data));
+            }));
+        },
+        onDoom: function() {
+            this.resumeMainplayer();
+        }
+    }), mediaplayer.pluginManager.add("midroll", midroll, !0);
+}(), function() {
+    "use strict";
+    function getId(name) {
+        return id++, name ? name + id : id;
+    }
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$, params = {
+        allowscriptaccess: "always",
+        allowfullscreen: "true",
+        wmode: "transparent",
+        allowNetworking: "all"
+    }, attrs = {
+        bgcolor: "#000000"
+    }, id = new Date().getTime();
+    de.bild.mediaplayer.swfEvents = {}, mediaplayer.addMediaProvider("flash", {
+        canPlayType: function() {
+            var hasFlash = window.swfobject && swfobject.hasFlashPlayerVersion("10.0.3"), types = {
+                "video/3gpp": 1,
+                "video/x-msvideo": 1,
+                "video/quicktime": 1,
+                "video/x-m4v": 1,
+                "video/mp4": 1,
+                "video/m4p": 1,
+                "video/x-flv": 1,
+                "video/flv": 1,
+                "video/rtmp": 1,
+                "application/f4m": 1
+            };
+            return function(type) {
+                var ret = hasFlash ? "maybe" : "";
+                return type && ret && (type = type.split("+")[0], types[type] || (ret = "")), ret;
+            };
+        }(),
+        proto: {
+            construct: function(proxy) {
+                var vars, path;
+                this.options = proxy.data.flashProvider || {}, this.id = getId("mediaswf_"), this.options.path || mediaplayer.log("path for flash provider!"), 
+                path = proxy.data.basePath + this.options.path, $("<div />").prop("id", this.id).appendTo(proxy.$mediaDisplay), 
+                vars = $.extend({}, this.options.vars, {
+                    cb: "window.de.bild.mediaplayer.swfEvents." + this.id,
+                    name: this.id,
+                    id: this.id
+                }), this.isReady = !1, this._stateMuted = !1, this._stateVolume = 1, this.proxy = proxy, 
+                this.fnQueue = [], this.proxy.sharePlayerState(), this._createTimeRange(), this._setupEvents(this), 
+                this.resetStates(), swfobject.embedSWF(path, this.id, "100%", "100%", "9.0.115", !1, vars, params, attrs);
+            },
+            proxyEvents: {
+                waiting: "waiting",
+                playing: "playing",
+                play: "play",
+                pause: "pause",
+                seeked: "seeked",
+                ended: "ended",
+                loadedmetadata: "loadedmetadata",
+                volumechange: "volumechange",
+                progress: "progress",
+                timeupdate: "timeupdate",
+                error: "error"
+            },
+            _createTimeRange: function() {
+                var that = this;
+                this.bufferedTimeRange = {
+                    start: function(index) {
+                        if (index >= this.length) throw "timerange overflow";
+                        return 0;
+                    },
+                    end: function(index) {
+                        if (index >= this.length) throw "timerange overflow";
+                        return that._stateBufferred;
+                    },
+                    length: 0
+                };
+            },
+            resetStates: function() {
+                this._statePaused = !0, this._stateWaiting = !1, this._stateBufferred = 0, this._stateDuration = parseInt("NaN", 10), 
+                this._stateMetadata = null, this._stateCurrentTime = 0, this._stateEnded = !1, this.bufferedTimeRange.length = 0;
+            },
+            _setupEvents: function(that) {
+                de.bild.mediaplayer.swfEvents[this.id] = function(evt) {
+                    try {
+                        evt = JSON.parse(decodeURIComponent(evt));
+                    } catch (e) {
+                        return void mediaplayer.warn("could not parse flash event", evt);
+                    }
+                    if ("log" !== evt.type && that._fixTimeout && clearTimeout(that._fixTimeout), "initialized" == evt.type) return that.swf = document.getElementById(that.id), 
+                    that.isReady = !0, setTimeout(function() {
+                        that.processQueue();
+                    }), void (that._fixTimeout = setTimeout(function() {
+                        that._statePaused && (that.proxy.error({
+                            code: mediaplayer.ERRORS.MEDIASUPPORT,
+                            details: {
+                                type: "Network Error",
+                                value: "Redirect error: securityError"
+                            }
+                        }), that.proxy.fire(that.proxyEvents.error));
+                    }, 2e3));
+                    if ("waiting" == evt.type && evt.value === !1) return void (that._stateWaiting = !1);
+                    if ("warn" == evt.type || "log" == evt.type) return void mediaplayer[evt.type]("flash " + evt.type, evt);
+                    if (!that.proxyEvents[evt.type]) return void mediaplayer.warn("unknown event from flash: " + evt.type, evt);
+                    if (that._fixPause) {
+                        if ("playing" == evt.type || "loadedmetadata" == evt.type) try {
+                            that.swf.pause(), setTimeout(function() {
+                                that._fixPause = !1;
+                            }, 99);
+                        } catch (e) {}
+                        if ("playing" == evt.type) return;
+                    }
+                    if ("waiting" == evt.type) that._stateWaiting = !0; else if ("playing" == evt.type) that._stateWaiting = !1, 
+                    that._statePaused = !1; else if ("play" == evt.type) that._statePaused = !1; else if ("pause" == evt.type) that._statePaused = !0; else if ("ended" == evt.type) that._stateEnded = !0; else if ("loadedmetadata" == evt.type) {
+                        if (that._stateMetadata = evt.value, that._stateDuration = "duration" in evt.value ? evt.value.duration : "Infinity" == that.swf.getDuration() ? 1 / 0 : NaN, 
+                        that.proxy.data.durationSec === -1 || 0 === that.proxy.data.durationSec) that._stateDuration = 1 / 0; else if (that._stateDuration == 1 / 0 && !evt.value.duration) return void setTimeout(function() {
+                            that._stateDuration = that.swf.getDuration() || that._stateDuration, that.proxy.fire("loadedmetadata");
+                        });
+                    } else if ("timeupdate" == evt.type) that._stateCurrentTime = evt.value; else if ("progress" == evt.type) {
+                        if (!that._stateDuration) return;
+                        that._stateBufferred = evt.value * that._stateDuration, that.bufferedTimeRange.length = 1;
+                    } else "error" == evt.type && that.proxy.error({
+                        code: mediaplayer.ERRORS.MEDIASUPPORT,
+                        details: evt.value
+                    });
+                    that.proxy.fire(that.proxyEvents[evt.type]);
+                };
+            },
+            processQueue: function() {
+                for (var fn; this.fnQueue.length; ) fn = this.fnQueue.shift(), this.swf[fn[0]].apply(this.swf, fn[1]);
+            },
+            addToQueue: function(fn, args) {
+                if (!this.isReady) return this.fnQueue.push([ fn, args || [] ]), !0;
+            },
+            load: function(src) {
+                this.addToQueue("load", [ src ]) || (this._stateMetadata && (this.resetStates(), 
+                this.proxy.fire("emptied")), this.swf.load(src));
+            },
+            play: function() {
+                this._fixPause = !1, this.addToQueue("play") ? (this._stateWaiting = !0, this.proxy.fire("waiting")) : this.swf.play(), 
+                this._statePaused = !1;
+            },
+            pause: function() {
+                this.addToQueue("pause") ? this._stateWaiting = !1 : (this.swf.pause(), this.isLoadedmetadata() || (this._fixPause = !0)), 
+                this._statePaused = !0;
+            },
+            muted: function(mute) {
+                var isSetter = !!arguments.length;
+                return isSetter ? (this._stateMuted = mute, this.addToQueue("muted", [ mute ]) || this.swf.muted(mute), 
+                this.proxy.fire("volumechange"), void 0) : this.swf ? this.swf.muted() : this._stateMuted;
+            },
+            volume: function(vol) {
+                var isSetter = !!arguments.length;
+                return isSetter ? (this._stateVolume = vol, this.addToQueue("volume", [ vol ]) || this.swf.volume(vol), 
+                this.proxy.fire("volumechange"), void 0) : this.swf ? this.swf.volume() : this._stateVolume;
+            },
+            currentTime: function(time) {
+                var isSetter = !!arguments.length;
+                return isSetter && (this.addToQueue("currentTime", [ time ]) || this.swf.currentTime(time)), 
+                this._stateCurrentTime;
+            },
+            controls: function() {},
+            getBuffered: function() {
+                return this.bufferedTimeRange;
+            },
+            getDuration: function() {
+                return this._stateDuration;
+            },
+            isPlay: function() {
+                return !this._statePaused;
+            },
+            isPlaying: function() {
+                return !this._statePaused && !this._stateWaiting;
+            },
+            isEnded: function() {
+                return this._stateEnded;
+            },
+            isWaiting: function() {
+                return this._stateWaiting;
+            },
+            isLoadedmetadata: function() {
+                return !!this._stateMetadata;
+            },
+            isProgress: function() {
+                return !!this.bufferedTimeRange.length;
+            },
+            destroy: function() {
+                swfobject.removeSWF(this.id);
+            }
+        }
+    });
+}(), function() {
+    "use strict";
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$, message = "Video beginnt in {{time}} Sekunden", isMobile = /mobile|ipad|iphone|ipod|android/i.test(navigator.userAgent) || "ontouchstart" in window, pluginTemplate = '<div class="media-controlsblocker"><div class="media-timetillended" />';
+    isMobile && mediaplayer.dataLoader.addTransformator(function(data, doneCallback) {
+        $.each(data.plugins || [], function(i, plugin) {
+            if ("Controls" == plugin.name) return data.plugins.splice(i, 1), !1;
+        }), doneCallback(data);
+    }), mediaplayer.pluginManager.add("controls-mobile", {
+        init: function() {
+            this.isBlocked = !1, this.controller.index < 0 && this.controller.loadIndex(0), 
+            this.on("started", function() {
+                this.isAd() ? this.blockControls() : this.unblockControls();
+            }), this.setupBlockSeek();
+        },
+        isAd: function() {
+            var adTypes = {
+                midroll: 1,
+                preroll: 1,
+                postroll: 1
+            }, clipType = (this.controller.currentItem || {}).type;
+            return !!adTypes[clipType];
+        },
+        setupBlockSeek: function() {
+            var currentTime = 0, previousTime = currentTime, jumpBack = function() {
+                this.isBlocked && previousTime + .1 < currentTime && this.controller.currentTime(previousTime);
+            };
+            this.on("timeupdate", function() {
+                previousTime = currentTime, currentTime = this.controller.currentTime();
+            }), this.on("seeking", jumpBack), this.on("seeked", jumpBack);
+        },
+        _blockControls: function() {
+            this.isBlocked = !0, this.off(".blockcontrols"), this.setupControls(), this.$blockedWrapper.addClass("mp-visible"), 
+            this.isAd() ? (this.setupTimeTillEnded(), this.$durationDisplay.appendTo(this.$blockedWrapper)) : this.$durationDisplay.detach(), 
+            this.controller.controls(!1);
+        },
+        blockControls: function() {
+            this.isBlocked || (this.isBlocked = !0, this.off(".blockcontrols").on("timeupdate.blockcontrols", function() {
+                this.controller.currentTime() > 0 && this._blockControls();
+            }));
+        },
+        unblockControls: function() {
+            this.isBlocked && (this.isBlocked = !1, this.off(".blockcontrols"), this.$blockedWrapper && (this.$blockedWrapper.removeClass("mp-visible"), 
+            this.teardownTimeTillEnded()), this.controller.controls(!0), this.off("timeupdate", this._onUpdate));
+        },
+        setupControls: function() {
+            var that;
+            this.$blockedWrapper || (this.$blockedWrapper = $(pluginTemplate).appendTo(this.controller.$pluginDisplay), 
+            this.$durationDisplay = $(".media-timetillended", this.$blockedWrapper), mediaplayer.debug && (that = this, 
+            this.$durationDisplay.on("click", function() {
+                that.controller.pause(), that.controller.fire("ended");
+            })));
+        },
+        _updateDuration: function() {
+            var time = Math.round(this.duration - this.controller.currentTime());
+            time !== this.lastTime && (this.lastTime = time, this.$durationDisplay.html(message.replace("{{time}}", time)));
+        },
+        _onHaveDuration: function() {
+            this.duration = this.controller.getDuration(), isNaN(this.duration) || (this.setupControls(), 
+            this.on("timeupdate", this._updateDuration), this._updateDuration());
+        },
+        setupTimeTillEnded: function() {
+            this.teardownTimeTillEnded(), this.on("loadedmetadata", this._onHaveDuration);
+        },
+        teardownTimeTillEnded: function() {
+            this.off("loadedmetadata", this._onHaveDuration), this.off("timeupdate", this._updateDuration), 
+            this.lastTime = null, this.$blockedWrapper.removeClass("media-show-duration");
+        },
+        destroy: function() {
+            this.$blockedWrapper && this.$blockedWrapper.remove(), this.$posterWrapper && this.$posterWrapper.remove(), 
+            this.super.destroy.apply(this, arguments);
+        }
+    }, isMobile);
+}(), function() {
+    "use strict";
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$, childPlugins = mediaplayer.pluginManager.childPlugins;
+    mediaplayer.pluginManager.addChildPlugin({
+        name: "sharemenu",
+        defaults: {
+            label: "teilen"
+        },
+        setup: function(mainPlugin, container, options) {
+            var $submenu;
+            return $submenu = mediaplayer.getSubmenu("sharemenu", options.label, ""), childPlugins.sharelist.setup(mainPlugin, $submenu.find(".media-submenu")[0], options), 
+            $submenu.appendTo(container), $submenu.find("li").length ? void mainPlugin.on("started", function() {
+                var isAd = mainPlugin.controller.isAd();
+                $submenu[isAd ? "addClass" : "removeClass"]("block-submenu").find("button").prop("disabled", isAd);
+            }) : ($(container).remove(), void mediaplayer.warn("could not generate any shareitems"));
+        }
+    }), mediaplayer.pluginManager.addChildPlugin({
+        name: "sharelist",
+        defaults: {
+            label: "",
+            share: {
+                facebook: {
+                    layout: "button_count"
+                },
+                gplus: {
+                    layout: "button_count"
+                }
+            },
+            getHTML: {
+                Facebook: function(data) {
+                    return '<li class=""><a href="http://www.facebook.com/share.php?u=' + data.href + '" class="media-social-button media-fblike" target="_blank" rel="noopener noreferrer" data-tracking="facebook">Facebook</a></li>';
+                },
+                Googleplus: function(data) {
+                    return '<li><a href="https://plus.google.com/share?url=' + data.href + '"  class="media-social-button media-gplus" target="_blank" rel="noopener noreferrer" data-tracking="googleplus">Google+</a></li>';
+                },
+                Mail: function(data) {
+                    return '<li><a href="' + data.href + '" class="media-social-button media-mail" data-tracking="mail">Mail</a></li>';
+                },
+                Twitter: function(data) {
+                    return '<li class=""><a href="https://twitter.com/share?url=' + data.href + '" class="media-social-button media-twitter" target="_blank" rel="noopener noreferrer" data-tracking="twitter">Twitter</a></li>';
+                }
+            }
+        },
+        setup: function(mainPlugin, container, options) {
+            options = $.extend(!0, {}, this.defaults, options);
+            var items = this.createItems(mainPlugin.controller.data.bookmarks, options);
+            if (items.length) {
+                var $container = $(container);
+                $container.append('<ul class="media-sharelist">' + items.join("\n") + "</ul>"), 
+                this.trackItems($container);
+            }
+        },
+        createItems: function(controllerShare, options) {
+            var items = [];
+            return $.each(controllerShare || [], function(i, data) {
+                var name = data.type;
+                options.getHTML[name] ? (options.share[name] = $.extend({}, data, options.share[name]), 
+                items.push(options.getHTML[name](options.share[name]))) : mediaplayer.warn("no markup for share of type " + name);
+            }), items;
+        },
+        trackItems: function($container) {
+            $container.on("click", "a", function() {
+                var $this = $(this), trackingData = $this.attr("data-tracking");
+                trackingData && de && de.bild && de.bild.events && de.bild.events.publish && (de.bild.events.publish("de.bild.mobile.clickTracking", [ !1, {
+                    webtrekk: {
+                        linkId: "social",
+                        customClickParameter: {
+                            10: trackingData,
+                            26: "##CONTENTID##/video-direct-share"
+                        }
+                    }
+                } ]), de.bild.events.publish("dataLayerEventTracking", [ "click", {
+                    click_name: "social",
+                    social_network: trackingData,
+                    click_context: "video-direct-share"
+                } ]));
+            });
+        }
+    });
+}(), function() {
+    "use strict";
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$, STORAGE_KEY = "Mediaplayer_Quality", URL_POSTFIX = "&BildNoRedirect=json", URL_QUALITY_PLACEHOLDER = "_800k";
+    mediaplayer.pluginManager.addChildPlugin({
+        name: "quality",
+        defaults: {
+            label: "Qualität"
+        },
+        setup: function(mainPlugin, wrapper, options) {
+            if ("bundesliga" != mainPlugin.controller.$dom.attr("data-theme")) return !1;
+            if (navigator.userAgent.match(/Version\/[\d\.]+.*Safari/)) return void $(wrapper).remove();
+            options = $.extend(!0, {}, {
+                qualities: this.controller.data.qualities
+            }, options), this.$container = mediaplayer.getSubmenu("quality", options.label, "");
+            var items = this.createQualityLevels(options.qualities);
+            if (items.length && this.$container.find(".media-submenu").append('<ul class="media-qualitylist"><li>Qualität</li>' + items.join("\n") + "</ul>"), 
+            this.$container.appendTo(wrapper), !this.$container.find("li").length) return $(wrapper).remove(), 
+            void mediaplayer.warn("could not generate any quality list items");
+            this.setupEvents();
+            try {
+                this.qualityLevel = localStorage.getItem(STORAGE_KEY);
+            } catch (err) {
+                console.warn("Mediaplayer:: LocalStorage acceess failed.", err);
+            }
+        },
+        createQualityLevels: function(possibleQualities) {
+            var items = [], lastIndex = possibleQualities.length - 1;
+            return $.each(possibleQualities || [], function(i, data) {
+                items.push('<li><button data-quality="' + data.val + '" class="' + (i === lastIndex ? "active" : "") + '"><p class="quality-name">' + data.name + '</p><p class="quality-value">' + data.qlabel + "</p></button></li>");
+            }), items;
+        },
+        getFullyQualifiedUrl: function(src) {
+            var def = $.Deferred();
+            return this.qualifiedSource ? (def.resolveWith(this.qualifiedSource, [ this.qualifiedSource ]), 
+            def.promise()) : $.ajax({
+                url: src + URL_POSTFIX
+            });
+        },
+        setupEvents: function() {
+            var that = this;
+            this.$container.on("click.mediaplayerquality", ".media-qualitylist button", function(e) {
+                that._handleButtonAction(e);
+            }), this.on("started", function() {
+                var shouldBlock = that.controller.isAd() || !("main" === that.controller.currentItem.type && "html5" === that.controller.providerName && that._isSupportedFormat());
+                that.$container[shouldBlock ? "addClass" : "removeClass"]("block-submenu").find("button").prop("disabled", shouldBlock), 
+                that.qualityLevel && !shouldBlock && that.switchQuality(that.qualityLevel);
+            });
+        },
+        _isSupportedFormat: function() {
+            return "video/mp4" === this.controller.currentSrc.type;
+        },
+        switchQuality: function(qualityLevel) {
+            var that = this;
+            this.getFullyQualifiedUrl(this.controller.currentSrc.src).done(function(videoUrl) {
+                videoUrl.indexOf("http") < 0 || videoUrl.indexOf(URL_QUALITY_PLACEHOLDER) < 0 || (that.qualifiedSource = videoUrl, 
+                that.controller.switchSource(videoUrl.replace(URL_QUALITY_PLACEHOLDER, "_" + qualityLevel + "k")));
+            }), this.$container.find("button").removeClass("active").filter('[data-quality="' + qualityLevel + '"]').addClass("active");
+        },
+        _handleButtonAction: function(e) {
+            var qualityLevel = $(e.currentTarget).attr("data-quality");
+            if (qualityLevel != this.qualityLevel) {
+                this.qualityLevel = qualityLevel;
+                try {
+                    localStorage.setItem(STORAGE_KEY, this.qualityLevel);
+                } catch (err) {
+                    console.warn("Mediaplayer:: LocalStorage acceess failed.", err);
+                }
+                this.switchQuality(qualityLevel);
+            }
+        },
+        destroy: function() {
+            this.$container.off(".mediaplayerquality"), this.super.destroy.apply(this, arguments);
+        }
+    });
+}(), function() {
+    "use strict";
+    function logError() {
+        mediaplayer.error("Endscreen error", this, arguments);
+    }
+    function tmpl(template, data) {
+        var prop, regProp, html = template;
+        for (prop in data) regProp = new RegExp("{{" + prop + "}}", "gim"), html = html.replace(regProp, data[prop]);
+        return html;
+    }
+    function mapVideoTeaser(i, video) {
+        return tmpl(tmpls.teaser, video);
+    }
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$, PREMIUM_ENDSCREEN_CSS_CLASS = "media-endscreen--premium", tmpls = {
+        skeleton: '<div class="media-endscreen"><div class="recommended-medias">{{more}} {{revolver}} {{carousel}}</div><div class="current-media"><button type="button" class="media-replay">Wiederholen</button><div class="current-media-wrapper">{{sharelist}}</div></div></div>',
+        premiumSkeleton: '<div class="media-endscreen"><div class="recommended-medias">{{more}} {{revolver}}{{premium}}</div></div>',
+        more: '<h3><a href="{{videoHomeUrl}}">Weitere Videos</a></h3>',
+        revolver: '<p class="media-revolver-ui">Nächstes Video in <span class="revolver-duration">{{delay}}</span> Sek.  <button type="type" class="abort-revolver">Stop</button></p>',
+        carousel: '<div class="media-carousel"><div class="media-carouselview"><div class="media-carouselbox">{{teasers}}</div></div></div>',
+        teaser: '<div class="media-teaser" data-data="{{json}}"><span class="tsr-img"><img src="{{img}}" alt="#" /></span><div class="media-caption"><h2>{{title}}</h2><p>{{text}}</p></div></div>',
+        premium: {
+            bpPlusLogo: '<svg class="svg-bpluslogo" width="96" height="52" viewBox="0 0 96 52"><style>.st0{fill:url(#BG_1_);} .st1{fill:#fff;} .st2{fill:url(#SVGID_1_);} .st3{fill:url(#SVGID_2_);}</style><linearGradient id="BG_1_" gradientUnits="userSpaceOnUse" x1="33.25" y1="49" x2="33.25" y2="3"><stop offset="0" stop-color="#C00"/><stop offset="1" stop-color="#D00"/></linearGradient><path id="BG_2_" class="st0" d="M0 3h66.5v46H0z"/><circle class="st1" cx="70" cy="26" r="26"/><linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="70" y1="49" x2="70" y2="3"><stop offset="0"/><stop offset="1" stop-color="#444"/></linearGradient><circle class="st2" cx="70" cy="26" r="23"/><path class="st1" d="M17 8h4v4h-4zM23 8h4v36h-4zM17 14h4v30h-4zM35 8v7.5h-3.5c-1.4 0-2.5 1.1-2.5 2.5v23.5c0 1.4 1.1 2.5 2.5 2.5H39V8h-4zm0 32h-2V19.5h2V40zM15 22V10.5C15 9.1 13.9 8 12.5 8H5v36h7.5c1.4 0 2.5-1.1 2.5-2.5v-15c0-1-.6-1.8-1.4-2.2.8-.5 1.4-1.3 1.4-2.3zm-4 18H9V26.5h2V40zm0-17.5H9V12h2v10.5zM82 23h-8v-8h-8v8h-8v8h8v8h8v-8h8z"/><radialGradient id="SVGID_2_" cx="70" cy="26" r="23" gradientUnits="userSpaceOnUse"><stop offset=".639" stop-opacity="0"/><stop offset=".792" stop-color="#020202" stop-opacity=".424"/><stop offset=".869" stop-color="#0A0A0A" stop-opacity=".638"/><stop offset=".93" stop-color="#171717" stop-opacity=".805"/><stop offset=".981" stop-color="#2A2A2A" stop-opacity=".947"/><stop offset="1" stop-color="#333"/></radialGradient><circle class="st3" cx="70" cy="26" r="23"/></svg>',
+            "no vauth_data": '<div class="media-endscreen__prohibition js-default">{{svg}}<p class="media-endscreen__bildplus"><strong>DIES IST EIN BILDplus-VIDEO</strong><span>Erleben Sie ALLES von BILD nur mit BILDplus Abo!</span></p><a href="{{detailPage}}" class="media-endscreen__try">Jetzt testen ab 0,99 &euro;</a><div class="media-endscreen__login"><a href="{{detailPage}}" class="js-mediaplayer-login-out">Einloggen</a> | <a href="{{detailPage}}">Super-Ticket einlösen</a></div></div>',
+            default: '<div class="media-endscreen__prohibition js-default">{{svg}}<p class="media-endscreen__bildplus"><strong>DIES IST EIN BILDplus-VIDEO</strong><span>Erleben Sie ALLES von BILD nur mit BILDplus Abo!</span></p><a href="{{detailPage}}" class="media-endscreen__try">Jetzt testen ab 0,99 &euro;</a><div class="media-endscreen__login"><a href="{{detailPage}}" class="js-mediaplayer-login-out">Einloggen</a> | <a href="{{detailPage}}">Super-Ticket einlösen</a></div></div>',
+            "no user": '<div class="media-endscreen__prohibition js-no-user">{{svg}}<p class="media-endscreen__bildplus"><span>Bitte loggen Sie sich ein, um das Video zu sehen!</span></p><a href="{{detailPage}}" class="media-endscreen__try js-mediaplayer-login-out">Einloggen</a></div>',
+            expired: '<div class="media-endscreen__prohibition js-expired">{{svg}}<p class="media-endscreen__bildplus"><span>Bitte loggen Sie sich ein, um das Video zu sehen!</span></p><a href="{{detailPage}}" class="media-endscreen__try js-mediaplayer-login-out">Einloggen</a></div>',
+            "no priv match": '<div class="media-endscreen__prohibition js-not-available">{{svg}}<p class="media-endscreen__bildplus"><strong>DIES IST EIN BILDplus-VIDEO</strong><span>Erleben Sie ALLES von BILD nur mit BILDplus Abo!</span></p><a href="{{detailPage}}" class="media-endscreen__try">Jetzt testen ab 0,99 &euro;</a> <br/> <a href="{{detailPage}}">Super-Ticket einlösen</a></div>',
+            "not available": '<div class="media-endscreen__prohibition js-no-priv-match">{{svg}}<p class="media-endscreen__bildplus"><span>Dieses Video ist leider nicht mehr verfügbar.</span></p></div>'
+        }
+    };
+    mediaplayer.pluginManager.add("Endscreen", {
+        init: function() {
+            this.controller.data.loop || (this.channelData = [], this.channelDataPromise = $.Deferred(), 
+            this.channelDataLoading = !1, this.revolverTimer = null, this.params.relatedVideos = this.controller.data.relatedVideos, 
+            this.setupEvents());
+        },
+        setupEvents: function() {
+            var that = this;
+            if (this.params.relatedVideos && this.params.more) if ("string" == typeof this.params.relatedVideos) this.on("playing.loadendscreendata", this.getChannelXml); else if ("function" == typeof this.params.relatedVideos.then) {
+                try {
+                    this.params.relatedVideos.then(function(data) {
+                        that.parseChannelData(data);
+                    });
+                } catch (e) {
+                    this.parseChannelData(this.params.relatedVideos);
+                }
+                this.channelDataPromise.resolve();
+            } else this.parseChannelData(this.params.relatedVideos), this.channelDataPromise.resolve();
+            this.on("doom", this.showEndscreen);
+        },
+        getChannelXml: function() {
+            var _this = this;
+            _this.off(".loadendscreendata"), _this.channelDataLoading = !0, _this.$ajax = $.ajax({
+                url: _this.params.relatedVideos,
+                context: _this,
+                success: function(data) {
+                    _this.parseChannelData(data, !0);
+                },
+                error: logError,
+                complete: function() {
+                    _this.channelDataPromise.resolve();
+                }
+            });
+        },
+        _mapXmlToJSON: function(index, media) {
+            var i, len, attributes = media.attributes, ret = {
+                index: index
+            };
+            for (i = 0, len = attributes.length; i < len; i++) "specified" in attributes[i] && !attributes[i].specified || (ret[attributes[i].nodeName] = attributes[i].nodeValue);
+            return ret;
+        },
+        parseChannelData: function(data, isXML) {
+            this.channelData = data, isXML ? this.channelData = $("video", data).map(this._mapXmlToJSON) : this.channelData = $(this.channelData), 
+            this.createEndscreenHtml(), this.params.debug && (this.showEndscreen(), this.controller.pause());
+        },
+        createEndscreenHtml: function() {
+            this.channelHTML = this.channelData.map(mapVideoTeaser).get();
+        },
+        getSelfData: function() {
+            var data = this.controller.data;
+            return {
+                title: data.title,
+                text: data.description,
+                img: data.poster,
+                xml: data.dataUrl
+            };
+        },
+        setupEndscreen: function() {
+            var selfData, skeleton, data = {};
+            if (!this.$endscreen) {
+                if (selfData = this.getSelfData(), data.selfTeaser = tmpl(tmpls.teaser, selfData), 
+                data.more = tmpl(tmpls.more, {
+                    videoHomeUrl: this.params.videoHomeUrl
+                }), data.revolver = "", this.params.revolverDelay && (data.revolver = tmpl(tmpls.revolver, {
+                    delay: this.params.revolverDelay
+                })), this.params.premiumPlaybackFailed && this.params.premiumPlaybackFailReason) {
+                    data.detailPage = this.controller.data.canonicalUrl;
+                    var template = this.getPremiumFailTemplate(this.params.premiumPlaybackFailReason);
+                    template = tmpl(template, {
+                        svg: tmpls.premium.bpPlusLogo
+                    }), data.premium = tmpl(template, data), skeleton = tmpls.premiumSkeleton;
+                } else skeleton = tmpls.skeleton;
+                data.carousel = this.channelHTML ? tmpl(tmpls.carousel, {
+                    teasers: this.channelHTML.slice(0, 3).join("\n")
+                }) : "", this.$endscreen = this.appendChildPlugins(this.controller.$pluginDisplay, tmpl(skeleton, data)), 
+                this.setupTeaserEvents(), data.carousel && !this.params.premiumPlaybackFailed && this.createMediaCarousel(), 
+                $(".current-media-wrapper .media-teaser[data-data]", this.$endscreen).data("data", selfData.xml);
+            }
+        },
+        getPremiumFailTemplate: function(missReason) {
+            return tmpls.premium[missReason] ? tmpls.premium[missReason] : tmpls.premium.default;
+        },
+        createMediaCarousel: function() {
+            function slideNext() {
+                viewBox.pos > viewBox.max && (viewBox.pos = Math.max(viewBox.pos - viewBox.viewWidth, viewBox.max)), 
+                $carouselbox.css("left", viewBox.pos), updateControls();
+            }
+            function slidePrev() {
+                viewBox.pos < viewBox.min && (viewBox.pos = Math.min(viewBox.pos + viewBox.viewWidth, viewBox.min)), 
+                $carouselbox.css("left", viewBox.pos), updateControls();
+            }
+            function updateControls() {
+                $prev.prop("disabled", viewBox.pos >= viewBox.min), $next.prop("disabled", viewBox.pos <= viewBox.max);
+            }
+            function onViewBoxChange() {
+                viewBox = {
+                    pos: parseFloat($carouselbox.css("left"), 10) || 0,
+                    viewWidth: $carouselview.width(),
+                    boxWidth: $carouselbox.outerWidth(),
+                    min: 0
+                }, viewBox.max = (viewBox.boxWidth - viewBox.viewWidth) * -1, updateControls();
+            }
+            var $carousel = $(".media-carousel", this.$endscreen), $carouselview = $(".media-carouselview", $carousel), $carouselbox = $(".media-carouselbox", $carousel), $prev = $(".media-prev", $carousel), $next = $(".media-next", $carousel), viewBox = null;
+            onViewBoxChange(), $next.on("click", slideNext), $prev.on("click", slidePrev), this.controller.$mediaBox.on("playersizechange", onViewBoxChange);
+        },
+        setupTeaserEvents: function() {
+            var that = this;
+            this.$endscreen.on("click", ".media-teaser[data-data]", function() {
+                clearTimeout(this.revolverTimer);
+                var clickedIndex = $(".media-teaser[data-data]", that.$endscreen).index(this), clickedItem = that.channelData.splice(clickedIndex, 1);
+                return clickedItem && clickedItem[0] && that.channelData.push(clickedItem[0]), mediaplayer.core.create(that.controller.$dom, $(this).data("data"), {
+                    autoplay: !0,
+                    muted: that.controller.muted(),
+                    volume: that.controller.volume(),
+                    initializedBy: {
+                        origin: "endscreen",
+                        data: {
+                            teaserIndex: clickedIndex
+                        }
+                    },
+                    relatedVideos: that.channelData
+                }), !1;
+            }), this.$endscreen.on("click", ".media-replay", function() {
+                return clearTimeout(this.revolverTimer), mediaplayer.core.create(that.controller.$dom, that.controller.data.initialData, {
+                    autoplay: !0,
+                    muted: that.controller.muted(),
+                    volume: that.controller.volume(),
+                    initializedBy: {
+                        origin: "endscreen",
+                        data: {
+                            replay: !0
+                        }
+                    },
+                    relatedVideos: that.channelData
+                }), !1;
+            });
+        },
+        showEndscreen: function() {
+            this.setupEndscreen(), this.$endscreen && (this.params.revolverDelay && this.autoLoad(), 
+            this.params.premiumPlaybackFailed && this.$endscreen.addClass(PREMIUM_ENDSCREEN_CSS_CLASS), 
+            this.$endscreen.addClass("show-endscreen"));
+        },
+        autoLoad: function() {
+            var timer, $timerDisplay, that = this, removeRevolderDelayView = function() {
+                $(".media-revolver-ui", that.$endscreen).remove();
+            };
+            if (this.channelData && this.channelData.length) {
+                clearTimeout(this.revolverTimer), timer = this.params.revolverDelay, $timerDisplay = $(".revolver-duration", this.$endscreen), 
+                this.$endscreen.on("click", ".abort-revolver", function() {
+                    clearTimeout(that.revolverTimer), $(document).off("visibilitychange." + that.id, handleVisibility), 
+                    removeRevolderDelayView();
+                });
+                var tick = function() {
+                    if (timer--, timer > 0) $timerDisplay.html(timer), that.revolverTimer = setTimeout(tick, 1e3); else {
+                        $(document).off("visibilitychange." + that.id, handleVisibility);
+                        var firstItem = that.channelData.splice(0, 1);
+                        firstItem && firstItem[0] && that.channelData.push(firstItem[0]), mediaplayer.core.create(that.controller.$dom, firstItem[0].json, {
+                            autoplay: !0,
+                            muted: that.controller.muted(),
+                            volume: that.controller.volume(),
+                            initializedBy: {
+                                origin: "endscreen",
+                                data: {
+                                    revolver: !0
+                                }
+                            },
+                            relatedVideos: that.channelData
+                        });
+                    }
+                }, handleVisibility = function() {
+                    document.hidden ? clearTimeout(that.revolverTimer) : that.revolverTimer = setTimeout(tick, 1e3);
+                };
+                $(document).on("visibilitychange." + this.id, handleVisibility), handleVisibility();
+            } else if ("pending" !== this.channelDataPromise.state() || this.channelDataLoading) removeRevolderDelayView(); else {
+                var _that = this;
+                this.channelDataPromise.done(function() {
+                    _that.autoLoad();
+                }), this.getChannelXml();
+            }
+        },
+        destroy: function() {
+            clearTimeout(this.revolverTimer), $(document).off("visibilitychange." + this.id), 
+            this.super.destroy.apply(this, arguments);
+        }
+    }), mediaplayer.pluginManager.add("ResetPoster", {
+        init: function() {
+            this.controller.data.loop || mediaplayer.pluginManager.installedPlugins.back2theroots || mediaplayer.pluginManager.hasPlugin("Endscreen", this.controller.data.plugins) || this.on("doom", function() {
+                this.controller.error() || this.controller.data.loop || mediaplayer.core.create(this.controller.$dom, null, {
+                    autoplay: !1
+                });
+            });
+        }
+    }, !0);
+}(), function() {
+    "use strict";
+    var mutedPlayer, mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$;
+    return !mediaplayer.inlinePlayerProto || mediaplayer.inlinePlayerProto.isMobile ? void mediaplayer.warn("no inline player available or supported.") : (mutedPlayer = $.extend({}, mediaplayer.inlinePlayerProto, {
+        init: function() {
+            this.$unmuteButton = null, this.params && this.params.status && this.setup();
+        },
+        setup: function() {
+            var mainClip = this.controller.getClipByType("main");
+            this.load({
+                clipList: [ mainClip ]
+            }, {
+                loop: !0
+            });
+        },
+        onPlayerReady: function() {
+            var that = this;
+            this.inlineController.play(), this.inlineController.muted(!0), this.inlineController.controls(!1), 
+            this.$unmuteButton = $('<button type="button" class="media-unmutebutton"><span>Ton an</span></button>').appendTo(this.inlineController.$pluginDisplay), 
+            this.$unmuteButton.on("click", function() {
+                that.startNormalPlay();
+            }), this.inlineController.on("volumechange.mutedautoplay", function() {
+                this.muted() || that.startNormalPlay();
+            });
+        },
+        startNormalPlay: function() {
+            this.resumeMainplayer();
+        }
+    }), void mediaplayer.pluginManager.add("Mutedautoplay", mutedPlayer));
+}(), function() {
+    "use strict";
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$, overlayShow = .2, adOverlay = {
+        init: function() {
+            var that = this, data = this.controller.data, setup = function() {
+                data.overlayAd.ads && data.overlayAd.ads.length && (that.params = data.overlayAd, 
+                that.setup());
+            };
+            this.$currentAd = null, this._played = !1, data.overlayAd && ("function" == typeof data.overlayAd.done ? data.overlayAd.always(setup) : setup());
+        },
+        setup: function() {
+            this.$overlayContainer = $('<div class="mediaplayer-adoverlay-wrapper" />').appendTo(this.controller.$pluginDisplay), 
+            this.setupEvents();
+        },
+        setupEvents: function() {
+            var that = this;
+            this.$overlayContainer.on("click", ".mediaplayer-skipoverlayad", function() {
+                return that.removeCurrentAd(), !1;
+            }).on("click", ".adoverlay-clickthrough", function() {
+                that.trackEvent("clickTracking");
+            }), this.on("loadedmetadata", function() {
+                "main" == this.controller.currentItem.type && (this.params.startOverlay || (this.params.startOverlay = this.controller.getDuration() * overlayShow), 
+                this.params.startOverlay || (this.params.startOverlay = 20));
+            }), this.on("timeupdate.showoverlay", function() {
+                !this._played && "main" == this.controller.currentItem.type && this.controller.currentTime() > this.params.startOverlay && this.controller.isPlay() && (this._played = !0, 
+                this.off("timeupdate.showoverlay"), this.showAd(this.params.ads[0]));
+            });
+        },
+        removeCurrentAd: function() {
+            clearTimeout(this.timelineTimer), this.$currentAd && (this.$currentAd.remove(), 
+            this.$currentAd = null);
+        },
+        showAd: function(ad) {
+            "VPAID" == ad.apiFramework ? this.showVpaidAd(ad) : this.showImgAd(ad);
+        },
+        showImgAd: function(ad) {
+            var inlineStyle;
+            ad.content || (inlineStyle = 'style="width:' + ad.width + "px;height:" + ad.height + 'px";', 
+            ad.content = '<div class="mediaplayer-adoverlay" data-aspectratio="' + ad.aspectRatio + '" data-scalable="' + ad.scalable + '" ' + inlineStyle + '><a href="' + ad.clickThrough + '" target="_blank" class="adoverlay-clickthrough"><img src="' + ad.src + '" alt="ad" ' + inlineStyle + ' /></a><button type="button" class="mediaplayer-skipoverlayad" /></div>'), 
+            this.$currentAd = $(ad.content).appendTo(this.$overlayContainer), this.addOverlayEvents(ad);
+        },
+        getAdDuration: function(durationAsString) {
+            var durationArray = durationAsString.split(":"), duration = 3600 * parseInt(durationArray[0] || "0", 10) + 60 * parseInt(durationArray[1], 10) + parseInt(durationArray[2], 10);
+            return duration;
+        },
+        addOverlayEvents: function(ad) {
+            var that = this, evts = [ "impression", "firstquartile", "midpoint", "thirdquartile", "complete" ], duration = this.getAdDuration(ad.minDuration || "00:25:00") / 4 * 1e3, index = 0, onTimeleft = function() {
+                that.trackEvent(evts[index]), index++, evts[index] ? that.timelineTimer = setTimeout(onTimeleft, duration) : that.removeCurrentAd();
+            };
+            onTimeleft();
+        },
+        showVpaidAd: function(ad) {
+            this.load({
+                clipList: [ {
+                    type: "overlay",
+                    srces: [ ad ],
+                    plugins: [ {
+                        name: "Vasttracking",
+                        params: this.params
+                    } ]
+                } ]
+            }, null, {
+                nonLinear: !0
+            });
+        },
+        __eachPing: function(i, url) {
+            var img = document.createElement("img");
+            img.src = url;
+        },
+        trackEvent: function(type) {
+            mediaplayer.log("track: " + type), "impression" == type && this.params.impressions ? $.each(this.params.impressions, this.__eachPing) : "clickTracking" == type ? $.each(this.params.clickTracking || [], this.__eachPing) : this.params.events && this.params.events[type] && $.each(this.params.events[type], this.__eachPing);
+        }
+    };
+    mediaplayer.inlinePlayerProto ? adOverlay = $.extend({}, mediaplayer.inlinePlayerProto, adOverlay) : mediaplayer.error("no inline player available"), 
+    mediaplayer.pluginManager.add("Adoverlay", adOverlay, !0);
+}(), function() {
+    "use strict";
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$;
+    mediaplayer.pluginManager.add("ElementQueries", {
+        init: function() {
+            function onResize() {
+                var size, i = 0, width = $mediabox.outerWidth(), fSize = Math.max(parseInt($mediabox.css("fontSize"), 10) || 16, 13);
+                for (width *= 16 / fSize; i < len; i++) if (sizes[i].size >= width) {
+                    size = sizes[i];
+                    break;
+                }
+                lastSize.name != size.name && (lastSize = size, $mediabox.attr("data-playersize", size.name), 
+                $mediabox.attr("data-playersizes", size.names), $mediabox.trigger("playersizechange"));
+            }
+            var timer, lastSize = {}, sizes = [ {
+                size: 278,
+                name: "xxs",
+                names: "s xs xxs"
+            }, {
+                size: 380,
+                name: "xs",
+                names: "s xs"
+            }, {
+                size: 577,
+                name: "s",
+                names: "s"
+            }, {
+                size: 809,
+                name: "m",
+                names: "m"
+            }, {
+                size: 1024,
+                name: "l",
+                names: "l"
+            }, {
+                size: 1280,
+                name: "xl",
+                names: "l xl"
+            }, {
+                size: Number.MAX_VALUE,
+                name: "xxl",
+                names: "l xl xxl"
+            } ], len = sizes.length, throttledResize = function() {
+                clearTimeout(timer), timer = setTimeout(onResize, 30);
+            }, $mediabox = this.controller.$mediaBox;
+            onResize(), this.controller.$dom.on("updateplayersize", onResize), this.on("fullscreenchange", throttledResize), 
+            $(window).on("resize." + this.id, throttledResize);
+        }
+    }, !0);
+}(), function() {
+    "use strict";
+    function BuliTimeline($dom, options) {
+        this.$dom = $dom, this.params = options, this.teamtimeLines = {}, options.canonicalUrl || (this.params.canonicalUrl = location.href), 
+        this.createTimeLine(), this.loadData();
+    }
+    var mediaplayer = de.bild.mediaplayer, $ = mediaplayer.$, cfg = {
+        first_half: 45,
+        second_half: 90,
+        space: 7,
+        sociallayout: "button_count"
+    };
+    $.extend(BuliTimeline.prototype, {
+        createTimeLine: function() {
+            this.$timeline = $('<div class="timeline-outerwrapper"><div class="timeline-innerwrapper" /></div>').appendTo(this.$dom).find(".timeline-innerwrapper"), 
+            this.$dom.addClass("has-timeline-wrapper");
+        },
+        loadData: function() {
+            var that = this;
+            $.ajax({
+                url: this.params.dataUrl,
+                cache: !0,
+                dataType: "jsonp",
+                jsonp: !1,
+                jsonpCallback: "timeline_callback",
+                success: function(data) {
+                    that.params.data = data, that.addGame(data);
+                }
+            });
+        },
+        addTeam: function($dom, sel, data) {
+            var team = data ? '<div class="team-logo"><img src="' + data.logo_url + '" /></div><h3>' + data.name + "</h3>" : "";
+            $dom.find(sel).html(team);
+        },
+        addGame: function(data) {
+            var game = data.game, timelines = '<div class="half-time"><div class="team-1" /><div class="team-2" /><div class="extra-time" /></div>', $firstHalf = $(timelines), $secondHalf = $(timelines);
+            $firstHalf.find(".extra-time").html(game.first_half.extra_time), $secondHalf.find(".extra-time").html(game.second_half.extra_time), 
+            this.params.firstHalfTime = cfg.first_half + game.first_half.extra_time, this.params.secondHalfTime = cfg.first_half + game.second_half.extra_time, 
+            this.addTeam($firstHalf, ".team-1", data.home_team), this.addTeam($firstHalf, ".team-2", data.away_team), 
+            this.addCuePoints(game.first_half.marks, "cuepoints-firsthalf", this.params.firstHalfTime, 1, $firstHalf.find(".team-1")), 
+            this.addCuePoints(game.first_half.marks, "cuepoints-firsthalf", this.params.firstHalfTime, 2, $firstHalf.find(".team-2")), 
+            this.addCuePoints(game.second_half.marks, "cuepoints-secondhalf", this.params.secondHalfTime, 1, $secondHalf.find(".team-1"), this.params.firstHalfTime), 
+            this.addCuePoints(game.second_half.marks, "cuepoints-secondhalf", this.params.secondHalfTime, 2, $secondHalf.find(".team-2"), this.params.firstHalfTime), 
+            this.$timeline.html($firstHalf.add($secondHalf)), this.correctPopovers();
+        },
+        getNearCues: function(cue, cues) {
+            var i, near_cues = [], lPos = cue.pos - cfg.space, rPos = cue.pos + cfg.space;
+            for (i = 0; i < cues.length; i++) cues[i] != cue && rPos > cues[i].pos && lPos < cues[i].pos && near_cues.push(cues[i]);
+            return near_cues;
+        },
+        _correctPos: function(cues, space) {
+            var i, j, cue, position, nearCues;
+            for (i = 0; i < cues.length; i++) for (cue = cues[i], position = cue.pos, nearCues = this.getNearCues(cue, cues), 
+            j = 0; j < nearCues.length; j++) position += space, nearCues[j].pos = position;
+        },
+        correctPosForCues: function(cues) {
+            this._correctPos(cues, cfg.space), cues.reverse(), this._correctPos(cues, cfg.space * -1), 
+            cues.reverse();
+        },
+        getCuePoints: function(cues, time, team, correctTime) {
+            return correctTime || (correctTime = 0), cues = $.grep(cues, function(cue) {
+                return cue.team == team && (cue.pos = (cue.minute - correctTime) / time * 100, !0);
+            }), this.correctPosForCues(cues), $.map(cues, function(cue, i) {
+                return '<li class="cue" data-type="' + cue.type + '" data-time="' + cue.start_timecode + '" style="left: ' + cue.pos + '%;"><span class="type ' + cue.type + '" /> <div class="cue-popover"><h3>' + cue.headline + "</h3>" + (cue.text ? "<p>" + cue.text + "</p>" : "") + "</div></li>";
+            });
+        },
+        addCuePoints: function(cues, halfClass, time, team, $dom, correctTime) {
+            cues = this.getCuePoints(cues, time, team, correctTime), $('<ul class="cuepoints ' + halfClass + '">' + cues.join("") + "</ul>").appendTo($dom);
+        },
+        correctPopovers: function() {
+            var $popovers, mainLeft = this.$timeline.offset(), mainRight = this.$timeline.outerWidth();
+            mainLeft && mainRight && (mainLeft = mainLeft.left, mainRight += mainLeft, $popovers = $(".cue-popover", this.$timeline).css("display", "block"), 
+            $popovers.each(function() {
+                var $pop = $(this), left = $pop.offset(), right = $pop.outerWidth(), marginLeft = parseFloat($pop.css("marginLeft"), 10) || 0;
+                left && right && (left = left.left, right += left, left < mainLeft ? (marginLeft += mainLeft - left, 
+                $pop.css("marginLeft", marginLeft)) : right > mainRight && (marginLeft += mainRight - right, 
+                $pop.css("marginLeft", marginLeft)));
+            }), $popovers.css("display", ""));
+        }
+    }), mediaplayer.BuliTimeline = BuliTimeline, mediaplayer.pluginManager.add("Bulitimeline", {
+        init: function() {
+            this.params.dataScript && (this.bulitimeline = new BuliTimeline(this.controller.$dom, {
+                dataUrl: this.params.dataScript,
+                canonicalUrl: this.controller.data.canonicalUrl
+            }), this.$timeline = this.bulitimeline.$timeline, this.addEvents());
+        },
+        addEvents: function() {
+            var controller = this.controller;
+            this.$timeline.on("click", "[data-time]", function() {
+                var currentItem = controller.currentItem;
+                controller.play(), currentItem && "main" == currentItem.type && controller.currentTime($(this).data("time"));
+            });
+        }
+    });
+}(), window.de.bild.mediaplayer.pluginManager.add("Controls", {
+    js: window.de.bild.mediaplayer.defaults.pluginsPath.controls
+});
+g\��.0      X+,X+-=GjX`8�   s    :http://code.bildstatic.de/2.21.1-cats-release--16.21/min/core/components/mediaplayer/js/mediaplayer-desktop.min.js necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Via: 1.1 ISA01TMG
+Expires: Wed, 14 Dec 2016 19:40:07 GMT
+Date: Mon, 31 Oct 2016 11:29:48 GMT
+Content-Type: application/javascript
+Server: Apache
+Last-Modified: Thu, 20 Oct 2016 09:32:50 GMT
+X-UA-Compatible: IE=Edge
+Cache-Control: public, max-age=4787618
+X-Refresh: h=10|g=103975.000|c=(null)|rd=Thu, 20 Oct 2016 09:46:28 GMT|dd=Thu, 20 Oct 2016 09:46:53 GMT
+Vary: Origin
+ original-response-headers Via: 1.1 ISA01TMG
+Connection: Keep-Alive
+Proxy-Connection: Keep-Alive
+Transfer-Encoding: chunked
+Expires: Wed, 14 Dec 2016 19:40:07 GMT
+Date: Mon, 31 Oct 2016 11:29:48 GMT
+Content-Type: application/javascript
+Server: Apache
+Last-Modified: Thu, 20 Oct 2016 09:32:50 GMT
+X-UA-Compatible: IE=Edge
+Cache-Control: public, max-age=4787618
+X-Refresh: h=10|g=103975.000|c=(null)|rd=Thu, 20 Oct 2016 09:46:28 GMT|dd=Thu, 20 Oct 2016 09:46:53 GMT
+Vary: Origin
+ uncompressed-len 0  ��

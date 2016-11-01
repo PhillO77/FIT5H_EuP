@@ -4,7 +4,8 @@ var iom = iom || (function () {
   var dummySite = "dummy",
       baseUrl = "de.ioam.de/tx.io",
       baseUrlLSO = "de.ioam.de/aid.io",
-      eventList = ["", "inst", "open", "clse", "play", "stop", "fowa", "bakw", "recd", "paus", "forg", "bakg", "dele", "refr", "view", "alve", "fini", "aforg", "abakg", "aclse", "sple", "scvl", "serr", "spyr", "smdr", "sfpl", "sfqt", "ssqt", "stqt", "soqt", "sofc", "scfc", "scqt", "splr", "spli", "sprs", "spre", "smrs", "smre", "sors", "sore", "sack"],
+      optinUrl = "de.ioam.de/optin.php?re=",
+      eventList = ["", "inst", "init","open", "clse", "play", "resm", "stop", "fowa", "bakw", "recd", "paus", "forg", "bakg", "dele", "refr", "kill", "view", "alve", "fini", "aforg", "abakg", "aclse", "sple", "scvl", "serr", "spyr", "smdr", "sfpl", "sfqt", "ssqt", "stqt", "soqt", "sofc", "scfc", "scqt", "splr", "spli", "sprs", "spre", "smrs", "smre", "sors", "sore", "sack"],
       LSOBlacklist = [],
       checkEvents = 1,
       tb = 0,
@@ -16,7 +17,15 @@ var iom = iom || (function () {
         onblur:"abakg",
         onclose:"aclse"
       },
-      nt = 0;
+      nt = 2,
+      frequency = 60000,
+      hbiAdShort = 5000,
+      hbiAdMedium = 10000,
+      hbiAdLong = 30000,
+      hbiShort = 10000,
+      hbiMedium = 30000,
+      hbiLong = 60000,
+      heart;
 
   var IAMPageElement = null,
       IAMQSElement = null,
@@ -46,7 +55,7 @@ var iom = iom || (function () {
   }
 
   function isDoNotTrack() {
-    if ((nt&2) ? ((typeof result.nt == "undefined") ? (nt&1) : result.nt) : nt & 1) {
+    if ((nt & 2) ? ((typeof result.nt == "undefined") ? (nt & 1) : result.nt) : nt & 1) {
       if (window.navigator.msDoNotTrack && window.navigator.msDoNotTrack == "1") return true; 
       if (window.navigator.doNotTrack && (window.navigator.doNotTrack == "yes" || window.navigator.doNotTrack == "1")) return true; 
     }
@@ -54,7 +63,7 @@ var iom = iom || (function () {
   }
 
   function loadSurvey() {
-    szmvars = result.st+"//"+result.pt+"//"+result.cp+"//VIA_SZMNG";
+    szmvars = result.st + "//" + result.pt + "//" + result.cp + "//VIA_SZMNG";
     if (sv && !surveyCalled && result.sv !== "ke" && result.sv === "dz") {
       surveyCalled = 1;
       iam_ng_nxss();
@@ -261,16 +270,21 @@ var iom = iom || (function () {
     result.ur = document.location.host;
     result.xy = getScreen();
     result.lo = "DE/Hamburg";
-    result.cb = "000a";
-    result.vr = "308";
+    result.cb = "000e";
+    result.vr = "309";
     result.id = fingerprint();
     result.st = result.st ? result.st : dummySite;
+    if (window.tizen !== undefined) {
+      result.mi = fetchTizenUUIDs();
+    }
   }
 
   function event(event) {
     var payLoad = "";
     var i;
     event = event || "";
+    //Heartbeat stoppen
+    stopHeart();
     if (inited && !isDoNotTrack() && (!checkEvents || (checkEvents && arrayContains(eventList, event)))) {
       result.lt = (new Date()).getTime();
       result.ev = event;
@@ -289,6 +303,9 @@ var iom = iom || (function () {
       result.cs = hash(payLoad);
       result.url = proto + "//" + baseUrl + "?" + payLoad + "cs=" + result.cs;
       transmitData(result.url, mode);
+      if (arrayContains(['play', 'resm', 'alve', 'sfqt', 'ssqt', 'stgt'], event) && mode === 1 && result.hasOwnProperty('hb')) {
+        startHeart();
+      }
       return result;
     }
     return {};
@@ -423,6 +440,65 @@ var iom = iom || (function () {
     });
   }
 
+  function optin() {
+    var oiurl = ( window.location.protocol.slice(0,4) === 'http' ) ? window.location.protocol : "https:" + "//" + optinUrl;
+    var win = window.open(oiurl, '_blank');
+    win.focus();
+  }
+
+  function startHeart() {
+    //IE 9 Compatible
+    function heartbeat() {
+      return event("alve");   
+    }
+    switch (result.hb) {
+        case "adshort":
+          frequency = hbiAdShort;
+          break;
+        case "admedium":
+          frequency = hbiAdMedium;
+          break;
+       case "adlong":
+          frequency = hbiAdLong;
+          break;
+        case "short":
+          frequency = hbiShort;
+          break;
+        case "medium":
+          frequency = hbiMedium;
+          break;
+        case "long":
+          frequency = hbiLong;
+          break
+        default:
+          frequency = 0;
+    }
+    if (frequency != 0) {
+      try {
+        heart = setInterval(heartbeat, frequency);
+      } catch(e) {
+        //pass
+      }
+    }
+  }
+
+  function stopHeart() {
+    try {
+      clearInterval(heart);
+    } catch(e) {
+      //pass
+    }
+  }
+
+  function fetchTizenUUIDs() {
+    try {
+      return '{"uuids":{"tizenid":"' + tizen.systeminfo.getCapability('http://tizen.org/system/tizenid') + '","duid":"' + webapis.productinfo.getDuid() + '"}}';
+    } catch(e) {
+      return 'notizen';
+      //pass
+    }
+  }
+
   return {
     count: count,
     c: count,
@@ -433,19 +509,35 @@ var iom = iom || (function () {
     h:hybrid,
     hybrid:hybrid,
     setMultiIdentifier:setMultiIdentifier,
-    smi:setMultiIdentifier
+    smi:setMultiIdentifier,
+    oi:optin,
+    optin:optin
   }
 
 })();
-íº¨˜Ç      WÖ†ÊWÖ†Ê<âxóWÎ˜       :http://script.ioam.de/iam.js necko:classified 1 request-method GET request-Accept-Encoding gzip, deflate response-head HTTP/1.1 200 OK
+]h±û_þ      Wû{ÓWû{Ó<ü™±Wû—À       :http://script.ioam.de/iam.js strongly-framed 1 request-method GET request-Accept-Encoding gzip, deflate response-head HTTP/1.1 200 OK
+Expires: Mon, 10 Oct 2016 11:52:20 GMT
+Content-Type: application/x-javascript
+Vary: Accept-Encoding
+Last-Modified: Mon, 10 Oct 2016 09:52:20 GMT
+Cache-Control: privat, max-age=7200, pre-check=7200
+Date: Mon, 10 Oct 2016 11:29:36 GMT
+X-Powered-By: BLACKBIRD-SRC v0.7 000a
 Via: 1.1 ISA01TMG
-Expires: Tue, 06 Sep 2016 10:19:02 GMT
-Date: Tue, 06 Sep 2016 08:19:02 GMT
+Server: nginx
+p3p: policyref=https://script.ioam.de/p3p.xml, CP=NOI DSP NID PSAa OUR NOR UNI COM NAV
+ original-response-headers Via: 1.1 ISA01TMG
+Connection: Keep-Alive
+Proxy-Connection: Keep-Alive
+Transfer-Encoding: chunked
+Expires: Mon, 10 Oct 2016 11:52:20 GMT
+Date: Mon, 10 Oct 2016 09:52:20 GMT
 Content-Type: application/x-javascript
 Server: nginx
 Vary: Accept-Encoding
-X-Powered-By: BLACKBIRD-SRC v0.7 000a
-Cache-Control: privat, max-age=7200, pre-check=7200
-Last-Modified: Tue, 06 Sep 2016 08:19:02 GMT
-P3P: policyref=https://script.ioam.de/p3p.xml, CP=NOI DSP NID PSAa OUR NOR UNI COM NAV
- uncompressed-len 0   =3
+X-Powered-By: BLACKBIRD-SRC v0.7 000e
+Cache-Control: privat, max-age=7200
+Cache-Control: pre-check=7200
+Last-Modified: Mon, 10 Oct 2016 09:52:20 GMT
+p3p: policyref=https://script.ioam.de/p3p.xml, CP=NOI DSP NID PSAa OUR NOR UNI COM NAV
+ uncompressed-len 0 necko:classified 1   D¹

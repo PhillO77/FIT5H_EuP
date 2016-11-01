@@ -1,0 +1,704 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>Rheinwerk Computing :: Ruby on Rails 2 – Reguläre Ausdrücke</title>
+<meta name="title" content="Rheinwerk Computing :: Ruby on Rails 2 - Reguläre Ausdrücke">
+<meta name="author" content="Hussein Morsy, Tanja Otto">
+<meta name="publisher" content="Rheinwerk Verlag GmbH 2008">
+<meta name="copyright" content="Rheinwerk Verlag GmbH 2008">
+<meta name="Description" content="Ruby on Rails 2 - Das Entwickler-Handbuch – Reguläre Ausdrücke">
+<meta name="audience" content="Alle">
+<meta name="robots" content="INDEX,FOLLOW">
+<meta http-equiv="content-language" content="de">
+<link rel="stylesheet" type="text/css" href="common/rw_open.css">
+<link rel="prev" href="ruby_on_rails_04_004.htm">
+<link rel="next" href="ruby_on_rails_04_006.htm"><script type="text/javascript"><!--
+function OpenWin(url,name,height,width)
+{
+var InfoWin = window.open(url,name,"directories=0,height="+height+",width=" + width + ",hotkeys=0,location=0,menubar=0,resizable=1,screenX=150,screenY=10,left=150,top=10,scrollbars=1,status=1,titlebar=0,toolbar=0");
+InfoWin.focus();
+}
+//--></script><link href="common/prettify.css" type="text/css" rel="stylesheet"><script type="text/javascript" src="common/prettify.js"></script></head>
+<body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#00549d">
+<tr>
+<td height="74" valign="bottom" colspan="2"><a href="https://www.rheinwerk-verlag.de/katalog/openbook?GPP=opror"><img src="common/rw_openbook.gif" width="200" height="56" border="0" alt="Rheinwerk Computing < openbook >" title="Rheinwerk Computing < openbook >"></a></td>
+<td width="80" height="74"><a href="https://www.rheinwerk-verlag.de/?GPP=opror"><img src="common/rw_computing.gif" border="0" alt="Rheinwerk Computing - Professionelle Bücher. Auch für Einsteiger." title="Rheinwerk Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+</tr>
+</table>
+<div align="right"><a href="https://www.rheinwerk-verlag.de/?GPP=opror" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td width="190" valign="top">
+<table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+<tr>
+<td class="tbl2"><a class="nav" href="index.htm#_top">Inhaltsverzeichnis</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_00_001.htm#mj28b5adc89042b409899f4e978a98f8bc">Geleitwort des Fachgutachters</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_00_002.htm#mj7ee64bd4926cb4dc86dcb869a6cb0dfd">Einleitung</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_01_001.htm#mjd57ab456246e7d495b228f4568476c9e">1 Einführung</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_02_001.htm#mjaef0368fa2a897976bc3e837e8196f58">2 Installation</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_03_001.htm#mj7d1e8041ad552322a7e2d77b3296abdc">3 Erste Schritte</a></td>
+</tr>
+<tr>
+<td><a class="navh" href="##mj26e3b2bea7783fa09d1de92163aa328d">4 Einführung in Ruby</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_05_001.htm#mjde6995f939fe3a60fa9879c59cb0a2be">5 Eine einfache Bookmarkverwaltung</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_06_001.htm#mjde54313abcdef8877132fa7c71b09a33">6 Test-Driven Development</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_07_001.htm#mjecb7cdec7754e1c39ee027ae49dc029d">7 Rails-Projekte erstellen</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_08_001.htm#mjce2899a5d363f71f6f0d073c9f13d6b6">8 Templatesystem mit ActionView</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_09_001.htm#mjdfb336e61bd3f73be40015fbf785a671">9 Steuerzentrale mit ActionController</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_10_001.htm#mj935a669b8046ac474dd757d3e53232cd">10 Datenbankzugriff mit ActiveRecord</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_11_001.htm#mj1675ba13594f6829dbc2dc253ab27fe9">11 E-Mails verwalten mit ActionMailer</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_12_001.htm#mj6611aa0ab17d37783d07ad1dea00f41c">12 Nützliche Helfer mit ActiveSupport</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_13_001.htm#mj97fa5f072fd766a6ab6fb1e27cf5d30e">13 Ajax on Rails</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_14_001.htm#mj16935a0074d126d9101108e6aa2fc56e">14 RESTful Rails und Webservices</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_15_001.htm#mj880e2a7894124fa5af009b929d4b6e06">15 Rails mit Plug-ins erweitern</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_16_001.htm#mj38e3b0b65d3ca792b3f58760167e6090">16 Performancesteigerung</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_17_001.htm#mjb7359aefc277da097b8585dc9d1f0c60">17 Sicherheit</a></td>
+</tr>
+<tr>
+<td><a class="navnav" href="ruby_on_rails_18_001.htm#mj74ed02d407933df1db084656bcd7fe7e">18 Veröffentlichen einer Rails-Applikation auf einem Server</a></td>
+</tr>
+<!--<tr>
+<td><a class="navnav" href="stichwort.htm#_top">Stichwort</a></td>
+</tr>-->
+<!--<tr>
+<td><br><a href="http://download2.galileo-press.de/openbook/galileocomputing_ruby_on_rails.zip" class="navnav"><strong>Download:</strong><br>- ZIP, ca. 6,7 MB</a></td>
+</tr>-->
+<!--<tr><td><br><a href="https://www.rheinwerk-verlag.de/1204/?GPP=opror" class="navnav">Buch bestellen</a></td></tr>-->
+<tr>
+<td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+</tr>
+</table>
+</td>
+<td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+<td width="85%" valign="top" align="center"><div align="center">
+<table width="98%" border="0" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+<tr>
+<td width="100%" class="start" colspan="1" height="22" align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="25%"><a href="ruby_on_rails_04_006.htm" class="navnav"> &lt;&lt;   zurück</a></td>
+<td width="49%"><div align="center"><a href="https://www.rheinwerk-verlag.de/?GPP=opror" class="navnav">Rheinwerk Computing /</a><a href="https://www.rheinwerk-verlag.de/openbook/?GPP=opror" class="navnav"> &lt;openbook&gt; /</a><a href="index.htm" class="navnav"> Ruby on Rails 2</a></div></td>
+<td align="right" width="25%"><div align="right"><a href="ruby_on_rails_04_008.htm" class="navnav">vor   &gt;&gt; </a></div></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td width="100%" valign="top"><table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+<tr>
+<td colspan="2"><a href="https://www.rheinwerk-verlag.de/1204/?GPP=opror" class="buchtitel">Ruby on Rails 2</a><span class="autor"> von Hussein Morsy, Tanja Otto</span><br><span class="untertitel">Das Entwickler-Handbuch</span></td>
+</tr>
+<tr>
+<td valign="top" width="211"><dl>
+<dt><a href="https://www.rheinwerk-verlag.de/1204/?GPP=opror" class="navnav"><img src="common/9783898427791.gif" border="0" alt="Buch: Ruby on Rails 2" title="Buch: Ruby on Rails 2"></a></dt>
+<dd><br><a href="https://www.rheinwerk-verlag.de/1204/?GPP=opror"><span class="autor"><strong>Ruby on Rails 2</strong><br>geb., mit DVD<br>699 S., 39,90 Euro<br>Rheinwerk Computing<br>ISBN 978-3-89842-779-1</span></a></dd>
+</dl><a href="https://www.rheinwerk-verlag.de/1204/?GPP=opror" class="navnav"><img src="common/pfeil_rechts5.gif" border="0" alt="Online bestellen">Print-Version jetzt bestellen</a><br /><span class="autor">* versandkostenfrei in (D) und (A)</span></td>
+<td width="80%"><table border="0">
+<tr>
+<td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="3" class="kap"><strong><a href="ruby_on_rails_04_001.htm#mj26e3b2bea7783fa09d1de92163aa328d" class="navnav">4 Einführung in Ruby</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_001.htm#mj524e96bac0dfd7b13d55a449488aaed8" class="navnav">4.1 Was ist Ruby?</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_002.htm#mjb9fdeab762a437689f75e1401903a9e5" class="navnav">4.2 Ruby-Code ausführen</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_003.htm#mj9a95206d8652f7835a53b4173c92a21b" class="navnav">4.3 Grundlagen</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_004.htm#mj51e1b9cffbd404bfb0182da61a0b480e" class="navnav">4.4 Zahlen</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_005.htm#mj7892a65487c213be4867fc78123aafe4" class="navnav">4.5 Zeichenketten</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_006.htm#mj6541a8741cd6a87e1addb4115374a412" class="navnav">4.6 Symbole</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="#mjc1dd38c74d87db827b8a797d35e8acfe" class="navh">4.7 Reguläre Ausdrücke</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_008.htm#mj13114bded859919c971174be56519b8d" class="navnav">4.8 Arrays</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_009.htm#mja4292034ed129feb9de782e8726a3895" class="navnav">4.9 Hashes</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_010.htm#mjc8db57a5b82f2853d33b716b28eddb8d" class="navnav">4.10 Datum und Zeit</a></strong></td>
+</tr>
+<tr>
+<td valign="baseline" width="10"> </td>
+<td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+<td valign="baseline" colspan="2"><strong><a href="ruby_on_rails_04_011.htm#mj26483115e681cb389da8befbf78c0487" class="navnav">4.11 Module</a></strong></td>
+</tr>
+</table><br></td>
+</tr>
+</table>
+<table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+<tr>
+<td><div class="main"><a id="mjc1dd38c74d87db827b8a797d35e8acfe" name="mjc1dd38c74d87db827b8a797d35e8acfe"></a><a name="t21"></a><a name="t2t31"></a><br><div align="center"><a href="#top"><img src="common/top.gif" border="0" alt="Rheinwerk Computing - Zum Seitenanfang"></a></div>
+<h2 class="t2">4.7 Reguläre Ausdrücke  <a href="#t2t32"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><img src="common/15x15leer.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></h2>
+<p><strong><em>Muster</em></strong></p>
+<p>Reguläre Ausdrücke oder kurz Regex sind Muster, um in Zeichenketten nach Entsprechungen zu suchen. Jedes Zeichen innerhalb eines Musters hat eine bestimmte Bedeutung. Reguläre Ausdrücke werden eingesetzt, um zu vergleichen (zum Beispiel, um zu prüfen, ob eine bestimmte Zeichenkette innerhalb einer anderen vorkommt), um zu suchen (zum Beispiel die Position eines Zeichens innerhalb einer Zeichenkette) und um ggf. das gefundene zu ersetzen.</p><a id="mj40e544133350f07d0192d6c0a7d5ae11" name="mj40e544133350f07d0192d6c0a7d5ae11"></a><a name="t31"></a><br><div align="center"><a href="#top"><img src="common/top.gif" border="0" alt="Rheinwerk Computing - Zum Seitenanfang"></a></div><a name="t2t32"></a><h3 class="t3">Syntax von Regulären Ausdrücken  <a href="#t2t33"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#t2t31"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+<p>Auch Reguläre Ausdrücke sind, wie alles in Ruby, Objekte. Ein Regulärer Ausdruck ist eine Instanz der Klasse Regexp und kann über den Aufruf der Klassenmethoden Regexp.compile oder Regexp.new (Synonym von compile), die einen String oder einen Regulären Ausdruck als Parameter erwarten, erzeugt werden. Oder Sie nutzen eine der Kurzschreibweisen /Regex/ oder %r(Regex):</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; Regexp.compile("buch")
+=&gt; /buch/
+&gt;&gt; Regexp.new(/lampe/)
+=&gt; /lampe/
+&gt;&gt; %r(tisch)
+=&gt; /tisch/
+&gt;&gt; /stuhl/.class
+=&gt; Regexp</pre></div>
+<p>Darüber hinaus stehen in Regulären Ausdrücken Symbole und Abkürzungen zur Verfügung, von denen wir auch hier nur die am meistbenutzen auflisten:</p>
+<table border="0" cellpadding="3" cellspacing="1" width="100%">
+<tr>
+<td class="tabellenkopf"><span class="cfett">Symbol/Abkürzung</span></td>
+<td class="tabellenkopf"><span class="cfett">Beschreibung</span></td>
+</tr>
+<tr>
+<td class="tabellentext">
+^
+</td>
+<td class="tabellentext"> Anfang einer Zeile oder Zeichenkette
+</td>
+</tr>
+<td class="tabellentext">
+$
+</td>
+<td class="tabellentext"> Ende einer Zeile oder Zeichenkette
+</td>
+</tr>
+<td class="tabellentext">
+.
+</td>
+<td class="tabellentext"> ein beliebiges Zeichen (neue Zeile nur im Mehrzeilenmodus)
+</td>
+</tr>
+<td class="tabellentext">
+\ w
+</td>
+<td class="tabellentext"> ein beliebiges alphanumerisches Zeichen und der Unterstrich
+</td>
+</tr>
+<td class="tabellentext">
+\ W
+</td>
+<td class="tabellentext"> ein beliebiges Zeichen, das nicht alphanumerisch und auch kein Unterstrich ist
+</td>
+</tr>
+<td class="tabellentext">
+\ s
+</td>
+<td class="tabellentext"> ein Leerraum (Whitespace)
+</td>
+</tr>
+<td class="tabellentext">
+\ S
+</td>
+<td class="tabellentext"> ein Zeichen, das kein Leerraum (Whitespace) ist
+</td>
+</tr>
+<td class="tabellentext">
+\ d
+</td>
+<td class="tabellentext"> eine beliebige ganze Zahl
+</td>
+</tr>
+<td class="tabellentext">
+\ D
+</td>
+<td class="tabellentext"> keine Ziffer
+</td>
+</tr>
+<td class="tabellentext">
+\ A
+</td>
+<td class="tabellentext"> Anfang einer Zeichenkette
+</td>
+</tr>
+<td class="tabellentext">
+\ Z
+</td>
+<td class="tabellentext"> Ende einer Zeichenkette oder Ende einer Zeile
+</td>
+</tr>
+<td class="tabellentext">
+\ z
+</td>
+<td class="tabellentext"> Ende einer Zeichenkette
+</td>
+</tr>
+<td class="tabellentext">
+\ b
+</td>
+<td class="tabellentext"> Wortgrenze (außerhalb von Bereichsangaben)
+</td>
+</tr>
+<td class="tabellentext">
+\ B
+</td>
+<td class="tabellentext"> keine Wortgrenze
+</td>
+</tr>
+<td class="tabellentext">
+\ b
+</td>
+<td class="tabellentext"> Backspace (innerhalb von Bereichsangaben)
+</td>
+</tr>
+<td class="tabellentext">
+[]
+</td>
+<td class="tabellentext"> Bereichsangabe
+</td>
+</tr>
+<td class="tabellentext">
+*
+</td>
+<td class="tabellentext"> null oder mehrmalige Wiederholung des vorhergehenden Ausdrucks
+</td>
+</tr>
+<td class="tabellentext">
++
+</td>
+<td class="tabellentext"> ein- oder mehrmalige Wiederholung des vorhergehenden Ausdrucks
+</td>
+</tr>
+<td class="tabellentext">
+{anz}
+
+
+</td>
+<td class="tabellentext"> genau
+anz-maliges Vorkommen des vorhergehenden Ausdrucks
+</td>
+</tr>
+<td class="tabellentext">
+{min,max}
+
+
+</td>
+<td class="tabellentext"> zwischen
+min- und
+max-maligem Vorkommen des vorhergehenden Ausdrucks
+</td>
+</tr>
+<td class="tabellentext">
+{min,}
+
+
+</td>
+<td class="tabellentext"> mindestens
+min-maliges Vorkommen des vorhergehenden Ausdrucks
+</td>
+</tr>
+<td class="tabellentext">
+{,max}
+
+
+</td>
+<td class="tabellentext"> maximal
+max-maliges Vorkommen des vorhergehenden Ausdrucks
+</td>
+</tr>
+<td class="tabellentext">
+?
+</td>
+<td class="tabellentext"> ein- oder kein-maliges Vorkommen des vorhergehenden Ausdrucks
+</td>
+</tr>
+<td class="tabellentext">
+()
+</td>
+<td class="tabellentext"> Gruppierung von Ausdrücken
+</td>
+</tr>
+<td class="tabellentext">
+x|y
+
+</td>
+<td class="tabellentext"> passt auf x oder y
+(/me(i|y)er/ findet
+meier und
+meyer)</td>
+</tr>
+</table>
+<p class="tabunter"><strong> Tabelle   &nbsp;</strong>Reguläre Ausdrücke-Symbole und Abkürzungen</p>
+
+<p><strong><em>Modifier</em></strong></p>
+<p>Es ist auch möglich, direkt hinter einen Regex einen sog. Modifier, der die Arbeit der Mustersuche beeinflusst, zu setzen. Modifier bestehen aus einem Buchstaben und sind kombinierbar. Zum Beispiel findet das Muster /buch/i sowohl die Zeichenkette buch als auch Buch . Wir haben nachfolgend die gebräuchlichsten aufgelistet:</p>
+<table border="0" cellpadding="3" cellspacing="1" width="100%">
+<tr>
+<td class="tabellenkopf"><span class="cfett">Modifier</span>
+<td class="tabellenkopf"><span class="cfett">Beschreibung</span>
+</tr>
+<tr>
+<td class="tabellentext">i
+</td>
+<td class="tabellentext"> ignoriert Groß- und Kleinschreibung im Regulären Ausdruck(case
+<span class="cfett">i</span>nsensitive search).
+</td>
+</tr>
+<tr>
+<td class="tabellentext">
+o
+
+</td>
+<td class="tabellentext"> liest den Regulären Ausdruck nur einmal(compile pattern
+<span class="cfett">o</span>nce).
+</td>
+</tr>
+<tr>
+<td class="tabellentext">
+m
+
+</td>
+<td class="tabellentext"> Mehrzeilenmodus(<span class="cfett">m</span>ultiple lines)
+</td>
+</tr>
+<tr>
+<td class="tabellentext">
+x
+
+</td>
+<td class="tabellentext"> erweiterter Regulärer Ausdruck(e<span class="cfett">x</span>tended regular expression)
+</td>
+</tr>
+</table>
+<p class="tabunter"><strong> Tabelle   &nbsp;</strong>Reguläre Ausdrücke-Modifier</p>
+<p><strong><em>Maskierung</em></strong></p>
+<p>Wenn Sie mit Hilfe eines Regulären Ausdrucks nach einem Zeichen suchen möchten, das innerhalb eines Regulären Ausdrucks eine eigene Bedeutung hat, müssen Sie das Zeichen mit einem Backslash maskieren. Zum Beispiel steht der Punkt innerhalb eines Regex für ein beliebiges Zeichen. Wenn Sie aber nach einem Punkt suchen möchten, könnten Sie folgenden Regulären Ausdruck formulieren:</p>
+<div class="listing"><pre class="prettyprint">muster = /\./</pre></div><a id="mjbb7832d83739086cacd7fd909545467e" name="mjbb7832d83739086cacd7fd909545467e"></a><a name="t32"></a><br><div align="center"><a href="#top"><img src="common/top.gif" border="0" alt="Rheinwerk Computing - Zum Seitenanfang"></a></div><a name="t2t33"></a><h3 class="t3">Anwendungsbeispiele aus der Praxis  <img src="common/15x15leer.gif" width="15" height="15" border="0" alt="top"><a href="#t2t32"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+<p>Reguläre Ausdrücke werden für drei Anwendungsfälle benutzt:</p>
+<ol>
+<li><span class="cfett">Vergleichen,</span><br>um zu prüfen, ob eine bestimmte Zeichenkette in einer anderen vorkommt, oder um Usereingaben, wie zum Beispiel Datumseingaben oder E-Mail-Adressen, auf ein bestimmtes Format zu überprüfen.</li>
+<li><span class="cfett">Suchen,</span><br>um zum Beispiel die Position eines bestimmten Zeichens in einer Zeichenkette zu ermitteln oder um innerhalb eines Arrays nach einem bestimmten Inhalt zu suchen.</li>
+<li><span class="cfett">Suchen und ersetzen,</span><br>um eine bestimmte Zeichenkette innerhalb einer anderen zu ersetzen.</li>
+</ol>
+<h4 class="t4">Vergleichen</h4>
+<p>Um zu prüfen, ob es sich bei einer Zeichenkette um eine fünf-stellige Ziffernfolge handelt, zum Beispiel, ob eine Postleitzahl korrekt eingegeben wurde, können Sie folgenden Regulären Ausdruck definieren:</p>
+<div class="listing"><pre class="prettyprint">muster = /^\d{5}$/
+string = "40211"
+
+if string =~ muster
+puts "korrekt"
+else
+puts "nicht korrekt"
+end</pre></div>
+<p>Einigen von Ihnen wird die Kurzschreibweise</p>
+<div class="listing"><pre class="prettyprint">string =~ muster</pre></div>
+<p>aus Perl bekannt sein. Sie prüft, ob
+string dem
+muster entspricht. Mit dem Aufruf der Methode
+match würde unser Beispiel so aussehen:
+<div class="listing"><pre class="prettyprint">
+muster = /^\d{5}$/
+string = "40211"
+
+if muster.match(string)
+puts "korrekt"
+else
+puts "nicht korrekt"
+end
+# =&gt; korrekt</pre></div>
+<h4 class="t4">Suchen</h4>
+<p>Reguläre Ausdrücke werden dann zum Suchen in einer Zeichenkette eingesetzt, wenn man zum Beispiel wissen möchte, an welcher Position ein bestimmtes Muster in einer Zeichenkette vorkommt. In unserem Beispiel möchten wir wissen, an welcher Position eine Ziffer vorkommt:</p>
+<div class="listing"><pre class="prettyprint">muster = /\d/
+string="Preis: 2,5 EUR"
+puts string.index(muster)
+# =&gt; 7</pre></div>
+<p><strong><em>Beispiel</em></strong></p>
+<p>Man kann aber auch mit Hilfe von Regulären Ausdrücken prüfen, ob zum Beispiel Elemente eines Arrays Ziffern enthalten:</p>
+<div class="listing"><pre class="prettyprint">muster = /\d/
+array = ["Preis: 12", "Auto", "Farbe #227799"]
+
+puts array.grep(muster)
+# =&gt; Preis: 12
+# =&gt; Farbe #227799</pre></div>
+<table border="0" cellpadding="3" cellspacing="1" width="100%">
+<tr>
+<td class="tabellenkopf"><span class="cfett">Tipp zum Suchen von Methoden</td>
+</tr>
+<tr>
+<td class="tabellentext">
+Die Methode
+grep(muster) wird sehr gerne benutzt, um in der Ruby-Konsole nach einem Methodennamen für ein Objekt zu suchen, von dem man nur ungefähr weiß, wie er heißen könnte. Zum Beispiel suchen wir nach dem Methodennamen, um einen String in Großbuchstaben umzuwandeln. Wir wissen noch, dass die Methode im Namen
+case enthält, aber wie genau sie heißt, wissen wir nicht. Dann können wir in der Ruby-Konsole folgendes eingeben:
+<div class="listing"><pre class="prettyprint">&gt;&gt; "beispiel".methods.sort.grep(/case/)
+=&gt; ["casecmp", "downcase", "downcase!", "swapcase",
+"swapcase!", "upcase", "upcase!"
+</pre></div>
+</td>
+</tr>
+</table>
+<br><h4 class="t4">Suchen und Ersetzen</h4>
+<p>Ein Anwendungsfall für das Suchen und Ersetzen innerhalb von Zeichenketten wäre zum Beispiel das Ersetzen eines Trennzeichens in einem Betrag:</p>
+<div class="listing"><pre class="prettyprint">muster = /^\d{5}$/
+string = "2,456"
+puts string.gsub(/,/,".")
+# =&gt; 2.456</pre></div>
+<p>oder das Vertauschen von Vor- und Nachname:</p>
+<div class="listing"><pre class="prettyprint">muster = /(\w+) (\w+)/
+string= "Bohr Dominik"
+puts string.gsub(muster,'\2, \1')
+# =&gt; Dominik, Bohr</pre></div>
+<p>Mit den Methoden sub und gsub der Klasse String, die in unserem Beispiel zum Einsatz kamen, können Sie Ersetzungen in Zeichenketten vornehmen.</p>
+<p><strong><em>sub</em></strong></p>
+<p>Die Methode sub ersetzt das erste Vorkommen eines Suchmusters mit dem gegebenen Ersetzungsstring oder mit dem Ergebnis des gegebenen Blocks:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; s1 = "Messer, Messer und Gabel"
+=&gt; "Messer, Messer und Gabel"
+&gt;&gt; s1.sub(/Messer/, "Loeffel")
+=&gt; "Loeffel, Messer und Gabel"</pre></div>
+<p>Das Suchmuster ist normalerweise ein Regulärer Ausdruck. Ist das Suchmuster ein String, werden die Abkürzungen der Regulären Ausdrücke mit ihren Sonderbedeutungen nicht mehr als diese erkannt. Der Reguläre Ausdruck /\d/ würde nach einer Ziffer in der Zeichenkette suchen, der String '\d' sucht nach einem Backslash gefolgt von einem d.</p>
+<p><strong><em>gsub</em></strong></p>
+<p>Die Methode gsub funktioniert genauso wie die Methode sub, mit dem Unterschied, dass gsub (global substitution) alle Übereinstimmungen mit dem Suchmuster ersetzt und nicht nur die erste:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; s2 = "Messer, Messer und Gabel"
+=&gt; "Messer, Messer und Gabel"
+&gt;&gt; s2.gsub(/Messer/, "Loeffel")
+=&gt; "Loeffel, Loeffel und Gabel"</pre></div>
+<p>Sowohl sub als auch gsub verfügen über äquivalente Methoden sub! und gsub!, die das Objekt, auf das die Methode angewendet wird, verändern:</p>
+<div class="listing"><pre class="prettyprint">&gt;&gt; s = "Das Bild haengt schief"
+=&gt; "Das Bild haengt schief"
+&gt;&gt; s.gsub!(/schief/, "nicht schief")
+=&gt; "Das Bild haengt nicht schief"
+&gt;&gt; s
+=&gt; "Das Bild haengt nicht schief"</pre></div><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen und kritischen Rückmeldungen.
+<!--<form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="https://www.galileo-press.de/openbook/ruby_on_rails/ruby_on_rails_04_005.htm"><input type="hidden" name="buchtitel" value="Ruby on Rails 2"><input type="hidden" name="Kapitel" value="Reguläre Ausdrücke"><table border="0">
+<tr>
+<td><label for="name">Name</label><br></td>
+<td><input type="text" name="name" id="name" size="40"><br></td>
+</tr>
+<tr>
+<td><label for="email">E-Mail</label><br></td>
+<td><input type="text" name="email" id="email" size="40"><br></td>
+</tr>
+<tr>
+<td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+<td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+</tr>
+<tr>
+<td>
+</td>
+<td><input type="submit" value="Kommentar absenden"></td>
+</tr>
+</table>
+</form>--><a href="https://www.rheinwerk-verlag.de/feedback/produkt/1204/">>> Zum Feedback-Formular</a>
+</div></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td width="100%" class="start" colspan="1" height="22" align="center"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="25%"><a href="ruby_on_rails_04_006.htm" class="navnav"> &lt;&lt;   zurück</a></td>
+<td width="49%"><div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div></td>
+<td align="right" width="25%"><div align="right"><a href="ruby_on_rails_04_008.htm" class="navnav">vor   &gt;&gt; </a></div></td>
+</tr>
+</table></td>
+</tr>
+</table>
+</div></td>
+<td width="10" valign="top">  </td>
+<td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="https://www.rheinwerk-verlag.de/?GPP=opror" class="autor">
+<strong>Zum Katalog</strong></a>
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+
+<td valign="top"><table cellspacing="3">
+<tr>
+<td><a href="https://www.rheinwerk-verlag.de/ruby-on-rails-2_1204/?GPP=opror">
+<img src="common/779.gif" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Ruby on Rails 2" title="Zum Katalog: Ruby on Rails 2">
+<br /><strong>Ruby on Rails 2</strong><br /><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br /><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br /><br /></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="https://www.rheinwerk-verlag.de/?GPP=opror" class="autor"><strong>Buchtipps</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="https://www.rheinwerk-verlag.de/ruby-on-rails-31_2231/?GPP=opror">
+<img src="common/1490.gif" width="69" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Ruby on Rails 3.1" title="Zum Katalog: Ruby on Rails 3.1"><br /><br /><br /><br /><br /><br /><br />&nbsp;Ruby on Rails 3.1</a><br /><br /></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="https://www.rheinwerk-verlag.de/responsive-webdesign_3429/?GPP=opror">
+<img src="common/3200.gif" width="70" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Responsive Webdesign" title="Zum Katalog: Responsive Webdesign"><br /><br /><br /><br /><br /><br /><br />&nbsp;Responsive Webdesign</a><br /><br /></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="https://www.rheinwerk-verlag.de/suchmaschinen-optimierung_3611/?GPP=opror">
+<img src="common/2882.gif" width="70" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Suchmaschinen-Optimierung" title="Zum Katalog: Suchmaschinen-Optimierung"><br /><br /><br /><br /><br /><br /><br />&nbsp;Suchmaschinen-<br />&nbsp;Optimierung</a><br /><br /></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="https://www.rheinwerk-verlag.de/javascript_3209/?GPP=opror">
+<img src="common/1979.gif" width="70" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: JavaScript" title="Zum Katalog: JavaScript"><br /><br /><br /><br /><br /><br /><br>&nbsp;JavaScript</a><br /><br /></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="https://www.rheinwerk-verlag.de/schrodinger-lernt-html5-css3-und-javascript_3277/?GPP=opror">
+<img src="common/2020.gif" width="85" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Schrödinger lernt HTML5, CSS3 und JavaScript" title="Zum Katalog: Schrödinger lernt HTML5, CSS3 und JavaScript"><br /><br /><br /><br /><br /><br /><br />&nbsp;Schrödinger lernt<br />&nbsp;HTML5, CSS3<br />&nbsp;und JavaScript</a><br /><br /></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br /><a href="https://www.rheinwerk-verlag.de/hilfe/bestellung_6?GPP=opror"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br /><br /></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Rheinwerk Verlag GmbH 2008</strong><br>
+Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="https://www.rheinwerk-verlag.de/">[Rheinwerk Computing]</a><br><br>
+Rheinwerk Verlag GmbH, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:service@rheinwerk-verlag.de">service@rheinwerk-verlag.de</a></div><br><br></body>
+</html>
+<Š›:      Wó|¢Wó|¢<ö‹ÕWü·"   K    :http://openbook.rheinwerk-verlag.de/ruby_on_rails/ruby_on_rails_04_007.htm strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Via: 1.1 ISA01TMG
+Content-Length: 32767
+Date: Tue, 04 Oct 2016 09:55:46 GMT
+Content-Type: text/html
+Etag: "-217640951"
+Server: lighttpd/1.4.13
+Accept-Ranges: bytes
+Last-Modified: Fri, 09 Jan 2015 14:41:18 GMT
+ original-response-headers Via: 1.1 ISA01TMG
+Connection: Keep-Alive
+Proxy-Connection: Keep-Alive
+Content-Length: 32767
+Date: Tue, 04 Oct 2016 09:55:46 GMT
+Content-Type: text/html
+Etag: "-217640951"
+Server: lighttpd/1.4.13
+Accept-Ranges: bytes
+Last-Modified: Fri, 09 Jan 2015 14:41:18 GMT
+ uncompressed-len 0   ÿ

@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/QAPage">
+<head>
+
+<title>How do I install the Ruby ri documentation? - Stack Overflow</title>
+    <link rel="shortcut icon" href="//cdn.sstatic.net/Sites/stackoverflow/img/favicon.ico?v=4f32ecc8f43d">
+    <link rel="apple-touch-icon image_src" href="//cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+    <link rel="search" type="application/opensearchdescription+xml" title="Stack Overflow" href="/opensearch.xml">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:domain" content="stackoverflow.com"/>
+    <meta property="og:type" content="website" />
+
+    <meta property="og:image" itemprop="image primaryImageOfPage" content="http://cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon@2.png?v=73d79a89bded&a" />
+    <meta name="twitter:title" property="og:title" itemprop="title name" content="How do I install the Ruby ri documentation?" />
+    <meta name="twitter:description" property="og:description" itemprop="description" content="I&#39;ve recently installed Ruby 1.9.1 on Windows 7, and apparently it doesn&#39;t come with the standard ri documentation.  So when I do &#39;ri Array&#39;, I get:
+
+C:\&amp;gt;ri Array
+
+Nothing known about Array
+
+
+Is..." />
+    <meta property="og:url" content="http://stackoverflow.com/questions/3178900/how-do-i-install-the-ruby-ri-documentation"/>
+    <link rel="canonical" href="http://stackoverflow.com/questions/3178900/how-do-i-install-the-ruby-ri-documentation" />
+
+    
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdn.sstatic.net/Js/stub.en.js?v=d8b30c8cdc3f"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.sstatic.net/Sites/stackoverflow/all.css?v=5a033270afbb">
+
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;How do I install the Ruby ri documentation?&#39;" href="/feeds/question/3178900">
+            <meta name="twitter:app:country" content="US" />
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS" />
+            <meta name="twitter:app:id:iphone" content="871299723" />
+            <meta name="twitter:app:url:iphone" content="se-zaphod://stackoverflow.com/questions/3178900/how-do-i-install-the-ruby-ri-documentation" />
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS" />
+            <meta name="twitter:app:id:ipad" content="871299723" />
+            <meta name="twitter:app:url:ipad" content="se-zaphod://stackoverflow.com/questions/3178900/how-do-i-install-the-ruby-ri-documentation" />
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://stackoverflow.com/questions/3178900/how-do-i-install-the-ruby-ri-documentation">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+        
+            StackExchange.ready(function () {
+                    
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.initSnippetRenderer();
+                    });
+                    
+
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:3178900});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('1', '3178900');
+                                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+
+    <script>
+        StackExchange.init({"locale":"en","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","serverTime":1475576137,"routeName":"Questions/Show","site":{"name":"Stack Overflow","description":"Q&A for professional and enthusiast programmers","isNoticesTabEnabled":true,"recaptchaPublicKey":"6LdchgIAAAAAAJwGpIzRQSOFaO0pU6s44Xt8aTwc","recaptchaAudioLang":"en","enableNewTagCreationWarning":true,"insertSpaceAfterNameTabCompletion":false,"id":1,"enableInsertDocLinkDialog":true,"enableSocialMediaInSharePopup":true},"user":{"fkey":"75c63c8a725f284fb3a51b807c932519","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true}}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"styleCode":true,"enableNewLinkInsertDialog":true},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"snippets":{"snippetsEnabled":true,"renderDomain":"stacksnippets.net"},"markdown":{"asteriskIntraWordEmphasis":true}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"b70d4b0a048c","js/moderator.en.js":"224639e4d81f","js/full-anon.en.js":"5ad243322808","js/full.en.js":"d135407b299b","js/wmd.en.js":"bd706a402e08","js/third-party/jquery.autocomplete.min.js":"e5f01e97f7c3","js/third-party/jquery.autocomplete.min.en.js":"","js/mobile.en.js":"433c9c87f0ef","js/help.en.js":"a2f92aacc060","js/tageditor.en.js":"1d50aaf81026","js/tageditornew.en.js":"5f4d5136d0b1","js/inline-tag-editing.en.js":"a815357d00cd","js/revisions.en.js":"cf90cfea0ccf","js/review.en.js":"7020bbf0dbd2","js/tagsuggestions.en.js":"d1ff9b84abe5","js/post-validation.en.js":"0bc8c0d431b4","js/explore-qlist.en.js":"e71f14781288","js/events.en.js":"e8bb8851e628","js/keyboard-shortcuts.en.js":"b766463415ee","js/external-editor.en.js":"fc20a49e5703","js/external-editor.en.js":"fc20a49e5703","js/snippet-javascript.en.js":"bb9cbf50086e","js/snippet-javascript-codemirror.en.js":"2c1bf235e4fe"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    
+        <script>
+            StackExchange.ready(function () {
+                $('#nav-tour').click(function () {
+                    StackExchange.using("gps", function() {
+                        StackExchange.gps.track("aboutpage.click", { aboutclick_location: "headermain" }, true);
+                    });
+                });
+            });
+        </script>
+</head>
+<body class="question-page new-topbar">
+    <noscript><div id="noscript-padding"></div></noscript>
+            <script>(function () { var old = $.fn.contents; $.fn.contents = function () { try { return old.apply(this, arguments); } catch (e) { return $([]); } } })()</script>
+        <iframe id="adzerk-user-match" width="0" height="0" frameborder="0" scrolling="no" onload="window.AUMIframeDone=true"
+                src="https://ssum-sec.casalemedia.com/usermatch?s=183712&amp;cb=https%3A%2F%2Fengine.adzerk.net%2Fudb%2F22%2Fsync%2Fi.gif%3FpartnerId%3D1%26userId%3D"
+                style="display: none;" marginheight="0" marginwidth="0"></iframe>
+
+
+
+
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+
+
+
+<div class="topbar">
+    <div class="topbar-wrapper">
+
+        <div class="js-topbar-dialog-corral">
+
+
+<div class="topbar-dialog siteSwitcher-dialog dno">
+    <div class="header">
+        <h3><a href="//stackoverflow.com">current community</a></h3>
+    </div>
+    <div class="modal-content current-site-container">
+        <ul class="current-site">
+                <li>
+                        <div class="related-links">
+                    <a href="http://chat.stackoverflow.com" class="js-gps-track"     data-gps-track="site_switcher.click({ item_type:6 })"
+>chat</a>
+            </div>
+
+
+
+
+    <a href="//stackoverflow.com"
+       class="current-site-link site-link js-gps-track"
+       data-id="1"
+       data-gps-track="
+        site_switcher.click({ item_type:3 })">
+        <div class="site-icon favicon favicon-stackoverflow" title="Stack Overflow"></div>
+        Stack Overflow
+    </a>
+
+                </li>
+                <li class="related-site">
+                        <div class="L-shaped-icon-container">
+        <span class="L-shaped-icon"></span>
+    </div>
+
+                    
+
+
+
+    <a href="http://meta.stackoverflow.com"
+       class="site-link js-gps-track"
+       data-id="552"
+       data-gps-track="
+            site.switch({ target_site:552, item_type:3 }),
+        site_switcher.click({ item_type:4 })">
+        <div class="site-icon favicon favicon-stackoverflowmeta" title="Meta Stack Overflow"></div>
+        Meta Stack Overflow
+    </a>
+
+                </li>
+        </ul>
+    </div>
+    <div class="header" id="your-communities-header">
+        <h3>
+your communities        </h3>
+            
+    </div>
+    <div class="modal-content" id="your-communities-section">
+            
+            <div class="call-to-login">
+<a href="https://stackoverflow.com/users/signup?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f3178900%2fhow-do-i-install-the-ruby-ri-documentation" class="login-link js-gps-track"     data-gps-track="site_switcher.click({ item_type:10 })"
+>Sign up</a> or <a href="https://stackoverflow.com/users/login?ssrc=site_switcher&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f3178900%2fhow-do-i-install-the-ruby-ri-documentation" class="login-link js-gps-track"     data-gps-track="site_switcher.click({ item_type:11 })"
+>log in</a> to customize your list.
+            </div>
+    </div>
+    <div class="header">
+        <h3><a href="//stackexchange.com/sites">more stack exchange communities</a></h3>
+        <a href="http://blog.stackoverflow.com" class="fr">company blog</a>
+    </div>
+    <div class="modal-content">
+            <div class="child-content"></div>
+    </div>
+</div>
+        </div>
+
+        <div class="network-items">
+                <a href="//stackexchange.com"
+                   class="topbar-icon icon-site-switcher yes-hover js-site-switcher-button js-gps-track"
+                   data-gps-track="site_switcher.show"
+                   title="A list of all 161 Stack Exchange sites">
+                    <span class="hidden-text">Stack Exchange</span>
+                </a>
+
+    <a href="#"
+       class="topbar-icon icon-inbox yes-hover js-inbox-button"
+       title="Recent inbox messages">
+        <span class="hidden-text">Inbox</span>
+        <span class="unread-count" style="display:none"></span>
+    </a>
+    <a href="#"
+       class="topbar-icon icon-achievements yes-hover js-achievements-button "
+       data-unread-class=""
+       title="Recent achievements: reputation, badges, and privileges earned">
+        <span class="hidden-text">Reputation and Badges</span>
+        <span class="unread-count" style="display:none">
+            
+        </span>
+    </a>
+        </div>
+
+        <div class="topbar-links">
+
+                <div class="links-container">
+                <span class="topbar-menu-links">
+                                    <a href="https://stackoverflow.com/users/signup?ssrc=head&returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f3178900%2fhow-do-i-install-the-ruby-ri-documentation" class="login-link">sign up</a>
+                                <a href="https://stackoverflow.com/users/login?ssrc=head&returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f3178900%2fhow-do-i-install-the-ruby-ri-documentation" class="login-link">log in</a>
+
+                            <a href="/tour">tour</a>
+        <a href="#" class="icon-help js-help-button" title="Help Center and other resources">
+            help
+            <span class="triangle"></span>
+        </a>
+    <div class="topbar-dialog help-dialog js-help-dialog dno">
+        <div class="modal-content">
+            <ul>
+                                    <li>
+                        <a href="/tour" class="js-gps-track" data-gps-track="help_popup.click({ item_type:1 })">
+                            Tour
+                            <span class="item-summary">
+                                Start here for a quick overview of the site
+                            </span>
+                        </a>
+                    </li>
+                <li>
+                    <a href="/help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:4 })">
+                        Help Center
+                        <span class="item-summary">
+                            Detailed answers to any questions you might have
+                        </span>
+                    </a>
+                </li>
+                        <li>
+                            <a href="//meta.stackoverflow.com" class="js-gps-track" data-gps-track="help_popup.click({ item_type:2 })">
+                                Meta
+                                <span class="item-summary">
+                                    Discuss the workings and policies of this site
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://stackoverflow.com/company/about" class="js-gps-track" data-gps-track="help_popup.click({ item_type:6 })">
+                                About Us
+                                <span class="item-summary">
+                                    Learn more about Stack Overflow the company
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://business.stackoverflow.com/?ref=topbar_help" class="js-gps-track" data-gps-track="help_popup.click({ item_type:7 })">
+                                Business
+                                <span class="item-summary">
+                                    Learn more about hiring developers or posting ads with us
+                                </span>
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+                                            </span>
+                </div>
+
+            <div class="search-container">
+                <form id="search" action="/search" method="get" autocomplete="off">
+                    <input name="q" type="text" placeholder="Search Q&amp;A" value="" tabindex="1" autocomplete="off" maxlength="240" />
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <script>
+        StackExchange.ready(function() { StackExchange.topbar.init(); });
+    </script>
+
+    <div class="container">
+        <div id="header">
+            <br class="cbt">
+            <div id="hlogo">
+                <a href="/" >
+                    Stack Overflow
+                </a>
+            </div>
+            <div id="hmenus">
+                <div class="nav mainnavs">
+                    <ul>
+                        <li class="youarehere"><a id="nav-questions" href="/questions">Questions</a></li>
+                            <li><a id="nav-jobs" href="/jobs?med=site-ui&ref=jobs-tab">Jobs</a></li>
+                                                <li><a id="nav-docs" href="/documentation">Documentation</a></li>
+                        <li><a id="nav-tags" href="/tags">Tags</a></li>
+                        <li><a id="nav-users" href="/users">Users</a></li>
+                        <li><a id="nav-badges" href="/help/badges">Badges</a></li>
+                    </ul>
+                </div>
+                <div class="nav askquestion">
+                    <ul>
+                        <li>
+                            <a id="nav-askquestion"  href="/questions/ask">Ask Question</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+        <div id="content" class="snippet-hidden">
+            
+
+<div itemscope itemtype="http://schema.org/Question">
+    <link itemprop="image" href="//cdn.sstatic.net/Sites/stackoverflow/img/apple-touch-icon.png?v=c78bd457575a">
+
+
+    <div id="herobox" class="alternate">
+        <div class="test"></div>
+            <div id="close">
+                <a title="click to minimize"><span>x</span> Dismiss</a>
+            </div>
+        <div class="content">
+            <b>Join the Stack Overflow Community</b>
+            <div class="separator"></div>
+            <div class="blurb">
+                Stack Overflow is a community of 4.7 million programmers, just like you, helping each other.
+                    <br />
+Join them; it only takes a minute:                    <br />
+            </div>
+            <a href="/users/signup?ssrc=hero&amp;returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f3178900%2fhow-do-i-install-the-ruby-ri-documentation" id="tell-me-more" class="button">Sign up</a>
+        </div>
+    </div>
+<script>
+    StackExchange.ready(function () {
+
+        var location = 0;
+        if ($("body").hasClass("questions-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("question-page")) {
+            location = 1;;
+        } else if ($("body").hasClass("faq-page")) {
+            location = 5;;
+        } else if ($("body").hasClass("home-page")) {
+            location = 3;;
+        }
+
+        $('#tell-me-more').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: 'cta', location: location }, true);
+            });
+        });
+        $('#herobox #close').click(function () {
+            StackExchange.using("gps", function () {
+                StackExchange.gps.track("hero.action", { hero_action_type: "minimize", location: location }, true);
+            });
+            $.cookie("hero", "mini", { path: "/", expires: 365 });
+            $.ajax({
+                url: "/hero-mini",
+                success: function (data) {
+                    $("#herobox").fadeOut("fast", function () {
+                        $("#herobox").replaceWith(data);
+                        $("#herobox-mini").fadeIn("fast");
+                    });
+                }
+            });
+            return false;
+        });
+    });
+
+</script>			<div id="question-header">
+                <h1 itemprop="name"><a href="/questions/3178900/how-do-i-install-the-ruby-ri-documentation" class="question-hyperlink">How do I install the Ruby ri documentation?</a></h1>
+		</div>
+			<div id="mainbar">
+
+			
+
+<div class="question" data-questionid="3178900"  id="question">
+
+    <script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk1314026502",4).setZone(43); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk1314026502"></div>    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="3178900">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">20</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="#">favorite</a>
+        <div class="favoritecount"><b>7</b></div>
+
+
+</div>
+
+            </td>
+            
+<td class="postcell">
+<div>
+    <div class="post-text" itemprop="text">
+
+<p>I've recently installed Ruby 1.9.1 on Windows 7, and apparently it doesn't come with the standard ri documentation.  So when I do 'ri Array', I get:</p>
+
+<pre><code>C:\&gt;ri Array
+
+Nothing known about Array
+</code></pre>
+
+<p>Is there a way I can install this documentation so that the above works?</p>
+    </div>
+    <div class="post-taglist">
+        <a href="/questions/tagged/ruby" class="post-tag" title="show questions tagged &#39;ruby&#39;" rel="tag">ruby</a> 
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/q/3178900" title="short permalink to this question" class="short-link" id="link-post-3178900">share</a><span class="lsep">|</span><a href="/posts/3178900/edit" class="suggest-edit-post" title="">improve this question</a></div>        
+    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="/posts/3178900/revisions" title="show all edits to this post">edited <span title="2013-10-09 01:49:50Z" class="relativetime">Oct 9 '13 at 1:49</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/128421/the-tin-man"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/71770d043c0f7e3c7bc5f74190015c26?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/128421/the-tin-man">the Tin Man</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 108,459" dir="ltr">108k</span><span title="22 gold badges"><span class="badge1"></span><span class="badgecount">22</span></span><span title="134 silver badges"><span class="badge2"></span><span class="badgecount">134</span></span><span title="204 bronze badges"><span class="badge3"></span><span class="badgecount">204</span></span>
+        </div>
+    </div>
+</div>    </td>
+    <td class="post-signature owner">
+        <div class="user-info user-hover">
+    <div class="user-action-time">
+        asked <span title="2010-07-05 10:54:25Z" class="relativetime">Jul 5 '10 at 10:54</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/368134/grant-crofton"><div class="gravatar-wrapper-32"><img src="https://i.stack.imgur.com/gqbY3.jpg?s=32&amp;g=1" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/368134/grant-crofton">Grant Crofton</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">3,999</span><span title="4 gold badges"><span class="badge1"></span><span class="badgecount">4</span></span><span title="17 silver badges"><span class="badge2"></span><span class="badgecount">17</span></span><span title="30 bronze badges"><span class="badge3"></span><span class="badgecount">30</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</div>
+</td>
+        </tr>
+                
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-3178900" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-3178900" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>        </table>
+</div>
+
+			<div id="answers">
+
+				<a name="tab-top"></a>
+				<div id="answers-header">
+					<div class="subheader answers-subheader">
+						<h2>
+								6 Answers
+                                <span style="display:none;" itemprop="answerCount">6</span>
+						</h2>
+						<div>
+							<div id="tabs">
+        <a href="/questions/3178900/how-do-i-install-the-ruby-ri-documentation?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="/questions/3178900/how-do-i-install-the-ruby-ri-documentation?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere" href="/questions/3178900/how-do-i-install-the-ruby-ri-documentation?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+</div>
+						</div>
+					</div>    
+				</div>    
+
+
+
+
+  
+<a name="3180173"></a>
+<div id="answer-3180173" class="answer accepted-answer" data-answerid="3180173"  itemscope itemtype="http://schema.org/Answer" itemprop="acceptedAnswer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="3180173">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">6</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>Seems you have installer Ruby 1.9.1 distributed by the RubyInstaller project.</p>
+
+<p>You can use the Windows Help Files (CHM) that came with the installer instead of the ri documentation.</p>
+
+<p>The problem of the RI documentation is that some versions of RDoc have problems generating it and also generated more than 10 thousands files which slowed down the installers considerably.</p>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/3180173" title="short permalink to this answer" class="short-link" id="link-post-3180173">share</a><span class="lsep">|</span><a href="/posts/3180173/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2010-07-05 14:16:12Z" class="relativetime">Jul 5 '10 at 14:16</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/117298/luis-lavena"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/e7cff3cfd41c495e1012227d7dc24202?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/117298/luis-lavena">Luis Lavena</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">9,670</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="26 silver badges"><span class="badge2"></span><span class="badgecount">26</span></span><span title="36 bronze badges"><span class="badge3"></span><span class="badgecount">36</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-3180173" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+
+
+    <tr id="comment-3274425" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">So there&#39;s no way to download those file separately?</span>
+                    &ndash;&nbsp;<a href="/users/368134/grant-crofton"
+                       title="3,999 reputation"
+                       class="comment-user owner">Grant Crofton</a>
+                <span class="comment-date" dir="ltr"><span title="2010-07-05 14:47:16Z" class="relativetime-clean">Jul 5 '10 at 14:47</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-3275871" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">2</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">You can install rdoc-data: <a href="http://rdoc.rubyforge.org/History_txt.html" rel="nofollow">rdoc.rubyforge.org/History_txt.html</a></span>
+                    &ndash;&nbsp;<a href="/users/117298/luis-lavena"
+                       title="9,670 reputation"
+                       class="comment-user">Luis Lavena</a>
+                <span class="comment-date" dir="ltr"><span title="2010-07-05 18:34:46Z" class="relativetime-clean">Jul 5 '10 at 18:34</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-3310997" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">That&#39;s done the trick!  Thanks.</span>
+                    &ndash;&nbsp;<a href="/users/368134/grant-crofton"
+                       title="3,999 reputation"
+                       class="comment-user owner">Grant Crofton</a>
+                <span class="comment-date" dir="ltr"><span title="2010-07-09 09:47:32Z" class="relativetime-clean">Jul 9 '10 at 9:47</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-60111103" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">This is not an answer to the question.  You probably should have commented instead.</span>
+                    &ndash;&nbsp;<a href="/users/343397/hovis"
+                       title="678 reputation"
+                       class="comment-user">Hovis</a>
+                <span class="comment-date" dir="ltr"><span title="2016-03-26 20:26:13Z" class="relativetime-clean">Mar 26 at 20:26</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-3180173" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk665765609",4).setZone(44); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk665765609"></div>
+  
+<a name="13886612"></a>
+<div id="answer-13886612" class="answer" data-answerid="13886612"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="13886612">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">23</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>In case people on other platforms need to install their ri docs (like I did).  This article gives the why and the how:</p>
+
+<p><a href="http://jstorimer.com/ri.html">http://jstorimer.com/ri.html</a></p>
+
+<p>The command is:</p>
+
+<pre><code>gem rdoc --all --ri --no-rdoc
+</code></pre>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/13886612" title="short permalink to this answer" class="short-link" id="link-post-13886612">share</a><span class="lsep">|</span><a href="/posts/13886612/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+    <td align="right" class="post-signature">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        <a href="/posts/13886612/revisions" title="show all edits to this post">edited <span title="2013-10-09 01:51:41Z" class="relativetime">Oct 9 '13 at 1:51</span></a>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/128421/the-tin-man"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/71770d043c0f7e3c7bc5f74190015c26?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/128421/the-tin-man">the Tin Man</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 108,459" dir="ltr">108k</span><span title="22 gold badges"><span class="badge1"></span><span class="badgecount">22</span></span><span title="134 silver badges"><span class="badge2"></span><span class="badgecount">134</span></span><span title="204 bronze badges"><span class="badge3"></span><span class="badgecount">204</span></span>
+        </div>
+    </div>
+</div>    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2012-12-14 21:37:05Z" class="relativetime">Dec 14 '12 at 21:37</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/25538/jon-smock"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/7cf5af9e0f94976adae00ce7dfdd467b?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/25538/jon-smock">Jon Smock</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">5,373</span><span title="6 gold badges"><span class="badge1"></span><span class="badgecount">6</span></span><span title="31 silver badges"><span class="badge2"></span><span class="badgecount">31</span></span><span title="47 bronze badges"><span class="badge3"></span><span class="badgecount">47</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-13886612" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+
+
+    <tr id="comment-23471679" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">Thx a lot. Just what I needed.</span>
+                    &ndash;&nbsp;<a href="/users/901179/dmitriy-ugnichenko"
+                       title="784 reputation"
+                       class="comment-user">Dmitriy Ugnichenko</a>
+                <span class="comment-date" dir="ltr"><span title="2013-05-04 19:31:37Z" class="relativetime-clean">May 4 '13 at 19:31</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-13886612" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="15006101"></a>
+<div id="answer-15006101" class="answer" data-answerid="15006101"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="15006101">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">16</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>If you are using <strong>rvm</strong> you should <code>rvm docs generate</code> (or just <code>rvm docs generate-ri</code>)</p>
+
+<p>See <a href="http://kedarm.posterous.com/regenerating-ruby-ri-documentation">this info (2011August)</a> about rvm and ri </p>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/15006101" title="short permalink to this answer" class="short-link" id="link-post-15006101">share</a><span class="lsep">|</span><a href="/posts/15006101/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2013-02-21 15:32:31Z" class="relativetime">Feb 21 '13 at 15:32</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/259192/zipizap"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/04f5e260b2169925efcdffa51c52419e?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/259192/zipizap">zipizap</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">513</span><span title="5 silver badges"><span class="badge2"></span><span class="badgecount">5</span></span><span title="12 bronze badges"><span class="badge3"></span><span class="badgecount">12</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-15006101" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+
+
+    <tr id="comment-27967345" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">1</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">The website doesn&#39;t exist any more.</span>
+                    &ndash;&nbsp;<a href="/users/343204/snow-crash"
+                       title="21,233 reputation"
+                       class="comment-user">Snow Crash</a>
+                <span class="comment-date" dir="ltr"><span title="2013-09-22 03:38:32Z" class="relativetime-clean">Sep 22 '13 at 3:38</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+    <tr id="comment-36765573" class="comment ">
+        <td class="comment-actions">
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                <span title="number of &#39;useful comment&#39; votes received"
+                                      class="cool">2</span>
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">FYI: <code>rvm docs generate</code> took ages to complete on my system. So be warned or have patience.</span>
+                    &ndash;&nbsp;<a href="/users/57091/robsch"
+                       title="3,234 reputation"
+                       class="comment-user">robsch</a>
+                <span class="comment-date" dir="ltr"><span title="2014-05-27 06:42:39Z" class="relativetime-clean">May 27 '14 at 6:42</span></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-15006101" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="35573188"></a>
+<div id="answer-35573188" class="answer" data-answerid="35573188"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="35573188">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>None of the proposed solutions worked for me. In the end the solution I found was super simple, so I'll leave it here. (I'm running ruby 2.2.4 on win7 x64 in case that's relevant)</p>
+
+<p>(captain obvious alert: ruby must be installed and in your PATH)</p>
+
+<p>-open cmd</p>
+
+<pre><code>-$ gem install rdoc-data
+
+-$ rdoc-data --install
+</code></pre>
+
+<p>And you're set! test that it worked by running:</p>
+
+<p><code>-$ ri Array</code>  It should give you all the lovely documentation for the class!</p>
+
+<p>Hope this helps!</p>
+
+<p>ps. I just noticed that this is the solution that <a href="http://stackoverflow.com/users/117298/luis-lavena">Luis Lavena</a> proposed in a comment, but his comment wasn't clear to me so I had continued searching. Basically this is the same solution but explained more clearly so that that doesn't happen to anyone else :)</p>
+
+<p>Cheers!</p>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/35573188" title="short permalink to this answer" class="short-link" id="link-post-35573188">share</a><span class="lsep">|</span><a href="/posts/35573188/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2016-02-23 09:08:56Z" class="relativetime">Feb 23 at 9:08</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/5967511/lucas-fox"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/bbcae711a1e0293a5c5361ea7123444c?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/5967511/lucas-fox">Lucas Fox</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">26</span><span title="3 bronze badges"><span class="badge3"></span><span class="badgecount">3</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-35573188" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-35573188" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="36355977"></a>
+<div id="answer-36355977" class="answer" data-answerid="36355977"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="36355977">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">2</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>RVM does not automatically generate and install each Ruby's ri / rdoc documentation.  You can generate using the following command:
+rvm docs generate</p>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/36355977" title="short permalink to this answer" class="short-link" id="link-post-36355977">share</a><span class="lsep">|</span><a href="/posts/36355977/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info ">
+    <div class="user-action-time">
+        answered <span title="2016-04-01 12:08:48Z" class="relativetime">Apr 1 at 12:08</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/4040387/cathy-cullen"><div class="gravatar-wrapper-32"><img src="https://lh5.googleusercontent.com/-1OFi9TdAYU4/AAAAAAAAAAI/AAAAAAAAAN4/Pf-Lgvko10Q/photo.jpg?sz=32" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/4040387/cathy-cullen">Cathy Cullen</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">21</span><span title="1 bronze badge"><span class="badge3"></span><span class="badgecount">1</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-36355977" class="comments  dno">
+		    <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+                        <tr><td></td><td></td></tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-36355977" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+
+  
+<a name="3179708"></a>
+<div id="answer-3179708" class="answer" data-answerid="3179708"  itemscope itemtype="http://schema.org/Answer">
+    <table>
+        <tr>
+            <td class="votecell">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="3179708">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">0</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+
+</div>
+
+            </td>
+            
+
+
+<td class="answercell">
+    <div class="post-text" itemprop="text">
+<p>All the Ruby Docs are at <a href="http://www.ruby-doc.org" rel="nofollow">http://www.ruby-doc.org</a></p>
+
+<p>So the array documentation is at:</p>
+
+<p><a href="http://ruby-doc.org/core/classes/Array.html" rel="nofollow">http://ruby-doc.org/core/classes/Array.html</a></p>
+
+<p>Never tried it on windows but because its saying Nothing Known about X its not that its not installed just not got anything there.</p>
+
+<p>Try installing a gem as you can then <code>ri GEM_CLASS</code> as that should provide defentions, should let us see if its missing documentation or if ri's not looking in the right place</p>
+    </div>
+    <table class="fw">
+    <tr>
+    <td class="vt">
+<div class="post-menu"><a href="/a/3179708" title="short permalink to this answer" class="short-link" id="link-post-3179708">share</a><span class="lsep">|</span><a href="/posts/3179708/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </td>
+            
+
+
+    <td align="right" class="post-signature">   
+       
+
+    <div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2010-07-05 13:11:00Z" class="relativetime">Jul 5 '10 at 13:11</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="/users/222018/arcath"><div class="gravatar-wrapper-32"><img src="https://www.gravatar.com/avatar/4dea71e9df9a75bddd0c6aac8095065b?s=32&amp;d=identicon&amp;r=PG" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="/users/222018/arcath">Arcath</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">1,553</span><span title="3 gold badges"><span class="badge1"></span><span class="badgecount">3</span></span><span title="22 silver badges"><span class="badge2"></span><span class="badgecount">22</span></span><span title="53 bronze badges"><span class="badge3"></span><span class="badgecount">53</span></span>
+        </div>
+    </div>
+</div>
+    </td>
+    </tr>
+    </table>
+</td>
+        </tr>
+        
+<tr>
+    <td class="votecell"></td>
+    <td>
+	    <div id="comments-3179708" class="comments ">
+		    <table>
+                <tbody data-remaining-comments-count="0"
+                       data-canpost="false"
+                       data-cansee="true"
+                       data-comments-unavailable="false"
+                       data-addlink-disabled="true">
+
+
+
+    <tr id="comment-3273861" class="comment ">
+        <td>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class=" comment-score">
+                                &nbsp;&nbsp;
+                        </td>
+                        <td>
+                                &nbsp;
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td class="comment-text">
+            <div style="display: block;" class="comment-body">
+                <span class="comment-copy">I get the following for Rake, which I just installed (I shortened it a bit):   C:\&gt;ri Rake ---------------- Class: Rake -----------------------------   This post talks about the ri docs not being included: <a href="http://stackoverflow.com/questions/1587354/ruby-1-9-ri-problem/1588642#1588642" title="ruby 1 9 ri problem">stackoverflow.com/questions/1587354/ruby-1-9-ri-problem/&hellip;</a>  It&#39;s not too important, but the book I&#39;m reading talks about it so I  wanted to check it out.</span>
+                    &ndash;&nbsp;<a href="/users/368134/grant-crofton"
+                       title="3,999 reputation"
+                       class="comment-user owner">Grant Crofton</a>
+                <span class="comment-date" dir="ltr"><span title="2010-07-05 13:33:29Z" class="relativetime-clean">Jul 5 '10 at 13:33</span></span>
+                    <span class="edited-yes" title="this comment was edited 1 time"></span>
+                                                                            </div>
+                    </td>
+    </tr>
+                </tbody>
+		    </table>
+	    </div>
+
+        <div id="comments-link-3179708" data-rep=50 data-anon=true>
+
+                <a class="js-add-link comments-link disabled-link "
+                   title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”."
+                   >add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href=# onclick=""></a>
+        </div>         
+    </td>
+</tr>    </table>
+</div>
+									<a name='new-answer'></a>
+						<form id="post-form" action="/questions/3178900/answer/submit" method="post"  class="post-form">
+						    <input type="hidden" id="post-id" value="3178900" />
+                            <input type="hidden" id="qualityBanWarningShown" name="qualityBanWarningShown" value="false" />
+                            <input type="hidden" name="referrer" value="https://www.google.de/"/>
+							<h2 class="space">Your Answer</h2>
+
+
+            <script>
+            StackExchange.ifUsing("editor", function () {
+                StackExchange.using("externalEditor", function () {
+                    StackExchange.using("snippets", function () {
+                        StackExchange.snippets.init();
+                    });
+                });
+            }, "code-snippets");
+        </script>
+    
+
+<script>
+    StackExchange.ready(function() {
+        initTagRenderer("".split(" "), "".split(" "));
+       
+        StackExchange.using("externalEditor", function() {
+                // Have to fire editor after snippets, if snippets enabled
+                if (StackExchange.settings.snippets.snippetsEnabled) {
+                    StackExchange.using("snippets", function() {
+                        createEditor();
+                    });
+                }
+                else {
+                    createEditor();
+                }
+            });
+
+            function createEditor() {
+                prepareEditor({
+                    heartbeatType: 'answer',
+                convertImagesToLinks: true,
+                reputationToPostImages: 10,
+                bindNavPrevention: true,
+                postfix: "",
+                    onDemand: true,
+                    discardSelector: ".discard-answer"
+                    ,immediatelyShowMarkdownHelp:true
+                    });
+                
+
+        }
+    });  
+</script>
+
+
+<div id="post-editor" class="post-editor js-post-editor">
+
+    <div style="position: relative;">     
+        <div class="wmd-container">
+            <div id="wmd-button-bar" class="wmd-button-bar"></div>
+            <textarea id="wmd-input" class="wmd-input" name="post-text" cols="92" rows="15" tabindex="101" data-min-length=""></textarea>
+        </div>
+    </div>
+
+    <div class="fl" style="margin-top: 8px; height:24px;">&nbsp;</div>
+    <div id="draft-saved" class="draft-saved community-option fl" style="margin-top: 8px; height:24px; display:none;">draft saved</div>
+
+    <div id="draft-discarded" class="draft-discarded community-option fl" style="margin-top: 8px; height:24px; display:none;">draft discarded</div>
+
+
+
+    <div id="wmd-preview" class="wmd-preview"></div>
+    <div></div>
+    <div class="edit-block">
+        <input id="fkey" name="fkey" type="hidden" value="75c63c8a725f284fb3a51b807c932519">
+        <input id="author" name="author" type="text">
+    </div>
+
+
+
+</div>
+							<div style="position: relative;">
+								
+								            <div class="form-item dno new-post-login">
+        
+                <div class="new-login-form">
+                    <div class="new-login-left">
+                        <h3>Sign up or <a id="login-link" href="/users/login?ssrc=question_page&returnurl=http%3a%2f%2fstackoverflow.com%2fquestions%2f3178900%2fhow-do-i-install-the-ruby-ri-documentation%23new-answer">log in</a></h3>
+                        <script>
+                            StackExchange.ready(function () {
+                                StackExchange.helpers.onClickDraftSave('#login-link');
+                            });
+                        </script>
+                        <div class="preferred-login google-login">
+                            <p><span class="icon"></span><span>Sign up using Google</span></p>
+                        </div>
+                        <div class="preferred-login facebook-login">
+                            <p><span class="icon"></span><span>Sign up using Facebook</span></p>
+                        </div>
+                        <div class="preferred-login stackexchange-login">
+                            <p><span class="icon"></span><span>Sign up using Email and Password</span></p>
+                        </div>
+                    </div>
+                    <input type="hidden" name="manual-openid" class="manual-openid" />
+                    <input type="hidden" name="use-facebook" class="use-facebook" value="false" />
+                    <input type="hidden" name="use-google" class="use-google" value="false" />
+                    <input type="button" class="submit-openid" value="Submit" style="display:none" />
+                    <div class="new-login-right">
+                                <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" />
+                </div>
+            </td>
+        </tr>
+        </table>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                StackExchange.ready(
+                    function () {
+                        StackExchange.openid.initPostLogin('.new-post-login', 'http%3a%2f%2fstackoverflow.com%2fquestions%2f3178900%2fhow-do-i-install-the-ruby-ri-documentation%23new-answer', 'question_page');
+                    }
+                );
+            </script>
+            <noscript>
+                        <h3>Post as a guest</h3>
+    <div class="form-item">
+        <table>
+        <tr>
+                    <td class="vm">
+                <div>
+                    <label for="display-name">Name</label>
+                    <input id="display-name" name="display-name" type="text" size="30" maxlength="30" value="" tabindex="105">
+                </div>
+                <div>
+                    <label for="m-address">Email</label>
+                    <input id="m-address" name="m-address" type="email" size="30" maxlength="100" value="" tabindex="106" placeholder="required, but never shown" />
+                </div>
+            </td>
+        </tr>
+        </table>
+    </div>
+
+            </noscript>
+
+							</div>
+           
+															<div class="form-submit cbt">
+									<input id="submit-button" type="submit" value="Post Your Answer" tabindex="110">
+									<a href="#" class="btn-clear discard-answer dno">discard</a>
+
+<p class="privacy-policy-agreement">
+By posting your answer, you agree to the <a href='http://stackexchange.com/legal/privacy-policy' target='_blank'>privacy policy</a> and <a href='http://stackexchange.com/legal/terms-of-service' target='_blank'>terms of service</a>.</p>
+<input type="hidden" name="legalLinksShown" value="1" />								</div>
+						</form>
+
+
+
+						<h2 class="bottom-notice" data-loc="1">
+Not the answer you&#39;re looking for?							Browse other questions tagged <a href="/questions/tagged/ruby" class="post-tag" title="show questions tagged &#39;ruby&#39;" rel="tag">ruby</a>  or <a href="/questions/ask">ask your own question</a>.						</h2>
+			</div>
+		</div>
+				<div id="sidebar" class="show-votes">
+						    <div class="module question-stats">
+			        <table id="qinfo">
+			            <tr>
+			                <td>
+			                    <p class="label-key">asked</p>
+			                </td>
+			                <td style="padding-left: 10px">
+			                    <p class="label-key" title="2010-07-05 10:54:25Z"><b>6 years ago</b></p>
+			                </td>
+			            </tr>
+			            <tr>
+			                <td>
+			                    <p class="label-key">viewed</p>
+			                </td>
+
+			                <td style="padding-left: 10px">
+			                    <p class="label-key">
+			                        <b>12886 times</b>
+			                    </p>
+			                </td>
+			            </tr>
+			                <tr>
+			                    <td>
+			                        <p class="label-key">active</p>
+			                    </td>
+			                    <td style="padding-left: 10px">
+			                        <p class="label-key"><b><a href="?lastactivity" class="lastactivity-link" title="2016-04-01 12:08:48Z">6 months ago</a></b></p>
+			                    </td>
+			                </tr>
+			        </table>
+			    </div>
+			<div class="module community-bulletin" data-tracker="cb=1">
+    <div class="related">
+                <div class="bulletin-title">
+                    Blog
+                </div>
+                <hr />
+    <div class="spacer">
+        <div class="bulletin-item-type">
+                <a href="http://blog.stackoverflow.com/2016/10/podcast-89-the-decline-of-stack-overflow-has-been-greatly-exaggerated/" class="question-hyperlink">
+<div class="favicon favicon-stackexchangemeta" title="Meta Stack Exchange"></div>                </a>
+            </div>
+                <div class="bulletin-item-content">
+                    <a href="http://blog.stackoverflow.com/2016/10/podcast-89-the-decline-of-stack-overflow-has-been-greatly-exaggerated/" title="Stack Overflow Podcast #89 - The Decline of Stack Overflow Has Been Greatly Exaggerated" class="question-hyperlink">Stack Overflow Podcast #89 - The Decline of Stack Overflow Has Been Greatly&hellip;</a>
+                </div>
+                <br class="cbt" />
+            </div>
+    </div>
+</div>			
+			<script>
+                var ados = ados || {}; ados.run = ados.run || [];
+                ados.run.push(function () { ados_add_placement(22,8277,"adzerk289577412",[5,17,2221]).setZone(45); });
+            </script>
+            <div class="everyonelovesstackoverflow" id="adzerk289577412"></div>
+            <div id="hireme"></div>
+        <script>
+;(function(n){var u=Object.assign||function(n){for(var i,r,u,f,e=[],t=1;t<arguments.length;t++)e[t-1]=arguments[t];for(i=0,r=e;i<r.length;i++){u=r[i];for(f in u)n[f]=u[f]}return n},r,t,f,i;try{if(typeof[].indexOf!="function")return;if(r=["stackoverflow.com","serverfault.com","careers.stackoverflow.com","blog.codinghorror.com","joelonsoftware.com","www.joelonsoftware.com"],r[0]!=="*"&&r.indexOf(location.hostname)===-1)return;t=window;f=t.clc_opts?u({},window.clc_opts):{};t.clc_opts=u(n,f);void 0;t.clc_opts.autoload&&(t.clc_init=t.clc_init||[],t.clc_init.push(function(){return t.clc.load()}));i=document.createElement("script");i.async=!0;void 0;i.src=t.clc_opts.lib;document.body.appendChild(i)}catch(e){void 0}}).call(null, {"azw":true,"kt":2000,"tto":true,"autoload":true,"d":{"sb":["hireme","clc-sb"],"tlb":["careers1","clc-tlb"],"mlb":["careers3","clc-mlb"]},"allowed":["stackoverflow.com","serverfault.com","careers.stackoverflow.com","blog.codinghorror.com","joelonsoftware.com","www.joelonsoftware.com"],"h":"clc.stackoverflow.com","u":"//clc.stackoverflow.com/p.js","lib":"//cdn.sstatic.net/clc/clc.min.js?v=6f49b407ccbc"});        </script>
+			
+
+            <div class="module sidebar-linked">
+	<h4 id="h-linked">Linked</h4>
+	<div class="linked" data-tracker="lq=1">
+
+<div class="spacer">
+	<a href="/q/1587354" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">9</div>
+	</a>
+	<a href="/questions/1587354/ruby-1-9-ri-on-windows-knows-nothing-about-any-classes?noredirect=1" class="question-hyperlink">ruby 1.9 ri on Windows knows nothing about any classes</a>
+</div>
+<div class="spacer">
+	<a href="/q/2009730" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes answered-accepted default">16</div>
+	</a>
+	<a href="/questions/2009730/ruby-equivalent-to-pythons-help?noredirect=1" class="question-hyperlink">Ruby equivalent to Python&#39;s help()?</a>
+</div>
+<div class="spacer">
+	<a href="/q/18515077" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">1</div>
+	</a>
+	<a href="/questions/18515077/why-doesnt-ri-stringupcase-work-but-ri-upcase-does?noredirect=1" class="question-hyperlink">Why doesn&#39;t `ri String#upcase` work but `ri upcase` does?</a>
+</div>
+<div class="spacer">
+	<a href="/q/34195699" title="Vote score (upvotes - downvotes)">
+		<div class="answer-votes  default">0</div>
+	</a>
+	<a href="/questions/34195699/ruby-ri-documentation-for-v2-1-7?noredirect=1" class="question-hyperlink">Ruby ri documentation for v2.1.7</a>
+</div>			</div>
+</div>
+
+				<div class="module sidebar-related">
+					<h4 id="h-related">Related</h4>
+                    <div class="related js-gps-related-questions" data-tracker="rq=1">
+                        <div class="spacer"><a href="/q/198460" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">576</div></a><a href="/questions/198460/how-to-get-a-random-number-in-ruby" class="question-hyperlink">How to get a random number in Ruby</a></div><div class="spacer"><a href="/q/948135" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted extra-large">1472</div></a><a href="/questions/948135/how-to-write-a-switch-statement-in-ruby" class="question-hyperlink">How to write a switch statement in Ruby</a></div><div class="spacer"><a href="/q/1020568" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">750</div></a><a href="/questions/1020568/how-to-convert-a-string-to-lower-or-upper-case-in-ruby" class="question-hyperlink">How to convert a string to lower or upper case in Ruby</a></div><div class="spacer"><a href="/q/1381725" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">828</div></a><a href="/questions/1381725/how-to-make-no-ri-no-rdoc-the-default-for-gem-install" class="question-hyperlink">How to make --no-ri --no-rdoc the default for gem install?</a></div><div class="spacer"><a href="/q/1681467" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">130</div></a><a href="/questions/1681467/how-to-document-ruby-code" class="question-hyperlink">How to document Ruby code?</a></div><div class="spacer"><a href="/q/1986386" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">792</div></a><a href="/questions/1986386/check-if-a-value-exists-in-an-array-in-ruby" class="question-hyperlink">Check if a value exists in an array in Ruby</a></div><div class="spacer"><a href="/q/4370960" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">640</div></a><a href="/questions/4370960/what-is-attr-accessor-in-ruby" class="question-hyperlink">What is attr_accessor in Ruby?</a></div><div class="spacer"><a href="/q/17026441" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted large">463</div></a><a href="/questions/17026441/how-to-install-a-specific-version-of-a-ruby-gem" class="question-hyperlink">How to install a specific version of a ruby gem?</a></div><div class="spacer"><a href="/q/25201961" title="Vote score (upvotes - downvotes)"><div class="answer-votes answered-accepted default">0</div></a><a href="/questions/25201961/how-to-programmatically-fetch-ruby-documentation-of-corelib-stdlib" class="question-hyperlink">How to programmatically fetch ruby documentation of corelib / stdlib?</a></div><div class="spacer"><a href="/q/34195699" title="Vote score (upvotes - downvotes)"><div class="answer-votes default">0</div></a><a href="/questions/34195699/ruby-ri-documentation-for-v2-1-7" class="question-hyperlink">Ruby ri documentation for v2.1.7</a></div>
+                    </div>
+				</div>
+            
+<div id="hot-network-questions" class="module">
+    <h4>
+        <a href="//stackexchange.com/questions?tab=hot" 
+           class="js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:1, location:11 })">
+            Hot Network Questions
+        </a>
+    </h4>
+    <ul>
+            <li >
+                <div class="favicon favicon-movies" title="Movies &amp; TV Stack Exchange"></div><a href="http://movies.stackexchange.com/questions/61456/how-do-they-phrase-casting-calls-when-casting-an-individual-with-a-particular-sk" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:367 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How do they phrase casting calls when casting an individual with a particular skin color?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/57477/zero-emission-warfare" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    zero emission warfare
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/142141/why-did-vizzini-have-the-wine-and-tablecloth-all-laid-out" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why did Vizzini have the wine and tablecloth all laid out?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-askubuntu" title="Ask Ubuntu"></div><a href="http://askubuntu.com/questions/832779/how-to-copy-files-from-wine-to-desktop" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:89 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to copy files from Wine to desktop?
+                </a>
+
+            </li>
+            <li >
+                <div class="favicon favicon-diy" title="Home Improvement Stack Exchange"></div><a href="http://diy.stackexchange.com/questions/100279/how-can-i-pull-a-wire-through-a-pipe-that-has-too-many-turns-for-fish-tape" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:73 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How can I pull a wire through a pipe that has too many turns for fish tape?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-puzzling" title="Puzzling Stack Exchange"></div><a href="http://puzzling.stackexchange.com/questions/43648/a-silent-listen-anagram" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:559 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    A * SILENT + LISTEN = ANAGRAM
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-unix" title="Unix &amp; Linux Stack Exchange"></div><a href="http://unix.stackexchange.com/questions/313940/can-i-prevent-a-folder-of-a-certain-name-being-created" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:106 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Can I prevent a folder of a certain name being created?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-scifi" title="Science Fiction &amp; Fantasy Stack Exchange"></div><a href="http://scifi.stackexchange.com/questions/142085/what-was-the-first-sentient-race-that-awoke-on-arda" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:186 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What was the first sentient race that awoke on Arda?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-mathematica" title="Mathematica Stack Exchange"></div><a href="http://mathematica.stackexchange.com/questions/127876/did-fibonacci-slow-down" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:387 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Did Fibonacci slow down?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stats" title="Cross Validated"></div><a href="http://stats.stackexchange.com/questions/238214/how-exactly-does-a-random-effects-model-in-econometrics-relate-to-mixed-models" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:65 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How exactly does a &quot;random effects model&quot; in econometrics relate to mixed models outside of econometrics?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-security" title="Information Security Stack Exchange"></div><a href="http://security.stackexchange.com/questions/138567/why-should-the-options-method-not-be-allowed-on-an-http-server" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:162 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why should the OPTIONS method not be allowed on an HTTP server?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-codereview" title="Code Review Stack Exchange"></div><a href="http://codereview.stackexchange.com/questions/143168/building-better-boxes" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:196 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Building Better Boxes
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-english" title="English Language &amp; Usage Stack Exchange"></div><a href="http://english.stackexchange.com/questions/351634/how-to-prevent-a-sentence-beginning-with-the-word-the" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:97 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to prevent a sentence beginning with the word &quot;The&quot;?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/57365/what-would-modern-language-look-like-if-humans-also-communicated-via-bio-lumines" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What would modern language look like if humans also communicated via bio-luminescence?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-academia" title="Academia Stack Exchange"></div><a href="http://academia.stackexchange.com/questions/77704/should-i-decline-to-fill-out-a-recommedation-form-after-saying-that-i-will-do-it" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:415 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Should I decline to fill out a recommedation form after saying that I will do it?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1952517/why-one-of-np-complete-problem-had-a-polynomial-solution-then-everyone-of-them-h" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why one of NP-Complete problem had a polynomial solution then everyone of them has?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/57433/wwii-invasion-of-earth" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    WWII Invasion of Earth
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-stackoverflow" title="Stack Overflow"></div><a href="http://stackoverflow.com/questions/39843488/how-to-make-an-integer-larger-than-any-other-integer" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:1 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    How to make an integer larger than any other integer?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-travel" title="Travel Stack Exchange"></div><a href="http://travel.stackexchange.com/questions/80050/whats-an-easy-way-of-making-my-luggage-unique-so-that-its-easy-to-spot-on-the" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:273 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What&#39;s an easy way of making my luggage unique, so that it&#39;s easy to spot on the luggage carousel?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-rpg" title="Role-playing Games Stack Exchange"></div><a href="http://rpg.stackexchange.com/questions/88736/what-can-i-do-to-trigger-spout-lore-or-discern-realities" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:122 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    What can I do to trigger Spout Lore or Discern Realities?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-parenting" title="Parenting Stack Exchange"></div><a href="http://parenting.stackexchange.com/questions/27277/my-girlfriend-has-mentioned-disowning-her-14-y-o-transgender-daughter" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:228 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    My girlfriend has mentioned disowning her 14 y/o transgender daughter
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-earthscience" title="Earth Science Stack Exchange"></div><a href="http://earthscience.stackexchange.com/questions/8806/are-there-any-saltwater-rivers-on-earth" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:553 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Are there any saltwater rivers on Earth?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-math" title="Mathematics Stack Exchange"></div><a href="http://math.stackexchange.com/questions/1951726/why-do-some-divisibility-rules-work-only-in-base-10" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:69 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Why do some divisibility rules work only in base 10?
+                </a>
+
+            </li>
+            <li class="dno js-hidden">
+                <div class="favicon favicon-worldbuilding" title="Worldbuilding Stack Exchange"></div><a href="http://worldbuilding.stackexchange.com/questions/57411/medieval-europe-with-modern-logistical-industrial-concepts" class="js-gps-track" data-gps-track="site.switch({ item_type:11, target_site:579 }); posts_hot_network.click({ item_type:2, location:11 })">
+                    Medieval Europe With Modern Logistical Industrial Concepts
+                </a>
+
+            </li>
+    </ul>
+
+        <a href="#" 
+           class="show-more js-show-more js-gps-track" 
+           data-gps-track="posts_hot_network.click({ item_type:3, location:11 })">
+            more hot questions
+        </a>
+</div>
+		</div>
+	
+<div id="feed-link">
+    <div id="feed-link-text">
+        <a href="/feeds/question/3178900" title="feed of this question and its answers">
+            <span class="feed-icon"></span>question feed
+        </a>
+    </div>
+</div>	<script>
+StackExchange.ready(function(){$.get('/posts/3178900/ivc/b079');});
+</script>
+<noscript>
+    <div><img src="/posts/3178900/ivc/b079" class="dno" alt="" width="0" height="0"></div>
+</noscript><div style="display:none" id="prettify-lang">lang-rb</div></div>
+
+
+        </div>
+    </div>
+    <div id="footer" class="categories">
+        <div class="footerwrap">            
+            <div id="footer-menu">
+                <div class="top-footer-links">
+                    <a href="http://stackoverflow.com/company/about">about us</a>
+                        <a href="/tour">tour</a>
+                    <a href="/help">help</a>
+                    <a href="http://blog.stackoverflow.com?blb=1">blog</a>
+                        <a href="http://chat.stackoverflow.com">chat</a>
+                    <a href="http://data.stackexchange.com">data</a>
+                    <a href="http://stackexchange.com/legal">legal</a>
+                    <a href="http://stackexchange.com/legal/privacy-policy">privacy policy</a>
+                    <a href="http://stackoverflow.com/company/work-here">work here</a>
+                    <a href="http://stackexchange.com/mediakit">advertising info</a>
+
+                    <a onclick='StackExchange.switchMobile("on")'>mobile</a>
+                    <b><a href="/contact">contact us</a></b>
+                        <b><a href="http://meta.stackoverflow.com">feedback</a></b>
+                    
+                </div>
+                <div id="footer-sites">
+                    <table>
+    <tr>
+            <th colspan=4>
+                Technology
+            </th>
+            <th colspan=2>
+                Life / Arts
+            </th>
+            <th colspan=2>
+                Culture / Recreation
+            </th>
+            <th colspan=2>
+                Science
+            </th>
+            <th >
+                Other
+            </th>
+    </tr>
+    <tr>
+            <td>
+                <ol>
+                        <li><a href="//stackoverflow.com" title="professional and enthusiast programmers">Stack Overflow</a></li>
+                        <li><a href="//serverfault.com" title="system and network administrators">Server Fault</a></li>
+                        <li><a href="//superuser.com" title="computer enthusiasts and power users">Super User</a></li>
+                        <li><a href="//webapps.stackexchange.com" title="power users of web applications">Web Applications</a></li>
+                        <li><a href="//askubuntu.com" title="Ubuntu users and developers">Ask Ubuntu</a></li>
+                        <li><a href="//webmasters.stackexchange.com" title="pro webmasters">Webmasters</a></li>
+                        <li><a href="//gamedev.stackexchange.com" title="professional and independent game developers">Game Development</a></li>
+                        <li><a href="//tex.stackexchange.com" title="users of TeX, LaTeX, ConTeXt, and related typesetting systems">TeX - LaTeX</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="//programmers.stackexchange.com" title="professional programmers interested in conceptual questions about software development">Programmers</a></li>
+                        <li><a href="//unix.stackexchange.com" title="users of Linux, FreeBSD and other Un*x-like operating systems">Unix &amp; Linux</a></li>
+                        <li><a href="//apple.stackexchange.com" title="power users of Apple hardware and software">Ask Different (Apple)</a></li>
+                        <li><a href="//wordpress.stackexchange.com" title="WordPress developers and administrators">WordPress Development</a></li>
+                        <li><a href="//gis.stackexchange.com" title="cartographers, geographers and GIS professionals">Geographic Information Systems</a></li>
+                        <li><a href="//electronics.stackexchange.com" title="electronics and electrical engineering professionals, students, and enthusiasts">Electrical Engineering</a></li>
+                        <li><a href="//android.stackexchange.com" title="enthusiasts and power users of the Android operating system">Android Enthusiasts</a></li>
+                        <li><a href="//security.stackexchange.com" title="information security professionals">Information Security</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="//dba.stackexchange.com" title="database professionals who wish to improve their database skills and learn from others in the community">Database Administrators</a></li>
+                        <li><a href="//drupal.stackexchange.com" title="Drupal developers and administrators">Drupal Answers</a></li>
+                        <li><a href="//sharepoint.stackexchange.com" title="SharePoint enthusiasts">SharePoint</a></li>
+                        <li><a href="//ux.stackexchange.com" title="user experience researchers and experts">User Experience</a></li>
+                        <li><a href="//mathematica.stackexchange.com" title="users of Mathematica">Mathematica</a></li>
+                        <li><a href="//salesforce.stackexchange.com" title="Salesforce administrators, implementation experts, developers and anybody in-between">Salesforce</a></li>
+                        <li><a href="//expressionengine.stackexchange.com" title="administrators, end users, developers and designers for ExpressionEngine&#174; CMS">ExpressionEngine&#174; Answers</a></li>
+                        <li><a href="//crypto.stackexchange.com" title="software developers, mathematicians and others interested in cryptography">Cryptography</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="//codereview.stackexchange.com" title="peer programmer code reviews">Code Review</a></li>
+                        <li><a href="//magento.stackexchange.com" title="users of the Magento e-Commerce platform">Magento</a></li>
+                        <li><a href="//dsp.stackexchange.com" title="practitioners of the art and science of signal, image and video processing">Signal Processing</a></li>
+                        <li><a href="//raspberrypi.stackexchange.com" title="users and developers of hardware and software for Raspberry Pi">Raspberry Pi</a></li>
+                        <li><a href="//codegolf.stackexchange.com" title="programming puzzle enthusiasts and code golfers">Programming Puzzles &amp; Code Golf</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#technology" class="more">
+                                more (7)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="//photo.stackexchange.com" title="professional, enthusiast and amateur photographers">Photography</a></li>
+                        <li><a href="//scifi.stackexchange.com" title="science fiction and fantasy enthusiasts">Science Fiction &amp; Fantasy</a></li>
+                        <li><a href="//graphicdesign.stackexchange.com" title="Graphic Design professionals, students, and enthusiasts">Graphic Design</a></li>
+                        <li><a href="//movies.stackexchange.com" title="movie and tv enthusiasts">Movies &amp; TV</a></li>
+                        <li><a href="//music.stackexchange.com" title="musicians, students, and enthusiasts">Music: Practice &amp; Theory</a></li>
+                        <li><a href="//cooking.stackexchange.com" title="professional and amateur chefs">Seasoned Advice (cooking)</a></li>
+                        <li><a href="//diy.stackexchange.com" title="contractors and serious DIYers">Home Improvement</a></li>
+                        <li><a href="//money.stackexchange.com" title="people who want to be financially literate">Personal Finance &amp; Money</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="//academia.stackexchange.com" title="academics and those enrolled in higher education">Academia</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#lifearts" class="more">
+                                more (8)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="//english.stackexchange.com" title="linguists, etymologists, and serious English language enthusiasts">English Language &amp; Usage</a></li>
+                        <li><a href="//skeptics.stackexchange.com" title="scientific skepticism">Skeptics</a></li>
+                        <li><a href="//judaism.stackexchange.com" title="those who base their lives on Jewish law and tradition and anyone interested in learning more">Mi Yodeya (Judaism)</a></li>
+                        <li><a href="//travel.stackexchange.com" title="road warriors and seasoned travelers">Travel</a></li>
+                        <li><a href="//christianity.stackexchange.com" title="committed Christians, experts in Christianity and those interested in learning more">Christianity</a></li>
+                        <li><a href="//ell.stackexchange.com" title="speakers of other languages learning English">English Language Learners</a></li>
+                        <li><a href="//japanese.stackexchange.com" title="students, teachers, and linguists wanting to discuss the finer points of the Japanese language">Japanese Language</a></li>
+                        <li><a href="//gaming.stackexchange.com" title="passionate videogamers on all platforms">Arqade (gaming)</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="//bicycles.stackexchange.com" title="people who build and repair bicycles, people who train cycling, or commute on bicycles">Bicycles</a></li>
+                        <li><a href="//rpg.stackexchange.com" title="gamemasters and players of tabletop, paper-and-pencil role-playing games">Role-playing Games</a></li>
+                        <li><a href="//anime.stackexchange.com" title="anime and manga fans">Anime &amp; Manga</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#culturerecreation" class="more">
+                                more (18)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="//math.stackexchange.com" title="people studying math at any level and professionals in related fields">Mathematics</a></li>
+                        <li><a href="//stats.stackexchange.com" title="people interested in statistics, machine learning, data analysis, data mining, and data visualization">Cross Validated (stats)</a></li>
+                        <li><a href="//cstheory.stackexchange.com" title="theoretical computer scientists and researchers in related fields">Theoretical Computer Science</a></li>
+                        <li><a href="//physics.stackexchange.com" title="active researchers, academics and students of physics">Physics</a></li>
+                        <li><a href="//mathoverflow.net" title="professional mathematicians">MathOverflow</a></li>
+                        <li><a href="//chemistry.stackexchange.com" title="scientists, academics, teachers and students">Chemistry</a></li>
+                        <li><a href="//biology.stackexchange.com" title="biology researchers, academics, and students">Biology</a></li>
+                        <li><a href="//cs.stackexchange.com" title="students, researchers and practitioners of computer science">Computer Science</a></li>
+                            </ol></td><td><ol>
+                        <li><a href="//philosophy.stackexchange.com" title="those interested in logical reasoning">Philosophy</a></li>
+                    
+                        <li>
+                            <a href="http://stackexchange.com/sites#science" class="more">
+                                more (3)
+                            </a>
+                        </li>
+                </ol>
+            </td>
+            <td>
+                <ol>
+                        <li><a href="//stackapps.com" title="apps, scripts, and development with the Stack Exchange API">Stack Apps</a></li>
+                        <li><a href="//meta.stackexchange.com" title="meta-discussion of the Stack Exchange family of Q&amp;A websites">Meta Stack Exchange</a></li>
+                        <li><a href="//area51.stackexchange.com" title="proposing new sites in the Stack Exchange network">Area 51</a></li>
+                        <li><a href="//careers.stackoverflow.com">Stack Overflow Careers</a></li>
+                    
+                </ol>
+            </td>
+    </tr>
+</table>
+                </div>
+            </div>
+            <div id="copyright">
+                site design / logo &#169; 2016 Stack Exchange Inc; user contributions licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="license">cc by-sa 3.0</a> 
+                with <a href="http://blog.stackoverflow.com/2009/06/attribution-required/" rel="license">attribution required</a>
+            </div>
+            <div id="svnrev">
+                rev 2016.10.4.4031
+            </div>
+                </div>
+    </div>
+    <noscript>
+        <div id="noscript-warning">Stack Overflow works best with JavaScript enabled<img src="http://pixel.quantserve.com/pixel/p-c1rF4kxgLUzNc.gif" alt="" class="dno"></div>
+    </noscript>
+<script>var p = "http", d = "static"; if (document.location.protocol == "https:") { p += "s"; d = "engine"; } var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = p + "://" + d + ".adzerk.net/ados.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script>
+<script>
+    var ados = ados || {};
+    ados.run = ados.run || [];
+    
+    
+        
+        ados.run.push(function () {
+                setTimeout(function () { $("#adzerk-user-match").remove(); }, window.AUMIframeDone ? 0 : 2000);
+                ados_setKeywords('ruby');; ados_load();
+        });   
+        
+</script>
+
+    <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function() { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m);
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            
+            ga('create', 'UA-5620270-1');
+            ga('set', 'dimension2', '|ruby|');             ga('send', 'pageview');
+        
+        var _qevents = _qevents || [],
+            _comscore = _comscore || [];
+        (function () {
+            var ssl='https:'==document.location.protocol,
+                s=document.getElementsByTagName('script')[0],
+                qc=document.createElement('script');
+                qc.async = true;
+                qc.src = (ssl ? 'https://secure' : 'http://edge') + '.quantserve.com/quant.js';
+                s.parentNode.insertBefore(qc, s);
+                _qevents.push({ qacct: "p-c1rF4kxgLUzNc" });
+                            var sc=document.createElement('script');
+                sc.async=true;
+                sc.src=(ssl?'https://sb':'http://b') + '.scorecardresearch.com/beacon.js';
+                s.parentNode.insertBefore(sc, s);
+                _comscore.push({ c1: "2", c2: "17440561" });
+        })();
+
+    </script>
+        
+    
+            <script type="text/javascript">
+                
+                (function(appendChild) {
+                    Node.prototype.appendChild = function() {
+                        var parent = this;
+                        var newNode = arguments[0];
+                        if (parent.nodeName === 'HEAD'
+                            && newNode
+                            && newNode.nodeName === 'SCRIPT'
+                            && newNode.src) {
+                            
+                            window.setTimeout(function() {
+                                var result = newNode.src.match(/^https:\/\/maps\.googleapis\.com\/maps\/api\/place\/js\/(\w+)Service\./i) || [];
+                                var service = result[1];
+                                if (service) {
+                                    if (service === 'Autocompletion') service =  2;
+                                    else if (service === 'Place') service = 1;
+                                    else service = 0;
+                                    StackExchange.using('gps', function() {
+                                        StackExchange.gps.track('google_maps_places_api.call', { service: service });
+                                    });
+                                }
+                            }, 0);
+                        }
+                        return appendChild.apply(this, arguments);
+                    };
+                })(Node.prototype.appendChild);
+            </script>
+    </body>
+</html>�gt��      W�IW�L<��       V    :http://stackoverflow.com/questions/3178900/how-do-i-install-the-ruby-ri-documentation necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Via: 1.1 varnish, 1.1 ISA01TMG
+Age: 0
+Date: Tue, 04 Oct 2016 10:15:37 GMT
+Content-Type: text/html; charset=utf-8
+Accept-Ranges: bytes
+Cache-Control: private
+X-Frame-Options: SAMEORIGIN
+X-Request-Guid: 1a2df73b-d3f5-4771-910a-fc09d51a9297
+X-Served-By: cache-fra1237-FRA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1475576137.090602,VS0,VE107
+x-dns-prefetch-control: off
+ original-response-headers Via: 1.1 varnish, 1.1 ISA01TMG
+Connection: Keep-Alive
+Proxy-Connection: Keep-Alive
+Transfer-Encoding: chunked
+Age: 0
+Date: Tue, 04 Oct 2016 10:15:37 GMT
+Content-Type: text/html; charset=utf-8
+Accept-Ranges: bytes
+Cache-Control: private
+X-Frame-Options: SAMEORIGIN
+X-Request-Guid: 1a2df73b-d3f5-4771-910a-fc09d51a9297
+X-Served-By: cache-fra1237-FRA
+X-Cache: MISS
+X-Cache-Hits: 0
+X-Timer: S1475576137.090602,VS0,VE107
+x-dns-prefetch-control: off
+Set-Cookie: prov=3b2de3ae-8495-f1ac-7788-69c5169b3ad3; domain=.stackoverflow.com; expires=Fri, 01-Jan-2055 00:00:00 GMT; path=/; HttpOnly
+ charset UTF-8 uncompressed-len 0 predictor::resource-count 42 predictor::http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js 1,1,1475576137,4097 predictor::http://cdn.sstatic.net/Js/stub.en.js?v=d8b30c8cdc3f 1,1,1475576137,4097 predictor::http://cdn.sstatic.net/Sites/stackoverflow/all.css?v=5a033270afbb 1,1,1475576137,4097 predictor::https://www.gravatar.com/avatar/71770d043c0f7e3c7bc5f74190015c26?s=32&d=identicon&r=PG 1,1,1475576137,4097 predictor::https://i.stack.imgur.com/gqbY3.jpg?s=32&g=1 1,1,1475576137,4097 predictor::https://www.gravatar.com/avatar/e7cff3cfd41c495e1012227d7dc24202?s=32&d=identicon&r=PG 1,1,1475576137,4097 predictor::https://www.gravatar.com/avatar/7cf5af9e0f94976adae00ce7dfdd467b?s=32&d=identicon&r=PG 1,1,1475576137,4097 predictor::https://www.gravatar.com/avatar/04f5e260b2169925efcdffa51c52419e?s=32&d=identicon&r=PG 1,1,1475576137,4097 predictor::https://www.gravatar.com/avatar/bbcae711a1e0293a5c5361ea7123444c?s=32&d=identicon&r=PG 1,1,1475576137,4097 predictor::https://lh5.googleusercontent.com/-1OFi9TdAYU4/AAAAAAAAAAI/AAAAAAAAAN4/Pf-Lgvko10Q/photo.jpg?sz=32 1,1,1475576137,4097 predictor::https://www.gravatar.com/avatar/4dea71e9df9a75bddd0c6aac8095065b?s=32&d=identicon&r=PG 1,1,1475576137,4097 predictor::http://cdn.sstatic.net/clc/clc.min.js?v=6f49b407ccbc 1,1,1475576137,4097 predictor::http://static.adzerk.net/ados.js 1,1,1475576137,4097 predictor::https://www.google-analytics.com/analytics.js 1,1,1475576137,4096 predictor::http://edge.quantserve.com/quant.js 1,1,1475576137,4096 predictor::http://b.scorecardresearch.com/beacon.js 1,1,1475576137,4096 predictor::http://cdn.sstatic.net/img/share-sprite-new.svg?v=78be252218f3 1,1,1475576137,4097 predictor::http://cdn.sstatic.net/Sites/stackoverflow/img/sprites.svg?v=8c1c8cba242e 1,1,1475576137,4097 predictor::http://cdn.sstatic.net/img/so-hero-alt-splash.svg?v=0b8f98f7bb06 1,1,1475576137,4097 predictor::http://cdn.sstatic.net/img/favicons-sprite16.png?v=5b8c5b46a53a 1,1,1475576137,4097 predictor::http://cdn.sstatic.net/Js/full-anon.en.js?v=5ad243322808 1,1,1475576137,4097 predictor::http://b.scorecardresearch.com/b?c1=2&c2=17440561&ns__t=1475576138344&ns_c=UTF-8&cv=3.1&c8=How%20do%20I%20install%20the%20Ruby%20ri%20documentation%3F%20-%20Stack%20Overflow&c7=http%3A%2F%2Fstackoverflow.com%2Fquestions%2F3178900%2Fhow-do-i-install-the-ruby-ri-documentation&c9=https%3A%2F%2Fwww.google.de%2F 1,1,1475576137,4096 predictor::http://cdn.sstatic.net/Js/snippet-javascript.en.js?v=bb9cbf50086e 1,1,1475576137,4097 predictor::http://cdn.sstatic.net/Js/post-validation.en.js?v=0bc8c0d431b4 1,1,1475576137,4097 predictor::http://cdn.sstatic.net/Js/prettify-full.en.js?v=b70d4b0a048c 1,1,1475576137,4097 predictor::http://cdn.sstatic.net/Js/external-editor.en.js?v=fc20a49e5703 1,1,1475576137,4097 predictor::http://cdn.sstatic.net/img/openid/new-login-sprite.png?v=79224c9ea1cb 1,1,1475576137,4097 predictor::http://engine.adzerk.net/ados?t=1475576139085&request={%22Placements%22:[{%22A%22:22,%22S%22:8277,%22D%22:%22adzerk1314026502%22,%22AT%22:4,%22Z%22:[43]},{%22A%22:22,%22S%22:8277,%22D%22:%22adzerk665765609%22,%22AT%22:4,%22Z%22:[44]},{%22A%22:22,%22S%22:8277,%22D%22:%22adzerk289577412%22,%22ATA%22:[5,17,2221],%22Z%22:[45]}],%22Keywords%22:%22ruby%22,%22Referrer%22:%22https%3A%2F%2Fwww.google.de%2F%22,%22IsAsync%22:true} 1,1,1475576137,4097 predictor::https://www.google-analytics.com/r/collect?v=1&_v=j47&a=1782620436&t=pageview&_s=1&dl=http%3A%2F%2Fstackoverflow.com%2Fquestions%2F3178900%2Fhow-do-i-install-the-ruby-ri-documentation&dr=https%3A%2F%2Fwww.google.de%2F&ul=de&de=UTF-8&dt=How%20do%20I%20install%20the%20Ruby%20ri%20documentation%3F%20-%20Stack%20Overflow&sd=24-bit&sr=1600x804&vp=1525x709&je=0&_u=QEAAAIABI~&jid=1337879388&cid=1373315376.1475576139&tid=UA-5620270-1&_r=1&cd2=%7Cruby%7C&z=1688897601 1,1,1475576137,4097 predictor::http://cdn.sstatic.net/Sites/stackoverflow/img/wmd-buttons.svg?v=063c0288e422 1,1,1475576137,4097 predictor::http://static.adzerk.net/Extensions/adFeedback.js 1,1,1475576137,4097 predictor::http://static.adzerk.net/Extensions/adFeedback.css 1,1,1475576137,4097 predictor::http://static.adzerk.net/Advertisers/a974a5c0b5ff4c189585aea35c671f69.png 1,1,1475576137,4097 predictor::http://static.adzerk.net/Advertisers/78e105390cf2426896c5fc38ae85a4f6.png 1,1,1475576137,4097 predictor::http://static.adzerk.net/Advertisers/8b5446c312f44036ad08ed6ed35d5517.jpg 1,1,1475576137,4097 predictor::https://m.exactag.com/ai.aspx?tc=3354ca637359e836b9aa211a9d5b7c62;cache=1475576139585 1,1,1475576137,4097 predictor::http://clc.stackoverflow.com/p.js?zones=2%3Dhireme&tags=ruby&host=stackoverflow.com&lw=1397&bw=1535&az=1 1,1,1475576137,4097 predictor::https://adzerk-www.s3.amazonaws.com/customAdTypes/thumb_sprites.png 1,1,1475576137,4097 predictor::http://cdn.sstatic.net/clc/styles/clc/jobs-multi.min.css?v=3db05aa3fa43 1,1,1475576137,4097 predictor::http://clc.stackoverflow.com/soi.gif?an=Y2NisAwOT7F_c9mDAQRYGRlYOJhZmRiYGNgZgXwOkCBTVz4zQ4r1ff_e6e_sIZKMXAxAlcJAybk5zAw75FpfB-7AlGP4zSCZ-Yujzfl9CgA&at=0&pt=255 1,1,1475576137,4097 predictor::http://cdn.sstatic.net/clc/img/jobs/ico-location-gray.svg?v=5f4c99b12778 1,1,1475576137,4097 predictor::http://cdn.sstatic.net/clc/img/jobs/ico-dismiss.svg?v=5f4c99b12778 1,1,1475576137,4097  � 
