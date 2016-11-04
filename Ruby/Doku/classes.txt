@@ -41,7 +41,7 @@ Instazvariable / Eigenschaften
 	ermöglichen.
 	Eine Eigenschaft hat einen sogenannten Setter, der es ermöglicht einen Wert zu setzen; und einer Getter, der einen Wert zurückgibt.
 
-		Getter:
+	Getter:
 		def name
 			@name
 		end

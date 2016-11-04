@@ -4,3 +4,30 @@ Legen Sie ein Objekt an und wenden Sie die Methoden add und subtract an.
 
     Contact GitHub API Training Shop Blog About 
 
+<<<<<<< HEAD
+=======
+class Calculator
+
+	attr_accessor :zahl1, :zahl2
+
+	def initialize(zahl1, zahl2)
+		@zahl1 = zahl1
+		@zahl2 = zahl2 
+	end
+	def add
+		ausgabe1 = @zahl1 + @zahl2
+		
+	end
+
+	def subtract
+		ausgabe2 = @zahl1 - @zahl2
+	
+	end
+end
+obj=Calculator.new(5, 10)
+obj.zahl1 = 100
+obj.zahl2 = 50
+
+puts obj.add
+puts obj.subtract
+>>>>>>> c38d4d1f3edc2e96db3bc1cc7778c7a56d818d47
