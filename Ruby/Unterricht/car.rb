@@ -106,4 +106,8 @@ end
 theo = Driver.new('Theo')
 theo.add_cars(cars[0])
 theo.add_cars(cars2[0])
+<<<<<<< HEAD
 theo.show_cars
+=======
+theo.show_cars
+>>>>>>> fb95c109d99dfed0c998a1a83fa55318901cc23b

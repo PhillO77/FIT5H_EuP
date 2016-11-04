@@ -21,7 +21,7 @@ class Player
 end
 
 player1 = Player.new
->>>>>>> c38d4d1f3edc2e96db3bc1cc7778c7a56d818d47
+puts player1
 
 
 c. die Eigenschaft name soll sowohl lesbar, als auch schreibbar sein
