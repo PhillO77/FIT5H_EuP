@@ -1,0 +1,27 @@
+# 2. Worte
+# a. Bilde ein Array mit den Worten: Pflaume, Bauschaum, Auster
+
+worte = %w(Pflaume Bauschaum Auster)
+
+
+# b. Alle Element, die den String "aus" enthalten sollen ausgegeben werden.
+
+suche = "aus"
+worte.size.times do |aus|
+	puts worte[aus] if worte[aus].include?(suche)
+end
+
+# c. erzeugen eine Ausgabe nach der Länge der Worte von klein nach groß
+
+puts worte.sort{|x,y| x.length <=> y.lenght}
+
+puts worte.sort_by(&:length)
+
+# d. Ein Hash wird ausgegeben, das Wort als Index, die Anzahl der Buchstaben als Wert
+
+worte = { 'Pflaume' => 'Pflaume', 'Bauschaum' => 'Bauschaum', 'Auster' => 'Auster' }
+
+worte.each do |z,i|
+	puts "Index: #{z} - Wert: #{i.size}"
+
+end

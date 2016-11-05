@@ -2,50 +2,71 @@
 
 array = (15..20).to_a
 
-
 a. geben Sie diese Zahlen in einem Block aus
 
 puts array
 
-
 b. geben Sie die Zahlen mit dem Index etwa so aus: Index: 0 - Wert: 15
 
-
 x = 0
-array.each do |Key|
-puts "Index: #{x} - Wert: #{Key}
-x = x+1
-end
-
+array.each do |key|
+		puts "Index: #{x} - Wert: #{key}"
+		x = x +1
+	end
 
 c. erzeugen Sie in einem Block einen Hash, wobei Sie die Arraywerte als Index nutzen und als Wert eine Zufallszahl zwischen 100 und 200 speichern. 
 
-hash = {}
+hash ={}
 array.each {|v| hash[v] = rand(100..200)}
 hash
 
-
 d. Geben Sie diesen Hash anschließen etwa so aus: Index: 15 - Wert: 121
 
-array.each do |key|
+array = (15..20).to_a
 
+hash ={}
+array.each {|v| hash[v] = rand(100..200)}
+
+y = 0
+array.each do |key|
+	if y < 6									<---- ALTERNATIVE
+	hash.each do |hash, val|
+	puts "Index: #{hash} - Wert: #{val}" 
+	y = y + 1
+		end
+	end
+end
+
+----------------------------------------------------------------------
+
+array = (15..20).to_a
+
+hash ={}
+array.each {|v| hash[v] = rand(100..200)}
+
+	hash.each do |hash, val|
+	puts "Index: #{hash} - Wert: #{val}" 
+	end
 
 
 e. Ergänzen Sie die Ausgabe. Wenn der Wert größer als 150 ist, dann sieht die Ausgabe aus:  Index: 15 - Wert: 151. WOW
 
+array = (15..20).to_a
 
+hash ={}
+array.each {|v| hash[v] = rand(100..200)}
 
+	hash.each do |hash, val|
+		if val > 150
+	puts "Index: #{hash} - Wert: #{val} WOW"
+end
 
-
+		if val <= 150 
+	puts "Index: #{hash} - Wert: #{val}	"
+	end
+end
 
 f. Durchlaufen Sie das Array und speichern Sie die Quadratzahlen in einem Array
-
-
-
-
-
-
-
 g. ! Durchlaufen Sie das Array und speichern Sie die Quadratzahlen in einem Hash mit der Zahl als Schlüssel
 
 Zusatz Zahlen im Array und im Hash:
@@ -55,39 +76,12 @@ a. Legen Sie ein Array an mit 10 Primzahlen. Die Ausgabe des Arrays erzeugt:
 	...
 	11 ist zweistellig
   ...
-
-
-
-
-
-
-
 b. Legen Sie zur Übung einen Hash personen an, mit den keys vorname, nachname, stadt und den Werten Theo, Sommer, Lodz. Machen Sie eine Ausgabe, die 'vorname: Theo + neue Zeile' ausgibt
-
-
-
-
-
-
 c. Fortsetzung Aufgabe a: 
 Speichern Sie beim Durchlaufen des Arrays die Werte in einem Hash mit der Bezeichnung prims, sodass die jeweilige Primzahl den Schlüssel bildet und der Wert den Text 'ist einstellig', 'ist zweistellig'
-
-
-
-
-
-
-
 d. Sortieren Sie den Hash, sodass die Ausgabe folgendermaßen möglich wird:
 Einstellig: 1,3,5 ..
 Zweistellig: 11, 13, ..
-
-
-
-
-
-
-
 e. Fortsetzung Aufgabe b: 
 Speichern Sie den Hash in dem Array adressen und legen Sie zwei weitere Hashes personen mit den gleichen Keys und anderen Werten an. Durchlaufen Sie das Array, sodass folgende Ausgabe erfolgt.
 1.Person:
