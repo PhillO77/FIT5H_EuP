@@ -7,6 +7,72 @@
 #end
 
 #puts movie_listing("Superman")ls
+#------------------------------------------------------------------------------------------
+#class Autor
+	attr_reader :name
+	attr_reader :geburtstag
+	
+	def initialize(name, geburtstag)
+		@name = name
+		@geburtstag = geburtstag
+	end
+#end
+#------------------------------------------------------------------------------------------
+#class Bibliothek
+	attr_reader :buecher
+
+	def initialize(name)
+		@name = name
+		@buecher = []
+	end
+
+	def buecher=(buch_manuell)
+		@buecher << buch_manuell
+	end
+
+	def add_buch(buch)
+		@buecher << buch
+	end
+
+	def to_s
+		@buecher
+	end
+#end
+#------------------------------------------------------------------------------------------
+#class Buch
+	attr_reader :autor
+	attr_reader :titel
+	attr_accessor :gekauft_am
+
+	def initialize(autor, titel, gekauft)
+		@autor = autor
+		@titel = titel
+		@gekauft_am = gekauft
+	end
+
+	def autor=(autor)
+		@autor << autor
+	end
+#end
+#------------------------------------------------------------------------------------------
+#start.rb
+#require_relative "bibliothek"
+#require_relative "autor"
+#require_relative "buch"
+#
+#bibliothek = Bibliothek.new("Hamburg")
+#
+#autor_1 = Autor.new("Maier", "20.03.1980")
+#
+#buch_1 = Buch.new(autor_1, "Niemand", 2005)
+#buch_2 = Buch.new(autor_1, "Jeder", 2010)
+#buch_3 = Buch.new(autor_1, "Immer wieder gerne", 2013)
+#buch_4 = Buch.new(autor_1, "Morgen ist auch noch ein Tag", 2011)
+#
+#bibliothek.add_buch(buch_1)
+#bibliothek.add_buch(buch_2)
+#bibliothek.add_buch(buch_3)
+#bibliothek.add_buch(buch_4)
 
 #------------------------------------------------------------------------------------------
 
@@ -181,8 +247,12 @@ obj.firstname = "Theo"
 obj.street = "Hermelinweg 7"
 puts obj.print_address
 
+<<<<<<< HEAD
+------------------------------------------------------------------------------------------------------------
+=======
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------
+>>>>>>> fb95c109d99dfed0c998a1a83fa55318901cc23b
 
 class Playlist
 	def initialize(name)
@@ -230,4 +300,10 @@ playlist1 = Playlist.new("Theo")
 playlist1.add_movie(movie1)
 playlist1.add_movie(movie2)
 playlist1.add_movie(movie3)
+<<<<<<< HEAD
 playlist1.play 
+
+-----------------------------------------------------------------------------------------------------------
+=======
+playlist1.play 
+>>>>>>> fb95c109d99dfed0c998a1a83fa55318901cc23b
