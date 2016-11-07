@@ -104,7 +104,7 @@ window.outbrain.callWhatIs=function(c,a,d,f,b,e){OBR.d.u(OBR.d.f.Mb,function(){O
 window.outbrain_rater.returnedHtmlData=function(c,a){OBR.k.Ad(c,a)};window.outbrain_rater.returnedCancelOdbData=function(c){OBR.k.il(c)};!0===OBR.c.vf&&(OBR.e.log("Widget Start!"),OBR.c.vf=!1,"boolean"===typeof window.OB_PASSIVE_MODE&&!0===window.OB_PASSIVE_MODE?OBR.e.log("passive"):OBR.k.hc());}
 catch(ex){
 OBR.error(ex);}})(window.OBR);
-‘öMã8‹      X@⁄XF‘=moX ÅR   (    :http://widgets.outbrain.com/outbrain.js strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+U9È8‹      XBùXBÉ=§+X ÅR   (    :http://widgets.outbrain.com/outbrain.js strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
 Content-Type: application/x-javascript
 Etag: "00d50dc77c0d016c6d4a9f299009d13b:1477568490"
 Server: Apache

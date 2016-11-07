@@ -70,7 +70,7 @@ utag.DB("dc_region:"+u.region);}else if(xhr.readyState===4){postData(server_inde
 formData.append("data",json_string);xhr.send(formData);}
 postData(0,u.enrichment_polling,u.enrichment_polling_delay);}else{for(var i=0;i<u.server_list.length;i++){(function(i,enrichment_polling,enrichment_polling_delay){var server=u.server_list[i];setTimeout(function(){json_string=JSON.stringify(u.data);if(u.profile_specific_vid==1){json_string=json_string.replace(regExpReplace,u.visitor_id+u.get_account_profile(server)[2]);}
 var img=new Image();img.src=server+'?data='+encodeURIComponent(json_string);if(u.make_enrichment_request&&u.enrichment_enabled[server])u.do_enrichment(server,enrichment_polling,enrichment_polling_delay);},i*700);}(i,u.enrichment_polling,u.enrichment_polling_delay))}}};if(u.ts_collect.active){u.ts_collect.queue.push(sendData);}else{u.ts_collect.active=true;sendData();}}};utag.o[loader].loader.LOAD(id);})('48','axelspringer.bild');}catch(e){utag.DB(e)}
-é›kœæ      XI;XH÷=!X+X   V    :http://tags.tiqcdn.com/utag/axelspringer/bild/prod/utag.48.js?utv=ut4.39.201610050844 necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+?£Rsœæ      XBŠXBŠ=P_X+X   V    :http://tags.tiqcdn.com/utag/axelspringer/bild/prod/utag.48.js?utv=ut4.39.201610050844 necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
 Content-Type: application/x-javascript
 Etag: "160006029b7b42bfc0483714c62d2f09:1477323356"
 Server: Apache

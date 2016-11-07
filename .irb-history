@@ -1,7 +1,6 @@
 var = "Ruby ist perfekt"
 puts var. upcase
 car.class
-var.class
 puts var. upcase!
 puts var. downcase!
 var.methods
@@ -89,4 +88,10 @@ puts players
 end
 jahreszeiten.rotate!
 jahreszeiten
+var = "str"
+var.class
+p = var.class
+p.class
+var
+var.is_a? String
 exit

@@ -934,22 +934,23 @@
   window.ados.fire('load', null);
 
 }).call(this);
-õ”~ì0º      WÛÅIWÛÅJ<ˆèW¸ª…   !    :http://static.adzerk.net/ados.js necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
-Via: 1.1 ISA01TMG
-Expires: Tue, 11 Oct 2016 10:15:38 GMT
-Date: Tue, 04 Oct 2016 10:15:38 GMT
+¢5]50º      XLTXLU=ÿX!Ü”   !    :http://static.adzerk.net/ados.js necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
 Content-Type: application/javascript
 Etag: "382a60730ade0e806629018b5d3e4832"
-Server: cloudflare-nginx
 Accept-Ranges: bytes
+Via: 1.1 ISA01TMG
+Expires: Tue, 08 Nov 2016 08:03:32 GMT
+Date: Tue, 01 Nov 2016 08:03:32 GMT
+Server: cloudflare-nginx
 x-amz-id-2: +6wlc4l6etBmFqcNKRunHvd6COIjY8olhPC4xuy0YvwVzCADMNi2fL5R2185LgU4bZb3iogfjkc=
 x-amz-request-id: 2B3AB597F279DC39
 Last-Modified: Wed, 31 Aug 2016 21:07:32 GMT
 x-amz-meta-s3cmd-attrs: uid:503/gname:staff/uname:sean/gid:20/mode:33188/mtime:1472677650/atime:1472677650/md5:382a60730ade0e806629018b5d3e4832/ctime:1472677650
 Cache-Control: public, max-age=604800
 x-amz-version-id: LQgozCfzIM5Qai0mFMG2kfppNq44rZoX
-CF-Cache-Status: HIT
-cf-ray: 2ec7dfb12029407c-HAM
+cf-cache-status: HIT
+Vary: Accept-Encoding
+cf-ray: 2fadd4b2679a40d0-HAM
  original-response-headers Via: 1.1 ISA01TMG
 Connection: Keep-Alive
 Proxy-Connection: Keep-Alive
@@ -967,6 +968,6 @@ Last-Modified: Wed, 31 Aug 2016 21:07:32 GMT
 x-amz-meta-s3cmd-attrs: uid:503/gname:staff/uname:sean/gid:20/mode:33188/mtime:1472677650/atime:1472677650/md5:382a60730ade0e806629018b5d3e4832/ctime:1472677650
 Cache-Control: public, max-age=604800
 x-amz-version-id: LQgozCfzIM5Qai0mFMG2kfppNq44rZoX
-CF-Cache-Status: HIT
+cf-cache-status: HIT
 cf-ray: 2ec7dfb12029407c-HAM
- uncompressed-len 0   }M
+ uncompressed-len 0 request-Accept-Encoding gzip, deflate   }M

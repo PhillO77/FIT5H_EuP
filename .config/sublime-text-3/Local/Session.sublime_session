@@ -1,15 +1,16 @@
 {
 	"folder_history":
 	[
+		"/home/philippe/EuP",
 		"/home/philippe/KuA/doku",
 		"/home/philippe/EuP/Ruby"
 	],
 	"last_version": 3114,
-	"last_window_id": 4,
+	"last_window_id": 6,
 	"log_indexing": false,
 	"settings":
 	{
-		"new_window_height": 764.0,
+		"new_window_height": 0.0,
 		"new_window_settings":
 		{
 			"auto_complete":
@@ -89,6 +90,11 @@
 			},
 			"file_history":
 			[
+				"/home/philippe/KuA/doku/Linux_basis.txt",
+				"/home/philippe/KuA/doku/bash_spezifika.txt",
+				"/home/philippe/KuA/doku/file_system.txt",
+				"/home/philippe/KuA/doku/console_basis.txt",
+				"/home/philippe/KuA/doku/vim_basis_befehle.txt",
 				"/home/philippe/EuP/Ruby/Aufgaben/08_objects_interacting.txt",
 				"/home/philippe/EuP/Ruby/Unterricht/studio_game.rb",
 				"/home/philippe/EuP/Ruby/Unterricht/start.rb",
@@ -207,7 +213,7 @@
 			{
 			}
 		},
-		"new_window_width": 1212.0
+		"new_window_width": 0.0
 	},
 	"windows":
 	[
@@ -260,6 +266,31 @@
 			},
 			"buffers":
 			[
+				{
+					"file": "/home/philippe/EuP/Ruby/Unterricht/car.rb",
+					"settings":
+					{
+						"buffer_size": 3703,
+						"line_ending": "Unix",
+						"name": "car.rb"
+					}
+				},
+				{
+					"file": "/home/philippe/EuP/Ruby/Unterricht/start.rb",
+					"settings":
+					{
+						"buffer_size": 2418,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/philippe/EuP/Ruby/Unterricht/hello.rb",
+					"settings":
+					{
+						"buffer_size": 4711,
+						"line_ending": "Unix"
+					}
+				}
 			],
 			"build_system": "",
 			"build_system_choices":
@@ -293,10 +324,20 @@
 			},
 			"expanded_folders":
 			[
-				"/home/philippe/KuA/doku"
+				"/home/philippe/EuP",
+				"/home/philippe/EuP/Ruby",
+				"/home/philippe/EuP/Ruby/Aufgaben",
+				"/home/philippe/EuP/Ruby/Doku",
+				"/home/philippe/EuP/Ruby/Unterricht"
 			],
 			"file_history":
 			[
+				"/home/philippe/EuP/Ruby/Doku/vererbung.txt",
+				"/home/philippe/EuP/Ruby/Doku/abfragen.txt",
+				"/home/philippe/EuP/Ruby/Doku/hash.txt",
+				"/home/philippe/EuP/Ruby/Unterricht/start.rb",
+				"/home/philippe/EuP/Ruby/Unterricht/hello.rb",
+				"/home/philippe/EuP/Ruby/Aufgaben/09_bloecke",
 				"/home/philippe/KuA/doku/Linux_basis.txt",
 				"/home/philippe/KuA/doku/bash_spezifika.txt",
 				"/home/philippe/KuA/doku/file_system.txt",
@@ -304,14 +345,12 @@
 				"/home/philippe/KuA/doku/vim_basis_befehle.txt",
 				"/home/philippe/EuP/Ruby/Aufgaben/08_objects_interacting.txt",
 				"/home/philippe/EuP/Ruby/Unterricht/studio_game.rb",
-				"/home/philippe/EuP/Ruby/Unterricht/start.rb",
 				"/home/philippe/EuP/Ruby/Aufgaben/08_uebung_bank.txt",
 				"/home/philippe/EuP/Ruby/Doku/Array.txt",
 				"/home/philippe/EuP/Ruby/Aufgaben/Array.txt",
 				"/home/philippe/EuP/Ruby/Aufgaben/06_calculater.txt",
 				"/home/philippe/EuP/Ruby/Aufgaben/06_Attributes.txt",
 				"/home/philippe/EuP/Ruby/Doku/classes.txt",
-				"/home/philippe/EuP/Ruby/Unterricht/hello.rb",
 				"/home/philippe/EuP/Ruby/Doku/Beispiel_Eigenes class",
 				"/home/philippe/EuP/Ruby/Aufgaben/05_classes.txt",
 				"/home/philippe/EuP/Ruby/Aufgaben/05_classes_bank.txt",
@@ -332,7 +371,7 @@
 			],
 			"find":
 			{
-				"height": 0.0
+				"height": 34.0
 			},
 			"find_in_files":
 			{
@@ -363,14 +402,102 @@
 			"folders":
 			[
 				{
-					"path": "/home/philippe/KuA/doku"
+					"path": "/home/philippe/EuP"
 				}
 			],
 			"groups":
 			[
 				{
+					"selected": 1,
 					"sheets":
 					[
+						{
+							"buffer": 0,
+							"file": "/home/philippe/EuP/Ruby/Unterricht/car.rb",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 3703,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										3478,
+										3478
+									]
+								],
+								"settings":
+								{
+									"auto_name": "car.rb",
+									"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+								},
+								"translation.x": 0.0,
+								"translation.y": 1170.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 1,
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/home/philippe/EuP/Ruby/Unterricht/start.rb",
+							"semi_transient": false,
+							"settings":
+							{
+								"buffer_size": 2418,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										2418,
+										2418
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 0,
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/home/philippe/EuP/Ruby/Unterricht/hello.rb",
+							"semi_transient": true,
+							"settings":
+							{
+								"buffer_size": 4711,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										4140,
+										4140
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": -0.0,
+								"translation.y": 2745.0,
+								"zoom_level": 1.0
+							},
+							"stack_index": 2,
+							"type": "text"
+						}
 					]
 				}
 			],
@@ -414,7 +541,7 @@
 				"height": 100.0
 			},
 			"pinned_build_system": "",
-			"position": "0,0,0,0,0,388,40,1600,792,1600,804",
+			"position": "0,1,0,0,0,542,-3,1182,505,1600,804",
 			"project": "",
 			"replace":
 			{
@@ -461,7 +588,7 @@
 			"template_settings":
 			{
 			},
-			"window_id": 4,
+			"window_id": 6,
 			"workspace_name": ""
 		}
 	],

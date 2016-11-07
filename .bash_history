@@ -157,3 +157,33 @@ cd Dokumente/
 touch datei.txt
 clear
 git add . -A
+git pull origin master
+git commit -m "Neu"
+cd EuP
+cd Ruby
+cd Unterricht
+ruby car.rb
+irb
+ruby car.rb
+[A
+ruby car.rb
+irb
+clear
+ruby car.rb
+clear
+ruby car.rb
+git add . -A
+git commit -m "Neu"
+git push origin master
+git add . -A
+git commit -m "Neu"
+git commit -m "hahaha"
+git commit -m "haha"
+git pull origin master
+git push origin master
+git add . -A
+git commit -m "haha"
+git push origin master
+git add . -A
+git commit -m "Neu"
+git pull origin master

@@ -24,7 +24,7 @@ if(g.value!==undefined){if(u.typeOf(g.value)==="array"){for(j=0;j<g.value.length
 if(_event){fbq(_track,_event,u.remove_empty(g));}}};u.callBack=function(){var data={};u.initialized=true;while(data=u.queue.shift()){u.data=data.data;u.loader_cb();}};if(u.initialized){u.loader_cb();}else{u.queue.push({"data":u.data});if(!u.scriptrequested){u.scriptrequested=true;u.loader({"type":"script","src":u.data.base_url,"cb":u.callBack,"loc":"script","id":'utag_50'});!function(f,b,e){if(f.fbq)return;e=f.fbq=function(){e.callMethod?e.callMethod.apply(e,arguments):e.queue.push(arguments);};if(!f._fbq)f._fbq=e;e.push=e;e.loaded=!0;e.version='2.0';e.queue=[];e.agent='tmtealium';}(window,document);if(u.data.cust_pixel){u.data.cust_pixel=u.data.cust_pixel.split(/\s*,\s*/);for(var i=0;i<u.data.cust_pixel.length;i++){u.data.cust_pixel[i]=u.data.cust_pixel[i].replace(/^\s*/,"").replace(/\s*$/,"");fbq('init',u.data.cust_pixel[i]);}
 if(u.data.page_view==="true"){fbq('track','PageView',u.data.page);}}}}
 }};utag.o[loader].loader.LOAD(id);}("50","axelspringer.bild"));}catch(error){utag.DB(error);}
-š508;      XI;XH÷=!X+X   V    :http://tags.tiqcdn.com/utag/axelspringer/bild/prod/utag.50.js?utv=ut4.39.201610241535 necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+‘¥ËF;      XBŠXBŠ=P_X+X   V    :http://tags.tiqcdn.com/utag/axelspringer/bild/prod/utag.50.js?utv=ut4.39.201610241535 necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
 Content-Type: application/x-javascript
 Etag: "a3bb0f1956edc208ef457200f69f0e00:1477323356"
 Server: Apache
