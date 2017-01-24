@@ -40,18 +40,18 @@ X.prototype.get=function(a,c){for(var b=a+"=",d=(this.fa.cookie||"").split(fc),e
 function(){var a=null;if(Y.isEnabled()&&n(Y.get("GED_PLAYLIST_ACTIVITY"))){var c=Y.get("GED_PLAYLIST_ACTIVITY");if(c)try{c=cc(c),a=fb(c)}catch(b){}}return a},kc=function(){if(Z)for(var a=jc(document.referrer),c=0;c<Z.length;c++)if(Z[c].u==a)return Z[c];return null},nc=function(){if(Y.isEnabled()){var a=lc(),c=new T(a,-1),b;b=c;b=5>M()-b.i;var c=c.$(),d=M(),e=jc(document.URL),a=new ic(d,e,b?1:0,a,c);b=mc();c=[];if(b){c=b.length;if(0<c){d=Array(c);for(e=0;e<c;e++)d[e]=b[e];b=d}else b=[];c=document.URL;
 c=jc(c);d=M();for(e=0;e<b.length;e++)if(b[e].u==c||600<=d-b[e].tsl)b.splice(e,1),e--;c=b}a&&c.unshift(a);var c=c.slice(0,3),f,a=f=(new gb(f)).C(c);f=!0;if(Yb&&!f)f=l.btoa(a);else{b=[];for(d=c=0;d<a.length;d++){for(e=a.charCodeAt(d);255<e;)b[c++]=e&255,e>>=8;b[c++]=e}a=b;f=ac(a,f)}a=document.URL;b=1;a=a.match(gc)[b]||null;a="http"==a;Y.set("GED_PLAYLIST_ACTIVITY",f,-1,"/",null,!a)}};var oc=function(){function a(){try{nc()}catch(a){}}if(!(window.ima&&window.ima.video&&window.ima.video.client&&window.ima.video.client.tagged)){Tb();Xa(F(),"unload",a);try{hc||(hc=M(),Z=mc())}catch(b){}x("ima.video.client.getEData",function(){var a=lc(),c;a:{if(Z)for(c=0;c<Z.length;c++){var e;e=Z[c];if(e=null!==e&&"lt"in e){c=Z[c].lt;break a}}c=-1}return new T(a,c)});var c=new S(1E3);c.start();K(c,"tick",function(){try{nc()}catch(a){}});x("ima.video.client.setupEDHooks",Tb);x("ima.video.client.resetEDForTesting",
 Ub);x("ima.video.client.tagged",!0)}};x("ima.video.client.jsTag",!0);pb();oc();})()
-Vwy3¿“      WóK*WóK+<öi‹WóK    ,    :http://s0.2mdn.net/instream/video/client.js necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+’V:¿“      X<•X<•=(ä-X< +   ,    :http://s0.2mdn.net/instream/video/client.js necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
 Via: 1.1 ISA01TMG
-Age: 782
-Expires: Tue, 04 Oct 2016 06:26:41 GMT
-Date: Tue, 04 Oct 2016 06:11:41 GMT
 Content-Type: text/javascript
 Server: sffe
 Access-Control-Allow-Origin: *
 Last-Modified: Mon, 16 May 2016 22:02:08 GMT
-x-content-type-options: nosniff
+X-Content-Type-Options: nosniff
 x-xss-protection: 1; mode=block
 Cache-Control: public, max-age=900
+Date: Mon, 28 Nov 2016 12:01:43 GMT
+Expires: Mon, 28 Nov 2016 12:16:43 GMT
+Age: 494
  original-response-headers Via: 1.1 ISA01TMG
 Connection: Keep-Alive
 Proxy-Connection: Keep-Alive
@@ -63,7 +63,7 @@ Content-Type: text/javascript
 Server: sffe
 Access-Control-Allow-Origin: *
 Last-Modified: Mon, 16 May 2016 22:02:08 GMT
-x-content-type-options: nosniff
+X-Content-Type-Options: nosniff
 x-xss-protection: 1; mode=block
 Cache-Control: public, max-age=900
  uncompressed-len 0   h

@@ -1,33 +1,3 @@
-var = "Ruby ist perfekt"
-puts var. upcase
-car.class
-puts var. upcase!
-puts var. downcase!
-var.methods
-puts Time.new
-puts Time.now
-var = 1+1
-tage = 365
-stunden = 24
-tage*stunden
-str = "Hello Ruby!"
-str
-str.upcase
-ruby hello.rb
-hello = hello.rb
-name1 = "larry"
-health = 60
-puts "#{name1}'s health is #{health}"
-puts name1 + "'s health is" + health
-puts "#{name1}'s health is#{health}
-puts "#{name1}'s health is#{health*3}
-puts "#{name1}'s health is#{3*health}
-puts "#{name1}'s health is#{3 * health}
-puts "#{name1}'s health is #{3 * health}
-puts "#{name1}'s health is #{ health / 9. to_i}
-puts "#{name1}'s health is #{ health / 9. to_f}
-var = "irgendwas"
-var2 = var
 var[0] = "I"
 puts var
 var.object_id
@@ -94,4 +64,37 @@ p = var.class
 p.class
 var
 var.is_a? String
+e.name = "Weihnachtsmann ankockeln"
+e.location = "Weihnachtsmarkt"
+e.price = 9.99
+Event.all
+Event.first
+Event.count
+Event.find_by(price:9.99)
+m = Movies.new
+e = Events.new
+m.title = "Spiderman"
+m.title = "Ironman"
+m.rating = "3"
+m.rating = "1"
+m.total_gross = 30000000
+m.total_gross = 5000000
+m.Movie.new
+m = movie.new
+m = Movie.new
+m.title = "Superman"
+m.rating = "2"
+m.total_gross = 10000000
+m.save
+movie.all
+Movie.all
+xit
+e = Event.new
+e.valid?
+e.errors
+e.errors.full_messages
+e.name = "Kater auskureren
+e.name = "Kater auskureren"
+e.save
+wq
 exit

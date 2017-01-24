@@ -1,15 +1,117 @@
-1.  Klasse Kunde
-1a. Legen Sie eine Eigenschaft name und adresse in der Klasse Kunde an. Für die Eigenschaft name gibt es einen Lese- und Schreibzugriff, fuer die Eigenschaft adresse einen Schreibzugriff. 
-b. Die Eigenschaft name enthält den Vor- und Zunamen des Kunden. Diese Eigenschaft wird beim Anlegen des Objektes übergeben. Schreiben Sie den entsprechenden Konstruktor. 
-c. Erzeugen Sie ein Objekt mit dem Namen 'kunde1' und dem Initialwert: 'Theo Sommer' 
-d. Ändern Sie die Eigenschaft 'name' des Objektes in: 'Theo Sonnenschein' 
-e. Schreiben Sie den Befehl, der den Namen auf der Konsole ausgibt. 
-f. Fügen Sie der Klasse Kunde die Eigenschaft gehalt hinzu, die sowohl gelesen als auch geschrieben werden kann. Schreiben Sie den Befehl auf, der das Gehalt des Objektes als Konsolenbefehl auf 2000 setzt. 
-g. Die Eigenschaft adresse bekommt folgenden String uebergeben: Hermelinweg 11, 22159 Hamburg
-h. Schreiben Sie eine  Getter-Methode' für die Klasse Kunde, für die Eigenschaft adresse die folgende Ausgabe produziert: 'Theo Sonnenschein, Hermelinweg 11, 22159 Hamburg.'  und geben sie das auf der Konsole aus.
-i. Zusatz optional: Sichern Sie, dass im String Theo Sonnenschein sowohl Theo, als auch Sonnenschein jeweils mit einem Grossbuchstaben beginnen
+a. erstellen Sie eine Klasse Game mit einem Konstruktor, der eine Instanzvariable title anlegt. Zugleich soll ein leeres Array mit dem Namen players erstellt werden.
 
-2. Klasse Kredit 
-a. Legen Sie eine Klasse Kredit an, mit der Eigenschaft kunde (ohne Setter und Getter) und einem Konstruktor, der die Eigenschaft kunde füllt. Erzeugen Sie ein Objekt kredit1, dem Sie das bereits existierende Objekt kunde1 übergeben.
-b. Legen Sie eine Getter-Methode für die Eigenschaft kunde an, die folgende Ausgabe erzeugt: 'Theo Sonnenschein, Hermelinweg 11, 22159 Hamburg. Jahresgehalt: 24000 Euro.' 
-c. Fügen Sie eine Eigenschaft kredit hinzu, auf die lesend und schreibend zugegriffen werden kann. Speichern Sie für das bestehende Objekt in der Eigenschaft kredit den Wert 5000. 
+class Game
+	def initialize(title)
+		@title = title.capitalize
+		players = []
+	end
+end
+
+
+b. die Klasse Game bekommt eine Methode add_player der ein SPieler hinzugefuegt wird
+
+def add_player(player)
+	@player << player
+end
+
+c. eine Methode play erzeugt folgenden Ausdruck:
+	There are 3 players in Knuckleheads: 
+	I'm Moe with a health of 100 and a score of 103.
+	I'm Larry with a health of 60 and a score of 65.
+	I'm Curly with a health of 125 and a score of 130.
+	Moe got blammed!
+	Moe got w00ted!
+	Moe got w00ted!
+	I'm Moe with a health of 120 and a score of 123.
+	Larry got blammed!
+	Larry got w00ted!
+	Larry got w00ted!
+	I'm Larry with a health of 80 and a score of 85.
+	Curly got blammed!
+	Curly got w00ted!
+	Curly got w00ted!
+I'm Curly with a health of 145 and a score of 150.
+
+--------------------------------------------------------------------------------------
+
+class Game
+  def initialize(titel)
+    @titel = titel
+    @players = []
+  end
+
+  def add_player(player)
+    @players << player
+  end
+
+  def play
+    puts "There are #{@players.size} players in #{@titel}:"
+    @players.each do |player|
+      puts player
+    	end
+
+    @players.each do |player|
+      player.blam
+      player.w00t
+      player.w00t
+      puts player
+    	end
+	end
+end
+
+class Player
+
+  attr_accessor :name
+  attr_reader :health
+
+  def initialize(name, health=100)
+    @name = name.capitalize
+    @health = health
+  end
+
+  def to_s
+    "I'm #{@name} with a health of #{@health} and a score of #{score}."
+  end
+
+  def blam
+    @health -= 10
+    puts "#{@name} got blammed!"
+  end
+
+  def w00t
+    @health += 15
+    puts "#{@name} got w00ted!"
+  end
+
+  def score
+    @health + @name.length
+  end
+end
+
+player1 = Player.new("moe")
+player2 = Player.new("larry", 60)
+player3 = Player.new("curly", 125)
+
+players = [player1, player2, player3]
+
+game1 = Game.new("Knuckleheads")
+
+#game1 = Game.new("Knuckleheads")
+#game1.add_player(player1)
+#game1.add_player(player2)          <------ ALTERNATIVE 1
+#game1.add_player(player3)
+#game1.play
+
+#---------------------------------------------------------------------------------------
+
+
+
+#	players.each do |spieler|
+#	game1.add_player(spieler)      <------ ALTERNATIVE 2
+#	end
+
+players.each { |spieler| game1.add_player(spieler)}   # <----- ALTERNATIVE 3
+
+# --------------------------------------------------------------------------------------
+
+game1.play

@@ -356,30 +356,30 @@ var webtrekkUnloadObjects=[];var webtrekkLinktrackObjects=[];var webtrekkHeatmap
 
 /* Kompatibilitaetsmodus */
 var webtrekkPixel=false;function wt_sendinfo(p,mode,ep){if(webtrekkPixel){for(var i in webtrekk){if(i!=="plugins"&&i!=="sendinfo"){webtrekkPixel[i]=webtrekk[i];}}if(arguments.length===0){webtrekkPixel.sendinfo();}else{webtrekkPixel.sendinfo({},p,mode,ep);}}}if(typeof(webtrekk)=="object"){webtrekkConfig=webtrekk;webtrekkPixel=new webtrekkV3();if(typeof(wt_updatePixel)=="function"){wt_updatePixel();}if(webtrekk.sendinfo&&webtrekk.sendinfo=='1'){webtrekkPixel.sendinfo();}}
-/* End Kompatibilitaetsmodus */C*ì\      XI'XI'=Ð2XL   X    :http://www.bild.de/code/webtrekkwap,35166572.9-35439740.4-35166574.1-35439742.2.bild.js strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+/* End Kompatibilitaetsmodus */§U Pì\           X m=²fX t®   X    :http://www.bild.de/code/webtrekkwap,35166572.9-35439740.4-35166574.1-35439742.2.bild.js strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
 Via: 1.1 ISA01TMG
-Expires: Mon, 31 Oct 2016 13:50:07 GMT
-Date: Mon, 31 Oct 2016 13:28:19 GMT
+Expires: Mon, 07 Nov 2016 12:33:50 GMT
+Date: Mon, 07 Nov 2016 12:03:11 GMT
 Content-Type: text/javascript;charset=utf-8
 Server: Apache
 Content-Language: de-DE
 X-UA-Compatible: IE=Edge
-Last-Modified: Mon, 31 Oct 2016 11:54:33 GMT
-X-Refresh: h=173|g=103975.000|c=(null)|rd=Mon, 31 Oct 2016 11:54:33 GMT|dd=Mon, 31 Oct 2016 12:41:48 GMT
-Cache-Control: public, max-age=1308
+Last-Modified: Mon, 07 Nov 2016 10:36:05 GMT
+X-Refresh: h=126|g=103975.000|c=(null)|rd=Mon, 07 Nov 2016 10:36:05 GMT|dd=Mon, 07 Nov 2016 11:08:18 GMT
+Cache-Control: public, max-age=1839
 Vary: Origin
  original-response-headers Via: 1.1 ISA01TMG
 Connection: Keep-Alive
 Proxy-Connection: Keep-Alive
 Transfer-Encoding: chunked
-Expires: Mon, 31 Oct 2016 13:50:07 GMT
-Date: Mon, 31 Oct 2016 13:28:19 GMT
+Expires: Mon, 07 Nov 2016 12:33:50 GMT
+Date: Mon, 07 Nov 2016 12:03:11 GMT
 Content-Type: text/javascript;charset=utf-8
 Server: Apache
 Content-Language: de-DE
 X-UA-Compatible: IE=Edge
-Last-Modified: Mon, 31 Oct 2016 11:54:33 GMT
-X-Refresh: h=173|g=103975.000|c=(null)|rd=Mon, 31 Oct 2016 11:54:33 GMT|dd=Mon, 31 Oct 2016 12:41:48 GMT
-Cache-Control: public, max-age=1308
+Last-Modified: Mon, 07 Nov 2016 10:36:05 GMT
+X-Refresh: h=126|g=103975.000|c=(null)|rd=Mon, 07 Nov 2016 10:36:05 GMT|dd=Mon, 07 Nov 2016 11:08:18 GMT
+Cache-Control: public, max-age=1839
 Vary: Origin
- uncompressed-len 0 necko:classified 1   à 
+ uncompressed-len 0   à 

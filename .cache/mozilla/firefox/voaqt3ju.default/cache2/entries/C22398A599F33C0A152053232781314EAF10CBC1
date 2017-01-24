@@ -34,16 +34,18 @@ a.push(this.formatTime(this.currentStepInfo.partial));a.push(this.formatTime(thi
 e.prototype.getPointCheckArray=function(a){var c=this.getAdSize(this.target),b=this.getClipping(this.target,c.right-c.left,c.bottom-c.top),d=b.left,e=b.top,f=this.currentWidth=c.right-c.left,g=this.currentHeight=c.bottom-c.top,b=this.pixelModifiers.map(function(a){return f*a}),h=this.pixelModifiers.map(function(a){return g*a}),b=[{id:"0",left:b[0],top:h[1]},{id:"1",left:b[0],top:h[5]},{id:"2",left:b[1],top:h[0]},{id:"3",left:b[1],top:h[6]},{id:"4",left:b[2],top:h[2]},{id:"5",left:b[2],top:h[4]},{id:"6",
 left:b[3],top:h[3]},{id:"7",left:b[4],top:h[2]},{id:"8",left:b[4],top:h[4]},{id:"9",left:b[5],top:h[0]},{id:"10",left:b[5],top:h[6]},{id:"11",left:b[6],top:h[1]},{id:"12",left:b[6],top:h[5]}];return b=a?b.map(function(a){a.left+=c.left;a.top+=c.top;return a}):b.map(function(a){a.left+=d;a.top+=e;return a})};e.prototype.visiblePercentageFromPixelSample=function(a){var c=this.pointArray,b=0,d=0,e=this.currentWidth,f=this.currentHeight,g=a.length;if(!g)return 0;if(3>g)return.01;for(;g--;)b=Math.max(b,
 c[parseInt(a[g],10)].left),e=Math.min(e,c[parseInt(a[g],10)].left),d=Math.max(d,c[parseInt(a[g],10)].top),f=Math.min(f,c[parseInt(a[g],10)].top);return Math.floor((b-e)*(d-f)/(this.currentWidth*this.currentHeight)*100)/100};e.prototype.safeFrameDetect=function(){return this.safeFrame.inViewPercentage()/100}})();}());
-àuÕß      WûdØWûdÙ<üéWûiM   :    :http://cdn.flashtalking.com/pageFold/ftpagefold_v4.4.2.js necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+
+¥3ìÕß      X3ý~X3üº=#´ðX41   :    :http://cdn.flashtalking.com/pageFold/ftpagefold_v4.4.2.js necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
 Content-Type: text/javascript
 Etag: "925fdd567273871158d733ccb75e6ea1"
-Accept-Ranges: bytes
+Server: Flashtalking (AKA)
 x-amz-replication-status: COMPLETED
+Last-Modified: Fri, 02 Sep 2016 16:10:05 GMT
 x-amz-version-id: wHD0FpoWo68yrgJ5KsFKD0Gg_jI2NFy.
-Expires: Mon, 10 Oct 2016 10:11:26 GMT
-Date: Mon, 10 Oct 2016 09:52:24 GMT
-Cache-Control: max-age=1142
-X-HW: 1475561982.dop017.fr7.t,1475561982.cds061.fr7.c
+Expires: Tue, 22 Nov 2016 07:49:52 GMT
+Date: Tue, 22 Nov 2016 08:07:21 GMT
+Cache-Control: max-age=1145
+X-HW: 1479802041.dop006.fr7.t,1479802041.cds061.fr7.c
 x-pb-mii: Powered by DDN Mirror Image Internet
 Access-Control-Allow-Origin: *
 Access-Control-Allow-Methods: GET
@@ -52,8 +54,7 @@ Access-Control-Expose-Headers: Accept-Ranges, Content-Encoding, Content-Length, 
 x-amz-id-2: A1pQ1sFkzX3HjUiABhRZsiP52Vn88P8FtOEB3UEj7Iro1t5cLTx7wbedtJnGIC5PgX2y4TdKqX0=
 x-amz-request-id: A5F30EBC4B0CAF17
 Via: 1.1 ISA01TMG
-Server: Flashtalking (AKA)
-Last-Modified: Fri, 02 Sep 2016 16:10:05 GMT
+Accept-Ranges: bytes
  original-response-headers Via: 1.1 ISA01TMG
 Connection: Keep-Alive
 Proxy-Connection: Keep-Alive

@@ -1,3 +1,13 @@
-2016/11/01-08:16:39.773050 ac47db40 Recovering log #15
-2016/11/01-08:16:40.167515 ac47db40 Delete type=3 #13
-2016/11/01-08:16:40.167559 ac47db40 Delete type=0 #15
+2017/01/17-09:23:48.718834 aceffb40 Recovering log #61
+2017/01/17-09:23:48.725056 aceffb40 Level-0 table #63: started
+2017/01/17-09:23:48.730994 aceffb40 Level-0 table #63: 90181 bytes OK
+2017/01/17-09:23:48.734030 aceffb40 Delete type=3 #59
+2017/01/17-09:23:48.734096 aceffb40 Delete type=0 #61
+2017/01/17-09:23:48.739037 ac6feb40 Expanding@0 1+1 (90181+79488 bytes) to 2+1 (90500+79488 bytes)
+2017/01/17-09:23:48.739073 ac6feb40 Compacting 2@0 + 1@1 files
+2017/01/17-09:23:48.758529 ac6feb40 Generated table #65: 1942 keys, 114848 bytes
+2017/01/17-09:23:48.758555 ac6feb40 Compacted 2@0 + 1@1 files => 114848 bytes
+2017/01/17-09:23:48.762139 ac6feb40 compacted to: files[ 0 1 0 0 0 0 0 ]
+2017/01/17-09:23:48.762291 ac6feb40 Delete type=2 #63
+2017/01/17-09:23:48.762380 ac6feb40 Delete type=2 #56
+2017/01/17-09:23:48.762620 ac6feb40 Delete type=2 #60

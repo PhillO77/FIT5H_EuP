@@ -1237,30 +1237,30 @@ width: 100%;
   padding: 0 10px;
   text-align: right;
 }
-Ñä%Ž÷      	XB…XB…=IŠXMÖ   `    :http://www.bild.de/code/partner,44144570.9-47780104.5-47780110.5-47780118.1-47780088.2.bild.css strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
-Via: 1.1 ISA01TMG
-Expires: Mon, 31 Oct 2016 13:57:42 GMT
-Date: Mon, 31 Oct 2016 13:26:33 GMT
+æˆ`Ž÷      X4!ãX4!ã=#Ä"X4&4   `    :http://www.bild.de/code/partner,44144570.9-47780104.5-47780110.5-47780118.1-47780088.2.bild.css strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
 Content-Type: text/css;charset=utf-8
 Server: Apache
 Content-Language: de-DE
 X-UA-Compatible: IE=Edge
-Last-Modified: Mon, 31 Oct 2016 12:06:57 GMT
-X-Refresh: h=252|g=103975.000|c=(null)|rd=Mon, 31 Oct 2016 12:06:57 GMT|dd=Mon, 31 Oct 2016 12:47:19 GMT
-Cache-Control: public, max-age=1869
-Vary: Origin
+X-Refresh: h=537|g=103975.000|c=(null)|rd=Tue, 22 Nov 2016 07:27:54 GMT|dd=Tue, 22 Nov 2016 08:57:01 GMT
+Via: 1.1 ISA01TMG
+Expires: Tue, 22 Nov 2016 11:04:20 GMT
+Date: Tue, 22 Nov 2016 10:45:55 GMT
+Last-Modified: Tue, 22 Nov 2016 07:27:54 GMT
+Cache-Control: public, max-age=1105
+Vary: Accept-Encoding, Origin
  original-response-headers Via: 1.1 ISA01TMG
 Connection: Keep-Alive
 Proxy-Connection: Keep-Alive
 Transfer-Encoding: chunked
-Expires: Mon, 31 Oct 2016 13:57:42 GMT
-Date: Mon, 31 Oct 2016 13:26:33 GMT
+Expires: Tue, 22 Nov 2016 09:21:48 GMT
+Date: Tue, 22 Nov 2016 09:05:27 GMT
 Content-Type: text/css;charset=utf-8
 Server: Apache
 Content-Language: de-DE
 X-UA-Compatible: IE=Edge
-Last-Modified: Mon, 31 Oct 2016 12:06:57 GMT
-X-Refresh: h=252|g=103975.000|c=(null)|rd=Mon, 31 Oct 2016 12:06:57 GMT|dd=Mon, 31 Oct 2016 12:47:19 GMT
-Cache-Control: public, max-age=1869
+Last-Modified: Tue, 22 Nov 2016 07:27:54 GMT
+X-Refresh: h=537|g=103975.000|c=(null)|rd=Tue, 22 Nov 2016 07:27:54 GMT|dd=Tue, 22 Nov 2016 08:57:01 GMT
+Cache-Control: public, max-age=981
 Vary: Origin
- uncompressed-len 0 necko:classified 1   h&
+ uncompressed-len 0 necko:classified 1 request-Accept-Encoding gzip, deflate   h&

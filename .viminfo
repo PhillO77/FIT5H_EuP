@@ -79,14 +79,24 @@
 	 
 
 # Datei-Marken:
-'0  5  14  ~/.gitconfig
-'1  15  25  ~/KuA/doku/get
-'2  118  68  ~/.bashrc
-'3  119  65  ~/.bashrc
-'4  1  0  ~/.bash_profile
-'5  2  0  ~/.bash_profile
+'0  2  0  ~/KuA/test12.sh
+'1  1  3  ~/KuA/test.sh
+'2  12  11  ~/KuA/test.sh
+'3  6  6  ~/KuA/test.sh
+'4  2  24  ~/KuA/test.sh
+'5  5  14  ~/.gitconfig
+'6  15  25  ~/KuA/doku/get
+'7  118  68  ~/.bashrc
+'8  119  65  ~/.bashrc
+'9  1  0  ~/.bash_profile
 
 # Geschichte (neueste zuerst):
+-'  2  0  ~/KuA/test12.sh
+-'  1  0  ~/KuA/test12.sh
+-'  1  3  ~/KuA/test.sh
+-'  12  11  ~/KuA/test.sh
+-'  6  6  ~/KuA/test.sh
+-'  2  24  ~/KuA/test.sh
 -'  5  14  ~/.gitconfig
 -'  1  0  ~/.gitconfig
 -'  15  25  ~/KuA/doku/get
@@ -169,8 +179,37 @@
 -'  2  0  ~/.bash_profile
 -'  1  0  ~/.bash_profile
 -'  2  0  ~/.bash_profile
+-'  5  14  ~/.gitconfig
+-'  1  0  ~/.gitconfig
+-'  15  25  ~/KuA/doku/get
+-'  1  0  ~/KuA/doku/get
+-'  118  68  ~/.bashrc
+-'  1  0  ~/.bashrc
+-'  119  65  ~/.bashrc
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
+-'  1  0  ~/.bash_profile
+-'  2  0  ~/.bash_profile
 
 # Geschichte der Markierungen innerhalb von Dateien (neueste zuerst):
+
+> ~/KuA/test12.sh
+	"	2	0
+
+> ~/KuA/test.sh
+	"	1	3
+	^	12	12
+	.	12	11
+	+	1	11
+	+	2	25
+	+	9	0
+	+	9	0
+	+	2	0
+	+	3	28
+	+	7	7
+	+	6	6
+	+	10	11
+	+	12	11
 
 > ~/.gitconfig
 	"	5	14

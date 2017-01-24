@@ -1,12 +1,14 @@
 {
 	"folder_history":
 	[
+		"/home/philippe/KuA",
+		"/home/philippe/EuP/Ruby",
+		"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app",
 		"/home/philippe/EuP",
-		"/home/philippe/KuA/doku",
-		"/home/philippe/EuP/Ruby"
+		"/home/philippe/KuA/doku"
 	],
 	"last_version": 3114,
-	"last_window_id": 6,
+	"last_window_id": 13,
 	"log_indexing": false,
 	"settings":
 	{
@@ -18,6 +20,18 @@
 				"selected_items":
 				[
 					[
+						"rest",
+						"registrations"
+					],
+					[
+						"del",
+						"Delete"
+					],
+					[
+						"bescg",
+						"beschlunigen"
+					],
+					[
 						"ad",
 						"add_movie"
 					],
@@ -90,253 +104,98 @@
 			},
 			"file_history":
 			[
-				"/home/philippe/KuA/doku/Linux_basis.txt",
-				"/home/philippe/KuA/doku/bash_spezifika.txt",
-				"/home/philippe/KuA/doku/file_system.txt",
-				"/home/philippe/KuA/doku/console_basis.txt",
-				"/home/philippe/KuA/doku/vim_basis_befehle.txt",
-				"/home/philippe/EuP/Ruby/Aufgaben/08_objects_interacting.txt",
-				"/home/philippe/EuP/Ruby/Unterricht/studio_game.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/reviews/edit.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/controllers/reviews_controller.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/registrations/new.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/reviews/new.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/models/review.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/config/routes.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/reviews/show.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/config/locales/de.yml",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/registrations/_form.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/reviews/_form.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/registrations/show.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/reviews/index.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/controllers/registrations_controller.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/movies/index.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/models/movie.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/registrations/edit.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/registrations/index.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/events/index.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/config/routes.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/models/event.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/controllers/events_controller.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/db/schema.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/db/migrate/20161219130355_create_registrations.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/test/controllers/registrations_controller_test.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/test/fixtures/registrations.yml",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/test/models/registration_test.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/registrations/show.json.jbuilder",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/registrations/index.json.jbuilder",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/registrations/_registration.json.jbuilder",
+				"/home/philippe/EuP/Ruby/Rails/Doku/Layouts.txt",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/helpers/registrations_helper.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/assets/stylesheets/scaffolds.scss",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/assets/stylesheets/registrations.scss",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/assets/javascripts/registrations.coffee",
+				"/home/philippe/EuP/Ruby/Rails/Doku/validations.txt",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/models/registration.rb",
+				"/home/philippe/EuP/Ruby/Rails/Aufgaben/07_registrations.txt",
+				"/home/philippe/EuP/Ruby/Rails/Doku/foundation_einbinden.txt",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/helpers/movies_helper.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/assets/stylesheets/application.css",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/layouts/_top_bar.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/layouts/_side_bar.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/layouts/application.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/layouts/application.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/layouts/_top_bar.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/controllers/movies_controller.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/layouts/_side_bar.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/config/locales/de.yml",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/config/application.rb",
+				"/home/philippe/EuP/Ruby/Rails/Aufgaben/06_form.txt",
+				"/home/philippe/EuP/Ruby/Rails/Aufgaben/05_show.txt",
+				"/home/philippe/EuP/Ruby/Rails/Aufgaben/04_helpers.txt",
+				"/home/philippe/EuP/Ruby/Rails/Aufgaben/03_migration.txt",
+				"/home/philippe/EuP/Ruby/Rails/Doku/railsprojekte_erstellen.txt",
+				"/home/philippe/EuP/Ruby/Rails/Doku/rails.txt",
+				"/home/philippe/EuP/Ruby/Rails/Doku/migration.txt",
+				"/home/philippe/EuP/Ruby/Rails/Doku/helpers.txt",
+				"/home/philippe/EuP/Ruby/Rails/Doku/config.txt",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/db/seeds.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/db/migrate/20161129084650_add_fields_to_events.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/assets/stylesheets/application.css",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/config/initializers/time_formats.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/events/_form.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/events/show.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/events/new.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/events/edit.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/test/fixtures/movies.yml",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/Gemfile",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/helpers/events_helper.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/Gemfile",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/controllers/application_controller.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/Gemfile.lock",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/db/schema.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/db/seeds.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/db/migrate/20161129100406_add_fields_to_movie.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/config/secrets.yml",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/config/application.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/db/migrate/20161122114608_create_movies.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/config/initializers/time_format.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/movies/edit.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/movies/new.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/movies/show.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/movies/_form.html.erb",
+				"/home/philippe/EuP/Ruby/Unterricht/Geht.txt",
+				"/home/philippe/EuP/Ruby/Unterricht/car2.rb",
+				"/home/philippe/EuP/Ruby/Unterricht/car.rb",
+				"/home/philippe/EuP/Ruby/Unterricht/Hallo.rb",
 				"/home/philippe/EuP/Ruby/Unterricht/start.rb",
-				"/home/philippe/EuP/Ruby/Aufgaben/08_uebung_bank.txt",
-				"/home/philippe/EuP/Ruby/Doku/Array.txt",
-				"/home/philippe/EuP/Ruby/Aufgaben/Array.txt",
-				"/home/philippe/EuP/Ruby/Aufgaben/06_calculater.txt",
-				"/home/philippe/EuP/Ruby/Aufgaben/06_Attributes.txt",
-				"/home/philippe/EuP/Ruby/Doku/classes.txt",
 				"/home/philippe/EuP/Ruby/Unterricht/hello.rb",
-				"/home/philippe/EuP/Ruby/Doku/Beispiel_Eigenes class",
-				"/home/philippe/EuP/Ruby/Aufgaben/05_classes.txt",
-				"/home/philippe/EuP/Ruby/Aufgaben/05_classes_bank.txt",
-				"/home/philippe/EuP/Ruby/Aufgaben/04_methoden.txt",
-				"/home/philippe/EuP/Ruby/Aufgaben/02_Strings2.txt",
-				"/home/philippe/EuP/Ruby/Doku/Tastenkombinationen:",
-				"/home/philippe/EuP/Ruby/Doku/links.txt",
-				"/home/philippe/EuP/Ruby/Aufgaben/02_strings.txt",
-				"/home/philippe/EuP/Ruby/Aufgaben/hello.rb",
-				"/home/philippe/EuP/Ruby/Unterricht/02_Strings.txt",
-				"/home/philippe/EuP/Ruby/Doku/bloecke.txt",
-				"/home/philippe/EuP/Ruby/Aufgaben/01_Start.txt",
-				"/home/philippe/EuP/Ruby/Doku/Varriablen.txt",
-				"/home/philippe/EuP/Ruby/Doku/essentials.txt",
-				"/home/philippe/KuA/doku/git_init.txt",
-				"/home/philippe/KuA/README.md",
-				"/home/philippe/KuA/test.txt"
-			],
-			"find":
-			{
-				"height": 0.0
-			},
-			"find_in_files":
-			{
-				"height": 0.0,
-				"where_history":
-				[
-				]
-			},
-			"find_state":
-			{
-				"case_sensitive": false,
-				"find_history":
-				[
-				],
-				"highlight": true,
-				"in_selection": false,
-				"preserve_case": false,
-				"regex": false,
-				"replace_history":
-				[
-				],
-				"reverse": false,
-				"show_context": true,
-				"use_buffer2": true,
-				"whole_word": false,
-				"wrap": true
-			},
-			"incremental_find":
-			{
-				"height": 0.0
-			},
-			"input":
-			{
-				"height": 31.0
-			},
-			"menu_visible": true,
-			"output.find_results":
-			{
-				"height": 0.0
-			},
-			"output.unsaved_changes":
-			{
-				"height": 100.0
-			},
-			"pinned_build_system": "",
-			"replace":
-			{
-				"height": 0.0
-			},
-			"save_all_on_build": true,
-			"select_file":
-			{
-				"height": 0.0,
-				"last_filter": "",
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"select_project":
-			{
-				"height": 0.0,
-				"last_filter": "",
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"select_symbol":
-			{
-				"height": 0.0,
-				"last_filter": "",
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"show_minimap": false,
-			"show_open_files": true,
-			"show_tabs": true,
-			"side_bar_visible": true,
-			"side_bar_width": 155.0,
-			"status_bar_visible": true,
-			"template_settings":
-			{
-			}
-		},
-		"new_window_width": 0.0
-	},
-	"windows":
-	[
-		{
-			"auto_complete":
-			{
-				"selected_items":
-				[
-					[
-						"ad",
-						"add_movie"
-					],
-					[
-						"play",
-						"playlist1"
-					],
-					[
-						"thub",
-						"thumbs_up"
-					],
-					[
-						"sub",
-						"subtract"
-					],
-					[
-						"set",
-						"set_name"
-					],
-					[
-						"cla",
-						"cla	class .. < ParentClass .. initialize .. end"
-					],
-					[
-						"ba",
-						"bank_account"
-					],
-					[
-						"rank",
-						"rank"
-					],
-					[
-						"mov",
-						"movie_listing"
-					],
-					[
-						"def",
-						"def	def … end"
-					]
-				]
-			},
-			"buffers":
-			[
-				{
-					"file": "/home/philippe/EuP/Ruby/Unterricht/car.rb",
-					"settings":
-					{
-						"buffer_size": 3703,
-						"line_ending": "Unix",
-						"name": "car.rb"
-					}
-				},
-				{
-					"file": "/home/philippe/EuP/Ruby/Unterricht/start.rb",
-					"settings":
-					{
-						"buffer_size": 2418,
-						"line_ending": "Unix"
-					}
-				},
-				{
-					"file": "/home/philippe/EuP/Ruby/Unterricht/hello.rb",
-					"settings":
-					{
-						"buffer_size": 4711,
-						"line_ending": "Unix"
-					}
-				}
-			],
-			"build_system": "",
-			"build_system_choices":
-			[
-			],
-			"build_varint": "",
-			"command_palette":
-			{
-				"height": 0.0,
-				"last_filter": "",
-				"selected_items":
-				[
-				],
-				"width": 0.0
-			},
-			"console":
-			{
-				"height": 0.0,
-				"history":
-				[
-				]
-			},
-			"distraction_free":
-			{
-				"menu_visible": true,
-				"show_minimap": false,
-				"show_open_files": false,
-				"show_tabs": false,
-				"side_bar_visible": false,
-				"status_bar_visible": false
-			},
-			"expanded_folders":
-			[
-				"/home/philippe/EuP",
-				"/home/philippe/EuP/Ruby",
-				"/home/philippe/EuP/Ruby/Aufgaben",
-				"/home/philippe/EuP/Ruby/Doku",
-				"/home/philippe/EuP/Ruby/Unterricht"
-			],
-			"file_history":
-			[
 				"/home/philippe/EuP/Ruby/Doku/vererbung.txt",
 				"/home/philippe/EuP/Ruby/Doku/abfragen.txt",
 				"/home/philippe/EuP/Ruby/Doku/hash.txt",
-				"/home/philippe/EuP/Ruby/Unterricht/start.rb",
-				"/home/philippe/EuP/Ruby/Unterricht/hello.rb",
 				"/home/philippe/EuP/Ruby/Aufgaben/09_bloecke",
 				"/home/philippe/KuA/doku/Linux_basis.txt",
 				"/home/philippe/KuA/doku/bash_spezifika.txt",
@@ -399,10 +258,355 @@
 				"whole_word": false,
 				"wrap": true
 			},
+			"incremental_find":
+			{
+				"height": 0.0
+			},
+			"input":
+			{
+				"height": 31.0
+			},
+			"menu_visible": true,
+			"output.find_results":
+			{
+				"height": 0.0
+			},
+			"output.unsaved_changes":
+			{
+				"height": 100.0
+			},
+			"pinned_build_system": "",
+			"replace":
+			{
+				"height": 0.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_symbol":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": false,
+			"show_open_files": true,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 231.0,
+			"status_bar_visible": true,
+			"template_settings":
+			{
+			}
+		},
+		"new_window_width": 0.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"rest",
+						"registrations"
+					],
+					[
+						"del",
+						"Delete"
+					],
+					[
+						"bescg",
+						"beschlunigen"
+					],
+					[
+						"ad",
+						"add_movie"
+					],
+					[
+						"play",
+						"playlist1"
+					],
+					[
+						"thub",
+						"thumbs_up"
+					],
+					[
+						"sub",
+						"subtract"
+					],
+					[
+						"set",
+						"set_name"
+					],
+					[
+						"cla",
+						"cla	class .. < ParentClass .. initialize .. end"
+					],
+					[
+						"ba",
+						"bank_account"
+					],
+					[
+						"rank",
+						"rank"
+					],
+					[
+						"mov",
+						"movie_listing"
+					],
+					[
+						"def",
+						"def	def … end"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/home/philippe/EuP/Ruby/Rails/Projekte/John.txt",
+					"settings":
+					{
+						"buffer_size": 2237,
+						"line_ending": "Unix",
+						"name": "John.txt"
+					}
+				},
+				{
+					"file": "/home/philippe/EuP/Ruby/Rails/Doku/validations.txt",
+					"settings":
+					{
+						"buffer_size": 531,
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "",
+			"build_system_choices":
+			[
+			],
+			"build_varint": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"last_filter": "",
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0,
+				"history":
+				[
+				]
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"expanded_folders":
+			[
+				"/home/philippe/EuP/Ruby",
+				"/home/philippe/EuP/Ruby/Rails",
+				"/home/philippe/EuP/Ruby/Rails/Doku",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/ontrack/app/views",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/ontrack/app/views/projects",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/ontrack/db/migrate",
+				"/home/philippe/EuP/Ruby/Unterricht",
+				"/home/philippe/EuP/Ruby/Unterricht/Rails"
+			],
+			"file_history":
+			[
+				"/home/philippe/EuP/Ruby/Doku/Klassenarbeit vorbereitung",
+				"/home/philippe/EuP/Ruby/Rails/Doku/1. Übung",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/ontrack/Gemfile",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/ontrack/app/views/projects/index.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/ontrack/app/views/projects/show.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/layouts/_top_bar.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/ontrack/db/migrate/20170117090346_create_iterations.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/ontrack/app/views/projects/edit.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/movies/edit.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/movies/index.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Doku/CSS-Framework.txt+",
+				"/home/philippe/EuP/Ruby/Rails/Doku/railsprojekte_erstellen.txt",
+				"/home/philippe/EuP/Ruby/Klassenarbeit_ja/books/Gemfile",
+				"/home/philippe/EuP/Ruby/Klassenarbeit_ja/books/config/routes.rb",
+				"/home/philippe/EuP/Ruby/Klassenarbeit_ja/books/app/views/layouts/application.html.erb",
+				"/home/philippe/EuP/Ruby/Klassenarbeit_ja/books/app/views/layouts/_top_bar.html.erb",
+				"/home/philippe/EuP/Ruby/Klassenarbeit_ja/books/app/views/books/index.html.erb",
+				"/home/philippe/EuP/Ruby/Klassenarbeit_ja/books/db/migrate/20170110105020_create_likes.rb",
+				"/home/philippe/EuP/Ruby/Klassenarbeit_ja/books/app/models/book.rb",
+				"/home/philippe/EuP/Ruby/Klassenarbeit_ja/books/app/models/like.rb",
+				"/home/philippe/EuP/Ruby/Klassenarbeit_ja/books/db/schema.rb",
+				"/home/philippe/EuP/Ruby/Klassenarbeit_ja/books/app/controllers/likes_controller.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/controllers/registrations_controller.rb",
+				"/home/philippe/EuP/Ruby/Rails/Doku/nested_resource.txt",
+				"/home/philippe/EuP/Ruby/Rails/Doku/routing.txt",
+				"/home/philippe/EuP/Ruby/Rails/Doku/active_record_commands.txt",
+				"/home/philippe/EuP/Ruby/Rails/Doku/models.txt",
+				"/home/philippe/EuP/Ruby/Doku/patterns.txt",
+				"/home/philippe/EuP/Ruby/Doku/layout.txt",
+				"/home/philippe/EuP/Ruby/Doku/foundation_einbinden.txt",
+				"/home/philippe/EuP/Ruby/Doku/validations.txt",
+				"/home/philippe/EuP/Ruby/Doku/rails.txt",
+				"/home/philippe/EuP/Ruby/Doku/config.txt",
+				"/home/philippe/EuP/Ruby/Doku/railsprojekt_erstellen.txt",
+				"/home/philippe/EuP/Ruby/Doku/migrations.txt",
+				"/home/philippe/EuP/Ruby/Doku/helpers.txt",
+				"/home/philippe/EuP/Ruby/Doku/active_record_commands.txt",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/layouts/application.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/assets/stylesheets/styles.scss",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/layouts/_flash_messages.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/reviews/edit.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/controllers/reviews_controller.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/registrations/new.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/reviews/new.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/models/review.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/config/routes.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/reviews/show.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/config/locales/de.yml",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/registrations/_form.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/reviews/_form.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/registrations/show.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/reviews/index.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/models/movie.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/registrations/edit.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/registrations/index.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/events/index.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/config/routes.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/models/event.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/controllers/events_controller.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/db/schema.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/db/migrate/20161219130355_create_registrations.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/test/controllers/registrations_controller_test.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/test/fixtures/registrations.yml",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/test/models/registration_test.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/registrations/show.json.jbuilder",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/registrations/index.json.jbuilder",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/registrations/_registration.json.jbuilder",
+				"/home/philippe/EuP/Ruby/Rails/Doku/Layouts.txt",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/helpers/registrations_helper.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/assets/stylesheets/scaffolds.scss",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/assets/stylesheets/registrations.scss",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/assets/javascripts/registrations.coffee",
+				"/home/philippe/EuP/Ruby/Rails/Doku/validations.txt",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/models/registration.rb",
+				"/home/philippe/EuP/Ruby/Rails/Aufgaben/07_registrations.txt",
+				"/home/philippe/EuP/Ruby/Rails/Doku/foundation_einbinden.txt",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/helpers/movies_helper.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/assets/stylesheets/application.css",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/layouts/_top_bar.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/layouts/_side_bar.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/layouts/application.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/controllers/movies_controller.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/layouts/_side_bar.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/config/locales/de.yml",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/config/application.rb",
+				"/home/philippe/EuP/Ruby/Rails/Aufgaben/06_form.txt",
+				"/home/philippe/EuP/Ruby/Rails/Aufgaben/05_show.txt",
+				"/home/philippe/EuP/Ruby/Rails/Aufgaben/04_helpers.txt",
+				"/home/philippe/EuP/Ruby/Rails/Aufgaben/03_migration.txt",
+				"/home/philippe/EuP/Ruby/Rails/Doku/rails.txt",
+				"/home/philippe/EuP/Ruby/Rails/Doku/migration.txt",
+				"/home/philippe/EuP/Ruby/Rails/Doku/helpers.txt",
+				"/home/philippe/EuP/Ruby/Rails/Doku/config.txt",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/db/seeds.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/db/migrate/20161129084650_add_fields_to_events.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/assets/stylesheets/application.css",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/config/initializers/time_formats.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/events/_form.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/events/show.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/events/new.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/views/events/edit.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/test/fixtures/movies.yml",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/Gemfile",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/helpers/events_helper.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/Gemfile",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/rails_app/app/controllers/application_controller.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/Gemfile.lock",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/db/schema.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/db/seeds.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/db/migrate/20161129100406_add_fields_to_movie.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/config/secrets.yml",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/config/application.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/db/migrate/20161122114608_create_movies.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/config/initializers/time_format.rb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/movies/new.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/movies/show.html.erb",
+				"/home/philippe/EuP/Ruby/Rails/Projekte/flix/app/views/movies/_form.html.erb",
+				"/home/philippe/EuP/Ruby/Unterricht/Geht.txt",
+				"/home/philippe/EuP/Ruby/Unterricht/car2.rb",
+				"/home/philippe/EuP/Ruby/Unterricht/car.rb",
+				"/home/philippe/EuP/Ruby/Unterricht/Hallo.rb",
+				"/home/philippe/EuP/Ruby/Unterricht/start.rb",
+				"/home/philippe/EuP/Ruby/Unterricht/hello.rb",
+				"/home/philippe/EuP/Ruby/Doku/vererbung.txt",
+				"/home/philippe/EuP/Ruby/Doku/abfragen.txt",
+				"/home/philippe/EuP/Ruby/Doku/hash.txt",
+				"/home/philippe/EuP/Ruby/Aufgaben/09_bloecke",
+				"/home/philippe/KuA/doku/Linux_basis.txt"
+			],
+			"find":
+			{
+				"height": 34.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
 			"folders":
 			[
 				{
-					"path": "/home/philippe/EuP"
+					"path": "/home/philippe/EuP/Ruby"
 				}
 			],
 			"groups":
@@ -413,28 +617,28 @@
 					[
 						{
 							"buffer": 0,
-							"file": "/home/philippe/EuP/Ruby/Unterricht/car.rb",
+							"file": "/home/philippe/EuP/Ruby/Rails/Projekte/John.txt",
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 3703,
+								"buffer_size": 2237,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										3478,
-										3478
+										467,
+										467
 									]
 								],
 								"settings":
 								{
-									"auto_name": "car.rb",
-									"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+									"auto_name": "John.txt",
+									"syntax": "Packages/Text/Plain text.tmLanguage"
 								},
 								"translation.x": 0.0,
-								"translation.y": 1170.0,
+								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 1,
@@ -442,60 +646,30 @@
 						},
 						{
 							"buffer": 1,
-							"file": "/home/philippe/EuP/Ruby/Unterricht/start.rb",
-							"semi_transient": false,
+							"file": "/home/philippe/EuP/Ruby/Rails/Doku/validations.txt",
+							"semi_transient": true,
 							"settings":
 							{
-								"buffer_size": 2418,
+								"buffer_size": 531,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										2418,
-										2418
+										463,
+										463
 									]
 								],
 								"settings":
 								{
-									"syntax": "Packages/Ruby/Ruby.sublime-syntax",
-									"translate_tabs_to_spaces": false
+									"syntax": "Packages/Text/Plain text.tmLanguage"
 								},
 								"translation.x": 0.0,
 								"translation.y": 0.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
-							"type": "text"
-						},
-						{
-							"buffer": 2,
-							"file": "/home/philippe/EuP/Ruby/Unterricht/hello.rb",
-							"semi_transient": true,
-							"settings":
-							{
-								"buffer_size": 4711,
-								"regions":
-								{
-								},
-								"selection":
-								[
-									[
-										4140,
-										4140
-									]
-								],
-								"settings":
-								{
-									"syntax": "Packages/Ruby/Ruby.sublime-syntax",
-									"translate_tabs_to_spaces": false
-								},
-								"translation.x": -0.0,
-								"translation.y": 2745.0,
-								"zoom_level": 1.0
-							},
-							"stack_index": 2,
 							"type": "text"
 						}
 					]
@@ -541,7 +715,7 @@
 				"height": 100.0
 			},
 			"pinned_build_system": "",
-			"position": "0,1,0,0,0,542,-3,1182,505,1600,804",
+			"position": "0,1,0,0,0,0,0,0,0,1600,900",
 			"project": "",
 			"replace":
 			{
@@ -583,12 +757,12 @@
 			"show_open_files": true,
 			"show_tabs": true,
 			"side_bar_visible": true,
-			"side_bar_width": 155.0,
+			"side_bar_width": 231.0,
 			"status_bar_visible": true,
 			"template_settings":
 			{
 			},
-			"window_id": 6,
+			"window_id": 11,
 			"workspace_name": ""
 		}
 	],

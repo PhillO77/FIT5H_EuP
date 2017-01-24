@@ -45,13 +45,13 @@ if(!__qc.evts){for(var k in _qevents){__qc.qcenqp(_qevents[k]);}
 _qevents={push:function(){var a=arguments;for(var i=0;i<a.length;i++){__qc.qcenqp(a[i]);}}};__qc.evts=1;}}};}
 function quantserve(){__qc.quantserve();}
 quantserve();
-mHÌ‘*      XLTXLT=CX|š   $    :http://edge.quantserve.com/quant.js necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+µ€Ë´‘*      TX‡žX‡—=]qdXˆT   $    :http://edge.quantserve.com/quant.js necko:classified 1 strongly-framed 1 request-method GET response-head HTTP/1.1 200 OK
+Via: 1.1 ISA01TMG
 Content-Type: application/x-javascript
 Server: Apache
 Accept-Ranges: bytes
-Expires: Tue, 01 Nov 2016 11:29:31 GMT
-Date: Mon, 31 Oct 2016 11:29:31 GMT
-Via: 1.1 ISA01TMG
+Expires: Wed, 25 Jan 2017 07:30:31 GMT
+Date: Tue, 24 Jan 2017 07:30:31 GMT
 Last-Modified: Fri, 15 Jul 2016 22:07:37 GMT
 Cache-Control: private, max-age=86400
  original-response-headers Via: 1.1 ISA01TMG
