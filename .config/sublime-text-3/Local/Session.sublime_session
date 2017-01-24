@@ -393,10 +393,13 @@
 					}
 				},
 				{
+					"contents": "Link:\n	http://guides.rubyonrails.org/active_record_validations.html\n\nRails hat standardmäßig eine Validierungs-Funktion für User-Eingaben.\nJedes Datenbank-Tabellenfeld kann in der jeweiligen Model-Klasse überprüft werden. \nVor dem Speichern eines Datensatzes überprüft Rails, ob alle im Model definierten Validierungen true ergeben.\n\nModel:\n	Beispiele:\n			validates :name, :description, :location, presence: true\n			validates :description, length: { minimum: 25 }	\n			validates :price, numericality: { greater_then_or_equal_to: 0 }\n",
 					"file": "/home/philippe/EuP/Ruby/Rails/Doku/validations.txt",
+					"file_size": 538,
+					"file_write_time": 131266907995639687,
 					"settings":
 					{
-						"buffer_size": 531,
+						"buffer_size": 532,
 						"line_ending": "Unix"
 					}
 				}
@@ -435,11 +438,7 @@
 			[
 				"/home/philippe/EuP/Ruby",
 				"/home/philippe/EuP/Ruby/Rails",
-				"/home/philippe/EuP/Ruby/Rails/Doku",
-				"/home/philippe/EuP/Ruby/Rails/Projekte/ontrack/app/views",
-				"/home/philippe/EuP/Ruby/Rails/Projekte/ontrack/app/views/projects",
-				"/home/philippe/EuP/Ruby/Rails/Projekte/ontrack/db/migrate",
-				"/home/philippe/EuP/Ruby/Unterricht",
+				"/home/philippe/EuP/Ruby/Rails/Projekte",
 				"/home/philippe/EuP/Ruby/Unterricht/Rails"
 			],
 			"file_history":
@@ -647,18 +646,18 @@
 						{
 							"buffer": 1,
 							"file": "/home/philippe/EuP/Ruby/Rails/Doku/validations.txt",
-							"semi_transient": true,
+							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 531,
+								"buffer_size": 532,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										463,
-										463
+										464,
+										464
 									]
 								],
 								"settings":
