@@ -15,4 +15,8 @@ Kurzschreibweise:
 Iteration über einen Hash:
 	cars.each do |key, val|
 		puts "Index: #{key} ist ein #{val}"
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> deaaa540b5f84440556b7890a3e69df0ac0bafa0
